@@ -65,5 +65,9 @@
   <ItemGroup>
     <None Include="icon.png" Pack="True" PackagePath="\" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Brackets" Version="0.3.0-beta" />
+  </ItemGroup>
 
 </Project>
