@@ -1,6 +1,6 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// default text input object for Rss 0.91, 0.92, 1.0, 2.0 and ATOM
@@ -40,7 +40,7 @@
         /// Reads a rss textInput element based on the xml given in element
         /// </summary>
         /// <param name="element">text input element as xml</param>
-        public FeedTextInput(XElement element)
+        public FeedTextInput(ParentTag element)
         {
             this.Title = element.GetValue("title");
             this.Link = element.GetValue("link");

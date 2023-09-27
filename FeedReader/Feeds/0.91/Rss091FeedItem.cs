@@ -1,7 +1,7 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
     using System;
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// Rss 0.91 Feed Item according to specification: http://www.rssboard.org/rss-0-9-1-netscape#image
@@ -37,7 +37,7 @@
         /// Creates this object based on the xml in the XElement parameter.
         /// </summary>
         /// <param name="item">feed item as xml</param>
-        public Rss091FeedItem(XElement item)
+        public Rss091FeedItem(ParentTag item)
             : base(item)
         {
             this.Description = item.GetValue("description");

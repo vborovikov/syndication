@@ -1,10 +1,9 @@
 ﻿namespace CodeHollow.FeedReader.Parser
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
     using System.Text;
-    using System.Xml.Linq;
+    using Brackets;
+    using CodeHollow.FeedReader;
 
     /// <summary>
     /// Internal FeedParser - returns the type of the feed or the parsed feed.
@@ -16,10 +15,11 @@
         /// </summary>
         /// <param name="doc">the xml document</param>
         /// <returns>the feed type</returns>
-        public static FeedType ParseFeedType(XDocument doc)
+        public static FeedType ParseFeedType(Document doc)
         {
-            string rootElement = doc.Root.Name.LocalName;
-            
+            var docRoot = doc.Root();
+            var rootElement = docRoot.Name.AsSpan()[(docRoot.Name.IndexOf(':') + 1)..];
+
             if (rootElement.EqualsIgnoreCase("feed"))
                 return FeedType.Atom;
 
@@ -28,11 +28,15 @@
 
             if (rootElement.EqualsIgnoreCase("rss"))
             {
-                string version = doc.Root.Attribute("version").Value;
-                if (version.EqualsIgnoreCase("2.0")) {
-                    if (doc.Root.Attribute(XName.Get("media", XNamespace.Xmlns.NamespaceName)) != null) {
+                var version = docRoot.GetAttributeValue("version");
+                if (version.EqualsIgnoreCase("2.0"))
+                {
+                    if (docRoot.Attribute("media") != null)
+                    {
                         return FeedType.MediaRss;
-                    } else {
+                    }
+                    else
+                    {
                         return FeedType.Rss_2_0;
                     }
                 }
@@ -45,7 +49,7 @@
 
                 return FeedType.Rss;
             }
-            
+
             throw new FeedTypeNotSupportedException($"unknown feed type {rootElement}");
         }
 
@@ -59,10 +63,7 @@
         public static Feed GetFeed(byte[] feedContentData)
         {
             string feedContent = Encoding.UTF8.GetString(feedContentData); // 1.) get string of the content
-            feedContent = RemoveWrongChars(feedContent);
-
-            XDocument feedDoc = XDocument.Parse(feedContent); // 2.) read document to get the used encoding
-
+            var feedDoc = Document.Xml.Parse(feedContent); // 2.) read document to get the used encoding
             Encoding encoding = GetEncoding(feedDoc); // 3.) get used encoding
 
             if (encoding != Encoding.UTF8) // 4.) if not UTF8 - reread the data :
@@ -70,17 +71,16 @@
                                            // from UTF8 to ISO-8859-1 doesn't work and result is wrong. see: FullParseTest.TestRss20ParseSwedishFeedWithIso8859_1
             {
                 feedContent = encoding.GetString(feedContentData);
-                feedContent = RemoveWrongChars(feedContent);
+                feedDoc = Document.Xml.Parse(feedContent);
             }
 
             var feedType = ParseFeedType(feedDoc);
-
             var parser = Factory.GetParser(feedType);
-            var feed = parser.Parse(feedContent);
+            var feed = parser.Parse(feedContent, feedDoc);
 
             return feed.ToFeed();
         }
-        
+
         /// <summary>
         /// Returns the parsed feed
         /// </summary>
@@ -88,14 +88,12 @@
         /// <returns>parsed feed</returns>
         public static Feed GetFeed(string feedContent)
         {
-            feedContent = RemoveWrongChars(feedContent);
-
-            XDocument feedDoc = XDocument.Parse(feedContent);
+            Document feedDoc = Document.Xml.Parse(feedContent);
 
             var feedType = ParseFeedType(feedDoc);
 
             var parser = Factory.GetParser(feedType);
-            var feed = parser.Parse(feedContent);
+            var feed = parser.Parse(feedContent, feedDoc);
 
             return feed.ToFeed();
         }
@@ -105,18 +103,20 @@
         /// </summary>
         /// <param name="feedDoc">rss feed document</param>
         /// <returns>encoding or utf8 by default</returns>
-        private static Encoding GetEncoding(XDocument feedDoc)
+        private static Encoding GetEncoding(Document feedDoc)
         {
             Encoding encoding = Encoding.UTF8;
 
-            try
+            var encodingAttr = feedDoc.Tag("?xml")?.Attribute("encoding");
+            if (encodingAttr?.HasValue == true)
             {
-                var encodingStr = feedDoc.Document.Declaration?.Encoding;
-                if (!string.IsNullOrEmpty(encodingStr))
+                var encodingStr = encodingAttr.ToString();
+                if (!string.IsNullOrWhiteSpace(encodingStr))
+                {
                     encoding = Encoding.GetEncoding(encodingStr);
-
+                }
             }
-            catch(Exception) { } // ignore and return default encoding
+
             return encoding;
         }
 

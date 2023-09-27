@@ -1,6 +1,6 @@
 ﻿namespace CodeHollow.FeedReader.Feeds.Itunes
 {
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// The itunes:image xml element
@@ -11,7 +11,7 @@
         /// Initializes a new instance of the <see cref="ItunesImage"/> class.
         /// </summary>
         /// <param name="image">The itunes:image element</param>
-        public ItunesImage(XElement image)
+        public ItunesImage(Tag image)
         {
             Href = image.GetAttributeValue("href");
         }

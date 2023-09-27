@@ -1,7 +1,7 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
-    using System;
-    using System.Xml.Linq;
+    using Brackets;
+    using CodeHollow.FeedReader;
 
     /// <summary>
     /// Rss 1.0 Feed according to specification: http://web.resource.org/rss/1.0/spec
@@ -53,18 +53,18 @@
         /// </summary>
         /// <param name="feedXml">the entire feed xml as string</param>
         /// <param name="channel">the "channel" element in the xml as XElement</param>
-        public Rss10Feed(string feedXml, XElement channel)
+        public Rss10Feed(string feedXml, ParentTag channel)
             : base(feedXml, channel)
         {
-            this.About = channel.GetAttribute("rdf:about").GetValue();
+            this.About = channel.GetAttributeValue("rdf:about");
             this.DC = new DublinCore(channel);
             this.Sy = new Syndication(channel);
             this.Description = channel.GetValue("description");
 
-            this.Image = new Rss10FeedImage(channel.Parent.GetElement("image"));
-            this.TextInput = new Rss10FeedTextInput(channel.Parent.GetElement("textinput"));
+            this.Image = new Rss10FeedImage(((ParentTag)channel.Parent).GetElement("image"));
+            this.TextInput = new Rss10FeedTextInput(((ParentTag)channel.Parent).GetElement("textinput"));
 
-            var items = channel.Parent.GetElements("item");
+            var items = ((ParentTag)channel.Parent).GetRoots("item");
             foreach (var item in items)
             {
                 this.Items.Add(new Rss10FeedItem(item));

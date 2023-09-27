@@ -1,6 +1,6 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// Rss 1.0 Feed image according to specification: http://web.resource.org/rss/1.0/spec
@@ -26,10 +26,10 @@
         /// Reads a rss 1.0 feed image based on the xml given in element
         /// </summary>
         /// <param name="element">feed image as xml</param>
-        public Rss10FeedImage(XElement element)
+        public Rss10FeedImage(ParentTag element)
             : base(element)
         {
-            this.About = element.GetAttribute("rdf:about").GetValue();
+            this.About = element.GetAttributeValue("rdf:about");
         }
     }
 }

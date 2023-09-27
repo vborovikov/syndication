@@ -1,6 +1,8 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
     using System;
+    using Brackets;
+    using CodeHollow.FeedReader;
 
     /// <summary>
     /// The parsed "dc:" elements in a feed
@@ -100,7 +102,7 @@
         /// Reads a dublincore (dc:) element based on the xml given in element
         /// </summary>
         /// <param name="item">item element as xml</param>
-        public DublinCore(System.Xml.Linq.XElement item)
+        public DublinCore(ParentTag item)
         {
             this.Title = item.GetValue("dc:title");
             this.Creator = item.GetValue("dc:creator");
@@ -109,7 +111,7 @@
             this.Publisher = item.GetValue("dc:publisher");
             this.Contributor = item.GetValue("dc:contributor");
             this.DateString = item.GetValue("dc:date");
-            this.Date = Helpers.TryParseDateTime(DateString);
+            this.Date = Helpers.TryParseDateTime(this.DateString);
             this.Type = item.GetValue("dc:type");
             this.Format = item.GetValue("dc:format");
             this.Identifier = item.GetValue("dc:identifier");

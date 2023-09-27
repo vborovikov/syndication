@@ -1,6 +1,6 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// item source object from rss 2.0 according to specification: https://validator.w3.org/feed/docs/rss2.html
@@ -30,7 +30,7 @@
         /// Reads a rss feed item based on the xml given in element
         /// </summary>
         /// <param name="element">item source element as xml</param>
-        public FeedItemSource(XElement element)
+        public FeedItemSource(ParentTag element)
         {
             this.Url = element.GetAttributeValue("url");
             this.Value = element.GetValue();

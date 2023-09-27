@@ -3,7 +3,7 @@ namespace CodeHollow.FeedReader.Feeds
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// Atom 1.0 feed item object according to specification: https://validator.w3.org/feed/docs/atom.html
@@ -89,15 +89,15 @@ namespace CodeHollow.FeedReader.Feeds
         /// Reads an atom feed based on the xml given in item
         /// </summary>
         /// <param name="item">feed item as xml</param>
-        public AtomFeedItem(XElement item)
+        public AtomFeedItem(ParentTag item)
             : base(item)
         {
-            this.Link = item.GetElement("link")?.Attribute("href")?.Value;
+            this.Link = item.Tag("link")?.GetAttributeValue("href");
 
             this.Author = new AtomPerson(item.GetElement("author"));
 
             var categories = item.GetElements("category");
-            this.Categories = categories.Select(x => (string)x.Attribute("term")).ToList();
+            this.Categories = categories.Select(x => x.GetAttributeValue("term")).ToList();
 
             this.Content = item.GetValue("content").HtmlDecode();
             this.Contributor = new AtomPerson(item.GetElement("contributor"));

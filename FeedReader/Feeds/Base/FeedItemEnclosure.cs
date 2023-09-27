@@ -1,6 +1,7 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
     using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// Enclosure object of Rss 2.0 according to specification: https://validator.w3.org/feed/docs/rss2.html
@@ -35,7 +36,7 @@
         /// Reads a rss feed item enclosure based on the xml given in element
         /// </summary>
         /// <param name="element">enclosure element as xml</param>
-        public FeedItemEnclosure(XElement element)
+        public FeedItemEnclosure(Tag element)
         {
             this.Url = element.GetAttributeValue("url");
             this.Length = Helpers.TryParseInt(element.GetAttributeValue("length"));

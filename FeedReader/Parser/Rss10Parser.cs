@@ -1,14 +1,15 @@
 ﻿namespace CodeHollow.FeedReader.Parser
 {
-    using System.Xml.Linq;
+    using Brackets;
+    using CodeHollow.FeedReader;
     using Feeds;
 
     internal class Rss10Parser : AbstractXmlFeedParser
     {
-        public override BaseFeed Parse(string feedXml, XDocument feedDoc)
+        protected override BaseFeed ParseOverride(string feedXml, Document feedDoc)
         {
-            var rdf = feedDoc.Root;
-            var channel = rdf.GetElement("channel");
+            var rdf = feedDoc.Root();
+            var channel = rdf.Root("channel");
             Rss10Feed feed = new Rss10Feed(feedXml, channel);
             return feed;
         }

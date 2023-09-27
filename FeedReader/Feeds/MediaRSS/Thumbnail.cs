@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Linq;
+﻿using Brackets;
 
 namespace CodeHollow.FeedReader.Feeds.MediaRSS
 {
@@ -17,7 +14,7 @@ namespace CodeHollow.FeedReader.Feeds.MediaRSS
         /// Reads a rss feed item enclosure based on the xml given in element
         /// </summary>
         /// <param name="element">enclosure element as xml</param>
-        public Thumbnail(XElement element)
+        public Thumbnail(Tag element)
         {
             this.Url = element.GetAttributeValue("url");
             this.Height = Helpers.TryParseInt(element.GetAttributeValue("height"));

@@ -1,7 +1,6 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
-    using System;
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// Rss 1.0 Feed Item according to specification: http://web.resource.org/rss/1.0/spec
@@ -42,13 +41,13 @@
         /// Reads a rss 1.0 feed item based on the xml given in item
         /// </summary>
         /// <param name="item">feed item as xml</param>
-        public Rss10FeedItem(XElement item)
+        public Rss10FeedItem(ParentTag item)
             : base(item)
         {
             this.DC = new DublinCore(item);
             this.Sy = new Syndication(item);
 
-            this.About = item.GetAttribute("rdf:about").GetValue();
+            this.About = item.GetAttributeValue("rdf:about");
             this.Description = item.GetValue("description");
         }
 

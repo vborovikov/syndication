@@ -1,6 +1,7 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
-    using System.Xml.Linq;
+    using Brackets;
+    using CodeHollow.FeedReader;
 
     /// <summary>
     /// The parsed syndication elements. Those are all elements that start with "sy:"
@@ -35,7 +36,7 @@
         /// Creates the object based on the xml in the given XElement
         /// </summary>
         /// <param name="xelement">syndication element as xml</param>
-        public Syndication(XElement xelement)
+        public Syndication(ParentTag xelement)
         {
             this.UpdateBase = xelement.GetValue("sy:updateBase");
             this.UpdateFrequency = xelement.GetValue("sy:updateFrequency");

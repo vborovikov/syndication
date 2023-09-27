@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// Rss Feed according to Rss 0.91 specification:
@@ -108,7 +108,7 @@
         /// </summary>
         /// <param name="feedXml">the entire feed xml as string</param>
         /// <param name="channel">the "channel" element in the xml as XElement</param>
-        public Rss091Feed(string feedXml, XElement channel)
+        public Rss091Feed(string feedXml, ParentTag channel)
             : base(feedXml, channel)
         {
             this.Description = channel.GetValue("description");
@@ -139,7 +139,7 @@
             if (skipDays != null)
                 this.SkipDays = skipDays.GetElements("day")?.Select(x => x.GetValue()).ToList();
 
-            var items = channel.GetElements("item");
+            var items = channel.GetRoots("item");
 
             AddItems(items);
         }
@@ -167,7 +167,7 @@
         /// Adds feed items to the items collection
         /// </summary>
         /// <param name="items">feed items as XElements</param>
-        internal virtual void AddItems(IEnumerable<XElement> items)
+        internal virtual void AddItems(IEnumerable<ParentTag> items)
         {
             foreach (var item in items)
             {

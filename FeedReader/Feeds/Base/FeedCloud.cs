@@ -1,6 +1,7 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
     using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// Cloud object according to Rss 2.0 specification: https://validator.w3.org/feed/docs/rss2.html#ltcloudgtSubelementOfLtchannelgt
@@ -45,7 +46,7 @@
         /// Reads a rss feed cloud element based on the xml given in element
         /// </summary>
         /// <param name="element">cloud element as xml</param>
-        public FeedCloud(XElement element)
+        public FeedCloud(Tag element)
         {
             this.Domain = element.GetAttributeValue("domain");
             this.Port = element.GetAttributeValue("port");

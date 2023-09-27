@@ -5,6 +5,7 @@
     using System.Globalization;
     using System.Linq;
     using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// RSS 2.0 feed accoring to specification: https://validator.w3.org/feed/docs/rss2.html
@@ -121,7 +122,7 @@
         /// </summary>
         /// <param name="feedXml">the entire feed xml as string</param>
         /// <param name="channel">the "channel" element in the xml as XElement</param>
-        public Rss20Feed(string feedXml, XElement channel)
+        public Rss20Feed(string feedXml, ParentTag channel)
             : base(feedXml, channel)
         {
             this.Description = channel.GetValue("description");
@@ -134,14 +135,14 @@
             this.LastBuildDateString = channel.GetValue("lastBuildDate");
             this.ParseDates(this.Language, this.PublishingDateString, this.LastBuildDateString);
 
-            var categories = channel.GetElements("category");
+            var categories = channel.GetTags("category");
             this.Categories = categories.Select(x => x.GetValue()).ToList();
 
             this.Sy = new Syndication(channel);
             this.Generator = channel.GetValue("generator");
             this.TTL = channel.GetValue("ttl");
             this.Image = new Rss20FeedImage(channel.GetElement("image"));
-            this.Cloud = new FeedCloud(channel.GetElement("cloud"));
+            this.Cloud = new FeedCloud(channel.Tag("cloud"));
             this.TextInput = new FeedTextInput(channel.GetElement("textinput"));
 
             var skipHours = channel.GetElement("skipHours");
@@ -152,7 +153,7 @@
             if (skipDays != null)
                 this.SkipDays = skipDays.GetElements("day")?.Select(x => x.GetValue()).ToList();
 
-            var items = channel.GetElements("item");
+            var items = channel.GetRoots("item");
 
             foreach (var item in items)
             {

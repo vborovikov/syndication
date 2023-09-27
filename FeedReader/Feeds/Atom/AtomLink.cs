@@ -1,6 +1,6 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// Atom 1.0 link according to specification: https://validator.w3.org/feed/docs/atom.html#link
@@ -50,7 +50,7 @@
         /// Reads an atom link based on the xml given in element
         /// </summary>
         /// <param name="element">link as xml</param>
-        public AtomLink(XElement element)
+        public AtomLink(Tag element)
         {
             this.Href = element.GetAttributeValue("href");
             this.Relation = element.GetAttributeValue("rel");

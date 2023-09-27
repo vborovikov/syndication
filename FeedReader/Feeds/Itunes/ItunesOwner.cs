@@ -1,6 +1,6 @@
 ﻿namespace CodeHollow.FeedReader.Feeds.Itunes
 {
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// The itunes:owner xml element
@@ -11,10 +11,10 @@
         /// Initializes a new instance of the <see cref="ItunesOwner"/> class.
         /// </summary>
         /// <param name="ownerElement">the owner xml element</param>
-        public ItunesOwner(XElement ownerElement)
+        public ItunesOwner(ParentTag ownerElement)
         {
-            Name = ownerElement.GetValue(ItunesChannel.NAMESPACEPREFIX, "name");
-            Email = ownerElement.GetValue(ItunesChannel.NAMESPACEPREFIX, "email");
+            Name = ownerElement.GetValue("itunes:name");
+            Email = ownerElement.GetValue("itunes:email");
         }
         
         /// <summary>

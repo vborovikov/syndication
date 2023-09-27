@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// RSS 2.0 feed item accoring to specification: https://validator.w3.org/feed/docs/rss2.html
@@ -79,7 +80,7 @@
         /// Reads a new feed item element based on the given xml item
         /// </summary>
         /// <param name="item">the xml containing the feed item</param>
-        public Rss20FeedItem(XElement item)
+        public Rss20FeedItem(ParentTag item)
             : base(item)
         {
             this.Comments = item.GetValue("comments");

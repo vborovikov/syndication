@@ -1,6 +1,6 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// Rss 0.92 Feed Image according to specification: http://backend.userland.com/rss092
@@ -21,7 +21,7 @@
         /// Creates this object based on the xml in the XElement parameter.
         /// </summary>
         /// <param name="element">rss 0.92 image as xml</param>
-        public Rss092FeedImage(XElement element)
+        public Rss092FeedImage(ParentTag element)
             : base(element)
         {
         }

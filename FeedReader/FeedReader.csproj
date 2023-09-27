@@ -67,7 +67,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Brackets" Version="0.3.0-beta" />
+    <PackageReference Include="Brackets" Version="0.4.1-beta" />
   </ItemGroup>
-
 </Project>

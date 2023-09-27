@@ -1,6 +1,6 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// The base object for all feed items
@@ -20,7 +20,7 @@
         /// <summary>
         /// Gets the underlying XElement in order to allow reading properties that are not available in the class itself
         /// </summary>
-        public XElement Element { get; }
+        public ParentTag Element { get; }
 
         internal abstract FeedItem ToFeedItem();
 
@@ -37,7 +37,7 @@
         /// Reads a base feed item based on the xml given in element
         /// </summary>
         /// <param name="item">feed item as xml</param>
-        protected BaseFeedItem(XElement item)
+        protected BaseFeedItem(ParentTag item)
         {
             this.Title = item.GetValue("title");
             this.Link = item.GetValue("link");

@@ -26,10 +26,10 @@
         /// <param name="text">the string</param>
         /// <param name="compareTo">the string to compare to</param>
         /// <returns></returns>
-        public static bool EqualsIgnoreCase(this string text, string compareTo)
+        public static bool EqualsIgnoreCase(this ReadOnlySpan<char> text, ReadOnlySpan<char> compareTo)
         {
-            if (text == null)
-                return compareTo == null;
+            if (text.IsEmpty)
+                return compareTo.IsEmpty;
             return text.Equals(compareTo, StringComparison.OrdinalIgnoreCase);
         }
 
@@ -39,15 +39,17 @@
         /// <param name="text">the string</param>
         /// <param name="compareTo">all strings to compare to</param>
         /// <returns></returns>
-        public static bool EqualsIgnoreCase(this string text, params string[] compareTo)
+        public static bool EqualsIgnoreCase(this ReadOnlySpan<char> text, params string[] compareTo)
         {
             foreach(string value in compareTo)
             {
-                if (text.EqualsIgnoreCase(value))
+                if (text.EqualsIgnoreCase(value.AsSpan()))
                     return true;
             }
             return false;
         }
+
+        public static bool EqualsIgnoreCase(this string text, params string[] compareTo) => EqualsIgnoreCase(text.AsSpan(), compareTo);
 
         /// <summary>
         /// Converts a string to UTF-8

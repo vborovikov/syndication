@@ -1,7 +1,7 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
     using System.Collections.Generic;
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// Rss 0.92 feed according to specification: http://backend.userland.com/rss092
@@ -28,14 +28,14 @@
         /// </summary>
         /// <param name="feedXml">the entire feed xml as string</param>
         /// <param name="channel">the "channel" element in the xml as XElement</param>
-        public Rss092Feed(string feedXml, XElement channel)
+        public Rss092Feed(string feedXml, ParentTag channel)
             : base(feedXml, channel)
         {
-            this.Cloud = new FeedCloud(channel.GetElement("cloud"));
+            this.Cloud = new FeedCloud(channel.Tag("cloud"));
         }
 
         /// <inheritdoc/>
-        internal override void AddItems(IEnumerable<XElement> items)
+        internal override void AddItems(IEnumerable<ParentTag> items)
         {
             foreach (var item in items)
             {

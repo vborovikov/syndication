@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// Atom 1.0 feed object according to specification: https://validator.w3.org/feed/docs/atom.html
@@ -85,10 +85,10 @@
         /// </summary>
         /// <param name="feedXml">the entire feed xml as string</param>
         /// <param name="feed">the feed element in the xml as XElement</param>
-        public AtomFeed(string feedXml, XElement feed)
+        public AtomFeed(string feedXml, ParentTag feed)
             : base(feedXml, feed)
         {
-            this.Link = feed.GetElement("link")?.Attribute("href")?.Value;
+            this.Link = feed.Tag("link")?.GetAttributeValue("href");
 
             this.Author = new AtomPerson(feed.GetElement("author"));
 
@@ -108,7 +108,7 @@
             this.UpdatedDateString = feed.GetValue("updated");
             this.UpdatedDate = Helpers.TryParseDateTime(this.UpdatedDateString);
 
-            var items = feed.GetElements("entry");
+            var items = feed.GetRoots("entry");
 
             foreach (var item in items)
             {

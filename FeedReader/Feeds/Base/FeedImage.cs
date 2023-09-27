@@ -1,6 +1,6 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// feed image object that is used in feed (rss 0.91, 2.0, atom, ...)
@@ -35,7 +35,7 @@
         /// Reads a feed image based on the xml given in element
         /// </summary>
         /// <param name="element">feed image as xml</param>
-        public FeedImage(XElement element)
+        public FeedImage(ParentTag element)
         {
             this.Title = element.GetValue("title");
             this.Url = element.GetValue("url");

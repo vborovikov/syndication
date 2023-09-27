@@ -5,6 +5,7 @@
     using System.Globalization;
     using System.Linq;
     using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// Media RSS 2.0 feed according to specification: http://www.rssboard.org/media-rss
@@ -121,7 +122,7 @@
         /// </summary>
         /// <param name="feedXml">the entire feed xml as string</param>
         /// <param name="channel">the "channel" element in the xml as XElement</param>
-        public MediaRssFeed(string feedXml, XElement channel)
+        public MediaRssFeed(string feedXml, ParentTag channel)
             : base(feedXml, channel)
         {
             this.Description = channel.GetValue("description");
@@ -141,7 +142,7 @@
             this.Generator = channel.GetValue("generator");
             this.TTL = channel.GetValue("ttl");
             this.Image = new MediaRssFeedImage(channel.GetElement("image"));
-            this.Cloud = new FeedCloud(channel.GetElement("cloud"));
+            this.Cloud = new FeedCloud(channel.Tag("cloud"));
             this.TextInput = new FeedTextInput(channel.GetElement("textinput"));
 
             var skipHours = channel.GetElement("skipHours");
@@ -152,7 +153,7 @@
             if (skipDays != null)
                 this.SkipDays = skipDays.GetElements("day")?.Select(x => x.GetValue()).ToList();
 
-            var items = channel.GetElements("item");
+            var items = channel.GetRoots("item");
 
             foreach (var item in items)
             {

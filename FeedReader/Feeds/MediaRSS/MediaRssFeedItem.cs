@@ -1,10 +1,10 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
-    using CodeHollow.FeedReader.Feeds.MediaRSS;
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Xml.Linq;
+    using Brackets;
+    using CodeHollow.FeedReader.Feeds.MediaRSS;
 
     /// <summary>
     /// RSS 2.0 feed item accoring to specification: https://validator.w3.org/feed/docs/rss2.html
@@ -90,7 +90,7 @@
         /// Reads a new feed item element based on the given xml item
         /// </summary>
         /// <param name="item">the xml containing the feed item</param>
-        public MediaRssFeedItem(XElement item)
+        public MediaRssFeedItem(ParentTag item)
             : base(item)
         {
              
@@ -102,10 +102,10 @@
             this.DC = new DublinCore(item);
             this.Source = new FeedItemSource(item.GetElement("source"));
 
-            var media = item.GetElements("media", "content");
+            var media = item.GetRoots("media:content");
             this.Media = media.Select(x => new Media(x)).ToList();
 
-            var mediaGroups = item.GetElements("media", "group");
+            var mediaGroups = item.GetRoots("media:group");
             this.MediaGroups = mediaGroups.Select(x => new MediaGroup(x)).ToList();
 
             var categories = item.GetElements("category");

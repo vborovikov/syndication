@@ -1,7 +1,8 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
     using System.Collections.Generic;
-    using System.Xml.Linq;
+    using Brackets;
+    using CodeHollow.FeedReader;
 
     /// <summary>
     /// BaseFeed object which contains the basic properties that each feed has.
@@ -32,12 +33,12 @@
         /// <summary>
         /// Gets the whole, original feed as string
         /// </summary>
-        public string OriginalDocument { get; private set; }
+        public string OriginalDocument { get; }
 
         /// <summary>
         /// Gets the underlying XElement in order to allow reading properties that are not available in the class itself
         /// </summary>
-        public XElement Element { get; }
+        public ParentTag Element { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BaseFeed"/> class.
@@ -54,7 +55,7 @@
         /// </summary>
         /// <param name="feedXml">the entire feed xml as string</param>
         /// <param name="channel">the "channel" element in the xml as XElement</param>
-        protected BaseFeed(string feedXml, XElement channel)
+        protected BaseFeed(string feedXml, ParentTag channel)
             : this()
         {
             this.OriginalDocument = feedXml;

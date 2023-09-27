@@ -1,6 +1,6 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
-    using System.Xml.Linq;
+    using Brackets;
 
     /// <summary>
     /// Atom 1.0 person element according to specification: https://validator.w3.org/feed/docs/atom.html
@@ -35,7 +35,7 @@
         /// Reads an atom person based on the xml given in element
         /// </summary>
         /// <param name="element">person element as xml</param>
-        public AtomPerson(XElement element)
+        public AtomPerson(ParentTag element)
         {
             this.Name = element.GetValue("name");
             this.EMail = element.GetValue("email");

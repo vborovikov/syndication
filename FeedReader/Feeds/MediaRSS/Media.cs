@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Xml.Linq;
+using Brackets;
 
 namespace CodeHollow.FeedReader.Feeds.MediaRSS
 {
@@ -16,14 +14,14 @@ namespace CodeHollow.FeedReader.Feeds.MediaRSS
         /// <summary>
         /// Gets the underlying XElement in order to allow reading properties that are not available in the class itself
         /// </summary>
-        public XElement Element { get; }
+        public ParentTag Element { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Media"/> class.
         /// Reads a rss feed item enclosure based on the xml given in element
         /// </summary>
         /// <param name="element">enclosure element as xml</param>
-        public Media(XElement element)
+        public Media(ParentTag element)
         {
             this.Element = element;
             
@@ -37,7 +35,7 @@ namespace CodeHollow.FeedReader.Feeds.MediaRSS
             this.Width = Helpers.TryParseInt(element.GetAttributeValue("width"));
             this.Language = element.GetAttributeValue("lang");
 
-            var thumbnails = element.GetElements("media", "thumbnail");
+            var thumbnails = element.GetElements("media:thumbnail");
             this.Thumbnails = thumbnails.Select(x => new Thumbnail(x)).ToList();
 
         }
