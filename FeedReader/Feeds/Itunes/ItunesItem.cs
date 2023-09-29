@@ -6,7 +6,7 @@ namespace CodeHollow.FeedReader.Feeds.Itunes
     /// <summary>
     /// The itunes:... elements of an rss 2.0 item
     /// </summary>
-    public class ItunesItem
+    public record ItunesItem
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ItunesItem"/> class.
@@ -14,30 +14,30 @@ namespace CodeHollow.FeedReader.Feeds.Itunes
         /// <param name="itemElement"></param>
         public ItunesItem(ParentTag itemElement)
         {
-            Author = itemElement.GetValue("itunes:author");
-            Block = itemElement.GetValue("itunes:block").EqualsIgnoreCase("yes");
+            this.Author = itemElement.GetValue("itunes:author");
+            this.Block = itemElement.GetValue("itunes:block").EqualsIgnoreCase("yes");
             var imageElement = itemElement.Tag("itunes:image");
 
             if (imageElement != null)
             {
-                Image = new ItunesImage(imageElement);
+                this.Image = new ItunesImage(imageElement);
             }
 
             var duration = itemElement.GetValue("itunes:duration");
-            Duration = ParseDuration(duration);
+            this.Duration = ParseDuration(duration);
 
             var explicitValue = itemElement.GetValue("itunes:explicit");
-            Explicit = explicitValue.EqualsIgnoreCase("yes", "explicit", "true");
+            this.Explicit = explicitValue.EqualsIgnoreCase("yes", "explicit", "true");
 
-            IsClosedCaptioned = itemElement.GetValue("itunes:isClosedCaptioned").EqualsIgnoreCase("yes");
+            this.IsClosedCaptioned = itemElement.GetValue("itunes:isClosedCaptioned").EqualsIgnoreCase("yes");
 
             if (int.TryParse(itemElement.GetValue("itunes:order"), out var order))
             {
-                Order = order;
+                this.Order = order;
             }
 
-            Subtitle = itemElement.GetValue("itunes:subtitle");
-            Summary = itemElement.GetValue("itunes:summary");
+            this.Subtitle = itemElement.GetValue("itunes:subtitle");
+            this.Summary = itemElement.GetValue("itunes:summary");
         }
 
         private static TimeSpan? ParseDuration(string duration)

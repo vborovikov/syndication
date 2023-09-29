@@ -2,13 +2,12 @@
 {
     using System;
     using System.Linq;
-    using System.Xml.Linq;
     using Brackets;
 
     /// <summary>
     /// The basic itunes: elements that are part of the channel xml element of an rss2.0 feed
     /// </summary>
-    public class ItunesChannel
+    public record ItunesChannel
     {
         internal const string NAMESPACEPREFIX = "itunes";
         /// <summary>

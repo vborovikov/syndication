@@ -2,13 +2,11 @@
 
 namespace CodeHollow.FeedReader.Feeds.MediaRSS
 {
-
     /// <summary>
     /// Allows particular images to be used as representative images for the media object. If multiple thumbnails are included, and time coding is not at play, it is assumed that the images are in order of importance. 
     /// </summary>
-    public class Thumbnail
+    public record Thumbnail
     {
-        
         /// <summary>
         /// Initializes a new instance of the <see cref="Thumbnail"/> class.
         /// Reads a rss feed item enclosure based on the xml given in element
@@ -20,28 +18,26 @@ namespace CodeHollow.FeedReader.Feeds.MediaRSS
             this.Height = Helpers.TryParseInt(element.GetAttributeValue("height"));
             this.Width = Helpers.TryParseInt(element.GetAttributeValue("width"));
             this.Time = element.GetAttributeValue("time");
-            
         }
 
         /// <summary>
         /// The url of the thumbnail. Required attribute
         /// </summary>
-        public string Url { get; set; }
+        public string Url { get; }
 
         /// <summary>
         /// Height of the object media. Optional attribute
         /// </summary>
-        public int? Height { get; set; }
+        public int? Height { get; }
 
         /// <summary>
         /// Width of the object media. Optional attribute
         /// </summary>
-        public int? Width { get; set; }
+        public int? Width { get; }
 
         /// <summary>
         /// Specifies the time offset in relation to the media object
         /// </summary>
-        public string Time { get; set; }
-
+        public string Time { get; }
     }
 }

@@ -3,30 +3,22 @@
     /// <summary>
     /// An html feed link, containing the title, the url and the type of the feed
     /// </summary>
-    public class HtmlFeedLink
+    public record HtmlFeedLink
     {
         /// <summary>
         /// The title of the feed
         /// </summary>
-        public string Title { get; set; }
+        public string Title { get; }
 
         /// <summary>
         /// The url to the feed
         /// </summary>
-        public string Url { get; set; }
+        public string Url { get; }
 
         /// <summary>
         /// The type of the feed - rss or atom
         /// </summary>
-        public FeedType FeedType { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="HtmlFeedLink"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public HtmlFeedLink()
-        {
-        }
+        public FeedType FeedType { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="HtmlFeedLink"/> class.

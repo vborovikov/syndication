@@ -2,37 +2,27 @@
 {
     using System.Collections.Generic;
     using System.Linq;
-    using System.Xml.Linq;
     using Brackets;
 
     /// <summary>
     /// Rss 0.92 feed item according to specification: http://backend.userland.com/rss092
     /// </summary>
-    public class Rss092FeedItem : Rss091FeedItem
+    public record Rss092FeedItem : Rss091FeedItem
     {
         /// <summary>
         /// All entries "category" entries
         /// </summary>
-        public ICollection<string> Categories { get; set; }
+        public ICollection<string> Categories { get; }
 
         /// <summary>
         /// The "enclosure" field
         /// </summary>
-        public FeedItemEnclosure Enclosure { get; set; }
+        public FeedItemEnclosure Enclosure { get; }
 
         /// <summary>
         /// The "source" field
         /// </summary>
-        public FeedItemSource Source { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Rss092FeedItem"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public Rss092FeedItem()
-            : base()
-        {
-        }
+        public FeedItemSource Source { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Rss092FeedItem"/> class.

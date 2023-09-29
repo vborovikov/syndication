@@ -5,25 +5,17 @@
     /// <summary>
     /// item source object from rss 2.0 according to specification: https://validator.w3.org/feed/docs/rss2.html
     /// </summary>
-    public class FeedItemSource
+    public record FeedItemSource
     {
         /// <summary>
         /// The "url" element
         /// </summary>
-        public string Url { get; set; }
+        public string Url { get; }
 
         /// <summary>
         /// The value of the element
         /// </summary>
-        public string Value { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FeedItemSource"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public FeedItemSource()
-        {
-        }
+        public string Value { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="FeedItemSource"/> class.

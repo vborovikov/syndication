@@ -1,35 +1,26 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
-    using System.Xml.Linq;
     using Brackets;
 
     /// <summary>
     /// Enclosure object of Rss 2.0 according to specification: https://validator.w3.org/feed/docs/rss2.html
     /// </summary>
-    public class FeedItemEnclosure
+    public record FeedItemEnclosure
     {
         /// <summary>
         /// The "url" element
         /// </summary>
-        public string Url { get; set; }
+        public string Url { get; }
 
         /// <summary>
         /// The "length" element as int
         /// </summary>
-        public int? Length { get; set; }
+        public int? Length { get; }
 
         /// <summary>
         /// The "type" element
         /// </summary>
-        public string MediaType { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FeedItemEnclosure"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public FeedItemEnclosure()
-        {
-        }
+        public string MediaType { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="FeedItemEnclosure"/> class.

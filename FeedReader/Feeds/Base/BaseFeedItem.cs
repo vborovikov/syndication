@@ -5,17 +5,17 @@
     /// <summary>
     /// The base object for all feed items
     /// </summary>
-    public abstract class BaseFeedItem
+    public abstract record BaseFeedItem
     {
         /// <summary>
         /// The "title" element
         /// </summary>
-        public string Title { get; set; } // title
+        public string Title { get; } // title
 
         /// <summary>
         /// The "link" element
         /// </summary>
-        public string Link { get; set; } // link
+        public string Link { get; protected set; } // link
 
         /// <summary>
         /// Gets the underlying XElement in order to allow reading properties that are not available in the class itself
@@ -23,14 +23,6 @@
         public ParentTag Element { get; }
 
         internal abstract FeedItem ToFeedItem();
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BaseFeedItem"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        protected BaseFeedItem()
-        {
-        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BaseFeedItem"/> class.

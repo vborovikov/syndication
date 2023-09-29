@@ -4,13 +4,11 @@ using Brackets;
 
 namespace CodeHollow.FeedReader.Feeds.MediaRSS
 {
-
     /// <summary>
     /// A collection of media that are effectively the same content, yet different representations. For isntance: the same song recorded in both WAV and MP3 format.
     /// </summary>
-    public class MediaGroup
+    public record MediaGroup
     {
-        
         /// <summary>
         /// Gets the underlying XElement in order to allow reading properties that are not available in the class itself
         /// </summary>
@@ -31,7 +29,6 @@ namespace CodeHollow.FeedReader.Feeds.MediaRSS
         /// <summary>
         /// Media object
         /// </summary>
-        public ICollection<Media> Media { get; set; }
-
+        public ICollection<Media> Media { get; }
     }
 }

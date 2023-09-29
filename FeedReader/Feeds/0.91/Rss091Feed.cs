@@ -9,87 +9,87 @@
     /// Rss Feed according to Rss 0.91 specification:
     /// http://www.rssboard.org/rss-0-9-1-netscape
     /// </summary>
-    public class Rss091Feed : BaseFeed
+    public record Rss091Feed : BaseFeed
     {
         /// <summary>
         /// The required field "description"
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; }
 
         /// <summary>
         /// The required field "language"
         /// /// </summary>
-        public string Language { get; set; }
+        public string Language { get; }
 
         /// <summary>
         /// The "copyright" field
         /// </summary>
-        public string Copyright { get; set; }
+        public string Copyright { get; }
 
         /// <summary>
         /// The "docs" field
         /// </summary>
-        public string Docs { get; set; }
+        public string Docs { get; }
 
         /// <summary>
         /// The "image" element
         /// </summary>
-        public FeedImage Image { get; set; }
+        public FeedImage Image { get; }
 
         /// <summary>
         /// The "lastBuildDate" element
         /// </summary>
-        public string LastBuildDateString { get; set; }
+        public string LastBuildDateString { get; }
 
         /// <summary>
         /// The "lastBuildDate" as DateTime. Null if parsing failed or lastBuildDate is empty.
         /// </summary>
-        public DateTime? LastBuildDate { get; set; }
+        public DateTime? LastBuildDate { get; }
 
         /// <summary>
         /// The "managingEditor" field
         /// </summary>
-        public string ManagingEditor { get; set; }
+        public string ManagingEditor { get; }
 
         /// <summary>
         /// The "pubDate" field
         /// </summary>
-        public string PublishingDateString { get; set; }
+        public string PublishingDateString { get; }
 
         /// <summary>
         /// The "pubDate" field as DateTime. Null if parsing failed or pubDate is empty.
         /// </summary>
-        public DateTime? PublishingDate { get; set; }
+        public DateTime? PublishingDate { get; }
 
         /// <summary>
         /// The "rating" field
         /// </summary>
-        public string Rating { get; set; }
+        public string Rating { get; }
 
         /// <summary>
         /// All "day" elements in "skipDays"
         /// </summary>
-        public ICollection<string> SkipDays { get; set; }
+        public ICollection<string> SkipDays { get; }
 
         /// <summary>
         /// All "hour" elements in "skipHours"
         /// </summary>
-        public ICollection<string> SkipHours { get; set; }
+        public ICollection<string> SkipHours { get; }
 
         /// <summary>
         /// The "textInput" element
         /// </summary>
-        public FeedTextInput TextInput { get; set; }
+        public FeedTextInput TextInput { get; }
 
         /// <summary>
         /// The "webMaster" element
         /// </summary>
-        public string WebMaster { get; set; }
+        public string WebMaster { get; }
 
         /// <summary>
         /// All elements that start with "sy:"
         /// </summary>
-        public Syndication Sy { get; set; }
+        public Syndication Sy { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Rss091Feed"/> class.

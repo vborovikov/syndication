@@ -5,21 +5,12 @@
     /// <summary>
     /// Rss 1.0 Feed image according to specification: http://web.resource.org/rss/1.0/spec
     /// </summary>
-    public class Rss10FeedImage : FeedImage
+    public record Rss10FeedImage : FeedImage
     {
         /// <summary>
         /// The "about" attribute of the element
         /// </summary>
-        public string About { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Rss10FeedImage"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public Rss10FeedImage()
-            : base()
-        {
-        }
+        public string About { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Rss10FeedImage"/> class.

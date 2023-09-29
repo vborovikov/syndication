@@ -7,7 +7,7 @@
     /// <summary>
     /// BaseFeed object which contains the basic properties that each feed has.
     /// </summary>
-    public abstract class BaseFeed
+    public abstract record BaseFeed
     {
         /// <summary>
         /// creates the generic <see cref="Feed"/> object.
@@ -18,17 +18,17 @@
         /// <summary>
         /// The title of the feed
         /// </summary>
-        public string Title { get; set; }
+        public string Title { get; }
 
         /// <summary>
         /// The link (url) to the feed
         /// </summary>
-        public string Link { get; set; }
+        public string Link { get; protected set; }
 
         /// <summary>
         /// The items that are in the feed
         /// </summary>
-        public ICollection<BaseFeedItem> Items { get; set; }
+        public ICollection<BaseFeedItem> Items { get; }
 
         /// <summary>
         /// Gets the whole, original feed as string

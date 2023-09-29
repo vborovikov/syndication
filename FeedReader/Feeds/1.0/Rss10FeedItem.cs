@@ -5,36 +5,27 @@
     /// <summary>
     /// Rss 1.0 Feed Item according to specification: http://web.resource.org/rss/1.0/spec
     /// </summary>
-    public class Rss10FeedItem : BaseFeedItem
+    public record Rss10FeedItem : BaseFeedItem
     {
         /// <summary>
         /// The "about" attribute of the element
         /// </summary>
-        public string About { get; set; }
+        public string About { get; }
 
         /// <summary>
         /// The "description" field
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; }
 
         /// <summary>
         /// All elements starting with "dc:"
         /// </summary>
-        public DublinCore DC { get; set; }
+        public DublinCore DC { get; }
 
         /// <summary>
         /// All elements starting with "sy:"
         /// </summary>
-        public Syndication Sy { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Rss10FeedItem"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public Rss10FeedItem()
-            : base()
-        {
-        }
+        public Syndication Sy { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Rss10FeedItem"/> class.

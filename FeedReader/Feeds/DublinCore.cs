@@ -7,95 +7,87 @@
     /// <summary>
     /// The parsed "dc:" elements in a feed
     /// </summary>
-    public class DublinCore
+    public record DublinCore
     {
         /// <summary>
         /// The "title" element
         /// </summary>
-        public string Title { get; set; }
+        public string Title { get; }
 
         /// <summary>
         /// The "creator" element
         /// </summary>
-        public string Creator { get; set; }
+        public string Creator { get; }
 
         /// <summary>
         /// The "subject" element
         /// </summary>
-        public string Subject { get; set; }
+        public string Subject { get; }
 
         /// <summary>
         /// The "description" field
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; }
 
         /// <summary>
         /// The "publisher" element
         /// </summary>
-        public string Publisher { get; set; }
+        public string Publisher { get; }
 
         /// <summary>
         /// The "contributor" element
         /// </summary>
-        public string Contributor { get; set; }
+        public string Contributor { get; }
 
         /// <summary>
         /// The "date" element
         /// </summary>
-        public string DateString { get; set; }
+        public string DateString { get; }
 
         /// <summary>
         /// The "date" element as datetime. Null if parsing failed or date is empty.
         /// </summary>
-        public DateTime? Date { get; set; }
+        public DateTime? Date { get; }
 
         /// <summary>
         /// The "type" element
         /// </summary>
-        public string Type { get; set; }
+        public string Type { get; }
 
         /// <summary>
         /// The "format" element
         /// </summary>
-        public string Format { get; set; }
+        public string Format { get; }
 
         /// <summary>
         /// The "identifier" element
         /// </summary>
-        public string Identifier { get; set; }
+        public string Identifier { get; }
 
         /// <summary>
         /// The "source" element
         /// </summary>
-        public string Source { get; set; }
+        public string Source { get; }
 
         /// <summary>
         /// The "language" element
         /// </summary>
-        public string Language { get; set; }
+        public string Language { get; }
 
         /// <summary>
         /// The "rel" element
         /// </summary>
-        public string Relation { get; set; }
+        public string Relation { get; }
 
         /// <summary>
         /// The "coverage" element
         /// </summary>
-        public string Coverage { get; set; }
+        public string Coverage { get; }
 
         /// <summary>
         /// The "rights" element
         /// </summary>
-        public string Rights { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DublinCore"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public DublinCore()
-        {
-        }
+        public string Rights { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DublinCore"/> class.

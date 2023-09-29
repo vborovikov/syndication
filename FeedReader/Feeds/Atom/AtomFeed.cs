@@ -8,67 +8,67 @@
     /// <summary>
     /// Atom 1.0 feed object according to specification: https://validator.w3.org/feed/docs/atom.html
     /// </summary>
-    public class AtomFeed : BaseFeed
+    public record AtomFeed : BaseFeed
     {
         /// <summary>
         /// The "author" element
         /// </summary>
-        public AtomPerson Author { get; set; }
+        public AtomPerson Author { get; }
 
         /// <summary>
         /// All "category" elements
         /// </summary>
-        public ICollection<string> Categories { get; set; }
+        public ICollection<string> Categories { get; }
 
         /// <summary>
         /// The "contributor" element
         /// </summary>
-        public AtomPerson Contributor { get; set; }
+        public AtomPerson Contributor { get; }
 
         /// <summary>
         /// The "generator" element
         /// </summary>
-        public string Generator { get; set; }
+        public string Generator { get; }
 
         /// <summary>
         /// The "icon" element
         /// </summary>
-        public string Icon { get; set; }
+        public string Icon { get; }
 
         /// <summary>
         /// The "id" element
         /// </summary>
-        public string Id { get; set; }
+        public string Id { get; }
 
         /// <summary>
         /// The "logo" element
         /// </summary>
-        public string Logo { get; set; }
+        public string Logo { get; }
 
         /// <summary>
         /// The "rights" element
         /// </summary>
-        public string Rights { get; set; }
+        public string Rights { get; }
 
         /// <summary>
         /// The "subtitle" element
         /// </summary>
-        public string Subtitle { get; set; }
+        public string Subtitle { get; }
 
         /// <summary>
         /// The "updated" element as string
         /// </summary>
-        public string UpdatedDateString { get; set; }
+        public string UpdatedDateString { get; }
 
         /// <summary>
         /// The "updated" element as DateTime. Null if parsing failed of updatedDate is empty.
         /// </summary>
-        public DateTime? UpdatedDate { get; set; }
+        public DateTime? UpdatedDate { get; }
 
         /// <summary>
         /// All "link" elements
         /// </summary>
-        public ICollection<AtomLink> Links { get; set; }
+        public ICollection<AtomLink> Links { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AtomFeed"/> class.

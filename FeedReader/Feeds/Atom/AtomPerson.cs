@@ -5,30 +5,22 @@
     /// <summary>
     /// Atom 1.0 person element according to specification: https://validator.w3.org/feed/docs/atom.html
     /// </summary>
-    public class AtomPerson
+    public record AtomPerson
     {
         /// <summary>
         /// The "name" element
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; }
 
         /// <summary>
         /// The "email" element
         /// </summary>
-        public string EMail { get; set; }
+        public string EMail { get; }
 
         /// <summary>
         /// The "uri" element
         /// </summary>
-        public string Uri { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AtomPerson"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public AtomPerson()
-        {
-        }
+        public string Uri { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AtomPerson"/> class.

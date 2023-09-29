@@ -3,77 +3,67 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Xml.Linq;
     using Brackets;
 
     /// <summary>
     /// RSS 2.0 feed item accoring to specification: https://validator.w3.org/feed/docs/rss2.html
     /// </summary>
-    public class Rss20FeedItem : BaseFeedItem
+    public record Rss20FeedItem : BaseFeedItem
     {
         /// <summary>
         /// The "description" field of the feed item
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; }
 
         /// <summary>
         /// The "author" field of the feed item
         /// </summary>
-        public string Author { get; set; }
+        public string Author { get; }
 
         /// <summary>
         /// The "comments" field of the feed item
         /// </summary>
-        public string Comments { get; set; }
+        public string Comments { get; }
 
         /// <summary>
         /// The "enclosure" field
         /// </summary>
-        public FeedItemEnclosure Enclosure { get; set; }
+        public FeedItemEnclosure Enclosure { get; }
 
         /// <summary>
         /// The "guid" field
         /// </summary>
-        public string Guid { get; set; }
+        public string Guid { get; }
 
         /// <summary>
         /// The "pubDate" field
         /// </summary>
-        public string PublishingDateString { get; set; }
+        public string PublishingDateString { get; }
 
         /// <summary>
         /// The "pubDate" field as DateTime. Null if parsing failed or pubDate is empty.
         /// </summary>
-        public DateTime? PublishingDate { get; set; }
+        public DateTime? PublishingDate { get; }
 
         /// <summary>
         /// The "source" field
         /// </summary>
-        public FeedItemSource Source { get; set; }
+        public FeedItemSource Source { get; }
 
         /// <summary>
         /// All entries "category" entries
         /// </summary>
-        public ICollection<string> Categories { get; set; }
+        public ICollection<string> Categories { get; }
 
         /// <summary>
         /// The "content:encoded" field
         /// </summary>
-        public string Content { get; set; }
+        public string Content { get; }
 
         /// <summary>
         /// All elements starting with "dc:"
         /// </summary>
-        public DublinCore DC { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Rss20FeedItem"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public Rss20FeedItem()
-            : base()
-        {
-        }
+        public DublinCore DC { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Rss20FeedItem"/> class.

@@ -5,35 +5,27 @@
     /// <summary>
     /// default text input object for Rss 0.91, 0.92, 1.0, 2.0 and ATOM
     /// </summary>
-    public class FeedTextInput
+    public record FeedTextInput
     {
         /// <summary>
         /// The "title" element
         /// </summary>
-        public string Title { get; set; }
+        public string Title { get; }
 
         /// <summary>
         /// The "link" element
         /// </summary>
-        public string Link { get; set; }
+        public string Link { get; }
 
         /// <summary>
         /// The "description" field
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; }
 
         /// <summary>
         /// The "name" element
         /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FeedTextInput"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public FeedTextInput()
-        {
-        }
+        public string Name { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="FeedTextInput"/> class.

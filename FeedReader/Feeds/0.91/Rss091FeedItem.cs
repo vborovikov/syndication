@@ -6,31 +6,22 @@
     /// <summary>
     /// Rss 0.91 Feed Item according to specification: http://www.rssboard.org/rss-0-9-1-netscape#image
     /// </summary>
-    public class Rss091FeedItem : BaseFeedItem
+    public record Rss091FeedItem : BaseFeedItem
     {
         /// <summary>
         /// The "description" field
         /// </summary>
-        public string Description { get; set; } // description
+        public string Description { get; } // description
 
         /// <summary>
         /// The "pubDate" field
         /// </summary>
-        public string PublishingDateString { get; set; }
+        public string PublishingDateString { get; }
 
         /// <summary>
         /// The "pubDate" field as DateTime. Null if parsing failed or pubDate is empty.
         /// </summary>
-        public DateTime? PublishingDate { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Rss091FeedItem"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public Rss091FeedItem()
-            : base()
-        {
-        }
+        public DateTime? PublishingDate { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Rss091FeedItem"/> class.

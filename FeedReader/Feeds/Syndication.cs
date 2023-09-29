@@ -6,30 +6,22 @@
     /// <summary>
     /// The parsed syndication elements. Those are all elements that start with "sy:"
     /// </summary>
-    public class Syndication
+    public record Syndication
     {
         /// <summary>
         /// The "updatePeriod" element
         /// </summary>
-        public string UpdatePeriod { get; set; }
+        public string UpdatePeriod { get; }
 
         /// <summary>
         /// The "updateFrequency" element
         /// </summary>
-        public string UpdateFrequency { get; set; }
+        public string UpdateFrequency { get; }
 
         /// <summary>
         /// The "updateBase" element
         /// </summary>
-        public string UpdateBase { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Syndication"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public Syndication()
-        {
-        }
+        public string UpdateBase { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Syndication"/> class.

@@ -5,31 +5,22 @@
     /// <summary>
     /// Rss 0.91 Feed Image according to specification: http://www.rssboard.org/rss-0-9-1-netscape#image
     /// </summary>
-    public class Rss091FeedImage : FeedImage
+    public record Rss091FeedImage : FeedImage
     {
         /// <summary>
         /// The "description" element
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; }
 
         /// <summary>
         /// The "width" element
         /// </summary>
-        public int? Width { get; set; }
+        public int? Width { get; }
 
         /// <summary>
         /// The "height" element
         /// </summary>
-        public int? Height { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Rss091FeedImage"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public Rss091FeedImage()
-            : base()
-        {
-        }
+        public int? Height { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Rss091FeedImage"/> class.

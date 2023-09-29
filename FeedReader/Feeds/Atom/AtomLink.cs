@@ -5,45 +5,37 @@
     /// <summary>
     /// Atom 1.0 link according to specification: https://validator.w3.org/feed/docs/atom.html#link
     /// </summary>
-    public class AtomLink
+    public record AtomLink
     {
         /// <summary>
         /// The "href" element
         /// </summary>
-        public string Href { get; set; }
+        public string Href { get; }
 
         /// <summary>
         /// The "rel" element
         /// </summary>
-        public string Relation { get; set; } // rel
+        public string Relation { get; } // rel
 
         /// <summary>
         /// The "type" element
         /// </summary>
-        public string LinkType { get; set; } // type
+        public string LinkType { get; } // type
 
         /// <summary>
         /// The "hreflang" element
         /// </summary>
-        public string HrefLanguage { get; set; } // hreflang
+        public string HrefLanguage { get; } // hreflang
 
         /// <summary>
         /// The "title" element
         /// </summary>
-        public string Title { get; set; }
+        public string Title { get; }
 
         /// <summary>
         /// The "length" elemnt as int
         /// </summary>
-        public int? Length { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AtomLink"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public AtomLink()
-        {
-        }
+        public int? Length { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AtomLink"/> class.

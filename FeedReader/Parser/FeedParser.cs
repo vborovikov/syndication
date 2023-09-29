@@ -119,27 +119,5 @@
 
             return encoding;
         }
-
-        /// <summary>
-        /// removes some characters at the beginning of the document. These shouldn't be there,
-        /// but unfortunately they are sometimes there. If they are not removed - xml parsing would fail.
-        /// </summary>
-        /// <param name="feedContent">rss feed content</param>
-        /// <returns>cleaned up rss feed content</returns>
-        private static string RemoveWrongChars(string feedContent)
-        {
-            // replaces all control characters except CR LF (\r\n) and TAB.
-            for (int charCode = 0; charCode <= 31; charCode++)
-            {
-                if (charCode == 0x0D || charCode == 0x0A || charCode == 0x09) continue;
-
-                feedContent = feedContent.Replace(((char)charCode).ToString(), string.Empty);
-            }
-
-            feedContent = feedContent.Replace(((char)127).ToString(), string.Empty);   // replace DEL
-            feedContent = feedContent.Replace(((char)65279).ToString(), string.Empty); // replaces special char, fixes issues with at least one feed
-
-            return feedContent.Trim();
-        }
     }
 }

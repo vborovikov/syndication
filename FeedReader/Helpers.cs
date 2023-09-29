@@ -245,13 +245,9 @@
             if (!type.Contains("application/rss") && !type.Contains("application/atom"))
                 return null;
 
-            HtmlFeedLink hfl = new HtmlFeedLink();
             string title = GetAttributeFromLinkTag("title", linkTag);
             string href = GetAttributeFromLinkTag("href", linkTag);
-            hfl.Title = title;
-            hfl.Url = href;
-            hfl.FeedType = type.Contains("rss") ? FeedType.Rss : FeedType.Atom;
-            return hfl;
+            return new(title, href, type.Contains("rss") ? FeedType.Rss : FeedType.Atom);
         }
 
         /// <summary>

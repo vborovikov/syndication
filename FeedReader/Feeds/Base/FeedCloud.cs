@@ -1,45 +1,36 @@
 ﻿namespace CodeHollow.FeedReader.Feeds
 {
-    using System.Xml.Linq;
     using Brackets;
 
     /// <summary>
     /// Cloud object according to Rss 2.0 specification: https://validator.w3.org/feed/docs/rss2.html#ltcloudgtSubelementOfLtchannelgt
     /// </summary>
-    public class FeedCloud
+    public record FeedCloud
     {
         /// <summary>
         /// The "domain" element
         /// </summary>
-        public string Domain { get; set; }
+        public string Domain { get; }
 
         /// <summary>
         /// The "port" element
         /// </summary>
-        public string Port { get; set; }
+        public string Port { get; }
 
         /// <summary>
         /// The "path" element
         /// </summary>
-        public string Path { get; set; }
+        public string Path { get; }
 
         /// <summary>
         /// The "registerProcedure" element
         /// </summary>
-        public string RegisterProcedure { get; set; }
+        public string RegisterProcedure { get; }
 
         /// <summary>
         /// The "protocol" element
         /// </summary>
-        public string Protocol { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FeedCloud"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public FeedCloud()
-        {
-        }
+        public string Protocol { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="FeedCloud"/> class.

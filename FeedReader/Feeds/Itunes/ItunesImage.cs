@@ -5,7 +5,7 @@
     /// <summary>
     /// The itunes:image xml element
     /// </summary>
-    public class ItunesImage
+    public record ItunesImage
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ItunesImage"/> class.
@@ -13,7 +13,7 @@
         /// <param name="image">The itunes:image element</param>
         public ItunesImage(Tag image)
         {
-            Href = image.GetAttributeValue("href");
+            this.Href = image.GetAttributeValue("href");
         }
 
         /// <summary>

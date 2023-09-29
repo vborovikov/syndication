@@ -5,30 +5,22 @@
     /// <summary>
     /// feed image object that is used in feed (rss 0.91, 2.0, atom, ...)
     /// </summary>
-    public class FeedImage
+    public record FeedImage
     {
         /// <summary>
         /// The "title" element
         /// </summary>
-        public string Title { get; set; }
+        public string Title { get; }
 
         /// <summary>
         /// The "url" element
         /// </summary>
-        public string Url { get; set; }
+        public string Url { get; }
 
         /// <summary>
         /// The "link" element
         /// </summary>
-        public string Link { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FeedImage"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public FeedImage()
-        {
-        }
+        public string Link { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="FeedImage"/> class.

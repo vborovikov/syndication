@@ -6,21 +6,12 @@
     /// <summary>
     /// Rss 0.92 feed according to specification: http://backend.userland.com/rss092
     /// </summary>
-    public class Rss092Feed : Rss091Feed
+    public record Rss092Feed : Rss091Feed
     {
         /// <summary>
         /// The "cloud" field
         /// </summary>
-        public FeedCloud Cloud { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Rss092Feed"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        public Rss092Feed()
-            : base()
-        {
-        }
+        public FeedCloud Cloud { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Rss092Feed"/> class.
@@ -50,7 +41,6 @@
         public override Feed ToFeed()
         {
             var feed = base.ToFeed();
-            feed.SpecificFeed = this;
             feed.Type = FeedType.Rss_0_92;
             return feed;
         }
