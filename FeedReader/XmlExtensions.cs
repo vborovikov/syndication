@@ -18,7 +18,7 @@ static class XmlExtensions
 
     public static Tag Tag(this ParentTag parent, string name) => parent is null ? null : Find<Tag>(parent.GetEnumerator(), t => t.Name == name);
 
-    public static Attribute Attribute(this Tag tag, string name) => tag is null ? null : FindAttribute(tag.Attributes.GetEnumerator(), name);
+    public static Attribute Attribute(this Tag tag, string name) => tag is null ? null : FindAttribute(tag.EnumerateAttributes(), name);
 
     public static string GetValue(this Element element) =>
         element is null ? null :
