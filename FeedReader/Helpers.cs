@@ -1,15 +1,15 @@
 ﻿namespace CodeHollow.FeedReader
 {
-    using Feeds.MediaRSS;
     using System;
     using System.Collections.Generic;
     using System.Globalization;
     using System.Net;
     using System.Net.Http;
     using System.Text;
-    using System.Text.RegularExpressions;
     using System.Threading;
     using System.Threading.Tasks;
+    using Brackets;
+    using Feeds.MediaRSS;
 
     /// <summary>
     /// static class with helper functions
@@ -239,15 +239,12 @@
         /// <returns>Parsed HtmlFeedLink</returns>
         public static HtmlFeedLink GetFeedLinkFromLinkTag(string input)
         {
-            string linkTag = input.HtmlDecode();
-            string type = GetAttributeFromLinkTag("type", linkTag).ToLower();
-
-            if (!type.Contains("application/rss") && !type.Contains("application/atom"))
+            var html = Document.Html.Parse(input);
+            var tag = html.Find<Tag>(t => t.Name.Equals("link", StringComparison.OrdinalIgnoreCase));
+            if (tag is null)
                 return null;
 
-            string title = GetAttributeFromLinkTag("title", linkTag);
-            string href = GetAttributeFromLinkTag("href", linkTag);
-            return new(title, href, type.Contains("rss") ? FeedType.Rss : FeedType.Atom);
+            return GetFeedLinkFromLinkTag(tag);
         }
 
         /// <summary>
@@ -261,33 +258,56 @@
             // <link rel="alternate" type="application/rss+xml" title="Microsoft Bot Framework Blog" href="http://blog.botframework.com/feed.xml">
             // <link rel="alternate" type="application/atom+xml" title="Aktuelle News von heise online" href="https://www.heise.de/newsticker/heise-atom.xml">
 
-            Regex rex = new Regex("<link[^>]*rel=\"alternate\"[^>]*>", RegexOptions.Singleline);
+            var html = Document.Html.Parse(htmlContent);
+            var links = html.Find("/html/head/link[@rel='alternate']");
 
-            List<HtmlFeedLink> result = new List<HtmlFeedLink>();
-
-            foreach (Match m in rex.Matches(htmlContent))
+            var result = new List<HtmlFeedLink>();
+            foreach (var link in links)
             {
-                var hfl = GetFeedLinkFromLinkTag(m.Value);
-                if (hfl != null)
-                    result.Add(hfl);
+                if (link is Tag tag)
+                {
+                    var hfl = GetFeedLinkFromLinkTag(tag);
+                    if (hfl is not null)
+                    {
+                        result.Add(hfl);
+                    }
+                }
             }
-
             return result;
         }
 
-        /// <summary>
-        /// reads an attribute from an html tag
-        /// </summary>
-        /// <param name="attribute">name of the attribute, e.g. title</param>
-        /// <param name="htmlTag">the html tag, e.g. &lt;link title="my title"&gt;</param>
-        /// <returns>the value of the attribute, e.g. my title</returns>
-        private static string GetAttributeFromLinkTag(string attribute, string htmlTag)
+        private static HtmlFeedLink GetFeedLinkFromLinkTag(Tag link)
         {
-            var res = Regex.Match(htmlTag, attribute + "\\s*=\\s*\"(?<val>[^\"]*)\"", RegexOptions.IgnoreCase & RegexOptions.IgnorePatternWhitespace);
+            const StringComparison cmp = StringComparison.OrdinalIgnoreCase;
 
-            if (res.Groups.Count > 1)
-                return res.Groups[1].Value;
-            return string.Empty;
+            var type = string.Empty;
+            var title = string.Empty;
+            var href = string.Empty;
+
+            foreach (var attr in link.EnumerateAttributes())
+            {
+                if (attr.Name.Equals("type", cmp))
+                {
+                    type = attr.ToString();
+                }
+                else if (attr.Name.Equals("title", cmp))
+                {
+                    title = WebUtility.HtmlDecode(attr.ToString());
+                }
+                else if (attr.Name.Equals("href", cmp))
+                {
+                    href = attr.ToString();
+                }
+            }
+
+            var feedType =
+                type.Contains("application/rss", cmp) ? FeedType.Rss :
+                type.Contains("application/atom", cmp) ? FeedType.Atom :
+                FeedType.Unknown;
+            if (feedType == FeedType.Unknown || string.IsNullOrWhiteSpace(href))
+                return null;
+
+            return new(title, href, feedType);
         }
     }
 }
