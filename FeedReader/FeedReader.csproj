@@ -2,55 +2,24 @@
 
   <PropertyGroup>
     <TargetFrameworks>net7.0</TargetFrameworks>
-	  <Title>CodeHollow.FeedReader</Title>
-    <Authors>Armin Reiter</Authors>
-    <Company>Reiter ITS</Company>
-    <Product>CodeHollow.FeedReader</Product>
+    <AssemblyName>Brackets.FeedReader</AssemblyName>
+    <RootNamespace>Brackets.FeedReader</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Brackets.FeedReader</PackageId>
+    <Title>Brackets.FeedReader</Title>
     <Description>RSS and ATOM feed reader/parser. FeedReader is a .net standard 1.3 library used for reading and parsing RSS and ATOM feeds. Supports RSS 0.91, 0.92, 1.0, 2.0 and ATOM. Library tested with multiple languages and feeds.</Description>
-	  <Copyright>Copyright 2023</Copyright>
-    <PackageLicenseUrl></PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/arminreiter/FeedReader/</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/arminreiter/FeedReader/</RepositoryUrl>
-    <Version>1.2.6</Version>
-    <PackageReleaseNotes>fix issue</PackageReleaseNotes>
     <PackageTags>feed rss atom</PackageTags>
-    <AssemblyName>CodeHollow.FeedReader</AssemblyName>
-    <RootNamespace>CodeHollow.FeedReader</RootNamespace>
-    <RepositoryType>git</RepositoryType>
-    <AssemblyVersion>1.2.6.0</AssemblyVersion>
-    <FileVersion>1.2.6.0</FileVersion>
-    <PackageIcon>icon.png</PackageIcon>
-    <PackageIconUrl>https://raw.github.com/codehollow/FeedReader/master/FeedReader/icon.png</PackageIconUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/vborovikov/feed</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/vborovikov/feed.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
     <PackageReadmeFile>README.MD</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl>https://raw.github.com/vborovikov/feed/master/FeedReader/icon.png</PackageIconUrl>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.3|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard1.3\CodeHollow.FeedReader.xml</DocumentationFile>
-    <NoWarn></NoWarn>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net452|AnyCPU'">
-    <DocumentationFile>bin\Debug\net452\CodeHollow.FeedReader.xml</DocumentationFile>
-    <NoWarn></NoWarn>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp2.1|AnyCPU'">
-    <DocumentationFile>bin\Debug\netcoreapp2.1\CodeHollow.FeedReader.xml</DocumentationFile>
-    <UseNETCoreGenerator>true</UseNETCoreGenerator>
-    <NoWarn></NoWarn>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.3|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard1.3\CodeHollow.FeedReader.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp2.1|AnyCPU'">
-    <DocumentationFile>bin\Release\netcoreapp2.1\CodeHollow.FeedReader.xml</DocumentationFile>
-    <UseNETCoreGenerator>true</UseNETCoreGenerator>
-    <NoWarn></NoWarn>
-  </PropertyGroup>
-  
   <ItemGroup>
     <None Include="..\LICENSE">
       <Pack>True</Pack>
@@ -61,11 +30,11 @@
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
-  
+
   <ItemGroup>
     <None Include="icon.png" Pack="True" PackagePath="\" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <PackageReference Include="Brackets" Version="0.4.2-beta" />
   </ItemGroup>
