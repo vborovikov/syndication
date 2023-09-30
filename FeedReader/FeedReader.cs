@@ -69,19 +69,6 @@
         /// Opens a webpage and reads all feed urls from it (link rel="alternate" type="application/...")
         /// </summary>
         /// <param name="url">the url of the page</param>
-        /// <returns>a list of links including the type and title, an empty list if no links are found</returns>
-        /// <example>FeedReader.GetFeedUrlsFromUrl("codehollow.com"); // returns a list of all available feeds at
-        /// https://codehollow.com </example>
-        [Obsolete("Use GetFeedUrlsFromUrlAsync method")]
-        public static IEnumerable<HtmlFeedLink> GetFeedUrlsFromUrl(string url)
-        {
-            return GetFeedUrlsFromUrlAsync(url).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// Opens a webpage and reads all feed urls from it (link rel="alternate" type="application/...")
-        /// </summary>
-        /// <param name="url">the url of the page</param>
         /// <param name="cancellationToken">token to cancel operation</param>
         /// /// <param name="autoRedirect">autoredirect if page is moved permanently</param>
         /// <returns>a list of links including the type and title, an empty list if no links are found</returns>
@@ -112,32 +99,11 @@
         /// Opens a webpage and reads all feed urls from it (link rel="alternate" type="application/...")
         /// </summary>
         /// <param name="url">the url of the page</param>
-        /// <returns>a list of links, an empty list if no links are found</returns>
-        [Obsolete("Use the ParseFeedUrlsAsStringAsync method")]
-        public static string[] ParseFeedUrlsAsString(string url)
-        {
-            return ParseFeedUrlsAsStringAsync(url).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// Opens a webpage and reads all feed urls from it (link rel="alternate" type="application/...")
-        /// </summary>
-        /// <param name="url">the url of the page</param>
         /// <param name="cancellationToken">token to cancel operation</param>
         /// <returns>a list of links, an empty list if no links are found</returns>
-        public static async Task<string[]> ParseFeedUrlsAsStringAsync(string url, CancellationToken cancellationToken)
+        public static async Task<string[]> ParseFeedUrlsAsStringAsync(string url, CancellationToken cancellationToken = default)
         {
             return (await GetFeedUrlsFromUrlAsync(url, cancellationToken).ConfigureAwait(false)).Select(x => x.Url).ToArray();
-        }
-
-        /// <summary>
-        /// Opens a webpage and reads all feed urls from it (link rel="alternate" type="application/...")
-        /// </summary>
-        /// <param name="url">the url of the page</param>
-        /// <returns>a list of links, an empty list if no links are found</returns>
-        public static Task<string[]> ParseFeedUrlsAsStringAsync(string url)
-        {
-            return ParseFeedUrlsAsStringAsync(url, CancellationToken.None);
         }
 
         /// <summary>
@@ -149,18 +115,6 @@
         {
             // left the method here for downward compatibility
             return Helpers.ParseFeedUrlsFromHtml(htmlContent);
-        }
-
-        /// <summary>
-        /// reads a feed from an url. the url must be a feed. Use ParseFeedUrlsFromHtml to
-        /// parse the feeds from a url which is not a feed.
-        /// </summary>
-        /// <param name="url">the url to a feed</param>
-        /// <returns>parsed feed</returns>
-        [Obsolete("Use ReadAsync method")]
-        public static Feed Read(string url)
-        {
-            return ReadAsync(url).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -208,33 +162,10 @@
         /// <param name="filePath">the path to the feed file</param>
         /// <param name="cancellationToken">token to cancel operation</param>
         /// <returns>parsed feed</returns>
-        public static async Task<Feed> ReadFromFileAsync(string filePath, CancellationToken cancellationToken)
+        public static async Task<Feed> ReadFromFileAsync(string filePath, CancellationToken cancellationToken = default)
         {
-            byte[] result;
-#if NETCOREAPP2_1
-            {
-                result = await System.IO.File.ReadAllBytesAsync(filePath, cancellationToken).ConfigureAwait(false);
-            }
-#else
-            {
-                using (var stream = System.IO.File.Open(filePath, System.IO.FileMode.Open))
-                {
-                    result = new byte[stream.Length];
-                    await stream.ReadAsync(result, 0, (int)stream.Length, cancellationToken).ConfigureAwait(false);
-                }
-            }
-            #endif
+            byte[] result = await System.IO.File.ReadAllBytesAsync(filePath, cancellationToken).ConfigureAwait(false);
             return ReadFromByteArray(result);
-        }
-
-        /// <summary>
-        /// reads a feed from a file
-        /// </summary>
-        /// <param name="filePath">the path to the feed file</param>
-        /// <returns>parsed feed</returns>
-        public static Task<Feed> ReadFromFileAsync(string filePath)
-        {
-            return ReadFromFileAsync(filePath, CancellationToken.None);
         }
 
         /// <summary>
