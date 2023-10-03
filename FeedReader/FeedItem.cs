@@ -26,39 +26,39 @@
         /// <summary>
         /// The description of the feed item
         /// </summary>
-        public string Description { get; internal set; }
+        public string Description { get; internal init; }
 
         /// <summary>
         /// The publishing date as string. This is filled, if a publishing
         /// date is set - independent if it is a correct date or not
         /// </summary>
-        public string PublishingDateString { get; internal set; }
+        public string PublishingDateString { get; internal init; }
 
         /// <summary>
         /// The published date as datetime. Null if parsing failed or if
         /// no publishing date is set. If null, please check <see cref="PublishingDateString"/> property.
         /// </summary>
-        public DateTime? PublishingDate { get; internal set; }
+        public DateTime? PublishingDate { get; internal init; }
 
         /// <summary>
         /// The author of the feed item
         /// </summary>
-        public string Author { get; internal set; }
+        public string Author { get; internal init; }
 
         /// <summary>
         /// The id of the feed item
         /// </summary>
-        public string Id { get; internal set; }
+        public string Id { get; internal init; }
 
         /// <summary>
         /// The categories of the feeditem
         /// </summary>
-        public ICollection<string> Categories { get; internal set; }
+        public ICollection<string> Categories { get; internal init; }
 
         /// <summary>
         /// The content of the feed item
         /// </summary>
-        public string Content { get; internal set; }
+        public string Content { get; internal init; }
 
         /// <summary>
         /// The parsed feed item element - e.g. of type <see cref="Rss20FeedItem"/> which contains

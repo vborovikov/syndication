@@ -45,20 +45,15 @@
         /// <inheritdoc/>
         internal override FeedItem ToFeedItem()
         {
-            FeedItem f = new FeedItem(this);
-
-            if (this.DC != null)
+            var f = new FeedItem(this)
             {
-                f.Author = this.DC.Creator;
-                f.Content = this.DC.Description;
-                f.PublishingDate = this.DC.Date;
-                f.PublishingDateString = this.DC.DateString;
-            }
-
-            f.Description = this.Description;
-            if (string.IsNullOrEmpty(f.Content))
-                f.Content = this.Description;
-            f.Id = this.Link;
+                Id = this.Link,
+                Description = this.Description,
+                Content = this.DC?.Description ?? this.Description,
+                Author = this.DC?.Creator,
+                PublishingDate = this.DC?.Date,
+                PublishingDateString = this.DC?.DateString
+            };
 
             return f;
         }
