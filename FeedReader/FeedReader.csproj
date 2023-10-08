@@ -36,6 +36,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Brackets" Version="0.4.7-beta" />
+    <PackageReference Include="Brackets" Version="0.4.10-beta" />
   </ItemGroup>
 </Project>

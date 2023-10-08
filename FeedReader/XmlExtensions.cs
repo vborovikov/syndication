@@ -20,10 +20,23 @@ static class XmlExtensions
 
     public static Attribute Attribute(this Tag tag, string name) => tag is null ? null : FindAttribute(tag.EnumerateAttributes(), name);
 
-    public static string GetValue(this Element element) =>
-        element is null ? null :
-        element.TryGetValue<string>(out var str) ? WebUtility.HtmlDecode(str) :
-        null;
+    public static string GetValue(this Element element)
+    {
+        if (element is null)
+            return null;
+
+        var child = element.GetSingleChild();
+        if (child != null)
+        {
+            element = child;
+        }
+
+        return element switch
+        {
+            Section section => section.ToString(), // don't decode section
+            _ => element.TryGetValue<string>(out var str) ? WebUtility.HtmlDecode(str) : null,
+        };
+    }
 
     public static string GetValue(this ParentTag parent, string tagName) => parent.Tag(tagName)?.GetValue();
 
@@ -38,6 +51,21 @@ static class XmlExtensions
 
     public static IEnumerable<ParentTag> GetRoots(this ParentTag parent, string name) =>
         Enumerate<ParentTag>(parent.GetEnumerator(), t => t.Name == name);
+
+    private static Element GetSingleChild(this Element element)
+    {
+        if (element is not ParentTag parent)
+            return null;
+        var elements = parent.GetEnumerator();
+        if (!elements.MoveNext())
+            return null;
+
+        var child = elements.Current;
+        if (elements.MoveNext())
+            return null;
+
+        return child;
+    }
 
     private static IEnumerable<TElement> Enumerate<TElement>(Element.Enumerator elements, Predicate<TElement> match)
     {

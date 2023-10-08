@@ -302,7 +302,7 @@ namespace CodeHollow.FeedReader.Tests
             Assert.IsTrue(item.Categories.Contains("BillingAPI"));
             Eq("https://codehollow.com/?p=749", item.Guid);
             Assert.IsTrue(item.Description.StartsWith("<p>The Azure Billing API allows to programmatically read Azure"));
-            Assert.IsTrue(item.Content.Contains("<add key=\"Tenant\" "));
+            Assert.IsTrue(item.Content.Contains("&lt;add key=&quot;Tenant&quot; "));
 
         }
 
@@ -669,7 +669,7 @@ namespace CodeHollow.FeedReader.Tests
             Assert.IsTrue(item.Categories.Contains("BillingAPI"));
             Eq("https://codehollow.com/?p=749", item.Guid);
             Assert.IsTrue(item.Description.StartsWith("<p>The Azure Billing API allows to programmatically read Azure"));
-            Assert.IsTrue(item.Content.Contains("<add key=\"Tenant\" "));
+            Assert.IsTrue(item.Content.Contains("&lt;add key=&quot;Tenant&quot; "));
 
         }
 

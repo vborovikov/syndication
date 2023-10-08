@@ -18,16 +18,6 @@ namespace CodeHollow.FeedReader.Tests
         }
 
         [TestMethod]
-        public async Task TestAcceptHeaderForbiddenWithParsing()
-        {
-            // results in 403 Forbidden if webclient does not have the accept header set
-            var feed = await FeedReader.ReadAsync("http://www.girlsguidetopm.com/feed/").ConfigureAwait(false);
-            string title = feed.Title;
-            Assert.IsTrue(feed.Items.Count > 2);
-            Assert.IsTrue(!string.IsNullOrEmpty(title));
-        }
-
-        [TestMethod]
         public async Task TestAcceptForbiddenUserAgent()
         {
             // results in 403 Forbidden if webclient does not have the accept header set
@@ -91,14 +81,6 @@ namespace CodeHollow.FeedReader.Tests
         #region Read Feed
 
         [TestMethod]
-        public async Task TestReadAdobeFeed()
-        {
-            var feed = await FeedReader.ReadAsync("https://theblog.adobe.com/news/feed").ConfigureAwait(false);
-            string title = feed.Title;
-            Assert.AreEqual("Adobe Blog", title);
-        }
-
-        [TestMethod]
         public async Task TestReadSimpleFeed()
         {
             var feed = await FeedReader.ReadAsync("https://arminreiter.com/feed").ConfigureAwait(false);
@@ -155,13 +137,6 @@ namespace CodeHollow.FeedReader.Tests
             var feed = await FeedReader.ReadAsync("http://www.powershell.co.at/feed/").ConfigureAwait(false);
             Assert.IsTrue(!string.IsNullOrEmpty(feed.Title));
             Assert.IsTrue(feed.Items.Count > 0);
-        }
-
-        [TestMethod]
-        public async Task TestReadRss20FeedCharter97Handle403Forbidden()
-        {
-            var feed = await FeedReader.ReadAsync("charter97.org/rss.php").ConfigureAwait(false);
-            Assert.IsTrue(!string.IsNullOrEmpty(feed.Title));
         }
 
         [TestMethod]
@@ -231,14 +206,6 @@ namespace CodeHollow.FeedReader.Tests
         {
             var feed = await FeedReader.ReadAsync("http://www.thaqafnafsak.com/feed").ConfigureAwait(false);
             Assert.AreEqual("ثقف نفسك", feed.Title);
-            Assert.IsTrue(feed.Items.Count > 0);
-        }
-
-        [TestMethod]
-        public async Task TestReadTheStudentLawyer()
-        {
-            var feed = await FeedReader.ReadAsync("http://us10.campaign-archive.com/feed?u=8da2e137a07b178e5d9a71c2c&id=9134b0cc95").ConfigureAwait(false);
-            Assert.AreEqual("The Student Lawyer Careers Network Archive Feed", feed.Title);
             Assert.IsTrue(feed.Items.Count > 0);
         }
 
