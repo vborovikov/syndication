@@ -8,16 +8,6 @@
     internal static class Extensions
     {
         /// <summary>
-        /// Decodes a html encoded string
-        /// </summary>
-        /// <param name="text">html text</param>
-        /// <returns>decoded html</returns>
-        public static string HtmlDecode(this string text)
-        {
-            return System.Net.WebUtility.HtmlDecode(text);
-        }
-
-        /// <summary>
         /// Determines whether this string and another string object have the same value.
         /// </summary>
         /// <param name="text">the string</param>

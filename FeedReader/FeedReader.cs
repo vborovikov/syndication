@@ -42,7 +42,7 @@
         /// <example>GetAbsoluteFeedUrl("codehollow.com", myRelativeFeedLink);</example>
         public static HtmlFeedLink GetAbsoluteFeedUrl(string pageUrl, HtmlFeedLink feedLink)
         {
-            string tmpUrl = feedLink.Url.HtmlDecode();
+            string tmpUrl = feedLink.Url;
             pageUrl = GetAbsoluteUrl(pageUrl);
 
             if (tmpUrl.StartsWith("http://", StringComparison.OrdinalIgnoreCase)
@@ -56,10 +56,10 @@
             {
                 if (finalUri.IsAbsoluteUri)
                 {
-                    return new HtmlFeedLink(feedLink.Title.HtmlDecode(), finalUri.ToString(), feedLink.FeedType);
+                    return new HtmlFeedLink(feedLink.Title, finalUri.ToString(), feedLink.FeedType);
                 }
                 else if (Uri.TryCreate(pageUrl + '/' + tmpUrl.TrimStart('/'), UriKind.Absolute, out finalUri))
-                    return new HtmlFeedLink(feedLink.Title.HtmlDecode(), finalUri.ToString(), feedLink.FeedType);
+                    return new HtmlFeedLink(feedLink.Title, finalUri.ToString(), feedLink.FeedType);
             }
             
             throw new UrlNotFoundException($"Could not get the absolute url out of {pageUrl} and {feedLink.Url}");
