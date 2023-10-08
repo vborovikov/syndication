@@ -82,7 +82,7 @@
             this.Source = new FeedItemSource(item.GetElement("source"));
 
             var categories = item.GetElements("category");
-            this.Categories = categories.Select(x => x.GetValue()).ToList();
+            this.Categories = categories.Select(x => x.GetValue()).ToArray();
 
             this.Guid = item.GetValue("guid");
             this.Description = item.GetValue("description");

@@ -126,7 +126,7 @@
             this.ParseDates(this.Language, this.PublishingDateString, this.LastBuildDateString);
 
             var categories = channel.GetElements("category");
-            this.Categories = categories.Select(x => x.GetValue()).ToList();
+            this.Categories = categories.Select(x => x.GetValue()).ToArray();
 
             this.Sy = new Syndication(channel);
             this.Generator = channel.GetValue("generator");
@@ -137,11 +137,11 @@
 
             var skipHours = channel.GetElement("skipHours");
             if (skipHours != null)
-                this.SkipHours = skipHours.GetElements("hour")?.Select(x => x.GetValue()).ToList();
+                this.SkipHours = skipHours.GetElements("hour")?.Select(x => x.GetValue()).ToArray();
 
             var skipDays = channel.GetElement("skipDays");
             if (skipDays != null)
-                this.SkipDays = skipDays.GetElements("day")?.Select(x => x.GetValue()).ToList();
+                this.SkipDays = skipDays.GetElements("day")?.Select(x => x.GetValue()).ToArray();
 
             var items = channel.GetRoots("item");
 

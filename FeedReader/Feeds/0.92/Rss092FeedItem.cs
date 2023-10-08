@@ -36,7 +36,7 @@
             this.Source = new FeedItemSource(item.Root("source"));
 
             var categories = item.GetElements("category");
-            this.Categories = categories.Select(x => x.GetValue()).ToList();
+            this.Categories = categories.Select(x => x.GetValue()).ToArray();
         }
     }
 }

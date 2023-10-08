@@ -93,7 +93,7 @@
             this.Author = new AtomPerson(feed.GetElement("author"));
 
             var categories = feed.GetElements("category");
-            this.Categories = categories.Select(x => x.GetValue()).ToList();
+            this.Categories = categories.Select(x => x.GetValue()).ToArray();
 
             this.Contributor = new AtomPerson(feed.GetElement("contributor"));
             this.Generator = feed.GetValue("generator");
@@ -103,7 +103,7 @@
             this.Rights = feed.GetValue("rights");
             this.Subtitle = feed.GetValue("subtitle");
 
-            this.Links = feed.GetElements("link").Select(x => new AtomLink(x)).ToList();
+            this.Links = feed.GetElements("link").Select(x => new AtomLink(x)).ToArray();
 
             this.UpdatedDateString = feed.GetValue("updated");
             this.UpdatedDate = Helpers.TryParseDateTime(this.UpdatedDateString);

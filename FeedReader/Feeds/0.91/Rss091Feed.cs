@@ -133,11 +133,11 @@
 
             var skipHours = channel.GetElement("skipHours");
             if (skipHours != null)
-                this.SkipHours = skipHours.GetElements("hour")?.Select(x => x.GetValue()).ToList();
+                this.SkipHours = skipHours.GetElements("hour")?.Select(x => x.GetValue()).ToArray();
 
             var skipDays = channel.GetElement("skipDays");
             if (skipDays != null)
-                this.SkipDays = skipDays.GetElements("day")?.Select(x => x.GetValue()).ToList();
+                this.SkipDays = skipDays.GetElements("day")?.Select(x => x.GetValue()).ToArray();
 
             var items = channel.GetRoots("item");
 

@@ -88,7 +88,7 @@ namespace CodeHollow.FeedReader.Feeds
             this.Author = new AtomPerson(item.GetElement("author"));
 
             var categories = item.GetElements("category");
-            this.Categories = categories.Select(x => x.GetAttributeValue("term")).ToList();
+            this.Categories = categories.Select(x => x.GetAttributeValue("term")).ToArray();
 
             this.Content = item.GetValue("content");
             this.Contributor = new AtomPerson(item.GetElement("contributor"));
@@ -96,7 +96,7 @@ namespace CodeHollow.FeedReader.Feeds
 
             this.PublishedDateString = item.GetValue("published");
             this.PublishedDate = Helpers.TryParseDateTime(this.PublishedDateString);
-            this.Links = item.GetElements("link").Select(x => new AtomLink(x)).ToList();
+            this.Links = item.GetElements("link").Select(x => new AtomLink(x)).ToArray();
 
             this.Rights = item.GetValue("rights");
             this.Source = item.GetValue("source");

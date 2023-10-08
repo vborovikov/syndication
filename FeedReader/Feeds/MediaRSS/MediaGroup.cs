@@ -23,7 +23,7 @@ namespace CodeHollow.FeedReader.Feeds.MediaRSS
         {
             this.Element = element;
             var media = element.GetRoots("media:content");
-            this.Media = media.Select(x => new Media(x)).ToList();
+            this.Media = media.Select(x => new Media(x)).ToArray();
         }
 
         /// <summary>
