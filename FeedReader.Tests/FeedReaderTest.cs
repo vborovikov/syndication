@@ -76,6 +76,13 @@ namespace CodeHollow.FeedReader.Tests
 
         }
 
+        [TestMethod]
+        public void GetAbsoluteFeedUrl_RelativePath_Concat()
+        {
+            var feedLink = FeedReader.GetAbsoluteFeedUrl("https://devleader.substack.com/", new HtmlFeedLink("Dev Leader", "/feed", FeedType.Rss_2_0));
+            Assert.AreEqual("https://devleader.substack.com/feed", feedLink.Url);
+        }
+
         #endregion
 
         #region Read Feed

@@ -29,7 +29,8 @@
         /// <example>GetUrl("codehollow.com"); => returns https://codehollow.com</example>
         public static string GetAbsoluteUrl(string url)
         {
-            return new UriBuilder(url).ToString();
+            var uriBuilder = new UriBuilder(url) { Port = -1 };
+            return uriBuilder.ToString();
         }
 
         /// <summary>
@@ -47,7 +48,9 @@
 
             if (tmpUrl.StartsWith("http://", StringComparison.OrdinalIgnoreCase)
                 || tmpUrl.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
+            {
                 return feedLink;
+            }
 
             if (tmpUrl.StartsWith("//", StringComparison.OrdinalIgnoreCase)) // special case
                 tmpUrl = "http:" + tmpUrl;
@@ -58,8 +61,10 @@
                 {
                     return new HtmlFeedLink(feedLink.Title, finalUri.ToString(), feedLink.FeedType);
                 }
-                else if (Uri.TryCreate(pageUrl + '/' + tmpUrl.TrimStart('/'), UriKind.Absolute, out finalUri))
+                else if (Uri.TryCreate(pageUrl.TrimEnd('/') + '/' + tmpUrl.TrimStart('/'), UriKind.Absolute, out finalUri))
+                {
                     return new HtmlFeedLink(feedLink.Title, finalUri.ToString(), feedLink.FeedType);
+                }
             }
             
             throw new UrlNotFoundException($"Could not get the absolute url out of {pageUrl} and {feedLink.Url}");
