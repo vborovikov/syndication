@@ -133,8 +133,8 @@
         /// <returns>parsed feed</returns>
         public static async Task<Feed> ReadAsync(string url, CancellationToken cancellationToken, bool autoRedirect = true, string userAgent=null)
         {
-            var feedContent = await Helpers.DownloadBytesAsync(GetAbsoluteUrl(url), cancellationToken, autoRedirect, userAgent).ConfigureAwait(false);
-            return ReadFromByteArray(feedContent);
+            using var feedContent = await Helpers.DownloadBytesAsync(GetAbsoluteUrl(url), cancellationToken, autoRedirect, userAgent).ConfigureAwait(false);
+            return await FeedParser.GetFeedAsync(feedContent, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -157,8 +157,8 @@
         /// <returns>parsed feed</returns>
         public static Feed ReadFromFile(string filePath)
         {
-            var feedContent = System.IO.File.ReadAllBytes(filePath);
-            return ReadFromByteArray(feedContent);
+            var feedContent = System.IO.File.OpenRead(filePath);
+            return FeedParser.GetFeedAsync(feedContent, default).Result;
         }
 
         /// <summary>
@@ -169,8 +169,8 @@
         /// <returns>parsed feed</returns>
         public static async Task<Feed> ReadFromFileAsync(string filePath, CancellationToken cancellationToken = default)
         {
-            byte[] result = await System.IO.File.ReadAllBytesAsync(filePath, cancellationToken).ConfigureAwait(false);
-            return ReadFromByteArray(result);
+            var result = System.IO.File.OpenRead(filePath);
+            return await FeedParser.GetFeedAsync(result, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -179,17 +179,6 @@
         /// <param name="feedContent">the feed content (xml)</param>
         /// <returns>parsed feed</returns>
         public static Feed ReadFromString(string feedContent)
-        {
-            return FeedParser.GetFeed(feedContent);
-        }
-
-        /// <summary>
-        /// reads a feed from the bytearray <paramref name="feedContent"/>
-        /// This could be useful if some special encoding is used.
-        /// </summary>
-        /// <param name="feedContent"></param>
-        /// <returns></returns>
-        public static Feed ReadFromByteArray(byte[] feedContent)
         {
             return FeedParser.GetFeed(feedContent);
         }
