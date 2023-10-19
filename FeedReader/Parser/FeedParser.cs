@@ -1,10 +1,7 @@
 ﻿namespace CodeHollow.FeedReader.Parser
 {
     using System;
-    using System.IO;
     using System.Text;
-    using System.Threading;
-    using System.Threading.Tasks;
     using Brackets;
     using CodeHollow.FeedReader;
 
@@ -61,14 +58,27 @@
         /// Returns the parsed feed.
         /// This method checks the encoding of the received file
         /// </summary>
-        /// <param name="feedStream">the feed document</param>
+        /// <param name="feedContentData">the feed document</param>
         /// <returns>parsed feed</returns>
-        public static async Task<Feed> GetFeedAsync(Stream feedStream, CancellationToken cancellationToken)
+        public static Feed GetFeed(byte[] feedContentData)
         {
-            var feedDoc = await Document.Xml.ParseAsync(feedStream, cancellationToken).ConfigureAwait(false);
-            // in some cases - ISO-8859-1 - Encoding.UTF8.GetString doesn't work correct, so converting
-            // from UTF8 to ISO-8859-1 doesn't work and result is wrong. see: FullParseTest.TestRss20ParseSwedishFeedWithIso8859_1
-            return GetFeed(feedDoc, string.Empty);
+            string feedContent = Encoding.UTF8.GetString(feedContentData); // 1.) get string of the content
+            var feedDoc = Document.Xml.Parse(feedContent); // 2.) read document to get the used encoding
+            Encoding encoding = GetEncoding(feedDoc); // 3.) get used encoding
+
+            if (encoding != Encoding.UTF8) // 4.) if not UTF8 - reread the data :
+                                           // in some cases - ISO-8859-1 - Encoding.UTF8.GetString doesn't work correct, so converting
+                                           // from UTF8 to ISO-8859-1 doesn't work and result is wrong. see: FullParseTest.TestRss20ParseSwedishFeedWithIso8859_1
+            {
+                feedContent = encoding.GetString(feedContentData);
+                feedDoc = Document.Xml.Parse(feedContent);
+            }
+
+            var feedType = ParseFeedType(feedDoc);
+            var parser = Factory.GetParser(feedType);
+            var feed = parser.Parse(feedContent, feedDoc);
+
+            return feed.ToFeed();
         }
 
         /// <summary>
@@ -78,17 +88,36 @@
         /// <returns>parsed feed</returns>
         public static Feed GetFeed(string feedContent)
         {
-            var feedDoc = Document.Xml.Parse(feedContent);
-            return GetFeed(feedDoc, feedContent);
-        }
+            Document feedDoc = Document.Xml.Parse(feedContent);
 
-        private static Feed GetFeed(Document feedDoc, string feedContent)
-        {
             var feedType = ParseFeedType(feedDoc);
+
             var parser = Factory.GetParser(feedType);
             var feed = parser.Parse(feedContent, feedDoc);
 
             return feed.ToFeed();
+        }
+
+        /// <summary>
+        /// reads the encoding from a feed document, returns UTF8 by default
+        /// </summary>
+        /// <param name="feedDoc">rss feed document</param>
+        /// <returns>encoding or utf8 by default</returns>
+        private static Encoding GetEncoding(Document feedDoc)
+        {
+            Encoding encoding = Encoding.UTF8;
+
+            var encodingAttr = feedDoc.Tag("?xml")?.Attribute("encoding");
+            if (encodingAttr?.HasValue == true)
+            {
+                var encodingStr = encodingAttr.ToString();
+                if (!string.IsNullOrWhiteSpace(encodingStr))
+                {
+                    encoding = Encoding.GetEncoding(encodingStr);
+                }
+            }
+
+            return encoding;
         }
     }
 }

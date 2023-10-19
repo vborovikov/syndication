@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.Globalization;
-    using System.IO;
     using System.Net;
     using System.Net.Http;
     using System.Text;
@@ -50,7 +49,7 @@
         /// <param name="autoRedirect">autoredirect if page is moved permanently</param>
         /// <param name="userAgent">override built-in user-agent header</param>
         /// <returns>Content as byte array</returns>
-        public static async Task<Stream> DownloadBytesAsync(string url, CancellationToken cancellationToken, bool autoRedirect = true, string userAgent = USER_AGENT_VALUE)
+        public static async Task<byte[]> DownloadBytesAsync(string url, CancellationToken cancellationToken, bool autoRedirect = true, string userAgent = USER_AGENT_VALUE)
         {
             url = System.Net.WebUtility.UrlDecode(url);
             HttpResponseMessage response;
@@ -75,7 +74,7 @@
                     response = await _httpClient.SendAsync(request, HttpCompletionOption.ResponseContentRead, cancellationToken).ConfigureAwait(false);
                 }
             }
-            var content = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
+            var content = await response.Content.ReadAsByteArrayAsync().ConfigureAwait(false);
             return content;
         }
 
@@ -85,7 +84,7 @@
         /// <param name="url">correct url</param>
         /// <param name="autoRedirect">autoredirect if page is moved permanently</param>
         /// <returns>Content as byte array</returns>
-        public static Task<Stream> DownloadBytesAsync(string url, bool autoRedirect = true)
+        public static Task<byte[]> DownloadBytesAsync(string url, bool autoRedirect = true)
         {
             return DownloadBytesAsync(url, CancellationToken.None, autoRedirect);
         }
@@ -101,9 +100,8 @@
         /// <returns>Content as string</returns>
         public static async Task<string> DownloadAsync(string url, CancellationToken cancellationToken, bool autoRedirect = true)
         {
-            await using var content = await DownloadBytesAsync(url, cancellationToken, autoRedirect).ConfigureAwait(false);
-            using var reader = new StreamReader(content, Encoding.UTF8);
-            return await reader.ReadToEndAsync(cancellationToken);
+            var content = await DownloadBytesAsync(url, cancellationToken, autoRedirect).ConfigureAwait(false);
+            return Encoding.UTF8.GetString(content);
         }
 
         /// <summary>
