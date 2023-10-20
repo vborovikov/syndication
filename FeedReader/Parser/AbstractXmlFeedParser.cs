@@ -5,11 +5,11 @@
 
     internal abstract class AbstractXmlFeedParser : IFeedParser
     {
-        public BaseFeed Parse(string feedXml, Document feedDoc)
+        public BaseFeed Parse(Document feedDoc, string feedXml)
         {
-            return this.ParseOverride(feedXml, feedDoc);
+            return this.ParseOverride(feedDoc, feedXml);
         }
 
-        protected abstract BaseFeed ParseOverride(string feedXml, Document feedDoc);
+        protected abstract BaseFeed ParseOverride(Document feedDoc, string feedXml);
     }
 }

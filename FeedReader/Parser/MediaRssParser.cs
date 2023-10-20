@@ -6,7 +6,7 @@
 
     internal class MediaRssParser : AbstractXmlFeedParser
     {
-        protected override BaseFeed ParseOverride(string feedXml, Document feedDoc)
+        protected override BaseFeed ParseOverride(Document feedDoc, string feedXml)
         {
             var rss = feedDoc.Root();
             var channel = rss.Root("channel");

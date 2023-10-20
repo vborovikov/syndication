@@ -119,17 +119,24 @@
             return GetFeed(document, string.Empty);
         }
 
+        /// <summary>
+        /// Creates a <see cref="Feed"/> from a <see cref="Document">document</see>.
+        /// </summary>
+        /// <param name="document">The document object.</param>
+        /// <returns>The <see cref="Feed"/> instance.</returns>
+        public static Feed FromDocument(Document document) => GetFeed(document, string.Empty);
+
         private static Feed GetFeed(Document document, string content)
         {
             if (FeedParser.TryParseFeedType(document, out var feedType))
             {
                 var parser = Factory.GetParser(feedType);
-                var feed = parser.Parse(content, document);
+                var feed = parser.Parse(document, content);
 
                 return feed.ToFeed();
             }
 
-            if (document.Root().Name.Equals("html", StringComparison.OrdinalIgnoreCase))
+            if (document.Root()?.Name?.Equals("html", StringComparison.OrdinalIgnoreCase) == true)
             {
                 var feedUrls = Helpers.ParseFeedUrls(document);
                 throw new HtmlContentDetectedException("HTML content was detected.", feedUrls);

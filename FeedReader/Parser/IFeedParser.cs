@@ -5,6 +5,6 @@ namespace CodeHollow.FeedReader.Parser
 {
     internal interface IFeedParser
     {
-        BaseFeed Parse(string feedXml, Document feedDoc);
+        BaseFeed Parse(Document feedDoc, string feedXml);
     }
 }

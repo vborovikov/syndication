@@ -6,7 +6,7 @@
 
     internal class Rss10Parser : AbstractXmlFeedParser
     {
-        protected override BaseFeed ParseOverride(string feedXml, Document feedDoc)
+        protected override BaseFeed ParseOverride(Document feedDoc, string feedXml)
         {
             var rdf = feedDoc.Root();
             var channel = rdf.Root("channel");

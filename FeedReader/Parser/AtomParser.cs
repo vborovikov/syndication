@@ -6,7 +6,7 @@
 
     internal class AtomParser : AbstractXmlFeedParser
     {
-        protected override BaseFeed ParseOverride(string feedXml, Document feedDoc)
+        protected override BaseFeed ParseOverride(Document feedDoc, string feedXml)
         {
             AtomFeed feed = new AtomFeed(feedXml, feedDoc.Root());
             return feed;

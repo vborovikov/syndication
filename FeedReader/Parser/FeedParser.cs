@@ -106,7 +106,7 @@
 
             var feedType = ParseFeedType(feedDoc);
             var parser = Factory.GetParser(feedType);
-            var feed = parser.Parse(feedContent, feedDoc);
+            var feed = parser.Parse(feedDoc, feedContent);
 
             return feed.ToFeed();
         }
@@ -123,7 +123,7 @@
             var feedType = ParseFeedType(feedDoc);
 
             var parser = Factory.GetParser(feedType);
-            var feed = parser.Parse(feedContent, feedDoc);
+            var feed = parser.Parse(feedDoc, feedContent);
 
             return feed.ToFeed();
         }
