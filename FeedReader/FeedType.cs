@@ -6,6 +6,11 @@
     public enum FeedType
     {
         /// <summary>
+        /// Unknown - default type
+        /// </summary>
+        Unknown,
+
+        /// <summary>
         /// Atom Feed
         /// </summary>
         Atom,
@@ -35,15 +40,9 @@
         /// </summary>
         MediaRss,
 
-
         /// <summary>
         /// Rss feed - is used for <see cref="HtmlFeedLink"/> type
         /// </summary>
         Rss,
-
-        /// <summary>
-        /// Unknown - default type
-        /// </summary>
-        Unknown
     }
 }

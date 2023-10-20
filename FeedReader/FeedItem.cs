@@ -71,7 +71,7 @@
         /// Creates the generic feed item object based on a parsed <see cref="BaseFeedItem"/>
         /// </summary>
         /// <param name="feedItem">BaseFeedItem which is a <see cref="Rss20FeedItem"/> , <see cref="Rss10FeedItem"/>, or another.</param>
-        public FeedItem(BaseFeedItem feedItem)
+        internal FeedItem(BaseFeedItem feedItem)
         {
             this.Title = feedItem.Title;
             this.Link = feedItem.Link;

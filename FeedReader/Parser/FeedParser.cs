@@ -3,7 +3,7 @@
     using System;
     using System.Text;
     using Brackets;
-    using CodeHollow.FeedReader;
+    using Attribute = Brackets.Attribute;
 
     /// <summary>
     /// Internal FeedParser - returns the type of the feed or the parsed feed.
@@ -11,20 +11,40 @@
     internal static class FeedParser
     {
         /// <summary>
-        /// Returns the feed type - rss 1.0, rss 2.0, atom, ...
+        /// Determines the feed type.
         /// </summary>
-        /// <param name="doc">the xml document</param>
-        /// <returns>the feed type</returns>
+        /// <param name="doc">The xml document</param>
+        /// <returns>The feed type</returns>
+        /// <exception cref="FeedTypeNotSupportedException">The feed type couldn't be determined.</exception>
         public static FeedType ParseFeedType(Document doc)
         {
+            if (TryParseFeedType(doc, out var feedType))
+                return feedType;
+
+            throw new FeedTypeNotSupportedException($"Unknown feed type '{doc.Root()?.Name}'.");
+        }
+
+        public static bool TryParseFeedType(Document doc, out FeedType feedType)
+        {
             var docRoot = doc.Root();
+            if (docRoot is null)
+            {
+                feedType = FeedType.Unknown;
+                return false;
+            }
             var rootElement = docRoot.Name.AsSpan()[(docRoot.Name.IndexOf(':') + 1)..];
 
             if (rootElement.EqualsIgnoreCase("feed"))
-                return FeedType.Atom;
+            {
+                feedType = FeedType.Atom;
+                return true;
+            }
 
             if (rootElement.EqualsIgnoreCase("rdf"))
-                return FeedType.Rss_1_0;
+            {
+                feedType = FeedType.Rss_1_0;
+                return true;
+            }
 
             if (rootElement.EqualsIgnoreCase("rss"))
             {
@@ -33,24 +53,34 @@
                 {
                     if (docRoot.Attribute("media") != null)
                     {
-                        return FeedType.MediaRss;
+                        feedType = FeedType.MediaRss;
+                        return true;
                     }
                     else
                     {
-                        return FeedType.Rss_2_0;
+                        feedType = FeedType.Rss_2_0;
+                        return true;
                     }
                 }
 
                 if (version.EqualsIgnoreCase("0.91"))
-                    return FeedType.Rss_0_91;
+                {
+                    feedType = FeedType.Rss_0_91;
+                    return true;
+                }
 
                 if (version.EqualsIgnoreCase("0.92"))
-                    return FeedType.Rss_0_92;
+                {
+                    feedType = FeedType.Rss_0_92;
+                    return true;
+                }
 
-                return FeedType.Rss;
+                feedType = FeedType.Rss;
+                return true;
             }
 
-            throw new FeedTypeNotSupportedException($"unknown feed type {rootElement}");
+            feedType = FeedType.Unknown;
+            return false;
         }
 
 
@@ -107,8 +137,8 @@
         {
             Encoding encoding = Encoding.UTF8;
 
-            var encodingAttr = feedDoc.Tag("?xml")?.Attribute("encoding");
-            if (encodingAttr?.HasValue == true)
+            if (feedDoc.FirstOrDefault(e => e is Instruction { Name: "xml", HasAttributes: true }) is Instruction xml &&
+                xml.Attributes.FirstOrDefault(a => a is Attribute { Name: "encoding", HasValue: true }) is Attribute encodingAttr)
             {
                 var encodingStr = encodingAttr.ToString();
                 if (!string.IsNullOrWhiteSpace(encodingStr))

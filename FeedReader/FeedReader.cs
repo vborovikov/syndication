@@ -178,6 +178,7 @@
         /// </summary>
         /// <param name="feedContent">the feed content (xml)</param>
         /// <returns>parsed feed</returns>
+        [Obsolete("Use Feed.FromString instead.")]
         public static Feed ReadFromString(string feedContent)
         {
             return FeedParser.GetFeed(feedContent);
@@ -189,6 +190,7 @@
         /// </summary>
         /// <param name="feedContent"></param>
         /// <returns></returns>
+        [Obsolete("Use Feed.FromStreamAsync instead.")]
         public static Feed ReadFromByteArray(byte[] feedContent)
         {
             return FeedParser.GetFeed(feedContent);

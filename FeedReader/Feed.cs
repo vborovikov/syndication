@@ -1,9 +1,14 @@
 ﻿namespace CodeHollow.FeedReader
 {
-    using Feeds;
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using Brackets;
+    using Feeds;
+    using Parser;
 
     /// <summary>
     /// Generic Feed object that contains some basic properties. If a property is not available
@@ -81,7 +86,7 @@
         /// Creates the generic feed object based on a parsed BaseFeed
         /// </summary>
         /// <param name="feed">BaseFeed which is a <see cref="Rss20Feed"/> , <see cref="Rss10Feed"/>, or another.</param>
-        public Feed(BaseFeed feed)
+        internal Feed(BaseFeed feed)
         {
             this.SpecificFeed = feed;
 
@@ -89,6 +94,48 @@
             this.Link = feed.Link;
 
             this.Items = feed.Items.Select(x => x.ToFeedItem()).ToArray();
+        }
+
+        /// <summary>
+        /// Creates a <see cref="Feed"/> from a string.
+        /// </summary>
+        /// <param name="content">The string content of the feed.</param>
+        /// <returns>The <see cref="Feed"/> instance.</returns>
+        public static Feed FromString(string content)
+        {
+            var document = Document.Xml.Parse(content);
+            return GetFeed(document, content);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="Feed"/> from a stream.
+        /// </summary>
+        /// <param name="stream">The stream of the feed.</param>
+        /// <param name="cancellationToken">The cancellation token.</param>
+        /// <returns>A task that represents the asynchronous operation.</returns>
+        public static async Task<Feed> FromStreamAsync(Stream stream, CancellationToken cancellationToken)
+        {
+            var document = await Document.Xml.ParseAsync(stream, cancellationToken).ConfigureAwait(false);
+            return GetFeed(document, string.Empty);
+        }
+
+        private static Feed GetFeed(Document document, string content)
+        {
+            if (FeedParser.TryParseFeedType(document, out var feedType))
+            {
+                var parser = Factory.GetParser(feedType);
+                var feed = parser.Parse(content, document);
+
+                return feed.ToFeed();
+            }
+
+            if (document.Root().Name.Equals("html", StringComparison.OrdinalIgnoreCase))
+            {
+                var feedUrls = Helpers.ParseFeedUrls(document);
+                throw new HtmlContentDetectedException("HTML content was detected.", feedUrls);
+            }
+
+            throw new FeedTypeNotSupportedException($"Unknown feed type '{document.Root()?.Name}'.");
         }
     }
 }

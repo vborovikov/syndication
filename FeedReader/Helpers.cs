@@ -259,6 +259,11 @@
             // <link rel="alternate" type="application/atom+xml" title="Aktuelle News von heise online" href="https://www.heise.de/newsticker/heise-atom.xml">
 
             var html = Document.Html.Parse(htmlContent);
+            return ParseFeedUrls(html);
+        }
+
+        internal static HtmlFeedLink[] ParseFeedUrls(Document html)
+        {
             var links = html.Find("/html/head/link[@rel='alternate']");
 
             var result = new List<HtmlFeedLink>();
@@ -273,7 +278,7 @@
                     }
                 }
             }
-            return result;
+            return result.ToArray();
         }
 
         private static HtmlFeedLink GetFeedLinkFromLinkTag(Tag link)
