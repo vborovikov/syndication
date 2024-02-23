@@ -136,13 +136,14 @@
                 return feed.ToFeed();
             }
 
-            if (document.Root()?.Name?.Equals("html", StringComparison.OrdinalIgnoreCase) == true)
+            var documentRoot = document.FirstOrDefault<ParentTag>();
+            if (documentRoot is { Name: "html" })
             {
                 var feedUrls = Helpers.ParseFeedUrls(document);
                 throw new HtmlContentDetectedException("HTML content was detected.", feedUrls);
             }
 
-            throw new FeedTypeNotSupportedException($"Unknown feed type '{document.Root()?.Name}'.");
+            throw new FeedTypeNotSupportedException($"Unknown feed type '{documentRoot?.Name}'.");
         }
     }
 }

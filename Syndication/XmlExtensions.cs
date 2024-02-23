@@ -7,8 +7,6 @@ using Brackets;
 
 static class XmlExtensions
 {
-    public static ParentTag Root(this Document document) => Find<ParentTag>(document.GetEnumerator(), _ => true);
-
     public static ParentTag Root(this Document document, string name) => Find<ParentTag>(document.GetEnumerator(), p => p.Name == name);
 
     public static ParentTag Root(this ParentTag parent, string name) => parent is null ? null : Find<ParentTag>(parent.GetEnumerator(), p => p.Name == name);

@@ -1,17 +1,15 @@
-﻿namespace Syndication.Parser
-{
-    using Brackets;
-    using Syndication;
-    using Feeds;
+﻿namespace Syndication.Parser;
 
-    internal class Rss092Parser : AbstractXmlFeedParser
+using Brackets;
+using Feeds;
+
+internal class Rss092Parser : AbstractXmlFeedParser
+{
+    protected override BaseFeed ParseOverride(Document feedDoc, string feedXml)
     {
-        protected override BaseFeed ParseOverride(Document feedDoc, string feedXml)
-        {
-            var rss = feedDoc.Root();
-            var channel = rss.Root("channel");
-            Rss092Feed feed = new Rss092Feed(feedXml, channel);
-            return feed;
-        }
+        var rss = feedDoc.First<ParentTag>();
+        var channel = rss.First<ParentTag>(r => r.Name == "channel");
+        Rss092Feed feed = new Rss092Feed(feedXml, channel);
+        return feed;
     }
 }

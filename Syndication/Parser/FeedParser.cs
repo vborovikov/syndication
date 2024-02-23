@@ -20,12 +20,12 @@
             if (TryParseFeedType(doc, out var feedType))
                 return feedType;
 
-            throw new FeedTypeNotSupportedException($"Unknown feed type '{doc.Root()?.Name}'.");
+            throw new FeedTypeNotSupportedException($"Unknown feed type '{doc.FirstOrDefault<ParentTag>()?.Name}'.");
         }
 
         public static bool TryParseFeedType(Document doc, out FeedType feedType)
         {
-            var docRoot = doc.Root();
+            var docRoot = doc.FirstOrDefault<ParentTag>();
             if (docRoot is null)
             {
                 feedType = FeedType.Unknown;
