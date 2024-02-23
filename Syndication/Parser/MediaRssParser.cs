@@ -1,7 +1,7 @@
-﻿namespace CodeHollow.FeedReader.Parser
+﻿namespace Syndication.Parser
 {
     using Brackets;
-    using CodeHollow.FeedReader;
+    using Syndication;
     using Feeds;
 
     internal class MediaRssParser : AbstractXmlFeedParser

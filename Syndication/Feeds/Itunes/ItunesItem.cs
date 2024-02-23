@@ -1,7 +1,7 @@
 ﻿using System;
 using Brackets;
 
-namespace CodeHollow.FeedReader.Feeds.Itunes
+namespace Syndication.Feeds.Itunes
 {
     /// <summary>
     /// The itunes:... elements of an rss 2.0 item

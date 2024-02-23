@@ -1,4 +1,4 @@
-﻿namespace CodeHollow.FeedReader.Feeds.MediaRSS
+﻿namespace Syndication.Feeds.MediaRSS
 {
     /// <summary>
     /// Specifies the type of an object

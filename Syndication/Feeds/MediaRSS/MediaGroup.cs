@@ -2,7 +2,7 @@
 using System.Linq;
 using Brackets;
 
-namespace CodeHollow.FeedReader.Feeds.MediaRSS
+namespace Syndication.Feeds.MediaRSS
 {
     /// <summary>
     /// A collection of media that are effectively the same content, yet different representations. For isntance: the same song recorded in both WAV and MP3 format.

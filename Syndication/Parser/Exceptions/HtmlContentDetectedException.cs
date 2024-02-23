@@ -1,4 +1,4 @@
-namespace CodeHollow.FeedReader.Parser;
+namespace Syndication.Parser;
 
 using System;
 using System.Collections.Generic;

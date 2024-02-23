@@ -1,7 +1,7 @@
-﻿namespace CodeHollow.FeedReader.Feeds
+﻿namespace Syndication.Feeds
 {
     using Brackets;
-    using CodeHollow.FeedReader;
+    using Syndication;
 
     /// <summary>
     /// Rss 1.0 Feed according to specification: http://web.resource.org/rss/1.0/spec

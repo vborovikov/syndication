@@ -1,4 +1,4 @@
-﻿namespace CodeHollow.FeedReader.Parser
+﻿namespace Syndication.Parser
 {
     internal static class Factory
     {

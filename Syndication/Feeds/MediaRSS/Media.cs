@@ -2,7 +2,7 @@
 using System.Linq;
 using Brackets;
 
-namespace CodeHollow.FeedReader.Feeds.MediaRSS
+namespace Syndication.Feeds.MediaRSS
 {
     /// <summary>
     /// Media object

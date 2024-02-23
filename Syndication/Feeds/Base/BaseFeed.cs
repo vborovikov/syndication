@@ -1,8 +1,8 @@
-﻿namespace CodeHollow.FeedReader.Feeds
+﻿namespace Syndication.Feeds
 {
     using System.Collections.Generic;
     using Brackets;
-    using CodeHollow.FeedReader;
+    using Syndication;
 
     /// <summary>
     /// BaseFeed object which contains the basic properties that each feed has.

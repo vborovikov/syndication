@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CodeHollow.FeedReader.Tests
+namespace Syndication.Tests
 {
     [TestClass]
     public class FeedReaderTest

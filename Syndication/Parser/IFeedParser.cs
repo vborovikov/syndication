@@ -1,7 +1,7 @@
 ﻿using Brackets;
-using CodeHollow.FeedReader.Feeds;
+using Syndication.Feeds;
 
-namespace CodeHollow.FeedReader.Parser
+namespace Syndication.Parser
 {
     internal interface IFeedParser
     {

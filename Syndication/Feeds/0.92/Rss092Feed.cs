@@ -1,4 +1,4 @@
-﻿namespace CodeHollow.FeedReader.Feeds
+﻿namespace Syndication.Feeds
 {
     using System.Collections.Generic;
     using Brackets;

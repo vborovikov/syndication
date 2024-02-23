@@ -1,8 +1,8 @@
-﻿namespace CodeHollow.FeedReader.Feeds
+﻿namespace Syndication.Feeds
 {
     using System;
     using Brackets;
-    using CodeHollow.FeedReader;
+    using Syndication;
 
     /// <summary>
     /// The parsed "dc:" elements in a feed

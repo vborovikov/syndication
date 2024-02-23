@@ -1,6 +1,6 @@
 ﻿using Brackets;
 
-namespace CodeHollow.FeedReader.Feeds.MediaRSS
+namespace Syndication.Feeds.MediaRSS
 {
     /// <summary>
     /// Allows particular images to be used as representative images for the media object. If multiple thumbnails are included, and time coding is not at play, it is assumed that the images are in order of importance. 

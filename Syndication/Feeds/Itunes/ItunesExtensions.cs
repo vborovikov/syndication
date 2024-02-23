@@ -1,4 +1,4 @@
-﻿namespace CodeHollow.FeedReader.Feeds.Itunes
+﻿namespace Syndication.Feeds.Itunes
 {
     /// <summary>
     /// Extension method that allows to access the itunes tags for a feed

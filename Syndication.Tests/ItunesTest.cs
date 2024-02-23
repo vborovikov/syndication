@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CodeHollow.FeedReader.Feeds.Itunes;
+using Syndication.Feeds.Itunes;
 using System.Linq;
 
-namespace CodeHollow.FeedReader.Tests
+namespace Syndication.Tests
 {
     [TestClass]
     public class ItunesTest

@@ -2,10 +2,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 using System.Threading.Tasks;
-using CodeHollow.FeedReader.Feeds;
-using CodeHollow.FeedReader.Feeds.Itunes;
+using Syndication.Feeds;
+using Syndication.Feeds.Itunes;
 
-namespace CodeHollow.FeedReader.Tests
+namespace Syndication.Tests
 {
     [TestClass]
     public class FullParseTest

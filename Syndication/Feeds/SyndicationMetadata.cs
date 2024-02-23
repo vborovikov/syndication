@@ -1,7 +1,7 @@
-﻿namespace CodeHollow.FeedReader.Feeds
+﻿namespace Syndication.Feeds
 {
     using Brackets;
-    using CodeHollow.FeedReader;
+    using Syndication;
 
     /// <summary>
     /// The parsed syndication elements. Those are all elements that start with "sy:"

@@ -1,4 +1,4 @@
-﻿namespace CodeHollow.FeedReader
+﻿namespace Syndication
 {
     using Feeds;
     using System;

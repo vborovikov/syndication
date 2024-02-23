@@ -1,4 +1,4 @@
-﻿namespace CodeHollow.FeedReader
+﻿namespace Syndication
 {
     /// <summary>
     /// An html feed link, containing the title, the url and the type of the feed

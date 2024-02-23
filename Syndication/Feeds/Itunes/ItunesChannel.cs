@@ -1,4 +1,4 @@
-﻿namespace CodeHollow.FeedReader.Feeds.Itunes
+﻿namespace Syndication.Feeds.Itunes
 {
     using System;
     using System.Linq;
