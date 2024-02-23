@@ -1,36 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net7.0</TargetFrameworks>
-    <AssemblyName>Brackets.FeedReader</AssemblyName>
-    <RootNamespace>Brackets.FeedReader</RootNamespace>
+    <TargetFramework>net7.0</TargetFramework>
+    <AssemblyName>Syndication</AssemblyName>
+    <RootNamespace>Syndication</RootNamespace>
+    <Title>Syndication</Title>
+    <Description>RSS and ATOM feed reader/parser</Description>
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Brackets.FeedReader</PackageId>
-    <Title>Brackets.FeedReader</Title>
-    <Description>RSS and ATOM feed reader/parser</Description>
-    <PackageTags>feed rss atom</PackageTags>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageProjectUrl>https://github.com/vborovikov/feed</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/vborovikov/feed.git</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
+    <PackageId>SyndicationLib</PackageId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>README.MD</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/vborovikov/syndication</PackageProjectUrl>
+    <PackageTags>feed;rss;atom</PackageTags>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RepositoryUrl>https://github.com/vborovikov/syndication.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="..\README.MD">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="icon.png" Pack="True" PackagePath="\" />
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
