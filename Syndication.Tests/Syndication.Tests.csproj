@@ -187,7 +187,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FeedReader\FeedReader.csproj" />
+    <ProjectReference Include="..\Syndication\Syndication.csproj" />
   </ItemGroup>
 
 </Project>
