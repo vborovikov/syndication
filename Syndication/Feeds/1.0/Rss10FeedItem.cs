@@ -20,12 +20,12 @@
         /// <summary>
         /// All elements starting with "dc:"
         /// </summary>
-        public DublinCore DC { get; }
+        public DublinCoreMetadata DC { get; }
 
         /// <summary>
         /// All elements starting with "sy:"
         /// </summary>
-        public Syndication Sy { get; }
+        public SyndicationMetadata Sy { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Rss10FeedItem"/> class.
@@ -35,8 +35,8 @@
         public Rss10FeedItem(ParentTag item)
             : base(item)
         {
-            this.DC = new DublinCore(item);
-            this.Sy = new Syndication(item);
+            this.DC = new DublinCoreMetadata(item);
+            this.Sy = new SyndicationMetadata(item);
 
             this.About = item.GetAttributeValue("rdf:about");
             this.Description = item.GetValue("description");

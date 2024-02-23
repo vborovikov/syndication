@@ -6,7 +6,7 @@
     /// <summary>
     /// The parsed syndication elements. Those are all elements that start with "sy:"
     /// </summary>
-    public record Syndication
+    public record SyndicationMetadata
     {
         /// <summary>
         /// The "updatePeriod" element
@@ -24,11 +24,11 @@
         public string UpdateBase { get; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Syndication"/> class.
+        /// Initializes a new instance of the <see cref="SyndicationMetadata"/> class.
         /// Creates the object based on the xml in the given XElement
         /// </summary>
         /// <param name="xelement">syndication element as xml</param>
-        public Syndication(ParentTag xelement)
+        public SyndicationMetadata(ParentTag xelement)
         {
             this.UpdateBase = xelement.GetValue("sy:updateBase");
             this.UpdateFrequency = xelement.GetValue("sy:updateFrequency");

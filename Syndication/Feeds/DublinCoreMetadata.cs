@@ -7,7 +7,7 @@
     /// <summary>
     /// The parsed "dc:" elements in a feed
     /// </summary>
-    public record DublinCore
+    public record DublinCoreMetadata
     {
         /// <summary>
         /// The "title" element
@@ -90,11 +90,11 @@
         public string Rights { get; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DublinCore"/> class.
+        /// Initializes a new instance of the <see cref="DublinCoreMetadata"/> class.
         /// Reads a dublincore (dc:) element based on the xml given in element
         /// </summary>
         /// <param name="item">item element as xml</param>
-        public DublinCore(ParentTag item)
+        public DublinCoreMetadata(ParentTag item)
         {
             this.Title = item.GetValue("dc:title");
             this.Creator = item.GetValue("dc:creator");

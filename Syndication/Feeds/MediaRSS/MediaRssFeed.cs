@@ -104,7 +104,7 @@
         /// <summary>
         /// All elements starting with "sy:"
         /// </summary>
-        public Syndication Sy { get; }
+        public SyndicationMetadata Sy { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaRssFeed"/> class.
@@ -128,7 +128,7 @@
             var categories = channel.GetElements("category");
             this.Categories = categories.Select(x => x.GetValue()).ToArray();
 
-            this.Sy = new Syndication(channel);
+            this.Sy = new SyndicationMetadata(channel);
             this.Generator = channel.GetValue("generator");
             this.TTL = channel.GetValue("ttl");
             this.Image = new MediaRssFeedImage(channel.GetElement("image"));

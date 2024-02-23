@@ -74,7 +74,7 @@
         /// <summary>
         /// All elements starting with "dc:"
         /// </summary>
-        public DublinCore DC { get; }
+        public DublinCoreMetadata DC { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaRssFeedItem"/> class.
@@ -90,7 +90,7 @@
             this.Enclosure = new FeedItemEnclosure(item.GetElement("enclosure"));
             this.PublishingDateString = item.GetValue("pubDate");
             this.PublishingDate = Helpers.TryParseDateTime(this.PublishingDateString);
-            this.DC = new DublinCore(item);
+            this.DC = new DublinCoreMetadata(item);
             this.Source = new FeedItemSource(item.GetElement("source"));
 
             var media = item.GetRoots("media:content");

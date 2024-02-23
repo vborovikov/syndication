@@ -89,7 +89,7 @@
         /// <summary>
         /// All elements that start with "sy:"
         /// </summary>
-        public Syndication Sy { get; }
+        public SyndicationMetadata Sy { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Rss091Feed"/> class.
@@ -129,7 +129,7 @@
 
             this.TextInput = new FeedTextInput(channel.GetElement("textinput"));
 
-            this.Sy = new Syndication(channel);
+            this.Sy = new SyndicationMetadata(channel);
 
             var skipHours = channel.GetElement("skipHours");
             if (skipHours != null)

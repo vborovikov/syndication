@@ -16,12 +16,12 @@
         /// <summary>
         /// All elements starting with "dc:"
         /// </summary>
-        public DublinCore DC { get; }
+        public DublinCoreMetadata DC { get; }
 
         /// <summary>
         /// All elements starting with "sy:"
         /// </summary>
-        public Syndication Sy { get; }
+        public SyndicationMetadata Sy { get; }
 
         /// <summary>
         /// The "description" field
@@ -48,8 +48,8 @@
             : base(feedXml, channel)
         {
             this.About = channel.GetAttributeValue("rdf:about");
-            this.DC = new DublinCore(channel);
-            this.Sy = new Syndication(channel);
+            this.DC = new DublinCoreMetadata(channel);
+            this.Sy = new SyndicationMetadata(channel);
             this.Description = channel.GetValue("description");
 
             this.Image = new Rss10FeedImage(((ParentTag)channel.Parent).GetElement("image"));
