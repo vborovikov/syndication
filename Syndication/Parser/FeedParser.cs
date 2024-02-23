@@ -3,7 +3,6 @@
     using System;
     using System.Text;
     using Brackets;
-    using Attribute = Brackets.Attribute;
 
     /// <summary>
     /// Internal FeedParser - returns the type of the feed or the parsed feed.
@@ -138,7 +137,7 @@
             Encoding encoding = Encoding.UTF8;
 
             if (feedDoc.FirstOrDefault(e => e is Instruction { Name: "xml", HasAttributes: true }) is Instruction xml &&
-                xml.Attributes.FirstOrDefault(a => a is Attribute { Name: "encoding", HasValue: true }) is Attribute encodingAttr)
+                xml.Attributes.FirstOrDefault(a => a is Attr { Name: "encoding", HasValue: true }) is Attr encodingAttr)
             {
                 var encodingStr = encodingAttr.ToString();
                 if (!string.IsNullOrWhiteSpace(encodingStr))

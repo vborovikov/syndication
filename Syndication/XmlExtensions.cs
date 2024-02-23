@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using Brackets;
-using Attribute = Brackets.Attribute;
 
 static class XmlExtensions
 {
@@ -18,7 +17,7 @@ static class XmlExtensions
 
     public static Tag Tag(this ParentTag parent, string name) => parent is null ? null : Find<Tag>(parent.GetEnumerator(), t => t.Name == name);
 
-    public static Attribute Attribute(this Tag tag, string name) => tag is null ? null : FindAttribute(tag.EnumerateAttributes(), name);
+    public static Attr Attribute(this Tag tag, string name) => tag is null ? null : FindAttribute(tag.EnumerateAttributes(), name);
 
     public static string GetValue(this Element element)
     {
@@ -92,7 +91,7 @@ static class XmlExtensions
         return null;
     }
 
-    private static Attribute FindAttribute(Attribute.Enumerator attributes, string name)
+    private static Attr FindAttribute(Attr.Enumerator attributes, string name)
     {
         while (attributes.MoveNext())
         {
