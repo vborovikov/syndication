@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <AssemblyName>Syndication</AssemblyName>
-    <RootNamespace>Syndication</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
     <Title>Syndication</Title>
     <Description>RSS and ATOM feed reader/parser</Description>
   </PropertyGroup>
