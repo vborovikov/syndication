@@ -33,7 +33,7 @@
             : base(item)
         {
             this.Enclosure = new FeedItemEnclosure(item.Tag("enclosure"));
-            this.Source = new FeedItemSource(item.Root("source"));
+            this.Source = new FeedItemSource(item.GetElement("source"));
 
             var categories = item.GetElements("category");
             this.Categories = categories.Select(x => x.GetValue()).ToArray();

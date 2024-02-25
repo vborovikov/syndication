@@ -7,10 +7,6 @@ using Brackets;
 
 static class XmlExtensions
 {
-    public static ParentTag Root(this Document document, string name) => Find<ParentTag>(document.GetEnumerator(), p => p.Name == name);
-
-    public static ParentTag Root(this ParentTag parent, string name) => parent is null ? null : Find<ParentTag>(parent.GetEnumerator(), p => p.Name == name);
-
     public static Tag Tag(this Document document, string name) => Find<Tag>(document.GetEnumerator(), t => t.Name == name);
 
     public static Tag Tag(this ParentTag parent, string name) => parent is null ? null : Find<Tag>(parent.GetEnumerator(), t => t.Name == name);
@@ -39,7 +35,7 @@ static class XmlExtensions
 
     public static string GetAttributeValue(this Tag tag, string attributeName) => tag.Attribute(attributeName)?.GetValue();
 
-    public static ParentTag GetElement(this ParentTag parent, string name) => Root(parent, name);
+    public static ParentTag GetElement(this ParentTag parent, string name) => parent.FirstOrDefault<ParentTag>(r => r.Name == name);
 
     public static IEnumerable<Tag> GetElements(this Tag tag, string name) => tag is ParentTag parent ? GetTags(parent, name) : Array.Empty<Tag>();
 

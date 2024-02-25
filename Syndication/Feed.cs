@@ -36,12 +36,12 @@
         /// <summary>
         /// The description of the feed
         /// </summary>
-        public string Description { get; internal set; }
+        public string? Description { get; internal set; }
 
         /// <summary>
         /// The language of the feed
         /// </summary>
-        public string Language { get; internal set; }
+        public string? Language { get; internal set; }
 
         /// <summary>
         /// The copyright of the feed
@@ -63,7 +63,7 @@
         /// <summary>
         /// The url of the image
         /// </summary>
-        public string ImageUrl { get; internal set; }
+        public string? ImageUrl { get; internal set; }
 
         /// <summary>
         /// List of items

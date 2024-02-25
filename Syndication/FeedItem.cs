@@ -43,7 +43,7 @@
         /// <summary>
         /// The author of the feed item
         /// </summary>
-        public string Author { get; internal init; }
+        public string? Author { get; internal init; }
 
         /// <summary>
         /// The id of the feed item
