@@ -1,9 +1,16 @@
-# FeedReader
-FeedReader is a .net library used for reading and parsing RSS and ATOM feeds. Supports **RSS 0.91, 0.92, 1.0, 2.0 and ATOM**.
-Developed because tested existing libraries do not work with different languages, encodings or have other issues. 
-Library tested with multiple languages, encodings and feeds.
+# Syndication
 
-Original FeedReader library is available as NuGet package: [![NuGet](https://img.shields.io/nuget/v/CodeHollow.FeedReader.svg)](https://www.nuget.org/packages/CodeHollow.FeedReader)
+[![Downloads](https://img.shields.io/nuget/dt/SyndicationLib.svg)](https://www.nuget.org/packages/SyndicationLib)
+[![NuGet](https://img.shields.io/nuget/v/SyndicationLib.svg)](https://www.nuget.org/packages/SyndicationLib)
+[![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vborovikov/syndication/blob/master/LICENSE)
+
+Syndication is a .NET library used for reading and parsing RSS and ATOM feeds. Supports **RSS 0.91, 0.92, 1.0, 2.0 and ATOM**.
+
+Developed because tested existing libraries do not work with different languages, encodings or have other issues. Library tested with multiple languages, encodings and feeds.
+
+Original FeedReader library is available as NuGet package:
+
+[![NuGet](https://img.shields.io/nuget/v/CodeHollow.FeedReader.svg)](https://www.nuget.org/packages/CodeHollow.FeedReader)
 
 ## Usage
 The simplest way to read a feed and show the information is:
