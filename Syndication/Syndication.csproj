@@ -12,7 +12,7 @@
     <PackageId>SyndicationLib</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReadmeFile>README.MD</PackageReadmeFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/vborovikov/syndication</PackageProjectUrl>
     <PackageTags>feed;rss;atom</PackageTags>
     <PackageReleaseNotes></PackageReleaseNotes>
