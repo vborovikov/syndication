@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="0.91">
+
+<channel>
+<title>Laurence Tratt: Blog</title>
+<link>https://tratt.net/</link>
+<description>Laurence Tratt</description>
+<language>en-gb</language>
+
+<item>
+<pubdate>Wed, 28 Feb 2024 11:00 +0000</pubdate>
+<title>Some Reflections on Writing Unix Daemons</title>
+<link>https://tratt.net/laurie/blog/2024/some_reflections_on_writing_unix_daemons.html</link>
+<guid>https://tratt.net/laurie/blog/2024/some_reflections_on_writing_unix_daemons.html</guid>
+</item>
+
+<item>
+<pubdate>Tue, 16 Jan 2024 14:50 +0000</pubdate>
+<title>Faster Shell Startup With Shell Switching</title>
+<link>https://tratt.net/laurie/blog/2024/faster_shell_startup_with_shell_switching.html</link>
+<guid>https://tratt.net/laurie/blog/2024/faster_shell_startup_with_shell_switching.html</guid>
+</item>
+
+<item>
+<pubdate>Thu, 04 Jan 2024 09:50 +0000</pubdate>
+<title>Choosing What To Read</title>
+<link>https://tratt.net/laurie/blog/2024/choosing_what_to_read.html</link>
+<guid>https://tratt.net/laurie/blog/2024/choosing_what_to_read.html</guid>
+</item>
+
+<item>
+<pubdate>Wed, 13 Dec 2023 13:25 +0000</pubdate>
+<title>Debugging A Failing Hotkey</title>
+<link>https://tratt.net/laurie/blog/2023/debugging_a_failing_hotkey.html</link>
+<guid>https://tratt.net/laurie/blog/2023/debugging_a_failing_hotkey.html</guid>
+</item>
+
+<item>
+<pubdate>Mon, 04 Dec 2023 15:11 +0000</pubdate>
+<title>How Often Should We Sharpen Our Tools?</title>
+<link>https://tratt.net/laurie/blog/2023/how_often_should_we_sharpen_our_tools.html</link>
+<guid>https://tratt.net/laurie/blog/2023/how_often_should_we_sharpen_our_tools.html</guid>
+</item>
+
+<item>
+<pubdate>Tue, 14 Nov 2023 09:30 +0000</pubdate>
+<title>Four Kinds of Optimisation</title>
+<link>https://tratt.net/laurie/blog/2023/four_kinds_of_optimisation.html</link>
+<guid>https://tratt.net/laurie/blog/2023/four_kinds_of_optimisation.html</guid>
+</item>
+
+<item>
+<pubdate>Tue, 03 Oct 2023 13:00 +0000</pubdate>
+<title>Minor Advances in Knowledge Are Still a Worthwhile Goal</title>
+<link>https://tratt.net/laurie/blog/2023/minor_advances_in_knowledge_are_still_a_worthwhile_goal.html</link>
+<guid>https://tratt.net/laurie/blog/2023/minor_advances_in_knowledge_are_still_a_worthwhile_goal.html</guid>
+</item>
+
+<item>
+<pubdate>Mon, 18 Sep 2023 10:30 +0000</pubdate>
+<title>How Hard is it to Adapt a Memory Allocator to CHERI?</title>
+<link>https://tratt.net/laurie/blog/2023/how_hard_is_it_to_adapt_a_memory_allocator_to_cheri.html</link>
+<guid>https://tratt.net/laurie/blog/2023/how_hard_is_it_to_adapt_a_memory_allocator_to_cheri.html</guid>
+</item>
+
+<item>
+<pubdate>Wed, 23 Aug 2023 12:30 +0000</pubdate>
+<title>"Programming" and "Programmers" Mean Different Things to Different People</title>
+<link>https://tratt.net/laurie/blog/2023/programming_and_programmers_mean_different_things_to_different_people.html</link>
+<guid>https://tratt.net/laurie/blog/2023/programming_and_programmers_mean_different_things_to_different_people.html</guid>
+</item>
+
+<item>
+<pubdate>Sun, 13 Aug 2023 08:00 +0000</pubdate>
+<title>pizauth: First Stable Release</title>
+<link>https://tratt.net/laurie/blog/2023/pizauth_first_stable_release.html</link>
+<guid>https://tratt.net/laurie/blog/2023/pizauth_first_stable_release.html</guid>
+</item>
+
+<item>
+<pubdate>Tue, 18 Jul 2023 08:50 +0000</pubdate>
+<title>The Need to Explain</title>
+<link>https://tratt.net/laurie/blog/2023/the_need_to_explain.html</link>
+<guid>https://tratt.net/laurie/blog/2023/the_need_to_explain.html</guid>
+</item>
+
+<item>
+<pubdate>Wed, 05 Jul 2023 09:15 +0000</pubdate>
+<title>Two Stories for "What is CHERI?"</title>
+<link>https://tratt.net/laurie/blog/2023/two_stories_for_what_is_cheri.html</link>
+<guid>https://tratt.net/laurie/blog/2023/two_stories_for_what_is_cheri.html</guid>
+</item>
+
+<item>
+<pubdate>Tue, 16 May 2023 09:30 +0000</pubdate>
+<title>My Interview with Eelco Visser on Parsing</title>
+<link>https://tratt.net/laurie/blog/2023/my_interview_with_eelco_visser_with_on_parsing.html</link>
+<guid>https://tratt.net/laurie/blog/2023/my_interview_with_eelco_visser_with_on_parsing.html</guid>
+</item>
+
+<item>
+<pubdate>Tue, 02 May 2023 10:00 +0000</pubdate>
+<title>Why Split Lexing and Parsing Into Two Separate Phases?</title>
+<link>https://tratt.net/laurie/blog/2023/why_split_lexing_and_parsing_into_two_separate_phases.html</link>
+<guid>https://tratt.net/laurie/blog/2023/why_split_lexing_and_parsing_into_two_separate_phases.html</guid>
+</item>
+
+<item>
+<pubdate>Tue, 11 Apr 2023 10:15 +0000</pubdate>
+<title>Displaying My Washing Machine's Remaining Time With curl, jq, and pizauth</title>
+<link>https://tratt.net/laurie/blog/2023/displaying_my_washing_machines_remaining_time_with_curl_jq_pizauth.html</link>
+<guid>https://tratt.net/laurie/blog/2023/displaying_my_washing_machines_remaining_time_with_curl_jq_pizauth.html</guid>
+</item>
+
+<item>
+<pubdate>Mon, 03 Apr 2023 10:00 +0000</pubdate>
+<title>pizauth: dump and restore</title>
+<link>https://tratt.net/laurie/blog/2023/pizauth_dump_restore.html</link>
+<guid>https://tratt.net/laurie/blog/2023/pizauth_dump_restore.html</guid>
+</item>
+
+<item>
+<pubdate>Thu, 23 Mar 2023 15:00 +0000</pubdate>
+<title>How Big Should a Programming Language Be?</title>
+<link>https://tratt.net/laurie/blog/2023/how_big_should_a_programming_language_be.html</link>
+<guid>https://tratt.net/laurie/blog/2023/how_big_should_a_programming_language_be.html</guid>
+</item>
+
+<item>
+<pubdate>Thu, 16 Mar 2023 16:00 +0000</pubdate>
+<title>Rust's Two Kinds of 'Assert' Make for Better Code</title>
+<link>https://tratt.net/laurie/blog/2023/rusts_two_kinds_of_assert_make_for_better_code.html</link>
+<guid>https://tratt.net/laurie/blog/2023/rusts_two_kinds_of_assert_make_for_better_code.html</guid>
+</item>
+
+<item>
+<pubdate>Sun, 05 Mar 2023 09:45 +0000</pubdate>
+<title>Scheduling my Electricity Usage</title>
+<link>https://tratt.net/laurie/blog/2023/scheduling_my_electricity_usage.html</link>
+<guid>https://tratt.net/laurie/blog/2023/scheduling_my_electricity_usage.html</guid>
+</item>
+
+<item>
+<pubdate>Thu, 16 Feb 2023 10:00 +0000</pubdate>
+<title>Why Aren't Programming Language Specifications Comprehensive?</title>
+<link>https://tratt.net/laurie/blog/2023/why_arent_programming_language_specifications_comprehensive.html</link>
+<guid>https://tratt.net/laurie/blog/2023/why_arent_programming_language_specifications_comprehensive.html</guid>
+</item>
+
+</channel>
+</rss>

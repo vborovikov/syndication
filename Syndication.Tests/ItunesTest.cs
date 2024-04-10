@@ -16,7 +16,7 @@ namespace Syndication.Tests
         [TestMethod]
         public void TestItunesSampleFeed()
         {
-            var feed = FeedReader.ReadFromFile("Feeds/Rss20ItunesSample.xml");
+            var feed = Feed.FromString(Samples.GetContent("Feeds/Rss20ItunesSample.xml"));
 
             var itunesChannel = feed.GetItunesChannel();
 
@@ -91,7 +91,7 @@ namespace Syndication.Tests
         [TestMethod]
         public async Task TestItunesSampleFeed_Async()
         {
-            var feed = await FeedReader.ReadFromFileAsync("Feeds/Rss20ItunesSample.xml").ConfigureAwait(false);
+            var feed = await Feed.FromStreamAsync(Samples.GetStream("Feeds/Rss20ItunesSample.xml"), default).ConfigureAwait(false);
 
             var itunesChannel = feed.GetItunesChannel();
 
