@@ -2,8 +2,10 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.IO;
     using System.Linq;
+    using System.Text;
     using System.Threading;
     using System.Threading.Tasks;
     using Brackets;
@@ -94,6 +96,50 @@
             this.Link = feed.Link;
 
             this.Items = feed.Items.Select(x => x.ToFeedItem()).ToArray();
+        }
+
+        /// <summary>
+        /// Creates a <see cref="Feed"/> from a <see cref="ReadOnlySpan{T}">span of bytes</see>.
+        /// </summary>
+        /// <param name="span">The span of bytes.</param>
+        /// <returns>The <see cref="Feed"/> instance.</returns>
+        public static Feed FromSpan(ReadOnlySpan<byte> span)
+        {
+            var sample = span;
+            if (sample.Length > 128)
+                sample = sample[..128];
+
+            var encoding = Encoding.UTF8;
+            var sampleStr = encoding.GetString(sample);
+            var sampleDoc = Document.Xml.Parse(sampleStr);
+            if (TryGetEncoding(sampleDoc, out var docEncoding))
+            {
+                encoding = docEncoding;
+            }
+
+            var content = encoding.GetString(span);
+            var document = Document.Xml.Parse(content);
+            return GetFeed(document, content);
+        }
+
+        private static bool TryGetEncoding(Document document, [MaybeNullWhen(false)]out Encoding encoding)
+        {
+            if (document.FirstOrDefault<Instruction>() is { Name: "xml", HasAttributes: true } xmlInstruction &&
+                    xmlInstruction.Attributes["encoding"] is { Length: > 0 } xmlEncoding)
+            {
+                try
+                {
+                    encoding = Encoding.GetEncoding(xmlEncoding.ToString());
+                    return true;
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+
+            encoding = default;
+            return false;
         }
 
         /// <summary>
