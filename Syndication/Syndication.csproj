@@ -28,4 +28,10 @@
   <ItemGroup>
     <PackageReference Include="Brackets" Version="0.6.0-beta" />
   </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>Syndication.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
 </Project>

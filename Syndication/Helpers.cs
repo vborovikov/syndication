@@ -10,6 +10,7 @@
     using System.Threading.Tasks;
     using Brackets;
     using Feeds.MediaRSS;
+    using Syndication.Parser;
 
     /// <summary>
     /// static class with helper functions
@@ -120,44 +121,18 @@
         /// <summary>
         /// Tries to parse the string as datetime and returns null if it fails
         /// </summary>
-        /// <param name="datetime">datetime as string</param>
+        /// <param name="dateTimeSpan">datetime as string</param>
         /// <param name="cultureInfo">The cultureInfo for parsing</param>
         /// <returns>datetime or null</returns>
-        public static DateTime? TryParseDateTime(string datetime, CultureInfo cultureInfo = null)
+        public static DateTime? TryParseDateTime(ReadOnlySpan<char> dateTimeSpan, CultureInfo? cultureInfo = null)
         {
-            if (string.IsNullOrWhiteSpace(datetime))
+            if (dateTimeSpan.IsEmpty)
                 return null;
 
             var dateTimeFormat = cultureInfo?.DateTimeFormat ?? DateTimeFormatInfo.CurrentInfo;
-            bool parseSuccess = DateTimeOffset.TryParse(datetime, dateTimeFormat, DateTimeStyles.None, out var dt);
-
-            if (!parseSuccess)
-            {
-                // Do, 22 Dez 2016 17:36:00 +0000
-                // note - tried ParseExact with diff formats like "ddd, dd MMM yyyy hh:mm:ss K"
-                if (datetime.Contains(","))
-                {
-                    int pos = datetime.IndexOf(',') + 1;
-                    string newdtstring = datetime.Substring(pos).Trim();
-
-                    parseSuccess = DateTimeOffset.TryParse(newdtstring, dateTimeFormat, DateTimeStyles.None, out dt);
-                }
-                if (!parseSuccess)
-                {
-                    string newdtstring = datetime.Substring(0, datetime.LastIndexOf(" ")).Trim();
-
-                    parseSuccess = DateTimeOffset.TryParse(newdtstring, dateTimeFormat, DateTimeStyles.AssumeUniversal,
-                        out dt);
-                }
-                
-                if (!parseSuccess)
-                {
-                    string newdtstring = datetime.Substring(0, datetime.LastIndexOf(" ")).Trim();
-                    
-                    parseSuccess = DateTimeOffset.TryParse(newdtstring, dateTimeFormat, DateTimeStyles.None,
-                        out dt);
-                }
-            }
+            var parseSuccess = 
+                DateTimeOffset.TryParse(dateTimeSpan, dateTimeFormat, DateTimeStyles.None, out var dt) ||
+                InvalidDateTimeOffset.TryParse(dateTimeSpan, out dt);
 
             if (!parseSuccess)
                 return null;
