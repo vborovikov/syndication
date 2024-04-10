@@ -47,10 +47,10 @@
 
             if (rootElement.EqualsIgnoreCase("rss"))
             {
-                var version = docRoot.GetAttributeValue("version");
+                var version = docRoot.Attributes["version"];
                 if (version.EqualsIgnoreCase("2.0"))
                 {
-                    if (docRoot.Attribute("media") != null)
+                    if (docRoot.Attributes.Has("media"))
                     {
                         feedType = FeedType.MediaRss;
                         return true;

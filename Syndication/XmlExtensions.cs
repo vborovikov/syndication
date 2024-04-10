@@ -7,13 +7,10 @@ using Brackets;
 
 static class XmlExtensions
 {
-    public static Tag Tag(this Document document, string name) => Find<Tag>(document.GetEnumerator(), t => t.Name == name);
+    public static Tag? Tag(this ParentTag root, string name) =>
+        root?.FirstOrDefault<Tag>(t => t.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
 
-    public static Tag Tag(this ParentTag parent, string name) => parent is null ? null : Find<Tag>(parent.GetEnumerator(), t => t.Name == name);
-
-    public static Attr Attribute(this Tag tag, string name) => tag is null ? null : FindAttribute(tag.EnumerateAttributes(), name);
-
-    public static string GetValue(this Element element)
+    public static string? GetValue(this Element? element)
     {
         if (element is null)
             return null;
@@ -31,13 +28,13 @@ static class XmlExtensions
         };
     }
 
-    public static string GetValue(this ParentTag parent, string tagName) => parent.Tag(tagName)?.GetValue();
+    public static string? GetValue(this ParentTag parent, string tagName) => parent.Tag(tagName)?.GetValue();
 
-    public static string GetAttributeValue(this Tag tag, string attributeName) => tag.Attribute(attributeName)?.GetValue();
+    public static string? GetAttributeValue(this Tag? tag, string attributeName) => tag?.Attributes[attributeName].ToString();
 
-    public static ParentTag GetElement(this ParentTag parent, string name) => parent.FirstOrDefault<ParentTag>(r => r.Name == name);
+    public static ParentTag? GetElement(this ParentTag parent, string name) => parent.FirstOrDefault<ParentTag>(r => r.Name == name);
 
-    public static IEnumerable<Tag> GetElements(this Tag tag, string name) => tag is ParentTag parent ? GetTags(parent, name) : Array.Empty<Tag>();
+    public static IEnumerable<Tag> GetElements(this Tag tag, string name) => tag is ParentTag parent ? GetTags(parent, name) : [];
 
     public static IEnumerable<Tag> GetTags(this ParentTag parent, string name) =>
         Enumerate<Tag>(parent.GetEnumerator(), t => t.Name == name);
@@ -45,7 +42,7 @@ static class XmlExtensions
     public static IEnumerable<ParentTag> GetRoots(this ParentTag parent, string name) =>
         Enumerate<ParentTag>(parent.GetEnumerator(), t => t.Name == name);
 
-    private static Element GetSingleChild(this Element element)
+    private static Element? GetSingleChild(this Element element)
     {
         if (element is not ParentTag parent)
             return null;
@@ -69,32 +66,5 @@ static class XmlExtensions
                 yield return element;
             }
         }
-    }
-
-    private static TElement Find<TElement>(Element.Enumerator elements, Predicate<TElement> match)
-        where TElement : Element
-    {
-        while (elements.MoveNext())
-        {
-            if (elements.Current is TElement element && match(element))
-            {
-                return element;
-            }
-        }
-
-        return null;
-    }
-
-    private static Attr FindAttribute(Attr.Enumerator attributes, string name)
-    {
-        while (attributes.MoveNext())
-        {
-            if (attributes.Current.Name == name)
-            {
-                return attributes.Current;
-            }
-        }
-
-        return null;
     }
 }
