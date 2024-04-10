@@ -1,4 +1,4 @@
-﻿namespace News.Tests.Service;
+﻿namespace Syndication.Tests;
 
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
