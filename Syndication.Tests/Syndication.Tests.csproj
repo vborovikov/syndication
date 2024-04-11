@@ -9,8 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Feeds\*.xml"/>
-    <EmbeddedResource Include="Html\*.html"/>
+    <EmbeddedResource Include="Feeds\*.xml" />
+    <EmbeddedResource Include="Html\*.html" />
+    <EmbeddedResource Include="Web\*.xml" />
+    <EmbeddedResource Include="Web\*.html" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +27,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Syndication\Syndication.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Web\" />
   </ItemGroup>
 
 </Project>

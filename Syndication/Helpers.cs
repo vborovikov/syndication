@@ -256,7 +256,7 @@
             return result.ToArray();
         }
 
-        private static HtmlFeedLink GetFeedLinkFromLinkTag(Tag link)
+        private static HtmlFeedLink? GetFeedLinkFromLinkTag(Tag link)
         {
             const StringComparison cmp = StringComparison.OrdinalIgnoreCase;
 

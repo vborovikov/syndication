@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>PowerShell Usergroup Austria</title>
+	<atom:link href="http://www.powershell.co.at/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.powershell.co.at</link>
+	<description>Alles rund um Powershell in Österreich. Neuigkeiten, Workshops, Treffen und Kurse</description>
+	<lastBuildDate>Mon, 25 Mar 2024 16:04:52 +0000</lastBuildDate>
+	<language>de-DE</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.4</generator>
+	<item>
+		<title>PowerShell SnippetRace 11-12/2024</title>
+		<link>https://www.powershell.co.at/powershell-snippetrace-11-12-2024/</link>
+					<comments>https://www.powershell.co.at/powershell-snippetrace-11-12-2024/#respond</comments>
+		
+		<dc:creator><![CDATA[Roman Stadlmair]]></dc:creator>
+		<pubDate>Mon, 25 Mar 2024 15:24:52 +0000</pubDate>
+				<category><![CDATA[Neuigkeiten]]></category>
+		<category><![CDATA[Schnipseljagd]]></category>
+		<category><![CDATA[Dynamic Parameters]]></category>
+		<category><![CDATA[Managed Identities]]></category>
+		<category><![CDATA[PowerShell 7.5]]></category>
+		<category><![CDATA[Software]]></category>
+		<guid isPermaLink="false">https://www.powershell.co.at/?p=3528</guid>
+
+					<description><![CDATA[<p>Software, Managed Identities, PowerShell 7.5, Dynamic Parameters Events Snippets Top Software on a new PowerShell Workstation When setting up a machine to use PowerShell, there are a lot of &#8222;must-haves&#8220; tu effectively use PowerShell. Read Jeffrey Hicks blog about his favorites. Manage system and user-assigned Managed identities in Azure Identities are a major Column for security in Azure. Learn from Baki Onur Okutucu how to use PowerShell to control them from the command line. PowerShell team investments in 2024 Every year the PowerShell team at Microsoft releases a blogpost, which investments are don this year. Read Steve Lees blog on</p>
+The post <a href="https://www.powershell.co.at/powershell-snippetrace-11-12-2024/">PowerShell SnippetRace 11-12/2024</a> first appeared on <a href="https://www.powershell.co.at">PowerShell Usergroup Austria</a>.]]></description>
+		
+					<wfw:commentRss>https://www.powershell.co.at/powershell-snippetrace-11-12-2024/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PowerShell SnippetRace 09-10/2024</title>
+		<link>https://www.powershell.co.at/powershell-snippetrace-09-10-2024/</link>
+					<comments>https://www.powershell.co.at/powershell-snippetrace-09-10-2024/#respond</comments>
+		
+		<dc:creator><![CDATA[Roman Stadlmair]]></dc:creator>
+		<pubDate>Wed, 06 Mar 2024 09:30:25 +0000</pubDate>
+				<category><![CDATA[Neuigkeiten]]></category>
+		<category><![CDATA[Schnipseljagd]]></category>
+		<category><![CDATA[Active Directory]]></category>
+		<category><![CDATA[AD-Monitoring]]></category>
+		<category><![CDATA[Logon]]></category>
+		<category><![CDATA[Ping]]></category>
+		<category><![CDATA[VS-Code]]></category>
+		<guid isPermaLink="false">https://www.powershell.co.at/?p=3520</guid>
+
+					<description><![CDATA[<p>Logon, VS-Code, Ping, AD-Monitoring Events Snippets How to toggle PC login restrictions for AD accounts Login restrictions on a workstation are one security measure which may be implemented via Active Directory settings. Tino JR wrote a script for administrators to control this on the command line for your AD. Read Tinos blog on powershell.org. VS-Code Cloudsync Many of us use multiple machines to work and code. If you use VS-Code it may be nice to have the same environment on all machines to find ourself in a familiar environment. Read Patricks blog how to achieve this. The multiple ways to</p>
+The post <a href="https://www.powershell.co.at/powershell-snippetrace-09-10-2024/">PowerShell SnippetRace 09-10/2024</a> first appeared on <a href="https://www.powershell.co.at">PowerShell Usergroup Austria</a>.]]></description>
+		
+					<wfw:commentRss>https://www.powershell.co.at/powershell-snippetrace-09-10-2024/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PowerShell SnippetRace 07-08/2024</title>
+		<link>https://www.powershell.co.at/powershell-snippetrace-07-08-2024/</link>
+					<comments>https://www.powershell.co.at/powershell-snippetrace-07-08-2024/#respond</comments>
+		
+		<dc:creator><![CDATA[Roman Stadlmair]]></dc:creator>
+		<pubDate>Mon, 19 Feb 2024 09:02:03 +0000</pubDate>
+				<category><![CDATA[Neuigkeiten]]></category>
+		<category><![CDATA[Schnipseljagd]]></category>
+		<category><![CDATA[$null]]></category>
+		<category><![CDATA[-not]]></category>
+		<category><![CDATA[classes]]></category>
+		<category><![CDATA[Datatables]]></category>
+		<category><![CDATA[Exchangerate]]></category>
+		<category><![CDATA[Functions]]></category>
+		<category><![CDATA[Hashtables]]></category>
+		<guid isPermaLink="false">https://www.powershell.co.at/?p=3509</guid>
+
+					<description><![CDATA[<p>-not, $null, Exchangerate, Hashtables, Datatables, Classes, Functions Events Snippets This weeks i checked the top topics on the subreddit r/PowerShell and found some interestig issues which where discussed there. The &#8222;-not&#8220; conditional argument There was a question about the difference between &#8222;-not $MyVariable&#8220; vs &#8222;($null -eq $MyVariable)&#8220;. There is a differnece, please read it here. PS Module for Currency Conversion Get your API Key from &#8222;Exchangerate&#8220; and leveragr the PS-Module, which is wrapped around the Exchangerate-API to convert some currencies. Mark Wragg did the work for you, so go for it on his Github repo. Hashtables or Datatables &#8211; whats</p>
+The post <a href="https://www.powershell.co.at/powershell-snippetrace-07-08-2024/">PowerShell SnippetRace 07-08/2024</a> first appeared on <a href="https://www.powershell.co.at">PowerShell Usergroup Austria</a>.]]></description>
+		
+					<wfw:commentRss>https://www.powershell.co.at/powershell-snippetrace-07-08-2024/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PowerShell SnipetRace 05-06/2024</title>
+		<link>https://www.powershell.co.at/powershell-snipetrace-05-06-2024/</link>
+					<comments>https://www.powershell.co.at/powershell-snipetrace-05-06-2024/#respond</comments>
+		
+		<dc:creator><![CDATA[Roman Stadlmair]]></dc:creator>
+		<pubDate>Mon, 19 Feb 2024 07:34:39 +0000</pubDate>
+				<category><![CDATA[Neuigkeiten]]></category>
+		<category><![CDATA[Schnipseljagd]]></category>
+		<guid isPermaLink="false">https://www.powershell.co.at/?p=3504</guid>
+
+					<description><![CDATA[<p>PowerShell 7.5 and investments in 2024 Events Snippets Friday the 5th of February 2024, the PowerShell team had written about the next short and mid-term investments on ths PowerSHell platform and its ecosystem. Find a quick summary below. This is a long list of thrilling enhancements, we are looking forward to. Find the original post of Steve Lee on the Microsoft PowerShell Engineering Blog. Cheers / Roman Foto von Roman Kraft auf Unsplash</p>
+The post <a href="https://www.powershell.co.at/powershell-snipetrace-05-06-2024/">PowerShell SnipetRace 05-06/2024</a> first appeared on <a href="https://www.powershell.co.at">PowerShell Usergroup Austria</a>.]]></description>
+		
+					<wfw:commentRss>https://www.powershell.co.at/powershell-snipetrace-05-06-2024/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Blogposts and Newsletters in times of AI´s</title>
+		<link>https://www.powershell.co.at/blogposts-and-newsletters-in-times-of-ais/</link>
+					<comments>https://www.powershell.co.at/blogposts-and-newsletters-in-times-of-ais/#respond</comments>
+		
+		<dc:creator><![CDATA[Roman Stadlmair]]></dc:creator>
+		<pubDate>Sun, 11 Feb 2024 21:09:19 +0000</pubDate>
+				<category><![CDATA[Neuigkeiten]]></category>
+		<category><![CDATA[AI]]></category>
+		<category><![CDATA[Future]]></category>
+		<guid isPermaLink="false">https://www.powershell.co.at/?p=3496</guid>
+
+					<description><![CDATA[<p>This week i am not going to do a regular PowerShell newsletter, it will be more some personal thoughts on the recent developments with AI´s. As long as i read blogposts, i enjoyed the knowledge, which people share regarding a particular problem they want to solve. Solving a technical problem personally is one part of the effot, prepering the solution in a format so that others can benefit from is is a much wider step. Who ever has created a blogpost or video knows that preparation, production and post-editing takes some time, and all of this just for the community</p>
+The post <a href="https://www.powershell.co.at/blogposts-and-newsletters-in-times-of-ais/">Blogposts and Newsletters in times of AI´s</a> first appeared on <a href="https://www.powershell.co.at">PowerShell Usergroup Austria</a>.]]></description>
+		
+					<wfw:commentRss>https://www.powershell.co.at/blogposts-and-newsletters-in-times-of-ais/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PowerShell SnippetRace 02-04/2024</title>
+		<link>https://www.powershell.co.at/powershell-snippetrace-02-04-2024/</link>
+					<comments>https://www.powershell.co.at/powershell-snippetrace-02-04-2024/#respond</comments>
+		
+		<dc:creator><![CDATA[Roman Stadlmair]]></dc:creator>
+		<pubDate>Mon, 29 Jan 2024 11:33:05 +0000</pubDate>
+				<category><![CDATA[Neuigkeiten]]></category>
+		<category><![CDATA[Schnipseljagd]]></category>
+		<category><![CDATA[Disk]]></category>
+		<category><![CDATA[Folder]]></category>
+		<category><![CDATA[GAL sync]]></category>
+		<category><![CDATA[MS-Graph API]]></category>
+		<category><![CDATA[VS-Code]]></category>
+		<guid isPermaLink="false">https://www.powershell.co.at/?p=3483</guid>
+
+					<description><![CDATA[<p>VS-Code, MS-Graph API, GAL sync, Disk, Folder Events Snippets Prevent VS Code from causing high CPU usage on a remote server Coding remotely on a host over the network is a pretty cool feature many of us dont want to exclude from their working practice. In some cases this causes a high CPU load on those remote hosts. Read Michael Pietrofortes Blog on this topic. MS-Graph API PowerShell Module There are a lot MS-Graph API intros, videos and blogs out there. the Big question is always native REST of PowerShell ? Read this article from Jeff Brown and learn about</p>
+The post <a href="https://www.powershell.co.at/powershell-snippetrace-02-04-2024/">PowerShell SnippetRace 02-04/2024</a> first appeared on <a href="https://www.powershell.co.at">PowerShell Usergroup Austria</a>.]]></description>
+		
+					<wfw:commentRss>https://www.powershell.co.at/powershell-snippetrace-02-04-2024/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>$env:PSModulepath with Microsoft.PowerShell.PSResourceGet on macOS</title>
+		<link>https://www.powershell.co.at/envpsmodulepath-with-microsoft-powershell-psresourceget-on-macos/</link>
+					<comments>https://www.powershell.co.at/envpsmodulepath-with-microsoft-powershell-psresourceget-on-macos/#respond</comments>
+		
+		<dc:creator><![CDATA[Roman Stadlmair]]></dc:creator>
+		<pubDate>Tue, 16 Jan 2024 09:22:12 +0000</pubDate>
+				<category><![CDATA[Neuigkeiten]]></category>
+		<category><![CDATA[$env:PSModulepath]]></category>
+		<category><![CDATA[maxOS]]></category>
+		<guid isPermaLink="false">https://www.powershell.co.at/?p=3469</guid>
+
+					<description><![CDATA[<p>Hi Community ! Its been a long time since my last content blog, but i am just facing an issue, you also might face now or in the future its worth writing about. It is about the switch from the old &#8222;Module&#8220; based CmdLets (Find-Module, Install-Module, &#8230;) to the &#8222;PSResource&#8220;-based CmdLets with Microsoft.PowerShell.PSResourceGet. The point is that Modules, installed from the PowerShell Gallery with Install-Module are stored in the path ~/.local/share/powershell/Modules For example my PowerShellAI Module (in an outdated version) dan be found here: Looking for a new version of the module with Find-PSResource emits this: Ok then, so lets</p>
+The post <a href="https://www.powershell.co.at/envpsmodulepath-with-microsoft-powershell-psresourceget-on-macos/">$env:PSModulepath with Microsoft.PowerShell.PSResourceGet on macOS</a> first appeared on <a href="https://www.powershell.co.at">PowerShell Usergroup Austria</a>.]]></description>
+		
+					<wfw:commentRss>https://www.powershell.co.at/envpsmodulepath-with-microsoft-powershell-psresourceget-on-macos/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PowerShell SnippetRace 01-2024 (Happy new years edition)</title>
+		<link>https://www.powershell.co.at/powershell-snippetrace-01-2024-happy-new-years-edition/</link>
+					<comments>https://www.powershell.co.at/powershell-snippetrace-01-2024-happy-new-years-edition/#respond</comments>
+		
+		<dc:creator><![CDATA[Roman Stadlmair]]></dc:creator>
+		<pubDate>Thu, 11 Jan 2024 15:39:10 +0000</pubDate>
+				<category><![CDATA[Neuigkeiten]]></category>
+		<category><![CDATA[Schnipseljagd]]></category>
+		<category><![CDATA[Graph]]></category>
+		<category><![CDATA[junk]]></category>
+		<category><![CDATA[multiple objects]]></category>
+		<category><![CDATA[SCP]]></category>
+		<guid isPermaLink="false">https://www.powershell.co.at/?p=3462</guid>
+
+					<description><![CDATA[<p>SCP, junk, multiple objects, graph Events Snippets Copy files between Windows and Linux with PowerShell and SCP X-Plat (cross-plattform) Powershell allows new things which have been impossible with Windows PowerShell 5.1. Transferring files between those two platforms may occur in several ways (SMB, FTP), but SCP is part of this blogpost written by Thomas Joos. Set junk-settings for shared mailboxes When working with shared mailboxes, the user connected to this mailbox cannot configure the Junk Mail Settings for this shared mailbox in Outlook itself, but PowerShell can. Read Patrick Grünauers Blog to learn how this works. Return multiple objects from</p>
+The post <a href="https://www.powershell.co.at/powershell-snippetrace-01-2024-happy-new-years-edition/">PowerShell SnippetRace 01-2024 (Happy new years edition)</a> first appeared on <a href="https://www.powershell.co.at">PowerShell Usergroup Austria</a>.]]></description>
+		
+					<wfw:commentRss>https://www.powershell.co.at/powershell-snippetrace-01-2024-happy-new-years-edition/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PowerShell SnippetRace 50-52/2023 X-Mas Edition</title>
+		<link>https://www.powershell.co.at/powershell-snippetrace-50-52-2023-x-mas-edition/</link>
+					<comments>https://www.powershell.co.at/powershell-snippetrace-50-52-2023-x-mas-edition/#respond</comments>
+		
+		<dc:creator><![CDATA[Roman Stadlmair]]></dc:creator>
+		<pubDate>Thu, 21 Dec 2023 15:54:52 +0000</pubDate>
+				<category><![CDATA[Neuigkeiten]]></category>
+		<category><![CDATA[Schnipseljagd]]></category>
+		<category><![CDATA[Active Directory]]></category>
+		<category><![CDATA[Best Practices]]></category>
+		<category><![CDATA[Login Script]]></category>
+		<category><![CDATA[Pre-workout]]></category>
+		<guid isPermaLink="false">https://www.powershell.co.at/?p=3454</guid>
+
+					<description><![CDATA[<p>Best Practices, Pre-workout, Active Directory, Login Script Events Snippets Recently i read the notes of the PowerShell.org podcast. There are some pearls in it which i want to share with you and comment shortly in this X-Mas blog. PowerShell Best Practices and Style Guide Writing code in any language should follow some rules. If you are in PowerShell you may not be a typical developer, nevertheless to make your code readable, reusable and stable, read the PowerShell Practice and Stype Guide in GitHub. Its really worth the read, invest this 60 minutes to make your PowerShell code better. The tasks</p>
+The post <a href="https://www.powershell.co.at/powershell-snippetrace-50-52-2023-x-mas-edition/">PowerShell SnippetRace 50-52/2023 X-Mas Edition</a> first appeared on <a href="https://www.powershell.co.at">PowerShell Usergroup Austria</a>.]]></description>
+		
+					<wfw:commentRss>https://www.powershell.co.at/powershell-snippetrace-50-52-2023-x-mas-edition/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PowerShell SnippetRace 47-49/2023</title>
+		<link>https://www.powershell.co.at/powershell-snippetrace-47-49-2023/</link>
+					<comments>https://www.powershell.co.at/powershell-snippetrace-47-49-2023/#respond</comments>
+		
+		<dc:creator><![CDATA[Roman Stadlmair]]></dc:creator>
+		<pubDate>Mon, 04 Dec 2023 15:34:38 +0000</pubDate>
+				<category><![CDATA[Neuigkeiten]]></category>
+		<category><![CDATA[Schnipseljagd]]></category>
+		<category><![CDATA[$error]]></category>
+		<category><![CDATA[AD-Domain-SID]]></category>
+		<category><![CDATA[PowerShell 7.4]]></category>
+		<guid isPermaLink="false">https://www.powershell.co.at/?p=3445</guid>
+
+					<description><![CDATA[<p>AD-Domain-SID, PowerShell 7.4, $error, haveibeenP0wned Events Snippets Retrieve the Active Directory Domain-SID Most of you still uses Active Directory, Patrick shows you how to retrieve the AD Domain-SID with this little snippet. Read more here. PowerShell 7.4. has been released As this is tied to the .net release cycle, PowerShell 7.4. has been released, not with many new features, just that now Microsoft.PowerShell.PSResourceGet 1.0 is now an integral component of the PowerShell 7.4 release and PSReadLine has been updated to 2.3. See release notes here. Error handling with $error Another one with Patrick Grünauer deals with $error. Patrick goes a</p>
+The post <a href="https://www.powershell.co.at/powershell-snippetrace-47-49-2023/">PowerShell SnippetRace 47-49/2023</a> first appeared on <a href="https://www.powershell.co.at">PowerShell Usergroup Austria</a>.]]></description>
+		
+					<wfw:commentRss>https://www.powershell.co.at/powershell-snippetrace-47-49-2023/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

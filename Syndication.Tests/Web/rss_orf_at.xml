@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:orfon="http://rss.orf.at/1.0/"
+  xmlns="http://purl.org/rss/1.0/"
+>
+<channel rdf:about="https://orf.at/">
+   <title>news.ORF.at</title>
+   <link>https://orf.at/</link>
+   <dc:date>2024-04-11T13:08:46+02:00</dc:date>
+      <description>Die aktuellsten Nachrichten auf einen Blick - aus Österreich und der ganzen Welt. In Text, Bild und Video.</description>
+   <dc:publisher>ORF Österreichischer Rundfunk, Wien</dc:publisher>
+   <dc:creator>ORF Online und Teletext GmbH &amp; Co KG</dc:creator>
+   <dc:language>de</dc:language>
+   <dc:rights>Copyright &#169; 2024 ORF Online und Teletext GmbH &amp; Co KG</dc:rights>
+   <sy:updatePeriod>hourly</sy:updatePeriod>
+   <sy:updateFrequency>2</sy:updateFrequency>
+   <sy:updateBase>2000-01-01T00:00:00Z</sy:updateBase>
+   <orfon:site>news.ORF.at</orfon:site>
+
+
+
+   <items>
+      <rdf:Seq>
+         <rdf:li rdf:resource="https://orf.at/stories/3354168/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354165/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354163/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354137/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354153/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354149/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354152/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354148/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354147/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354144/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354143/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354139/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354136/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354125/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354134/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354127/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354126/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354124/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354122/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354121/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354120/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354119/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3353876/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3354112/" />
+
+
+      </rdf:Seq>
+   </items>
+</channel>
+<item rdf:about="https://orf.at/stories/3354168/">
+   <title>Abgeordnete: Zugeständnisse an Bauern im Eilverfahren</title>
+   
+   <link>https://orf.at/stories/3354168/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-04-11T13:08:46+02:00</dc:date>
+
+   <orfon:usid>news:3354168</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354165/">
+   <title>Vietnam: Unternehmerin wegen Betrugs zum Tod verurteilt</title>
+   
+   <link>https://orf.at/stories/3354165/</link>
+   <dc:subject>Chronik</dc:subject>
+   <dc:date>2024-04-11T13:01:49+02:00</dc:date>
+
+   <orfon:usid>news:3354165</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Nachrichten/Chronik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354163/">
+   <title>Moskau: Österreichischer Diplomat „unerwünschte Person“</title>
+   
+   <link>https://orf.at/stories/3354163/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-04-11T12:53:49+02:00</dc:date>
+
+   <orfon:usid>news:3354163</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354137/">
+   <title>Clinch ÖVP – FPÖ vor Kickl-Befragung</title>
+   <description>Bevor am Donnerstag FPÖ-Chef und Ex-Innenminister Herbert Kickl als Zeuge im U-Ausschuss zum „rot-blauen Machtmissbrauch“ befragt wird, ist es zwischen ÖVP und FPÖ am Vormittag wiederholt zu einem ausdauernden Schlagabtausch gekommen. Die ÖVP warf der FPÖ ein „abgesprochenes Theater“ vor und erhob vor der Befragung schwere Vorwürfe. Die FPÖ versuchte ihrerseits, den Spieß umzudrehen, und zeigte sich überzeugt, dass der Ausschuss zu einem „Bumerang“ für die ÖVP werde.</description>
+   <link>https://orf.at/stories/3354137/</link>
+   <dc:subject>Inland</dc:subject>
+   <dc:date>2024-04-11T12:45:47+02:00</dc:date>
+
+   <orfon:usid>news:3354137</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikInland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:story" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354153/">
+   <title>„Teufels Bad“ als Favorit für Österreichischen Filmpreis</title>
+   
+   <link>https://orf.at/stories/3354153/</link>
+   <dc:subject>Kultur</dc:subject>
+   <dc:date>2024-04-11T11:44:38+02:00</dc:date>
+
+   <orfon:usid>news:3354153</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:KulturUndFreizeit/KulturUeberblick" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354149/">
+   <title>Nach Waldbränden: Entschädigung für Rhodos-Touristen beginnt</title>
+   
+   <link>https://orf.at/stories/3354149/</link>
+   <dc:subject>Wirtschaft</dc:subject>
+   <dc:date>2024-04-11T11:39:48+02:00</dc:date>
+
+   <orfon:usid>news:3354149</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Wirtschaft/Unternehmensberichterstattung" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354152/">
+   <title>EU-Parlament hebt Immunität von AfD-Abgeordnetem Beck auf</title>
+   
+   <link>https://orf.at/stories/3354152/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-04-11T11:39:17+02:00</dc:date>
+
+   <orfon:usid>news:3354152</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354148/">
+   <title>Israel: Militäreinsatz in Zentralgaza gestartet</title>
+   
+   <link>https://orf.at/stories/3354148/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-04-11T11:12:11+02:00</dc:date>
+
+   <orfon:usid>news:3354148</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354147/">
+   <title>Kontrollbank erzielte im Vorjahr zehn Prozent mehr Gewinn</title>
+   
+   <link>https://orf.at/stories/3354147/</link>
+   <dc:subject>Wirtschaft</dc:subject>
+   <dc:date>2024-04-11T11:07:15+02:00</dc:date>
+
+   <orfon:usid>news:3354147</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Wirtschaft/Wirtschaftspolitik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354144/">
+   <title>Kiew: Parlament billigt umstrittenes Mobilmachungsgesetz</title>
+   
+   <link>https://orf.at/stories/3354144/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-04-11T10:56:38+02:00</dc:date>
+
+   <orfon:usid>news:3354144</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354143/">
+   <title>Keine Entspannung bei Hochwasserkatastrophe in Russland</title>
+   
+   <link>https://orf.at/stories/3354143/</link>
+   <dc:subject>Chronik</dc:subject>
+   <dc:date>2024-04-11T10:51:33+02:00</dc:date>
+
+   <orfon:usid>news:3354143</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Nachrichten/Chronik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354139/">
+   <title>Strengere Klimaziele für Lkws im Parlament beschlossen</title>
+   
+   <link>https://orf.at/stories/3354139/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-04-11T09:52:57+02:00</dc:date>
+
+   <orfon:usid>news:3354139</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354136/">
+   <title>„Rot-Blau“-U-Ausschuss: FPÖ-Mitarbeiter zu Inseraten befragt</title>
+   
+   <link>https://orf.at/stories/3354136/</link>
+   <dc:subject>Inland</dc:subject>
+   <dc:date>2024-04-11T09:24:33+02:00</dc:date>
+
+   <orfon:usid>news:3354136</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikInland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354125/">
+   <title>Neue Gespräche erst nach Abstimmung</title>
+   <description>Auch die 20. Runde der Kollektivvertragsverhandlungen bei der AUA am Mittwoch hat kein Ergebnis gebracht. Das Unternehmen legte ein verbessertes Angebot vor. Die Gewerkschaft vida will ihre Mitglieder bis Anfang kommender Woche über den Vorschlag abstimmen lassen, bis dahin ruhen die Gespräche. Sollte es zu keiner Einigung kommen, könnte es erneut Kampfmaßnahmen geben.</description>
+   <link>https://orf.at/stories/3354125/</link>
+   <dc:subject>Wirtschaft</dc:subject>
+   <dc:date>2024-04-11T09:19:56+02:00</dc:date>
+
+   <orfon:usid>news:3354125</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Wirtschaft/Unternehmensberichterstattung" />
+   <orfon:storyType rdf:resource="urn:orfon:type:story" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354134/">
+   <title>Heftige Angriffe auf ukrainische Energieinfrastruktur</title>
+   
+   <link>https://orf.at/stories/3354134/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-04-11T08:24:23+02:00</dc:date>
+
+   <orfon:usid>news:3354134</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354127/">
+   <title>Galant: Israel will Gazastreifen mit Hilfe „fluten“</title>
+   
+   <link>https://orf.at/stories/3354127/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-04-11T07:57:51+02:00</dc:date>
+
+   <orfon:usid>news:3354127</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354126/">
+   <title>Polizeirazzia bei Drogenfahndern in Marseille</title>
+   
+   <link>https://orf.at/stories/3354126/</link>
+   <dc:subject>Chronik</dc:subject>
+   <dc:date>2024-04-11T07:50:17+02:00</dc:date>
+
+   <orfon:usid>news:3354126</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Nachrichten/Chronik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354124/">
+   <title>Berichte: Myanmars Junta verliert Kontrolle über wichtige Stadt</title>
+   
+   <link>https://orf.at/stories/3354124/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-04-11T07:15:50+02:00</dc:date>
+
+   <orfon:usid>news:3354124</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354122/">
+   <title>Comeback von „Cheri, Cheri Lady“</title>
+   
+   <link>https://orf.at/stories/3354122/</link>
+   <dc:subject>Kultur</dc:subject>
+   <dc:date>2024-04-11T06:55:15+02:00</dc:date>
+
+   <orfon:usid>news:3354122</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:KulturUndFreizeit/Musik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354121/">
+   <title>Polen: Debatte über liberaleres Abtreibungsrecht</title>
+   
+   <link>https://orf.at/stories/3354121/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-04-11T06:45:24+02:00</dc:date>
+
+   <orfon:usid>news:3354121</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354120/">
+   <title>Wahl in Südkorea: Absolute Mehrheit für Opposition</title>
+   
+   <link>https://orf.at/stories/3354120/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-04-11T06:29:31+02:00</dc:date>
+
+   <orfon:usid>news:3354120</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354119/">
+   <title>Trump: Abtreibungsverbot in Arizona geht zu weit</title>
+   
+   <link>https://orf.at/stories/3354119/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-04-11T06:25:46+02:00</dc:date>
+
+   <orfon:usid>news:3354119</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3353876/">
+   <title>Karten werden neu gemischt</title>
+   <description>Nach sechs Jahren steht in Tirols Hauptstadt kein Stein mehr auf dem anderen: Seit 2018 prägten Abspaltungen, Abwahlen und der Koalitionsbruch die Innsbrucker Stadtpolitik. Am Sonntag werden bei der Gemeinde- und Bürgermeisterwahl die Karten neu gemischt. Die Grünen wollen erneut den Stadtchef stellen, die Konkurrenz aus dem blauen und bürgerlichen Lager ist allerdings groß.</description>
+   <link>https://orf.at/stories/3353876/</link>
+   <dc:subject>Inland</dc:subject>
+   <dc:date>2024-04-11T06:05:45+02:00</dc:date>
+
+   <orfon:usid>news:3353876</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikInland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:story" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3354112/">
+   <title>Kickl als Auskunftsperson im „Rot-Blau“-U-Ausschuss</title>
+   
+   <link>https://orf.at/stories/3354112/</link>
+   <dc:subject>Inland</dc:subject>
+   <dc:date>2024-04-11T00:04:16+02:00</dc:date>
+
+   <orfon:usid>news:3354112</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikInland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+
+</rdf:RDF>
+
+

@@ -1,0 +1,1941 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>arminreiter.com</title>
+	<atom:link href="https://arminreiter.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://arminreiter.com/</link>
+	<description>Azure &#38; Blockchain enthusiast, Software Engineering &#38; Architecture, Scrum, DevOps, C#, .net core, ...</description>
+	<lastBuildDate>Fri, 22 Dec 2023 20:17:10 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.4</generator>
+
+<image>
+	<url>https://arminreiter.com/wp-content/uploads/2023/11/cropped-arfavicon-32x32.webp</url>
+	<title>arminreiter.com</title>
+	<link>https://arminreiter.com/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">172951386</site>	<item>
+		<title>Kinsta: Website not updating after publishing</title>
+		<link>https://arminreiter.com/2023/12/kinsta-website-not-updating-after-publishing/</link>
+					<comments>https://arminreiter.com/2023/12/kinsta-website-not-updating-after-publishing/#respond</comments>
+		
+		<dc:creator><![CDATA[Armin Reiter]]></dc:creator>
+		<pubDate>Fri, 22 Dec 2023 20:04:59 +0000</pubDate>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[Web]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<guid isPermaLink="false">https://arminreiter.com/?p=2629</guid>
+
+					<description><![CDATA[<p>Kinsta is a hosting service for WordPress websites focusing on delivering high performance and a convenient experience when dealing with WordPress pages. Handling Staging environments and pushing them to live is a pretty nice feature. Sometimes, you will still see the old website after pushing from staging to live. If you face the issue that [&#8230;]</p>
+<p>The post <a href="https://arminreiter.com/2023/12/kinsta-website-not-updating-after-publishing/">Kinsta: Website not updating after publishing</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://kinsta.com/?kaid=AZHECJPPNKDN">Kinsta</a> is a hosting service for WordPress websites focusing on delivering high performance and a convenient experience when dealing with WordPress pages. Handling Staging environments and pushing them to live is a pretty nice feature.</p>
+
+
+
+<p>Sometimes, you will still see the old website after pushing from staging to live. If you face the issue that the updates are not showing after publishing the page, the problem is likely related to caching. There are several caches that you should check and clean:</p>
+
+
+
+<ol>
+<li><strong>Clear Kinsta Site Cache</strong>: In the Kinsta Admin view (<a target="_blank" href="https://my.kinsta.com/" rel="noreferrer noopener">my.kinsta.com</a>), go to “Tools” and press the “Clear cache” button in the Site cache section.</li>
+
+
+
+<li><strong>Clear Edge Cache</strong>: In the Kinsta Admin view (<a target="_blank" href="https://my.kinsta.com/" rel="noreferrer noopener">my.kinsta.com</a>), go to “Edge Caching” and press the “Clear cache” button. In many cases I had in the past, this was the main issue.</li>
+
+
+
+<li><strong>Clear Cloudflare Cache</strong>: Navigate to the Cloudflare admin panel (<a target="_blank" href="https://dash.cloudflare.com/" rel="noreferrer noopener">cloudflare.com</a>), select the affected website, and press the “Purge Cache” link on the upper right.</li>
+
+
+
+<li><strong>Clear WordPress &amp; WordPress Plugin Cache</strong>: In case you use additional caching plugins such as WP Super Cache, W3 Total Cache, WP Fastest Cache, WP Rocket, or OMGF, make sure you also clean the caches of these pages. A Kinsta Cache plugin allows you to clear the Kinsta Cache (same as the cache described in point 1.)</li>
+
+
+
+<li><strong>Use Incognito Browser</strong>: There is a chance that your browser cached the website, so try to open the website in an incognito window to see if this could be the issue.</li>
+
+
+
+<li><strong>Proxy</strong>: If none of the above helps, try to use an incognito browser on a different internet connection because there is a slight chance that a proxy server within your current network caches the website. The easiest is to turn off the WiFi of your mobile phone and then open the website in an incognito browser.</li>
+</ol>
+
+
+
+<p>If none of the above fixes the problem, make sure that your changes are published (so they are not in draft mode) and check if there is any special plugin that could cause special behaviors. There is a list of banned and incompatible plugins published in the Kinsta Knowledgebase: <a href="https://kinsta.com/knowledgebase/banned-plugins/" target="_blank" rel="noreferrer noopener">https://kinsta.com/knowledgebase/banned-plugins/</a></p>
+
+
+
+<h2 class="wp-block-heading">Further Information</h2>
+
+
+
+<p>Kinsta &#8211; WordPress Changes Not Showing? Here&#8217;s How to Fix the Problem: <a href="https://kinsta.com/blog/wordpress-changes-not-showing/">https://kinsta.com/blog/wordpress-changes-not-showing/</a></p>
+<p>The post <a href="https://arminreiter.com/2023/12/kinsta-website-not-updating-after-publishing/">Kinsta: Website not updating after publishing</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://arminreiter.com/2023/12/kinsta-website-not-updating-after-publishing/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2629</post-id>	</item>
+		<item>
+		<title>Configure dynamic DNS in OPNsense with Cloudflare</title>
+		<link>https://arminreiter.com/2022/08/configure-dynamic-dns-in-opnsense-with-cloudflare/</link>
+					<comments>https://arminreiter.com/2022/08/configure-dynamic-dns-in-opnsense-with-cloudflare/#comments</comments>
+		
+		<dc:creator><![CDATA[Armin Reiter]]></dc:creator>
+		<pubDate>Sun, 14 Aug 2022 16:41:03 +0000</pubDate>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[cloudflare]]></category>
+		<category><![CDATA[dyndns]]></category>
+		<category><![CDATA[opnsense]]></category>
+		<guid isPermaLink="false">https://arminreiter.com/?p=2377</guid>
+
+					<description><![CDATA[<p>OPNsense is a great open source firewall with lots of plugins and support for wireguard, dynamic DNS and many other. Few months ago, OPNsense decided to switch from dyndns (os-dyndns) to DDclient (os-ddclient) and it seems some users, including me, have issues with switching from legacy one to new one. In my case, I had [&#8230;]</p>
+<p>The post <a href="https://arminreiter.com/2022/08/configure-dynamic-dns-in-opnsense-with-cloudflare/">Configure dynamic DNS in OPNsense with Cloudflare</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>OPNsense is a great open source firewall with lots of plugins and support for wireguard, dynamic DNS and many other. Few months ago, OPNsense decided to switch from dyndns (os-dyndns) to DDclient (os-ddclient) and it seems some users, including me, have issues with switching from legacy one to new one. In my case, I had to switch from Azure DNS to Cloudflare because ddclient doesn&#8217;t support Azure DNS. Configuring Cloudflare also did not work that well in the beginning, but after some research, it worked. This blog post is the summary of the research.</p>
+
+
+
+<h2 class="wp-block-heading">Step 1: Install ddclient dynamic DNS plugin</h2>
+
+
+
+<p>Open OPNsense admin panel and go to &#8220;System &gt; Firmware &gt; Plugins&#8221; and select <strong>os-ddclient</strong> (do not use os-dyndns as it is outdated and will no longer be supported). Once it is installed you can find &#8220;Dynamic DNS&#8221; under services.</p>
+
+
+
+<h2 class="wp-block-heading">Step 2: Configure dynamic DNS</h2>
+
+
+
+<p>Go to Cloudflare and add the DNS entry that should be set by ddclient. In this example, I will add an A record dyn.arminreiter.com with IP 0.0.0.0 (choose whatever you want), deactivated proxy and TTL of 5 minutes.</p>
+
+
+
+<p>Within OPNsense, go to &#8220;Services &gt; Dynamic DNS &gt; Settings&#8221; and add a new dynamic DNS configuration and enter the values that fit your configuration:</p>
+
+
+
+<ul><li><strong>Enabled</strong>: true</li><li><strong>Service</strong>: Cloudflare</li><li><strong>Username</strong>: E-Mail address of your account</li><li><strong>Password</strong>: Global API key for your account (Open Cloudflare &gt; My Account &gt; API Tokens &gt; Global API Key &gt; View)</li><li><strong>Zone</strong>: your.domain (e.g. arminreiter.com)</li><li><strong>Hostname</strong>: full domain name you want to update (e.g. dyn.arminreiter.com)</li><li><strong>Check ip method</strong>: Interface</li><li><strong>Force SSL</strong>: true</li><li><strong>Interface to monitor</strong>: WAN</li></ul>
+
+
+
+<p>The DNS entry will be updated every 5 minutes. If you want to change the interval, go to &#8220;General Settings&#8221; and update the interval. </p>
+
+
+
+<p>Thats it already. Once it ran, you should see the updated DNS entry within Cloudflare. In case it does not work or if you have any issues, check the next (Troubleshoot) section.</p>
+
+
+
+<h2 class="wp-block-heading">Troubleshoot</h2>
+
+
+
+<h3 class="wp-block-heading">General Troubleshooting</h3>
+
+
+
+<p>If you have any issues, connect via ssh to OPNsense and try one of the following:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="bash" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># run ddclient and show debug and verbose output (if you only get some "skipping update" message, just try again)
+ddclient -debug -verbose
+
+# check ddclient configuration
+cat /usr/local/etc/ddclient.conf
+
+# clean ddclient cache
+rm /var/tmp/ddclient.cache</pre>
+
+
+
+<h3 class="wp-block-heading">API Token does not work</h3>
+
+
+
+<p>Unfortunately, DDclient (v 3.9.1) does not work with Cloudflare API Tokens. There is a fix available which is not yet released. This is also discussed in OPNsense forum (<a href="https://forum.opnsense.org/index.php?topic=26446.300">https://forum.opnsense.org/index.php?topic=26446.300</a>) and at GitHub (<a href="https://github.com/opnsense/plugins/issues/2842">https://github.com/opnsense/plugins/issues/2842</a>). Second one proposes as a workaround to quickfix the version until the update is released. This quickfix can be done as follows:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="bash" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">vi +4566 /usr/local/sbin/ddclient</pre>
+
+
+
+<p>change the header values to:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">            my $headers = "";
+            if ($config{$key}{'login'} eq 'token') {
+                    $headers .= "Authorization: Bearer $config{$key}{'password'}\n";
+            } else {
+                    $headers .= "X-Auth-Email: $config{$key}{'login'}\n";
+                    $headers .= "X-Auth-Key: $config{$key}{'password'}\n";
+            }
+            $headers .= "Content-Type: application/json";</pre>
+
+
+
+<p>save the file, open your configuration in OPNsense and replace the username with &#8220;<strong>token</strong>&#8221; and use your Cloudflare API token as password. This token must have the following configuration: </p>
+
+
+
+<ul><li>Permissions:<ul><li>Zone, Zone, Read</li><li>Zone, DNS, Edit</li></ul></li><li>Zone Resources:<ul><li>Include, Specific Zone, [your zone]</li></ul></li></ul>
+
+
+
+<p>The <strong>downside</strong> of this approach is, that an update of ddclient will overwrite the changes and you have to do it again. Therefore, the recommendation is to use the global API key until there is an official fix available.</p>
+<p>The post <a href="https://arminreiter.com/2022/08/configure-dynamic-dns-in-opnsense-with-cloudflare/">Configure dynamic DNS in OPNsense with Cloudflare</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://arminreiter.com/2022/08/configure-dynamic-dns-in-opnsense-with-cloudflare/feed/</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2377</post-id>	</item>
+		<item>
+		<title>Create your own Certificate Authority (CA) using OpenSSL</title>
+		<link>https://arminreiter.com/2022/01/create-your-own-certificate-authority-ca-using-openssl/</link>
+					<comments>https://arminreiter.com/2022/01/create-your-own-certificate-authority-ca-using-openssl/#comments</comments>
+		
+		<dc:creator><![CDATA[Armin Reiter]]></dc:creator>
+		<pubDate>Sat, 29 Jan 2022 10:54:59 +0000</pubDate>
+				<category><![CDATA[Scripts]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Certificates]]></category>
+		<category><![CDATA[OpenSSL]]></category>
+		<guid isPermaLink="false">https://arminreiter.com/?p=2315</guid>
+
+					<description><![CDATA[<p>Who isn&#8217;t tired of certificate errors at internal devices that serve a WebUI but don&#8217;t have a trusted certificate? Let&#8217;s encrypt is probably not the best alternative as there is no public access to the server (it is still possible, but some configuration and &#8220;workarounds&#8221; are needed). In this blog post, we&#8217;ll create our own [&#8230;]</p>
+<p>The post <a href="https://arminreiter.com/2022/01/create-your-own-certificate-authority-ca-using-openssl/">Create your own Certificate Authority (CA) using OpenSSL</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>Who isn&#8217;t tired of certificate errors at internal devices that serve a WebUI but don&#8217;t have a trusted certificate? Let&#8217;s encrypt is probably not the best alternative as there is no public access to the server (it is still possible, but some configuration and &#8220;workarounds&#8221; are needed).</p>
+
+
+
+<p>In this blog post, we&#8217;ll create our own simple Certificate Authority, which we&#8217;ll use to sign certificates we generate for our internal servers. We will also make sure that those are trusted certificates in our network. This post starts with the basics, so if you are familiar with certificates and CAs, how they work, the difference between a public key and a certificate, and why a certificate signing request is needed, skip the next section. If you are not that enlightened &#8211; let&#8217;s start with some theories:</p>
+
+
+
+<h2 class="wp-block-heading" id="how-do-ca-s-and-certificates-basically-work">How do CA&#8217;s and certificates, basically, work?</h2>
+
+
+
+<p>Let&#8217;s assume there is a server running a simple website. The traffic to the webserver should be encrypted (use https). This encryption is done via symmetric encryption, which means that there is one key to encrypt and decrypt the traffic. This key is generated when the connection is established and is exchanged between the client and server using asymmetric encryption (so there is a public/private key pair). Search for &#8220;SSL protocol&#8221; or &#8220;SSL handshake&#8221; for details. The basic idea is:</p>
+
+
+
+<ol>
+<li>Client receives the public key of the server (public key is included in the certificate)</li>
+
+
+
+<li>Client generates a symmetric key</li>
+
+
+
+<li>Client encrypts the symmetric key with the public key of the server</li>
+
+
+
+<li>Client sends the encrypted symmetric key to the server</li>
+
+
+
+<li>Server decrypts the encrypted symmetric key (at this stage, client and server have the same key, so key exchange is done)</li>
+
+
+
+<li>Client and server use the symmetric key to encrypt their communication</li>
+</ol>
+
+
+
+<p>In step 1., the client receives a certificate containing the server&#8217;s public key and other information like the issuer, how long it is valid, which algorithms are used, what the certificate is about, etc. You can open a website and check the certificate details to see what it contains:</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img fetchpriority="high" decoding="async" width="404" height="508" src="https://arminreiter.com/wp-content/uploads/2022/01/image.png" alt="" class="wp-image-2316" srcset="https://arminreiter.com/wp-content/uploads/2022/01/image.png 404w, https://arminreiter.com/wp-content/uploads/2022/01/image-239x300.png 239w" sizes="(max-width: 404px) 100vw, 404px" /></figure></div>
+
+
+<p>Such certificates, as well as the public/private key pair, can be generated by everyone. You can generate a certificate for the domain example.com, even if you don&#8217;t own it. That&#8217;s why it&#8217;s important to know if you can trust a certificate or not. This trust is established through &#8220;Trusted Root Certificate Authorities&#8221;. Suppose I want to get a trusted certificate for arminreiter.com. In that case, I can generate a certificate and send a certificate signing request (CSR) for this certificate to a trusted certificate authority. They will check if I am the owner of arminreiter.com and will sign my certificate. Once I deploy the signed certificate, the website visitors (browser) know that it can be trusted because it is signed by a certificate authority they trust (the signature is validated). If it is not signed, users will get a warning (it could also be that a man-in-the-middle issued its own certificate to decrypt all the traffic &#8211; so be careful if you get this warning).</p>
+
+
+
+<p>This works great for public websites, mainly because of <a href="https://letsencrypt.org/" target="_blank" rel="noreferrer noopener">https://letsencrypt.org/</a>. However, it&#8217;s not that easy for internal servers as let&#8217;s encrypt can&#8217;t check the internal servers. (It is possible, but it requires some work).</p>
+
+
+
+<p>For internal servers, one option is to create an own certificate authority (CA), configure the internal clients to trust this CA, and issue certificates that their own CA signs. The CA has its own key pair to sign the certificate requests.</p>
+
+
+
+<h2 class="wp-block-heading" id="step-by-step">Step-by-Step</h2>
+
+
+
+<p>Based on the information above, we know that we have to:</p>
+
+
+
+<ol>
+<li>Create a private key for our own CA</li>
+
+
+
+<li>Create a certificate for the CA</li>
+
+
+
+<li>Add this certificate to the &#8220;Trusted Root Certificate Authorities&#8221; store of the clients so that it becomes trusted</li>
+
+
+
+<li>Create a certificate for our webserver</li>
+
+
+
+<li>Sign this certificate with our CA (which is trusted and therefore, also this new certificate becomes trusted)</li>
+
+
+
+<li>Deploy the certificate</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="using-openssl-to-create-our-ca">Using OpenSSL to create our CA</h2>
+
+
+
+<h3 class="wp-block-heading" id="step-1-create-a-private-key-for-the-ca">Step 1: Create a private key for the CA</h3>
+
+
+
+<p><em>Note: we will encrypt the key with AES because if anyone gets access to the key this person can create signed, trusted certificates. Encrypting the key adds some protection (use a 20+ password)</em>.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">CANAME=MyOrg-RootCA
+
+# optional
+mkdir $CANAME
+cd $CANAME
+
+# generate aes encrypted private key
+openssl genrsa -aes256 -out $CANAME.key 4096</pre>
+
+
+
+<h3 class="wp-block-heading" id="step-2-create-certificate-of-the-ca">Step 2: Create Certificate of the CA</h3>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># create certificate, 1826 days = 5 years
+# the following will ask for common name, country, ...
+openssl req -x509 -new -nodes -key $CANAME.key -sha256 -days 1826 -out $CANAME.crt
+
+# ... or you provide common name, country etc. via:
+openssl req -x509 -new -nodes -key $CANAME.key -sha256 -days 1826 -out $CANAME.crt -subj '/CN=MyOrg Root CA/C=AT/ST=Vienna/L=Vienna/O=MyOrg'</pre>
+
+
+
+<h3 class="wp-block-heading" id="step-3-add-the-ca-certificate-to-the-trusted-root-certificates">Step 3: Add the CA certificate to the trusted root certificates</h3>
+
+
+
+<p>For <strong>Windows</strong>: Open the .crt file and install it for all users to &#8220;Trusted Root Certificate Authorities&#8221; (verify it by running <code>certmgr.msc</code>)<br>if you use <strong>Intune</strong>: Go to Devices &gt; Configuration Profiles &gt; Create profile &gt; Windows 10 and later, Templates, Trusted certificate &gt; upload the .crt file</p>
+
+
+
+<p>For <strong>Linux </strong>(Ubuntu): </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">sudo apt install -y ca-certificates
+sudo cp $CANAME.crt /usr/local/share/ca-certificates
+sudo update-ca-certificates</pre>
+
+
+
+<p><strong>Linux </strong>(Fedora/CentOS): </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">sudo cp $CANAME.crt /etc/pki/ca-trust/source/anchors/$CANAME.crt
+sudo update-ca-trust</pre>
+
+
+
+<p>is by sure also possible for Android, iOS, macOS, &#8230; =&gt; internet will help <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f609.png" alt="😉" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<h3 class="wp-block-heading" id="step-4-create-a-certificate-for-the-webserver">Step 4:  <span style="font-size: revert; color: initial;">Create a certificate for the webserver</span> </h3>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">MYCERT=myserver
+openssl req -new -nodes -out $MYCERT.csr -newkey rsa:4096 -keyout $MYCERT.key -subj '/CN=My Firewall/C=AT/ST=Vienna/L=Vienna/O=MyOrg'
+
+# create a v3 ext file for SAN properties
+cat > $MYCERT.v3.ext &lt;&lt; EOF
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = myserver.local
+DNS.2 = myserver1.local
+IP.1 = 192.168.1.1
+IP.2 = 192.168.2.1
+EOF
+</pre>
+
+
+
+<p><em>Note: the v3.ext file contains the properties of the v3 extension of certificates. This includes especially the SAN (subject alternative names) which contains the information about DNS or IP, which the browser needs to trust the certificate (you somehow need to make sure, that mysite.local uses the certificate that was issued for mysite.local)</em></p>
+
+
+
+<h3 class="wp-block-heading" id="step-5-sign-the-certificate">Step 5: Sign the certificate</h3>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">openssl x509 -req -in $MYCERT.csr -CA $CANAME.crt -CAkey $CANAME.key -CAcreateserial -out $MYCERT.crt -days 730 -sha256 -extfile $MYCERT.v3.ext</pre>
+
+
+
+<h3 class="wp-block-heading" id="step-6-deploy-the-certificate">Step 6: Deploy the certificate</h3>
+
+
+
+<p>no explanation here, as it depends on the server.</p>
+
+
+
+<h2 class="wp-block-heading" id="source-command-recap">Source/Command Recap</h2>
+
+
+
+<p>All commands collected in one code block:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">CANAME=MyOrg-RootCA
+
+# optional, create a directory
+mkdir $CANAME
+cd $CANAME
+
+# generate aes encrypted private key
+openssl genrsa -aes256 -out $CANAME.key 4096
+
+# create certificate, 1826 days = 5 years
+openssl req -x509 -new -nodes -key $CANAME.key -sha256 -days 1826 -out $CANAME.crt -subj '/CN=My Root CA/C=AT/ST=Vienna/L=Vienna/O=MyOrganisation'
+
+# create certificate for service
+MYCERT=myserver.local
+openssl req -new -nodes -out $MYCERT.csr -newkey rsa:4096 -keyout $MYCERT.key -subj '/CN=My Firewall/C=AT/ST=Vienna/L=Vienna/O=MyOrganisation'
+
+# create a v3 ext file for SAN properties
+cat > $MYCERT.v3.ext &lt;&lt; EOF
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = myserver.local
+DNS.2 = myserver1.local
+IP.1 = 192.168.1.1
+IP.2 = 192.168.2.1
+EOF
+
+openssl x509 -req -in $MYCERT.csr -CA $CANAME.crt -CAkey $CANAME.key -CAcreateserial -out $MYCERT.crt -days 730 -sha256 -extfile $MYCERT.v3.ext
+</pre>
+
+
+
+<h2 class="wp-block-heading" id="is-this-a-full-certificate-authority">Is this a &#8220;full&#8221; certificate authority?</h2>
+
+
+
+<p>No, it is not. A &#8220;real&#8221; Root CA usually consists of a Root CA, which signs the certificates of Intermediate CAs, which then sign the certificates of websites (there could also be multiple Intermediate CAs =&gt; certificate chain). This increases the security a lot because the certificate of the Root CA is only needed in very special cases (new Intermediate CA added or revoked).<br>The CA we created is only a public/private key pair, so it also does not maintain and publish a Certificate Revocation List (CRL), usually done by CAs. A CRL lists all revoked certificates (e.g., because the private key got leaked/compromised). If a client receives a certificate, it will check if it is still valid by checking the CRL.<br>Besides the CRL, they should implement the Online Certificate Status Protocol (OCSP), an alternative to CRLs. It also allows the client to check if a certificate is still valid or revoked, but it has advantages over CRLs.</p>
+
+
+
+<h2 class="wp-block-heading" id="some-final-comments">Some final comments&#8230;</h2>
+
+
+
+<p>There are already many posts about this topic (see Further Information section), but some of them use outdated algorithms or do not contain exactly what I need. </p>
+
+
+
+<p>Regarding the algorithms/usage:</p>
+
+
+
+<ul>
+<li>The private key of the Root CA should always be encrypted with a password. As stated above &#8211; if someone gets access to this key, this person is able to sign all certificates so that they become trusted.</li>
+
+
+
+<li>Triple-DES (3DES) is officially being retired (by NIST) and is therefore considered as unsecure. AES was created to replace 3DES (see e.g.: <a href="https://www.cryptomathic.com/news-events/blog/3des-is-officially-being-retired">https://www.cryptomathic.com/news-events/blog/3des-is-officially-being-retired</a>) and is still considered secure.</li>
+
+
+
+<li>RSA vs. Elliptic Curves: Elliptic Curves are basically preferred because of better security, higher efficiency, smaller keys and perfect forward secrecy &#8211; however, I used RSA 4096, because adoption is better (its basically available at all servers) and RSA is still unbroken.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="further-information">Further Information</h2>
+
+
+
+<ul>
+<li>OpenSSL Creating a Certificate Authority (CA): <a href="https://node-security.com/posts/openssl-creating-a-ca/">https://node-security.com/posts/openssl-creating-a-ca/</a></li>
+
+
+
+<li>Creating a browser trusted self-signed SSL certificate: <a href="https://medium.com/@tbusser/creating-a-browser-trusted-self-signed-ssl-certificate-2709ce43fd15">https://medium.com/@tbusser/creating-a-browser-trusted-self-signed-ssl-certificate-2709ce43fd15</a></li>
+
+
+
+<li>Create Your Own SSL Certificate Authority for Local HTTPS&nbsp;Development: <a href="https://deliciousbrains.com/ssl-certificate-authority-for-local-https-development/">https://deliciousbrains.com/ssl-certificate-authority-for-local-https-development/</a></li>
+
+
+
+<li>How to Be Your Own Certificate Authority: <a href="https://www.wikihow.com/Be-Your-Own-Certificate-Authority
+">https://www.wikihow.com/Be-Your-Own-Certificate-Authority</a></li>
+
+
+
+<li>How to Create Trusted Self-Signed SSL Certificates and Local Domains for Testing: <a href="https://betterprogramming.pub/trusted-self-signed-certificate-and-local-domains-for-testing-7c6e6e3f9548">https://betterprogramming.pub/trusted-self-signed-certificate-and-local-domains-for-testing-7c6e6e3f9548</a></li>
+
+
+
+<li>OpenSSL Certificate Authority: <a href="https://jamielinux.com/docs/openssl-certificate-authority/introduction.html">https://jamielinux.com/docs/openssl-certificate-authority/introduction.html</a></li>
+</ul>
+
+
+
+<p></p>
+<p>The post <a href="https://arminreiter.com/2022/01/create-your-own-certificate-authority-ca-using-openssl/">Create your own Certificate Authority (CA) using OpenSSL</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://arminreiter.com/2022/01/create-your-own-certificate-authority-ca-using-openssl/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2315</post-id>	</item>
+		<item>
+		<title>Take and Compare Website Screenshots with Python</title>
+		<link>https://arminreiter.com/2021/08/take-and-compare-website-screenshots-with-python/</link>
+					<comments>https://arminreiter.com/2021/08/take-and-compare-website-screenshots-with-python/#respond</comments>
+		
+		<dc:creator><![CDATA[Armin Reiter]]></dc:creator>
+		<pubDate>Wed, 18 Aug 2021 10:59:11 +0000</pubDate>
+				<category><![CDATA[Scripts]]></category>
+		<category><![CDATA[Automation]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Testing]]></category>
+		<category><![CDATA[Web]]></category>
+		<guid isPermaLink="false">https://arminreiter.com/?p=2301</guid>
+
+					<description><![CDATA[<p>I maintain a few wordpress websites and every time I install multiple updates, I have to click through the sites to see if everything still works. Small, potential design issues could still be overseen. To simplify and to improve this process, I created a python script that takes multiple screenshots of the website. This script [&#8230;]</p>
+<p>The post <a href="https://arminreiter.com/2021/08/take-and-compare-website-screenshots-with-python/">Take and Compare Website Screenshots with Python</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>I maintain a few wordpress websites and every time I install multiple updates, I have to click through the sites to see if everything still works. Small, potential design issues could still be overseen. To simplify and to improve this process, I created a python script that takes multiple screenshots of the website. This script is executed before and after the upgrade. Once this is done, I execute another script that compares the screenshots and shows if there are any differences. This blog post is about those two scripts &#8211; one that takes screenshots, another that compares two images.</p>
+
+
+
+<p>The screenshot taker script uses selenium and therefore, we need to download the selenium webdriver at first. The second script uses pillow library in python to compare images:</p>
+
+
+
+<h2 class="wp-block-heading" id="prerequisites">Prerequisites</h2>
+
+
+
+<ol><li>Download and install webdriver<ul><li>Firefox: <a href="https://github.com/mozilla/geckodriver/releases">https://github.com/mozilla/geckodriver/releases</a></li><li>alternative:<ul><li>Chrome: <a href="https://chromedriver.chromium.org/downloads">https://chromedriver.chromium.org/downloads</a></li><li>Edge: <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/</a></li></ul></li></ul></li><li>extract exe into a folder and add folder path to PATH</li><li>Install selenium and pillow:</li></ol>
+
+
+
+<pre class="wp-block-preformatted">pip install selenium
+pip install pillow
+
+# or 
+# python -m pip install selenium
+# python -m pip install pillow</pre>
+
+
+
+<h2 class="wp-block-heading" id="python-script-to-take-screenshots-of-a-website">Python script to take screenshots of a website</h2>
+
+
+
+<p>The following is the simplified version of the &#8220;screenshot taker&#8221; script. It contains the hardcoded URL and a hardcoded list of subsites. Later in this blog post, I will link a nicer one which accepts arguments, crawls the website for urls and allows a few more parameters.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">import os
+from datetime import datetime
+from time import sleep
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+
+siteurl = "https://arminreiter.com"
+screen_width = 2560
+screen_height = 1440
+output_directory = 'output_' + datetime.now().strftime('%Y%m%d_%H%M%S')
+
+sites = [ "/", "/about", "/resources", "/privacy-policy"]
+
+options = Options()
+options.add_argument("--headless")
+
+driver = webdriver.Firefox(options=options)
+driver.set_window_size(screen_width, screen_height)
+
+os.makedirs(output_directory , exist_ok=True)
+
+for url in sites:
+    print("get " + url + "...")
+    filename = url.replace('/','_') + ".png"
+
+    driver.get(siteurl + url)
+    sleep(3)
+    outfile = os.path.join(output_directory, filename)
+    driver.get_screenshot_as_file(outfile)
+
+driver.quit()</pre>
+
+
+
+<p>Even the script above contains the hardcoded urls and only takes screenshots, it should already be sufficient for many use cases. When the script ran, we will have screenshots of our website. If we run it before and after the upgrade, we will have screenshots to compare. So, lets write the script that allows us to compare two images:</p>
+
+
+
+<h2 class="wp-block-heading" id="python-script-to-compare-two-images">Python script to compare two images</h2>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">import argparse
+import os
+from datetime import datetime
+from PIL import Image, ImageChops
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--first",  "-f", help="path to the first folder for image comparison", required=True)
+parser.add_argument("--second", "-s", help="path to the second folder for image comparison", required=True)
+args = parser.parse_args()
+
+dir1 = args.first
+dir2 = args.second
+
+outputdir = 'result_' + datetime.now().strftime('%Y%m%d_%H%M%S')
+
+for filename in os.listdir(dir1):
+
+    file1 = os.path.join(dir1, filename)
+    file2 = os.path.join(dir2, filename)
+    im1 = Image.open(file1)
+    im2 = Image.open(file2)
+
+    print('Compare ' + filename + ' (' + file1 + ' AND ' + file2 + ')')
+
+    diff_img = ImageChops.difference(im1, im2).convert('RGB')
+    if diff_img.getbbox():
+        outpath = outputdir + '/' + filename + "-s.png"
+        print("Images are different, store difference in " + outpath)
+        os.makedirs(outputdir , exist_ok=True)
+        diff_img.save(outpath)
+    else:
+        print("Images are equal")
+</pre>
+
+
+
+<h2 class="wp-block-heading" id="improved-python-scripts">Improved Python Scripts</h2>
+
+
+
+<p>The following scripts are improved version of the two above. The improved screenshot script takes the url of the website and the screen resolution as parameters. It uses a webservice to get all subsites of the website and takes screenshots of each subsites. The number of subsites can be limited by using the -l parameter. <br>The image compare script is just extended by a description and 1-2 small adoptions.</p>
+
+
+
+<h3 class="wp-block-heading" id="improved-website-screenshot-python-script">Improved Website Screenshot Python Script  </h3>
+
+
+<p><script src="https://gist.github.com/arminreiter/24a751c3ce6a6a93c6d91bcf72196dbf.js"></script></p>
+
+
+
+<h3 class="wp-block-heading" id="improved-image-compare-python-script">Improved Image Compare Python Script</h3>
+
+
+<p><script src="https://gist.github.com/arminreiter/380e9b64124c0d2227e50af5178c27eb.js"></script></p>
+<p>The post <a href="https://arminreiter.com/2021/08/take-and-compare-website-screenshots-with-python/">Take and Compare Website Screenshots with Python</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://arminreiter.com/2021/08/take-and-compare-website-screenshots-with-python/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2301</post-id>	</item>
+		<item>
+		<title>3 ways to generate passwords in Powershell</title>
+		<link>https://arminreiter.com/2021/07/3-ways-to-generate-passwords-in-powershell/</link>
+					<comments>https://arminreiter.com/2021/07/3-ways-to-generate-passwords-in-powershell/#comments</comments>
+		
+		<dc:creator><![CDATA[Armin Reiter]]></dc:creator>
+		<pubDate>Sat, 31 Jul 2021 19:30:06 +0000</pubDate>
+				<category><![CDATA[Powershell]]></category>
+		<category><![CDATA[Scripts]]></category>
+		<category><![CDATA[Security]]></category>
+		<guid isPermaLink="false">https://arminreiter.com/?p=2291</guid>
+
+					<description><![CDATA[<p>Powershell is great for automation and if one wants to reset passwords or create new users, it can be useful to generate the passwords in the Powershell. The following contains 3 ways how to generate passwords in Powershell: A simple version using the built-in System.Web.Security.Membership Simple random password generator with predefined character set Password Generator [&#8230;]</p>
+<p>The post <a href="https://arminreiter.com/2021/07/3-ways-to-generate-passwords-in-powershell/">3 ways to generate passwords in Powershell</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>Powershell is great for automation and if one wants to reset passwords or create new users, it can be useful to generate the passwords in the Powershell.</p>
+
+
+
+<p>The following contains 3 ways how to generate passwords in Powershell:</p>
+
+
+
+<ol><li>A simple version using the built-in System.Web.Security.Membership</li><li>Simple random password generator with predefined character set</li><li>Password Generator that allows to specify the amount of uppercase, lowercase, numeric and special characters</li></ol>
+
+
+
+<h2 class="wp-block-heading">Simple, built-in Password Generator</h2>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="powershell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">function Get-RandomPassword {
+    param (
+        [Parameter(Mandatory)]
+        [int] $length,
+        [int] $amountOfNonAlphanumeric = 1
+    )
+    Add-Type -AssemblyName 'System.Web'
+    return [System.Web.Security.Membership]::GeneratePassword($length, $amountOfNonAlphanumeric)
+}
+
+Get-RandomPassword 8</pre>
+
+
+
+<p>Generates passwords such as:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="powershell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># Get-RandomPassword 8 0
+kz^RawKy
+
+# Get-RandomPassword 8 1
+/vmt@pO|
+
+# Get-RandomPassword 8 2
+6@=(9Dx[
+
+# Get-RandomPassword 8 4
+fI@W=p${
+
+# Get-RandomPassword 8 7
+@+[#$/+M
+
+# Get-RandomPassword 8 8
+!&amp;amp;@^*:}*</pre>
+
+
+
+<h2 class="wp-block-heading">Simple Random Password Generator with predefined character set</h2>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="powershell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">function Get-RandomPassword {
+    param (
+        [Parameter(Mandatory)]
+        [int] $length
+    )
+
+    #$charSet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789{]+-[*=@:)}$^%;(_!&amp;amp;#?>/|.'.ToCharArray()
+    $charSet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.ToCharArray()
+
+    $rng = New-Object System.Security.Cryptography.RNGCryptoServiceProvider
+    $bytes = New-Object byte[]($length)
+ 
+    $rng.GetBytes($bytes)
+ 
+    $result = New-Object char[]($length)
+ 
+    for ($i = 0 ; $i -lt $length ; $i++) {
+        $result[$i] = $charSet[$bytes[$i]%$charSet.Length]
+    }
+ 
+    return (-join $result)
+}
+
+Get-RandomPassword 8</pre>
+
+
+
+<p>lets generate a few passwords via:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="powershell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">for($i=0;$i-lt8;$i++) { Get-RandomPassword 8 }</pre>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">OhVGsUdx
+Blg2uK3u
+gj9qKDH4
+bbsTr25Q
+zQ4w2jTK
+aMAFMols
+26BvUY7E
+6GR6fZM5</pre>
+
+
+
+<h2 class="wp-block-heading">PassGen &#8211; Generate passwords with specific requirements</h2>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="powershell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">function Get-RandomPassword {
+    param (
+        [Parameter(Mandatory)]
+        [ValidateRange(4,[int]::MaxValue)]
+        [int] $length,
+        [int] $upper = 1,
+        [int] $lower = 1,
+        [int] $numeric = 1,
+        [int] $special = 1
+    )
+
+    if($upper + $lower + $numeric + $special -gt $length) {
+        throw "number of upper/lower/numeric/special char must be lower or equal to length"
+    }
+
+    $uCharSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    $lCharSet = "abcdefghijklmnopqrstuvwxyz"
+    $nCharSet = "0123456789"
+    $sCharSet = "/*-+,!?=()@;:._"
+    $charSet = ""
+
+    if($upper -gt 0) { $charSet += $uCharSet }
+    if($lower -gt 0) { $charSet += $lCharSet }
+    if($numeric -gt 0) { $charSet += $nCharSet }
+    if($special -gt 0) { $charSet += $sCharSet }
+    
+    $charSet = $charSet.ToCharArray()
+
+    $rng = New-Object System.Security.Cryptography.RNGCryptoServiceProvider
+    $bytes = New-Object byte[]($length)
+    $rng.GetBytes($bytes)
+ 
+    $result = New-Object char[]($length)
+    for ($i = 0 ; $i -lt $length ; $i++) {
+        $result[$i] = $charSet[$bytes[$i] % $charSet.Length]
+    }
+    $password = (-join $result)
+
+    $valid = $true
+    if($upper   -gt ($password.ToCharArray() | Where-Object {$_ -cin $uCharSet.ToCharArray() }).Count) { $valid = $false }
+    if($lower   -gt ($password.ToCharArray() | Where-Object {$_ -cin $lCharSet.ToCharArray() }).Count) { $valid = $false }
+    if($numeric -gt ($password.ToCharArray() | Where-Object {$_ -cin $nCharSet.ToCharArray() }).Count) { $valid = $false }
+    if($special -gt ($password.ToCharArray() | Where-Object {$_ -cin $sCharSet.ToCharArray() }).Count) { $valid = $false }
+ 
+    if(!$valid) {
+         $password = Get-RandomPassword $length $upper $lower $numeric $special
+    }
+
+    return $password
+}
+
+Get-RandomPassword 8</pre>
+
+
+
+<p>  Generates passwords such as:  </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="powershell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># length 8, 1 upper, 1 lower, 1 number, 1 special
+Get-RandomPassword 8
+!64mQbcY
+
+# at least 4 upper case characters
+Get-RandomPassword 8 4
+kEyW8IB/
+
+# length 12, at least 2 upper case, 2 lower case, 1 number
+Get-RandomPassword 12 2 2 1
+USj;,Y5MKyME
+
+# length 12, at least 5 upper case, 5 numbers
+Get-RandomPassword 12 -upper 5 -numeric 5
+722HE32WWDy!
+
+# length 8, at least 4 lower case, 4 numbers
+Get-RandomPassword 8 0 4 4 0
+9ub0v47y
+
+# length 8, 2 upper, 2 lower, 2 number, 2 special
+Get-RandomPassword 8 2 2 2 2
+0=oeS.F4
+
+# length 20, 1 upper, 1 lower, 1 number, 1 special
+Get-RandomPassword 20 1 1 1 1
+ma/dS@Z+ghuvCfEv=_5V</pre>
+<p>The post <a href="https://arminreiter.com/2021/07/3-ways-to-generate-passwords-in-powershell/">3 ways to generate passwords in Powershell</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://arminreiter.com/2021/07/3-ways-to-generate-passwords-in-powershell/feed/</wfw:commentRss>
+			<slash:comments>10</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2291</post-id>	</item>
+		<item>
+		<title>Add Exchange Online Shell to Windows Terminal</title>
+		<link>https://arminreiter.com/2021/01/add-exchange-online-shell-to-windows-terminal/</link>
+					<comments>https://arminreiter.com/2021/01/add-exchange-online-shell-to-windows-terminal/#comments</comments>
+		
+		<dc:creator><![CDATA[Armin Reiter]]></dc:creator>
+		<pubDate>Wed, 06 Jan 2021 09:54:11 +0000</pubDate>
+				<category><![CDATA[Azure]]></category>
+		<category><![CDATA[Office365]]></category>
+		<category><![CDATA[Exchange]]></category>
+		<category><![CDATA[Powershell]]></category>
+		<category><![CDATA[Windows Terminal]]></category>
+		<guid isPermaLink="false">https://arminreiter.com/?p=2245</guid>
+
+					<description><![CDATA[<p>I really like the Windows Terminal &#8211; an awesome tool which I use daily. Some time ago, I posted my My Windows Terminal Config. These days, I added the Exchange Online Shell as another option in my config. Here is how you can add it. Note: Exchange Online Shell does not work within powershell core, [&#8230;]</p>
+<p>The post <a href="https://arminreiter.com/2021/01/add-exchange-online-shell-to-windows-terminal/">Add Exchange Online Shell to Windows Terminal</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>I really like the <a href="https://aka.ms/terminal">Windows Terminal</a> &#8211; an awesome tool which I use daily. Some time ago, I posted my <a href="https://arminreiter.com/2020/04/my-windows-terminal-config/">My Windows Terminal Config</a>. These days, I added the Exchange Online Shell as another option in my config. Here is how you can add it.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-full is-resized"><img decoding="async" src="https://arminreiter.com/wp-content/uploads/2021/01/20200106_ExchangeOnlineShellWindowsTerminal.jpg" alt="" class="wp-image-2251" width="374" height="250"/></figure></div>
+
+
+
+<p><strong>Note:</strong> Exchange Online Shell does not work within powershell <span style="text-decoration: underline;">core</span>, that&#8217;s why we use standard powershell.</p>
+
+
+
+<h2 class="wp-block-heading" id="step-1-install-exchangeonlinemanagement">Step 1: Install ExchangeOnlineManagement</h2>
+
+
+
+<p>Open Powershell (not core) <strong>as administrator</strong> and install the module &#8220;ExchangeOnlineManagement&#8221;:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="powershell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Install-Module ExchangeOnlineManagement</pre>
+
+
+
+<h2 class="wp-block-heading" id="step-2-verify-if-it-works">Step 2: Verify if it works</h2>
+
+
+
+<span id="more-2245"></span>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="powershell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Import-Module ExchangeOnlineManagement
+Connect-ExchangeOnline
+# sign in
+Get-MailUser</pre>
+
+
+
+<p>If Connect-ExchangeOnline throws:<em> </em></p>
+
+
+
+<p><em>Could not load type &#8216;System.Security.Cryptography.SHA256Cng&#8217; from assembly &#8216;System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&#8217; …</em></p>
+
+
+
+<p>switch to &#8220;classic&#8221; Powershell. This error occurs if you use Powershell Core. ExchangeOnlineManagement only works within Powershell.</p>
+
+
+
+<h2 class="wp-block-heading" id="step-3-add-exchange-online-to-windows-terminal">Step 3: Add Exchange Online to Windows Terminal</h2>
+
+
+
+<p>Open settings of Windows Terminal and add:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="json" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">      {
+        "guid": "{2f59be3b-a8a2-4131-98c9-e8531cbc4dd9}",
+        "name": "Exchange Online Shell",
+        "commandline": "powershell.exe -NoExit -Command \"Import-Module ExchangeOnlineManagement; Connect-ExchangeOnline\"",
+        "background": "#012456",
+        "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png"
+      }</pre>
+
+
+
+<p>If you always use the same user, you can add &#8220;-UserPrincipalName myuser@example.com&#8221; to the config:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="json" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">      {
+        "guid": "{2f59be3b-a8a2-4131-98c9-e8531cbc4dd9}",
+        "name": "Exchange Online Shell",
+        "commandline": "powershell.exe -NoExit -Command \"Import-Module ExchangeOnlineManagement; Connect-ExchangeOnline -UserPrincipalName myuser@example.com\"",
+        "background": "#012456",
+        "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png"
+      }</pre>
+
+
+
+<h2 class="wp-block-heading" id="my-entire-windows-terminal-config">My entire Windows Terminal config</h2>
+
+
+<p><script src="https://gist.github.com/arminreiter/d838c00cad86994952e77d9e3579243d.js"></script></p>
+
+
+
+<p></p>
+<p>The post <a href="https://arminreiter.com/2021/01/add-exchange-online-shell-to-windows-terminal/">Add Exchange Online Shell to Windows Terminal</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://arminreiter.com/2021/01/add-exchange-online-shell-to-windows-terminal/feed/</wfw:commentRss>
+			<slash:comments>8</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2245</post-id>	</item>
+		<item>
+		<title>Using Azure VM to Crack Passwords</title>
+		<link>https://arminreiter.com/2020/11/using-azure-vm-to-crack-passwords/</link>
+					<comments>https://arminreiter.com/2020/11/using-azure-vm-to-crack-passwords/#comments</comments>
+		
+		<dc:creator><![CDATA[Armin Reiter]]></dc:creator>
+		<pubDate>Fri, 27 Nov 2020 17:27:07 +0000</pubDate>
+				<category><![CDATA[Azure]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[VirtualMachine]]></category>
+		<guid isPermaLink="false">https://arminreiter.com/?p=2189</guid>
+
+					<description><![CDATA[<p>If you are doing CTFs (capture the flags) &#8211; so online hacking challenges &#8211; you probably have to deal with password cracking or hash cracking. If you work on a notebook, password cracking is not much fun. But, hey, there is the cloud! So, let&#8217;s use Microsoft Azure to crack passwords! We just need to [&#8230;]</p>
+<p>The post <a href="https://arminreiter.com/2020/11/using-azure-vm-to-crack-passwords/">Using Azure VM to Crack Passwords</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>If you are doing CTFs (capture the flags) &#8211; so online hacking challenges &#8211; you probably have to deal with password cracking or hash cracking. If you work on a notebook, password cracking is not much fun. But, hey, there is the cloud! So, let&#8217;s use Microsoft Azure to crack passwords!</p>
+
+
+
+<p>We just need to setup one or multiple VMs and use them! The beauty of the cloud is, that it is pay-per-use. So if it takes 5 hours to crack the password on a machine with 32 CPUs, then you only pay for those 5 hours. Besides that, you can even reduce your costs if you use reserved instances. But, lets start with the VM.</p>
+
+
+
+<span id="more-2189"></span>
+
+
+
+<p><strong>The virtual machine</strong></p>
+
+
+
+<p>For password cracking, we need:</p>
+
+
+
+<ul><li>VM with powerful GPU or powerful CPU (depends on the hash that we want to crack)</li><li>pay per use</li><li>Linux OS</li></ul>
+
+
+
+<p>Looking at <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/">https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/</a> and filtering for GPU or Compute optimized gives us:</p>
+
+
+
+<ul><li>Fxs v2 (replace x with the size, e.g. F2s v2, F8s v2, …)</li><li>N*-series VM (N stands for Nvidia)</li></ul>
+
+
+
+<p>I will use F32s v2 VM, which has 32 vCPUs for CPU optimized hash algorithms and NC6 Promo for GPU optimized hash algorithms.</p>
+
+
+
+<h2 class="wp-block-heading">Step 1: Create Azure VM</h2>
+
+
+
+<p>You can create it via UI, Powershell or Azure CLI. I&#8217;ll use Azure CLI because it works on every environment.<br>Install azure cli as described here <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli">https://docs.microsoft.com/en-us/cli/azure/install-azure-cli</a> or via choclatey: <code>choco install azure-cli -y</code></p>
+
+
+
+<p>Then use Azure CLI to create the VM:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="powershell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># login
+az login
+
+# switch azure subscription
+az account list --output table
+az account set --subscription "My Subscription"
+
+# set params for vm
+$vm_rg = "are-passcrack-vm-rg" # resource group
+$vm_n = "are-passcrack-vm"     # vm name
+$admin = "passcrack-admin"     # username of administrator
+
+# create new resource group
+az group create -n $vm_rg --location westeurope
+
+# list all vm images
+az vm image list -o table
+
+# list all vm sizes
+az vm list-sizes -l westeurope -o table
+
+# create gpu optimized vm
+az vm create -g $vm_rg -n $vm_n --image UbuntuLTS --admin-username $admin --size Standard_NC6_Promo --generate-ssh-keys
+
+# create cpu optimized vm
+# az vm create -g $vm_rg -n $vm_n--image UbuntuLTS --admin-username $admin --size Standard_F32s_v2 --generate-ssh-keys
+
+# read ip and store it in $ip
+$ip = (az vm show -d -g $vm_rg -n $vm_n --query publicIps -o tsv)</pre>
+
+
+
+<h2 class="wp-block-heading">Step 2: Connect and Install updates</h2>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">ssh $admin@$ip
+
+# get linux version
+uname -m &amp;&amp; cat /etc/*release
+
+# update and upgrade
+sudo apt-get update
+sudo apt-get upgrade -y</pre>
+
+
+
+<h2 class="wp-block-heading">Step 3: Install GPU driver (GPU VM only)</h2>
+
+
+
+<p><a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/n-series-driver-setup">https://docs.microsoft.com/en-us/azure/virtual-machines/linux/n-series-driver-setup</a></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># if not ubuntu 18.04 - check correct urls at: http://developer.download.nvidia.com/compute/cuda/repos/
+
+CUDA_REPO_PKG=cuda-repo-ubuntu1804_10.2.89-1_amd64.deb
+wget -O /tmp/${CUDA_REPO_PKG} http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/${CUDA_REPO_PKG}
+sudo dpkg -i /tmp/${CUDA_REPO_PKG}
+sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+rm -f /tmp/${CUDA_REPO_PKG}
+sudo apt-get update
+sudo apt-get install cuda-drivers
+sudo apt-get install nvidia-cuda-toolkit
+
+# restart machine and verify installation
+sudo reboot
+
+# reconnect
+ssh $admin@$ip
+nvidia-smi
+
+# output should be something like:
+# +-----------------------------------------------------------------------------+
+# | NVIDIA-SMI 455.38       Driver Version: 455.38       CUDA Version: 11.1     |
+# |-------------------------------+----------------------+----------------------+
+# | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+# | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+# |                               |                      |               MIG M. |
+# |===============================+======================+======================|
+# |   0  Tesla K80           Off  | 00006133:00:00.0 Off |                    0 |
+# | N/A   43C    P0    56W / 149W |      0MiB / 11441MiB |      0%      Default |
+# |                               |                      |                  N/A |
+# +-------------------------------+----------------------+----------------------+
+# 
+# +-----------------------------------------------------------------------------+
+# | Processes:                                                                  |
+# |  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+# |        ID   ID                                                   Usage      |
+# |=============================================================================|
+# |  No running processes found                                                 |
+# +-----------------------------------------------------------------------------+</pre>
+
+
+
+<h2 class="wp-block-heading">Step 4: Install Hashcat/John/…</h2>
+
+
+
+<p><strong>Install latest Version of Hashcat</strong>:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># Install latest version of Hashcat (check https://hashcat.net/hashcat/ to get latest version number)
+
+wget https://hashcat.net/files/hashcat-6.1.1.7z
+sudo apt-get install p7zip-full -y
+7z x hashcat-6.1.1.7z
+rm hashcat-6.1.1.7z</pre>
+
+
+
+<p><strong>Install John the Ripper</strong><br>latest version at: <a href="https://www.openwall.com/john/">https://www.openwall.com/john/</a></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">sudo apt-get install build-essential libssl-dev -y
+wget https://www.openwall.com/john/k/john-1.9.0-jumbo-1.tar.gz
+tar xfz john-1.9.0-jumbo-1.tar.gz
+cd john-1.9.0-jumbo-1/src
+./configure
+# output will show you some infos - please check if OpenCL is set to true, if not, try:
+# ./configure &amp;&amp; make clean &amp;&amp; make -sj4
+
+cd ../run
+./john --list=opencl-devices
+
+# output should be something like:
+# Platform #0 name: NVIDIA CUDA, version: OpenCL 1.2 CUDA 11.1.102
+#     Device #0 (1) name:     Tesla K80
+#     Device vendor:          NVIDIA Corporation
+#     Device type:            GPU (LE)
+#     Device version:         OpenCL 1.2 CUDA
+#     Driver version:         455.32.00 [recommended]
+#     Native vector widths:   char 1, short 1, int 1, long 1
+#     Preferred vector width: char 1, short 1, int 1, long 1
+#     Global Memory:          11441 MB (ECC)
+#     Global Memory Cache:    208 KB
+#     Local Memory:           48 KB (Local)
+#     Constant Buffer size:   64 KB
+#     Max memory alloc. size: 2860 MB
+#     Max clock (MHz):        823
+#     Profiling timer res.:   1000 ns
+#     Max Work Group Size:    1024
+#     Parallel compute cores: 13
+#     CUDA cores:             2496  (13 x 192)
+#     Speed index:            2054208
+#     Warp size:              32
+#     Max. GPRs/work-group:   65536
+#     Compute capability:     3.7 (sm_37)
+#     Kernel exec. timeout:   no
+#     PCI device topology:    00:00.0
+
+./john --list=formats --format=opencl</pre>
+
+
+
+<p><strong>Install fcrackzip</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">sudo apt-get install fcrrackzip</pre>
+
+
+
+<h2 class="wp-block-heading">Step 5: Download Wordlists</h2>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">cd ~
+mkdir wordlists
+cd wordlists
+wget https://crackstation.net/files/crackstation-human-only.txt.gz
+gzip -d crackstation-human-only.txt.gz
+
+wget https://crackstation.net/files/crackstation.txt.gz
+gzip -d crackstation.txt.gz
+
+wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/darkweb2017-top1000.txt
+wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/darkweb2017-top10000.txt
+wget https://github.com/FlameOfIgnis/Pwdb-Public/raw/master/wordlists/ignis-10M.txt</pre>
+
+
+
+<h2 class="wp-block-heading">Step 6: Start Cracking</h2>
+
+
+
+<p>try to crack the following hashes:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8
+a94a8fe5ccb19ba61c4c0873d391e987982fbbd3
+7c4a8d09ca3762af61e59520943dc26494f8941b
+d2bf02e60ed38af96751c5a78a8ffbe32f4598f9
+d033e22ae348aeb5660fc2140aec35850c4da997
+21298df8a3277357ee55b01df9530b535cf08ec1
+6defcdce4d06b8518640f0fe5f692b639bf31a4a
+7288edd0fc3ffcbe93a0cf06e3568e28521687bc</pre>
+
+
+
+<p>or:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">$2a$10$z580SUOJrDVim.KmT4wKpOw891M7pbAsvM2NsbdIPn.B00IX.hbP6
+$2a$10$llqj/yYA0JFdZ0jU.x8Fs.srlQNYZg8v08p0WyeUqyKeGA0xqMP4C
+$2a$10$sejozbYMR5KmiAqKsnPWv.riS5TiQwEDrOB2fgS9ERxYp4t52YxRu
+$2a$10$31TyVw44TzVL9JWjkj.Nn.IDEZKJmK7JAQXxiB3dYhqkWX1n9GHxS
+$2a$10$hdO/G606lyYmAvJ0.G0mTOGuSMiQu7CaFFVyXTiJVcXkEISpQcK/i
+$2a$10$2uVS4Rpts2yAb5rc0qJBZ.0RstK1wDBl3BopgL.5L8n3t9bxc7NjC
+$2a$10$kZp.cIRemnjM452mA.4C0u15iS.olx9HQaeDYLxGstkAS5rnDoVM2
+$2a$10$XQeAEopVPVGb4SOHaj.Yzur7BB.XqkzsOMMj1MW/vvC3RA.qIFhvW
+$2a$10$OkB1by5f1KZ.l90nOqL/Ye0SKf.V4rImMd//T.brZiHyk0CnBbI/u</pre>
+
+
+
+<p>Some samples:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">### paramters ###
+# file with hashes
+CRACK=~/crackme.txt
+# wordlists
+WL_CSHO=~/wordlists/crackstation-human-only.txt
+WL_CS=~/wordlists/crackstation.txt
+WL_RY=~/wordlists/rockyou.txt
+WL_DWT=~/wordlists/darkweb2017-top1000.txt
+WL_DWTT=~/wordlists/darkweb2017-top10000.txt
+WL_IG=~/wordlists/ignis-10M.txt
+
+### john the ripper ###
+
+cd ~/john-1.9.0-jumbo-1/run/
+
+./john --wordlist=$WL_CSHO $CRACK
+./john --wordlist=$WL_CSHO $CRACK --fork=6
+./john --wordlist=$WL_CSHO $CRACK --fork=6 --format=raw-md5
+./john --wordlist=$WL_CSHO $CRACK --fork=6 --format=bcrypt 
+./john --wordlist=$WL_CSHO $CRACK --format=raw-MD5-opencl
+./john --wordlist=$WL_CSHO $CRACK --format=raw-SHA1-opencl
+
+./john --increment $CRACK --format=raw-SHA1-opencl
+./john --increment $CRACK --fork=16 --format=raw-sha1
+./john --increment $CRACK --fork=16 --format=bcrypt
+
+### hashcat ###
+
+cd ~/hashcat-6.1.1
+
+# -a 0 => dictionary, 3 => bruteforce
+./hashcat.bin -a 0 -m 100 $CRACK $WL_CSHO
+./hashcat.bin -a 3 -m 100 b8c0a6c50e24eccba706932a5a03fc6c7cc34ab7
+./hashcat.bin -a 0 -m 4700 90b9aa7e25f80cf4f64e990b78a9fc5ebd6cecad $WL_CSHO # m 4700 = sha1(md5($pass))
+
+### hashcat - excel ###
+
+wget https://raw.githubusercontent.com/stricture/hashstack-server-plugin-oclhashcat/master/scrapers/office2hashcat.py
+HASH=$(python office2hashcat.py secure.xlsx)
+./hashcat.bin -a 3 -m 9600 $HASH ?d?d?d?d?d?d
+./hashcat.bin -a 0 -m 9600 $HASH $WL_CSHO
+
+### fcrackzip ###
+
+fcrackzip -u -v -l 6 -c 1 -b crackme.zip
+# -u => unzip 
+# -v => verbose
+# -l => length
+# -c => character set, 1 = numeric
+# -b => bruteforce</pre>
+
+
+
+<h2 class="wp-block-heading">Step 7. a.: Shutdown VM</h2>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="powershell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">$vm_rg = "are-passcrack-vm-rg" # resource group
+$vm_n = "are-passcrack-vm"     # vm name
+
+az vm deallocate -n $vm_n -g $vm_rg</pre>
+
+
+
+<h2 class="wp-block-heading">Step 7. b.: Start and Connect to VM</h2>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="powershell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">az login
+az account set --subscription "My Subscription"
+
+$vm_rg = "are-passcrack-vm-rg" # resource group
+$vm_n = "are-passcrack-vm"     # vm name
+$admin = "passcrack-admin"     # username of administrator
+
+az vm start -g $vm_rg -n $vm_n
+$ip = (az vm show -d -g $vm_rg -n $vm_n --query publicIps -o tsv)
+
+ssh $admin@$ip</pre>
+
+
+
+<h2 class="wp-block-heading">Step 7. c.: Shutdown and Delete VM</h2>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="powershell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">$vm_rg = "are-passcrack-vm-rg" # resource group
+$vm_n = "are-passcrack-vm"     # vm name
+
+az vm deallocate -n $vm_n -g $vm_rg
+az group delete -g $vm_rg
+
+# verify
+az vm list -o table
+az group list -o table</pre>
+<p>The post <a href="https://arminreiter.com/2020/11/using-azure-vm-to-crack-passwords/">Using Azure VM to Crack Passwords</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://arminreiter.com/2020/11/using-azure-vm-to-crack-passwords/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2189</post-id>	</item>
+		<item>
+		<title>Website Hardening with HTTP Security Headers</title>
+		<link>https://arminreiter.com/2020/10/website-hardening-with-http-security-headers/</link>
+					<comments>https://arminreiter.com/2020/10/website-hardening-with-http-security-headers/#respond</comments>
+		
+		<dc:creator><![CDATA[Armin Reiter]]></dc:creator>
+		<pubDate>Fri, 16 Oct 2020 11:01:16 +0000</pubDate>
+				<category><![CDATA[Security]]></category>
+		<category><![CDATA[Web]]></category>
+		<category><![CDATA[WebDevelopment]]></category>
+		<guid isPermaLink="false">https://arminreiter.com/?p=2138</guid>
+
+					<description><![CDATA[<p>One easy and good start to harden your website or web application is to configure the HTTP Security Headers. Those HTTP Headers are included in the response of the server and tell the browser how to deal with content on your website. As an example, you can configure the HTTP Headers in a way, that [&#8230;]</p>
+<p>The post <a href="https://arminreiter.com/2020/10/website-hardening-with-http-security-headers/">Website Hardening with HTTP Security Headers</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>One easy and good start to harden your website or web application is to configure the HTTP Security Headers. Those HTTP Headers are included in the response of the server and tell the browser how to deal with content on your website.</p>
+
+
+
+<p>As an example, you can configure the HTTP Headers in a way, that only javascript code that is delivered by your website is allowed. </p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="654" src="https://arminreiter.com/wp-content/uploads/2020/10/20201009_httpheader_devconsole-1024x654.jpg" alt="" class="wp-image-2141" srcset="https://arminreiter.com/wp-content/uploads/2020/10/20201009_httpheader_devconsole-1024x654.jpg 1024w, https://arminreiter.com/wp-content/uploads/2020/10/20201009_httpheader_devconsole-300x192.jpg 300w, https://arminreiter.com/wp-content/uploads/2020/10/20201009_httpheader_devconsole-768x490.jpg 768w, https://arminreiter.com/wp-content/uploads/2020/10/20201009_httpheader_devconsole.jpg 1198w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<span id="more-2138"></span>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">First step: Check your HTTP Headers</h2>
+
+
+
+<p>First step is to check which HTTP headers are already configured and which should be added. Scott Helme build a great site for that: <a href="http://securityheaders.com/"></a><a href="https://securityheaders.com/">https://securityheaders.com/</a></p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="472" src="https://arminreiter.com/wp-content/uploads/2020/10/20201009_arminreiter_securityreport-1024x472.jpg" alt="" class="wp-image-2142" srcset="https://arminreiter.com/wp-content/uploads/2020/10/20201009_arminreiter_securityreport-1024x472.jpg 1024w, https://arminreiter.com/wp-content/uploads/2020/10/20201009_arminreiter_securityreport-300x138.jpg 300w, https://arminreiter.com/wp-content/uploads/2020/10/20201009_arminreiter_securityreport-768x354.jpg 768w, https://arminreiter.com/wp-content/uploads/2020/10/20201009_arminreiter_securityreport-1536x707.jpg 1536w, https://arminreiter.com/wp-content/uploads/2020/10/20201009_arminreiter_securityreport.jpg 1878w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>After that, you can configure all missing headers. </p>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Recommended HTTP Security Headers</h2>
+
+
+
+<p>The configuration of the Headers ALWAYS depend on your website, your requirements, the features, the structure etc.. Therefore, it is always up to you to check the headers in detail. </p>
+
+
+
+<p>In many cases, the following headers are a good starting point:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Content-Security-Policy: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'self'
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Permitted-Cross-Domain-Policies: none</pre>
+
+
+
+<h3 class="wp-block-heading"><strong>Content-Security-Policy</strong> (CSP)</h3>
+
+
+
+<p>Defines, which resources the browser is allowed to load from which urls (sources). With CSP, you can e.g. specify, that images are allowed to load from your url and from cdn.example.com. You can also define, that JavaScript files are only allowed from your url and that no inline scripts are allowed. Such a config prevents loading scripts from other websites or injected javascripts. </p>
+
+
+
+<p>If you set the CSP, be careful and make sure that your site still works afterwards! Especially google-analytics or other external scripts will probably not load anymore!</p>
+
+
+
+<p><strong>Examples</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># Allow everything, but only from the same origin
+default-src 'self';
+
+# Allow scripts from origin and Google Analytics 
+script-src 'self' www.google-analytics.com
+
+# Allow scripts, ajax, form actions, css and images from the same origin. 
+default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'self'</pre>
+
+
+
+<p>Check your Content-Security-Policy with: <a href="https://csp-evaluator.withgoogle.com/">https://csp-evaluator.withgoogle.com/</a><br>Get more information at: </p>
+
+
+
+<ul><li><a href="https://content-security-policy.com/">https://content-security-policy.com/</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP</a></li></ul>
+
+
+
+<h3 class="wp-block-heading"><strong>Referrer Policy</strong></h3>
+
+
+
+<p>This policy defines how much referrer information is included in requests. If you tweet a link to your website and visitors click this link, the header will contain the referrer information. If someone clicks a link on your webpage, the referrer information is also included. Two examples:</p>
+
+
+
+<p><strong>Referrer-Policy: unsafe-url</strong></p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="894" height="289" src="https://arminreiter.com/wp-content/uploads/2020/10/20201009_referrer_unsafeurl.jpg" alt="" class="wp-image-2144" srcset="https://arminreiter.com/wp-content/uploads/2020/10/20201009_referrer_unsafeurl.jpg 894w, https://arminreiter.com/wp-content/uploads/2020/10/20201009_referrer_unsafeurl-300x97.jpg 300w, https://arminreiter.com/wp-content/uploads/2020/10/20201009_referrer_unsafeurl-768x248.jpg 768w" sizes="(max-width: 894px) 100vw, 894px" /></figure>
+
+
+
+<p><strong>Referrer-Policy: strict-origin-when-cross-origin</strong></p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="908" height="288" src="https://arminreiter.com/wp-content/uploads/2020/10/20201009_referrer_strict.jpg" alt="" class="wp-image-2145" srcset="https://arminreiter.com/wp-content/uploads/2020/10/20201009_referrer_strict.jpg 908w, https://arminreiter.com/wp-content/uploads/2020/10/20201009_referrer_strict-300x95.jpg 300w, https://arminreiter.com/wp-content/uploads/2020/10/20201009_referrer_strict-768x244.jpg 768w" sizes="(max-width: 908px) 100vw, 908px" /></figure>
+
+
+
+<p>The second one only contains the root url, arminreiter.com, while the first one also has the page in it. Your referrer policy depends on which information you want to share with other websites, but it is at least recommended to only allow referrer information for websites that use HTTPS.</p>
+
+
+
+<p>Note: The referrer policy can also be defined as meta tag in html or separately for each link:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="html" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">&lt;meta name="referrer" content="origin">
+&lt;!-- or -->
+&lt;a href="https://arminreiter.com" rel="noreferrer"></pre>
+
+
+
+<p>The following values are allowed:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Referrer-Policy: no-referrer
+Referrer-Policy: no-referrer-when-downgrade
+Referrer-Policy: origin
+Referrer-Policy: origin-when-cross-origin
+Referrer-Policy: same-origin
+Referrer-Policy: strict-origin
+Referrer-Policy: strict-origin-when-cross-origin
+Referrer-Policy: unsafe-url</pre>
+
+
+
+<p>A description of the different options can be found here:</p>
+
+
+
+<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy</a></li><li><a href="https://www.w3.org/TR/referrer-policy/">https://www.w3.org/TR/referrer-policy/</a></li><li><a href="https://scotthelme.co.uk/a-new-security-header-referrer-policy/">https://scotthelme.co.uk/a-new-security-header-referrer-policy/</a></li></ul>
+
+
+
+<h3 class="wp-block-heading"><strong>Set-Cookie</strong></h3>
+
+
+
+<p>When the server returns a cookie to the client, the response contains a set-cookie header. This header can be extended with some attributes. The following one is a recommended Set-Cookie header:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Set-Cookie: name=value; Expires=date; Secure; HttpOnly; SameSite=Strict</pre>
+
+
+
+<p>The following attributes are allowed:</p>
+
+
+
+<ul><li><strong>Secure</strong>: is set when the request is made with https scheme.</li><li><strong>HttpOnly</strong>: If HttpOnly is set, javascript is not allowed to access the cookie (e.g. via Document.cookie).</li><li><strong>SameSite=Strict</strong>: Browser sends cookie only for same-site request. Other options are Lax and None.</li></ul>
+
+
+
+<p>Find more information about Set-Cookie at:</p>
+
+
+
+<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie</a></li></ul>
+
+
+
+<h3 class="wp-block-heading"><strong>Strict-Transport-Security</strong></h3>
+
+
+
+<p>Tells the browser that the website should only be accessed via HTTPS.<br><em>Strict-Transport-Security: max-age=31536000 ; includeSubDomains</em></p>
+
+
+
+<ul><li>max-age: tells the browser to remember that the site is only accessible via HTTPS for this amount of time (in seconds). 31536000 = 1 year</li><li>includeSubDomains (optional): rule is applied also to subdomains</li><li>preload (optional): Google maintains an HSTS preload list (<a href="https://hstspreload.org/">https://hstspreload.org/</a>) which contains domains that have opted-in to HSTS and can therefore only be accessed over HTTPS.</li></ul>
+
+
+
+<p>see also:</p>
+
+
+
+<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security</a></li><li><a href="https://opensource.google/projects/hstspreload">https://opensource.google/projects/hstspreload</a></li></ul>
+
+
+
+<h3 class="wp-block-heading"><strong>X-Content-Type-Options</strong></h3>
+
+
+
+<p>This options prevents the browser from doing MIME-type sniffing. Thats a technique which is used by some browsers to determine the type of a file and execute it, independent of the returned content-type. If the browser e.g. requests a script, but that script has an incorrect media type, the browser will &#8220;sniff&#8221; the content of the file, detect it as script and execute it. An attacker could for example upload a script file with content-type image (e.g. as profile image of a user). The browser would sniff the content of the &#8220;image&#8221;, will detect that it is a script and will execute it.<br>This can be prevented by using the HTTP header:</p>
+
+
+
+<p>X-Content-Type-Options: nosniff</p>
+
+
+
+<p>The &#8220;nosniff&#8221; option disables the sniffing and in the example above, it would block the script because the content-type would be image and not one of the javascript media types.</p>
+
+
+
+<p>see also:</p>
+
+
+
+<ul><li><a href="https://www.keycdn.com/support/what-is-mime-sniffing">https://www.keycdn.com/support/what-is-mime-sniffing</a></li><li><a href="https://webhint.io/docs/user-guide/hints/hint-x-content-type-options/">https://webhint.io/docs/user-guide/hints/hint-x-content-type-options/</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options</a></li></ul>
+
+
+
+<h3 class="wp-block-heading"><strong>X-Frame-Options</strong></h3>
+
+
+
+<p>Defines if the page can be rendered in an &lt;embed&gt;, &lt;frame&gt;, &lt;iframe&gt; or &lt;object&gt; tag. If someone creates a page with an iframe that embeds your webpage, then the options below will block the rendering of your page (by sure, it must be supported by the browsers, but most of them do). You can test this by creating a new page &#8211; e.g. index.html &#8211; on your desktop, and embed your website into an iframe:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="html" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">&lt;html>
+  &lt;body>
+    &lt;iframe src="https://arminreiter.com">
+    &lt;/iframe>
+  &lt;/body>
+&lt;/html></pre>
+
+
+
+<p>If you open this index.html, you will, instead of your webpage, see the following content in the iframe:</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="469" height="245" src="https://arminreiter.com/wp-content/uploads/2020/10/20201009_xframeoptions.png" alt="" class="wp-image-2149" srcset="https://arminreiter.com/wp-content/uploads/2020/10/20201009_xframeoptions.png 469w, https://arminreiter.com/wp-content/uploads/2020/10/20201009_xframeoptions-300x157.png 300w" sizes="(max-width: 469px) 100vw, 469px" /></figure>
+
+
+
+<p>There are the following 2 options available (note: allow-from is deprecated and not supported by many browsers):</p>
+
+
+
+<ul><li>X-Frame-Options: DENY<br>The page can not be displayed in a frame.</li><li>X-Frame-Options: SAMEORIGIN<br>The site can only be displayed in a frame with the same origin.</li></ul>
+
+
+
+<p>see also:</p>
+
+
+
+<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</a></li><li><a href="https://www.keycdn.com/blog/x-frame-options">https://www.keycdn.com/blog/x-frame-options</a></li><li><a href="https://clickjacker.io/">https://clickjacker.io/</a></li></ul>
+
+
+
+<h3 class="wp-block-heading"><strong>X-Permitted-Cross-Domain-Policies</strong></h3>
+
+
+
+<p>Prevents others to embed your website e.g. into adobe flash applications or PDF documents. This can be completely forbidden or controlled via a crossdomain.xml policy file. The allowed values are:</p>
+
+
+
+<ul><li><strong>X-Permitted-Cross-Domain-Policies: none</strong><br>Do not allow any embedding. </li><li>X-Permitted-Cross-Domain-Policies: master-only<br>Instructs Flash and other applications to only read the master crossdomain.xml file from the root website.  </li><li>X-Permitted-Cross-Domain-Policies: by-content-type<br>Only policy files served with content type &#8220;text/x-cross-domain-policy&#8221; are allowed.</li><li>X-Permitted-Cross-Domain-Policies: all<br>All policy files on the domain are required.</li></ul>
+
+
+
+<p>see also:</p>
+
+
+
+<ul><li><a href="https://owasp.org/www-project-secure-headers">https://owasp.org/www-project-secure-headers</a></li><li><a href="https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html">https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html</a></li></ul>
+
+
+
+<h3 class="wp-block-heading"><strong>Extra: remove headers that expose information</strong></h3>
+
+
+
+<p>Beside the headers mentioned above, there are other standard headers e.g. X-Powered-By, Server, X-AspNet-Version and others. They expose information about your website/infrastructure and should therefore be removed.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>other HTTP Headers</strong></h3>
+
+
+
+<p><strong>X-XSS-Protection</strong> instructs the browser to stop pages from loading when they detect cross-site scripting (xss). This header is not supported by Chrome, Firefox or Edge and is therefore not needed anymore. Value could be:<br>X-XSS-Protection: 1; mode=block</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Further information</strong></h3>
+
+
+
+<ul><li>Can I use: <a href="https://caniuse.com/">https://caniuse.com/</a></li><li>HTTP Headers: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/</a></li><li>OWASP Secure Headers Project: <a href="https://owasp.org/www-project-secure-headers">https://owasp.org/www-project-secure-headers</a></li><li>Security Headers Scan: <a href="https://securityheaders.com/">https://securityheaders.com/</a></li></ul>
+<p>The post <a href="https://arminreiter.com/2020/10/website-hardening-with-http-security-headers/">Website Hardening with HTTP Security Headers</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://arminreiter.com/2020/10/website-hardening-with-http-security-headers/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2138</post-id>	</item>
+		<item>
+		<title>Azure AD: Guest can&#8217;t login &#8211; &#8220;Your sign-in was blocked&#8221;</title>
+		<link>https://arminreiter.com/2020/10/azure-ad-guest-cant-login-your-sign-in-was-blocked/</link>
+					<comments>https://arminreiter.com/2020/10/azure-ad-guest-cant-login-your-sign-in-was-blocked/#respond</comments>
+		
+		<dc:creator><![CDATA[Armin Reiter]]></dc:creator>
+		<pubDate>Thu, 01 Oct 2020 15:00:11 +0000</pubDate>
+				<category><![CDATA[Azure]]></category>
+		<category><![CDATA[Office365]]></category>
+		<category><![CDATA[Active Directory]]></category>
+		<guid isPermaLink="false">https://arminreiter.com/?p=2131</guid>
+
+					<description><![CDATA[<p>In the last weeks, new guests in our Azure Active Directory / Office365 received the message &#8220;Your sign-in was blocked&#8221; &#8211; &#8220;We&#8217;ve detected something unusual about this sign-in.&#8220; For standard users, you can just fix this by remediating the risky sign-in of the user in: Azure Active Directory &#8211; Security &#8211; Risky users (https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/RiskyUsers). But [&#8230;]</p>
+<p>The post <a href="https://arminreiter.com/2020/10/azure-ad-guest-cant-login-your-sign-in-was-blocked/">Azure AD: Guest can&#8217;t login &#8211; &#8220;Your sign-in was blocked&#8221;</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>In the last weeks, new guests in our Azure Active Directory / Office365 received the message &#8220;<strong>Your sign-in was blocked</strong>&#8221; &#8211; &#8220;<strong>We&#8217;ve detected something unusual about this sign-in.</strong>&#8220;</p>
+
+
+
+<p>For standard users, you can just fix this by remediating the risky sign-in of the user in: Azure Active Directory &#8211; Security &#8211; Risky users (<a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/RiskyUsers">https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/RiskyUsers</a>). <strong>But this does not work for guests</strong>!</p>
+
+
+
+<p>The issue is: The Identity Protection risk-based policies (User risk policy, Sign-in risk policy and MFA registration policy) are usually configured for all users (which is good) and therefore also for guests. Even if the guests have MFA activated, there is a good chance that especially the <strong>User risk policy </strong>is triggered. If that happens for a guest user, you don&#8217;t see it in risky sign-ins overview, because the guest is not in your Active Directory &#8211; so it&#8217;s nothing you can control. The official Microsoft explanation is:</p>
+
+
+
+<ul><li>If a guest user triggers the Identity Protection user risk policy to force password reset,&nbsp;<strong>they will be blocked</strong>. This block is due to the inability to reset passwords in the resource directory.</li><li><strong>Guest users do not appear in the risky users report</strong>. This loss of visibility is due to the risk evaluation occurring in the B2B user&#8217;s home directory.</li><li>Administrators&nbsp;<strong>cannot dismiss or remediate a risky B2B collaboration user</strong>&nbsp;in their resource directory. This loss of functionality is due to administrators in the resource directory not having access to the B2B user&#8217;s home directory.</li></ul>
+
+
+
+<p>see: <a href="https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/concept-identity-protection-b2b">https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/concept-identity-protection-b2b</a></p>
+
+
+
+<h2 class="wp-block-heading">Solution</h2>
+
+
+
+<p>There are two solutions available:</p>
+
+
+
+<p><strong>Option 1</strong> &#8211; Create a dynamic group with all guests which is excluded from user risk policy:</p>
+
+
+
+<span id="more-2131"></span>
+
+
+
+<ul><li>Create a new dynamic group in Azure Active Directory:<ul><li>Group Type: Security</li><li>Group name: Guests (or whatever you want)</li><li>Membership type: Dynamic User</li><li>Add dynamic query:<ul><li>userType Equals Guest</li></ul></li></ul></li></ul>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img loading="lazy" decoding="async" width="755" height="95" src="https://arminreiter.com/wp-content/uploads/2020/10/image.png" alt="" class="wp-image-2133" srcset="https://arminreiter.com/wp-content/uploads/2020/10/image.png 755w, https://arminreiter.com/wp-content/uploads/2020/10/image-300x38.png 300w" sizes="(max-width: 755px) 100vw, 755px" /></figure></div>
+
+
+
+<ul><li>Save the group and wait a few minutes till you see the guest users in All members.</li><li>Open User risk policy under: Azure Active Directory &#8211; Security &#8211; User risk policy (<a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/IdentityProtectionMenuBlade/UserPolicy">https://portal.azure.com/#blade/Microsoft_AAD_IAM/IdentityProtectionMenuBlade/UserPolicy</a>)</li><li>Exclude Guests from the policy</li></ul>
+
+
+
+<p><strong>Option 2 &#8211; Tell the guest that their administrator has to remediate the risk</strong></p>
+
+
+
+<ul><li>Instruct the guest that their IT should go to: <br><a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/RiskyUsers">https://portal.azure.com/#blade/Microsoft_AAD_IAM/SecurityMenuBlade/RiskyUsers</a></li><li>If the user is not listed &#8211; click &#8220;Load more&#8221;</li><li>Dismiss the risk for the user</li></ul>
+
+
+
+<h2 class="wp-block-heading">Further information</h2>
+
+
+
+<ul><li>Identity Protection and B2B users: <a href="https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/concept-identity-protection-b2b">https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/concept-identity-protection-b2b</a></li></ul>
+<p>The post <a href="https://arminreiter.com/2020/10/azure-ad-guest-cant-login-your-sign-in-was-blocked/">Azure AD: Guest can&#8217;t login &#8211; &#8220;Your sign-in was blocked&#8221;</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://arminreiter.com/2020/10/azure-ad-guest-cant-login-your-sign-in-was-blocked/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2131</post-id>	</item>
+		<item>
+		<title>My Windows Terminal Config</title>
+		<link>https://arminreiter.com/2020/04/my-windows-terminal-config/</link>
+					<comments>https://arminreiter.com/2020/04/my-windows-terminal-config/#respond</comments>
+		
+		<dc:creator><![CDATA[Armin Reiter]]></dc:creator>
+		<pubDate>Mon, 13 Apr 2020 15:00:51 +0000</pubDate>
+				<category><![CDATA[Powershell]]></category>
+		<category><![CDATA[Windows Terminal]]></category>
+		<guid isPermaLink="false">https://arminreiter.com/?p=2035</guid>
+
+					<description><![CDATA[<p>The new windows terminal is really great and offers many configuration options, even it is still in preview (1.0 is planned for May 2020). In this blog post, I want to quickly show my configuration and some things that I think are good to know when you work with Windows Terminal. What is the Windows [&#8230;]</p>
+<p>The post <a href="https://arminreiter.com/2020/04/my-windows-terminal-config/">My Windows Terminal Config</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>The new windows terminal is really great and offers many configuration options, even it is still in preview (1.0 is planned for May 2020). In this blog post, I want to quickly show my configuration and some things that I think are good to know when you work with Windows Terminal.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-windows-terminal">What is the Windows Terminal?</h2>
+
+
+
+<p>The Windows Terminal is <a href="https://github.com/microsoft/terminal">Open Source</a> and can be downloaded via the <a href="https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701">Windows Store</a>. <br>It supports tabs and integrates different shells such as Powershell, Powershell Core, Command Line, WSL (Ubuntu and others). It is customizable in different ways and it could e.g. look as follows:</p>
+
+
+
+<span id="more-2035"></span>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="609" data-id="2008" src="https://arminreiter.com/wp-content/uploads/2020/04/WindowsTerminal-1024x609.png" alt="" class="wp-image-2008" srcset="https://arminreiter.com/wp-content/uploads/2020/04/WindowsTerminal-1024x609.png 1024w, https://arminreiter.com/wp-content/uploads/2020/04/WindowsTerminal-300x178.png 300w, https://arminreiter.com/wp-content/uploads/2020/04/WindowsTerminal-768x456.png 768w, https://arminreiter.com/wp-content/uploads/2020/04/WindowsTerminal.png 1484w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="609" data-id="2038" src="https://arminreiter.com/wp-content/uploads/2020/04/20200413_WindowsTerminal-1024x609.png" alt="" class="wp-image-2038" srcset="https://arminreiter.com/wp-content/uploads/2020/04/20200413_WindowsTerminal-1024x609.png 1024w, https://arminreiter.com/wp-content/uploads/2020/04/20200413_WindowsTerminal-300x178.png 300w, https://arminreiter.com/wp-content/uploads/2020/04/20200413_WindowsTerminal-768x456.png 768w, https://arminreiter.com/wp-content/uploads/2020/04/20200413_WindowsTerminal.png 1484w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</figure>
+
+
+
+<p class="has-text-align-left">You can run the Windows Terminal by executing <strong>wt</strong>. So I usually use:</p>
+
+
+
+<p class="has-text-align-center">&lt;<strong>Win + R&gt;  </strong><br><strong>wt </strong><br><strong>RETURN</strong></p>
+
+
+
+<h2 class="wp-block-heading" id="my-configuration">My Configuration</h2>
+
+
+
+<p>Below, you can find my current configuration. I just want to bring your attention to a few settings:</p>
+
+
+
+<ul><li><strong>profiles &#8211; defaults:</strong> Those settings apply to all your shells. You can overwrite them in each profile. </li><li><strong>fontSize:</strong> Size of the font</li><li><strong>fontFace:</strong> Microsoft released a new font called &#8220;Cascadia Code&#8221; which is worth to try it out. You can find it on <a href="https://github.com/microsoft/cascadia-code">GitHub</a>.</li><li><strong>startingDirectory: </strong>The standard directory of the shell that is opened. Its really great to be able to set it to a path that is really in use. The standard path was always c:\Users\myuser which I never needed in the console.</li><li><strong>experimental.retroTerminalEffect</strong>: A funny effect that makes the console look like 30 years ago (restart needed).</li><li><strong>backgroundImage, backgroundImageOpacity, backgroundImageStretchMode, backgroundImageAlignment</strong>: Let you specify the background. And yes &#8211; <strong>GIFs work</strong>, so if you want an animated matrix background &#8211; feel free.</li></ul>
+
+
+
+<p>Description of  all settings: <a href="https://github.com/microsoft/terminal/blob/master/doc/cascadia/SettingsSchema.md">https://github.com/microsoft/terminal/blob/master/doc/cascadia/SettingsSchema.md</a></p>
+
+
+<p><script src="https://gist.github.com/arminreiter/d838c00cad86994952e77d9e3579243d.js"></script></p>
+
+
+
+<p>I also linked it on my new <a href="/resources">Resources</a> section.</p>
+<p>The post <a href="https://arminreiter.com/2020/04/my-windows-terminal-config/">My Windows Terminal Config</a> appeared first on <a href="https://arminreiter.com">arminreiter.com</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://arminreiter.com/2020/04/my-windows-terminal-config/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2035</post-id>	</item>
+	</channel>
+</rss>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Guid.New</title>
+	<atom:link href="https://guidnew.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://guidnew.com</link>
+	<description>Softwareentwicklung - Web, Mobile, Bots, C#, JS</description>
+	<lastBuildDate>Thu, 22 Feb 2024 09:33:07 +0000</lastBuildDate>
+	<language>de-DE</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.4</generator>
+
+<image>
+	<url>https://guidnew.com/wp-content/uploads/2020/10/cropped-favicon-guidnew-32x32.png</url>
+	<title>Guid.New</title>
+	<link>https://guidnew.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Senior .NET Entwickler (w/m/d)</title>
+		<link>https://guidnew.com/blog/senior-net-entwickler-w-m-d/</link>
+		
+		<dc:creator><![CDATA[Sandra Niederl]]></dc:creator>
+		<pubDate>Thu, 11 Jan 2024 16:26:26 +0000</pubDate>
+				<category><![CDATA[Karriere DE]]></category>
+		<guid isPermaLink="false">https://guidnew.com/?p=15646</guid>
+
+					<description><![CDATA[<p>Der Beitrag <a rel="nofollow" href="https://guidnew.com/blog/senior-net-entwickler-w-m-d/">Senior .NET Entwickler (w/m/d)</a> erschien zuerst auf <a rel="nofollow" href="https://guidnew.com">Guid.New</a>.</p>
+]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>CSS Container-Queries: Der Geheimtipp für perfekt skalierbare Webkomponenten</title>
+		<link>https://guidnew.com/blog/css-container-queries/</link>
+		
+		<dc:creator><![CDATA[Michael Wind]]></dc:creator>
+		<pubDate>Mon, 11 Sep 2023 11:27:22 +0000</pubDate>
+				<category><![CDATA[Softwareentwicklung]]></category>
+		<category><![CDATA[Technologien]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[CSS Container-Queries]]></category>
+		<category><![CDATA[CSS Media-Queries]]></category>
+		<guid isPermaLink="false">https://guidnew.com/?p=15474</guid>
+
+					<description><![CDATA[<p>Welcome to the Future of Responsive Webdesign: Wir haben den Geheimtipp für perfekt skalierbare Webkomponenten. Lerne die Vorteile der seit kurzem verfügbaren CSS Container-Queries kennen und erfahre, wie sie die traditionellen Media-Queries ergänzen können.</p>
+<p>Der Beitrag <a rel="nofollow" href="https://guidnew.com/blog/css-container-queries/">CSS Container-Queries: Der Geheimtipp für perfekt skalierbare Webkomponenten</a> erschien zuerst auf <a rel="nofollow" href="https://guidnew.com">Guid.New</a>.</p>
+]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Diving Deep into Typescript&#8217;s Utility Types</title>
+		<link>https://guidnew.com/blog/typescripts-utility-types/</link>
+		
+		<dc:creator><![CDATA[Hannes Hasenauer]]></dc:creator>
+		<pubDate>Tue, 29 Aug 2023 14:53:44 +0000</pubDate>
+				<category><![CDATA[Softwareentwicklung]]></category>
+		<category><![CDATA[Technologien]]></category>
+		<category><![CDATA[Typescript]]></category>
+		<category><![CDATA[Typescript Utility Types]]></category>
+		<guid isPermaLink="false">https://guidnew.com/?p=15419</guid>
+
+					<description><![CDATA[<p>Unleash the power of Typescript's Utility Types: Have you ever wondered about the magic behind Typescript in web development? This article introduces the tools called "Utility Types". Dive in and learn how these tools make programming easier and more fun!</p>
+<p>Der Beitrag <a rel="nofollow" href="https://guidnew.com/blog/typescripts-utility-types/">Diving Deep into Typescript&#8217;s Utility Types</a> erschien zuerst auf <a rel="nofollow" href="https://guidnew.com">Guid.New</a>.</p>
+]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Webinar &#8211; Die ungenutzten Potenziale der Digitalisierung in der Transportlogistik</title>
+		<link>https://guidnew.com/blog/webinar-digitalisierung-un-der-transportlogistik/</link>
+		
+		<dc:creator><![CDATA[Sandra Niederl]]></dc:creator>
+		<pubDate>Thu, 06 Apr 2023 11:47:24 +0000</pubDate>
+				<category><![CDATA[Guid.New]]></category>
+		<category><![CDATA[Events]]></category>
+		<category><![CDATA[Technologien]]></category>
+		<category><![CDATA[Digitalisierung]]></category>
+		<category><![CDATA[Logistics]]></category>
+		<category><![CDATA[Transportlogistik]]></category>
+		<category><![CDATA[webinar]]></category>
+		<guid isPermaLink="false">https://guidnew.com/?p=14733</guid>
+
+					<description><![CDATA[<p>Sie wollen mehr Übersicht und Ordnung in Ihre Aufträge bringen? Nie waren 60 Minuten Ihrer Zeit besser investiert – erfahren Sie, wie Sie durch gezielte Digitalisierung die Effizienz in Ihren Logistik-Prozessen steigern. In diesem kostenlosen Webinar zeigen wir Ihnen, wie individuelle Softwarelösungen mittelständische Transportdienstleister wettbewerbsfähiger machen.</p>
+<p>Der Beitrag <a rel="nofollow" href="https://guidnew.com/blog/webinar-digitalisierung-un-der-transportlogistik/">Webinar &#8211; Die ungenutzten Potenziale der Digitalisierung in der Transportlogistik</a> erschien zuerst auf <a rel="nofollow" href="https://guidnew.com">Guid.New</a>.</p>
+]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Hybrid Happiness – ist hybrides Arbeiten nur ein Trend oder die Zukunft.</title>
+		<link>https://guidnew.com/blog/hybrides-arbeiten-bei-guid-new/</link>
+		
+		<dc:creator><![CDATA[Sandra Niederl]]></dc:creator>
+		<pubDate>Mon, 04 Jul 2022 07:38:03 +0000</pubDate>
+				<category><![CDATA[Guid.New]]></category>
+		<category><![CDATA[homeoffice]]></category>
+		<category><![CDATA[hybrides Arbeiten]]></category>
+		<category><![CDATA[New Work]]></category>
+		<guid isPermaLink="false">https://guidnew.com/?p=7304</guid>
+
+					<description><![CDATA[<p>Wo geht die Reise hin und wie leben wir flexibles Arbeiten bei Guid.New. Wir berichten über unsere Rückkehr aus dem Homeoffice und stellen uns die Frage, was es braucht, um ein Arbeitsumfeld mit maximaler Flexibilität zu schaffen.</p>
+<p>Der Beitrag <a rel="nofollow" href="https://guidnew.com/blog/hybrides-arbeiten-bei-guid-new/">Hybrid Happiness – ist hybrides Arbeiten nur ein Trend oder die Zukunft.</a> erschien zuerst auf <a rel="nofollow" href="https://guidnew.com">Guid.New</a>.</p>
+]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Digitales Kundenbindungssystem – Von der Problemstellung zur optimalen Softwarelösung</title>
+		<link>https://guidnew.com/blog/digitales-kundenbindungssystem/</link>
+		
+		<dc:creator><![CDATA[Sandra Niederl]]></dc:creator>
+		<pubDate>Thu, 10 Mar 2022 08:35:05 +0000</pubDate>
+				<category><![CDATA[Softwareentwicklung]]></category>
+		<category><![CDATA[Appentwicklung]]></category>
+		<category><![CDATA[digitale Kundenbindung]]></category>
+		<category><![CDATA[Individualsoftware]]></category>
+		<guid isPermaLink="false">https://guidnew.com/?p=7052</guid>
+
+					<description><![CDATA[<p>Digitale Kundenbindung mit der DiKu-App. Wir haben mit Optikermeister Jörn Hagemann gesprochen, wie der Einsatz der DiKu-App das Kundenbindungsmanagement in seinem Unternehmen vorangetrieben hat. </p>
+<p>Der Beitrag <a rel="nofollow" href="https://guidnew.com/blog/digitales-kundenbindungssystem/">Digitales Kundenbindungssystem – Von der Problemstellung zur optimalen Softwarelösung</a> erschien zuerst auf <a rel="nofollow" href="https://guidnew.com">Guid.New</a>.</p>
+]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>An alternative approach to the ASP.NET Core SPA templates using YARP</title>
+		<link>https://guidnew.com/blog/an-alternative-approach-to-the-asp-net-core-spa-templates-using-yarp-2/</link>
+		
+		<dc:creator><![CDATA[Bernd Hirschmann]]></dc:creator>
+		<pubDate>Thu, 13 Jan 2022 08:46:30 +0000</pubDate>
+				<category><![CDATA[Softwareentwicklung]]></category>
+		<category><![CDATA[Technologien]]></category>
+		<category><![CDATA[Angular]]></category>
+		<category><![CDATA[ASPNET Core]]></category>
+		<category><![CDATA[YARP]]></category>
+		<guid isPermaLink="false">https://guidnew.com/?p=6983</guid>
+
+					<description><![CDATA[<p>An alternative approach to the new ASP.NET Core SPA templates in .NET 6. It uses YARP as proxy to forward requests to the SPA dev server.</p>
+<p>Der Beitrag <a rel="nofollow" href="https://guidnew.com/blog/an-alternative-approach-to-the-asp-net-core-spa-templates-using-yarp-2/">An alternative approach to the ASP.NET Core SPA templates using YARP</a> erschien zuerst auf <a rel="nofollow" href="https://guidnew.com">Guid.New</a>.</p>
+]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Guid.New Retro-NERDS – Eine Hommage an die Computerfreaks der 70er und 80er Jahre</title>
+		<link>https://guidnew.com/blog/retro-nerds/</link>
+		
+		<dc:creator><![CDATA[Sandra Niederl]]></dc:creator>
+		<pubDate>Tue, 07 Dec 2021 15:06:17 +0000</pubDate>
+				<category><![CDATA[Guid.New]]></category>
+		<category><![CDATA[Softwareentwicklung]]></category>
+		<category><![CDATA[Computerfreaks]]></category>
+		<category><![CDATA[Nerd]]></category>
+		<category><![CDATA[Retro]]></category>
+		<guid isPermaLink="false">https://guidnew.com/?p=6639</guid>
+
+					<description><![CDATA[<p>Wir werfen einen selbstironischen Blick auf "die NERDS" der 70er und 80er… dies ist eine Hommage an die Vorreiter dieser Zeitspanne, die Wegbereiter für unsere Arbeit.</p>
+<p>Der Beitrag <a rel="nofollow" href="https://guidnew.com/blog/retro-nerds/">Guid.New Retro-NERDS – Eine Hommage an die Computerfreaks der 70er und 80er Jahre</a> erschien zuerst auf <a rel="nofollow" href="https://guidnew.com">Guid.New</a>.</p>
+]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>SignalR modules with a shared connection using a C# Source Generator</title>
+		<link>https://guidnew.com/blog/signalr-modules-with-a-shared-connection-using-a-csharp-source-generator-2/</link>
+		
+		<dc:creator><![CDATA[Bernd Hirschmann]]></dc:creator>
+		<pubDate>Wed, 10 Nov 2021 08:53:12 +0000</pubDate>
+				<category><![CDATA[Softwareentwicklung]]></category>
+		<category><![CDATA[ASPNET Core]]></category>
+		<category><![CDATA[CSharp]]></category>
+		<category><![CDATA[Source Generators]]></category>
+		<guid isPermaLink="false">https://guidnew.com/?p=6513</guid>
+
+					<description><![CDATA[<p>In this article, I describe an approach how to build SignalR modules with a shared connection using a C# Source Generator.</p>
+<p>Der Beitrag <a rel="nofollow" href="https://guidnew.com/blog/signalr-modules-with-a-shared-connection-using-a-csharp-source-generator-2/">SignalR modules with a shared connection using a C# Source Generator</a> erschien zuerst auf <a rel="nofollow" href="https://guidnew.com">Guid.New</a>.</p>
+]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Der Design Sprint Workshop – oder wie man in kürzester Zeit komplexe Probleme löst und neue Ideen testet!</title>
+		<link>https://guidnew.com/blog/mit-design-sprint-wokshop-komplexe-probleme-loesen/</link>
+		
+		<dc:creator><![CDATA[Dominik Widnig]]></dc:creator>
+		<pubDate>Mon, 11 Oct 2021 12:12:52 +0000</pubDate>
+				<category><![CDATA[Softwareentwicklung]]></category>
+		<category><![CDATA[Technologien]]></category>
+		<category><![CDATA[Design Sprint Workshop]]></category>
+		<category><![CDATA[Individualsoftware]]></category>
+		<category><![CDATA[Teambuilding]]></category>
+		<guid isPermaLink="false">https://guidnew.com/?p=5890</guid>
+
+					<description><![CDATA[<p>Wir haben das Konzept Design-Sprint-Workshop einer Praxisprobe unterzogen. Der Teambuilding-Aspekt stand dabei für uns im Vordergrund und ganz nebenbei entstanden wertvolle Inputs für die Weiterentwicklung der DiKu App. In einem bewusst auf zwei Tage reduzierten Workshop, wurden Kreativtechniken erprobt und neue Denkansätze entwickelt.</p>
+<p>Der Beitrag <a rel="nofollow" href="https://guidnew.com/blog/mit-design-sprint-wokshop-komplexe-probleme-loesen/">Der Design Sprint Workshop – oder wie man in kürzester Zeit komplexe Probleme löst und neue Ideen testet!</a> erschien zuerst auf <a rel="nofollow" href="https://guidnew.com">Guid.New</a>.</p>
+]]></description>
+		
+		
+		
+			</item>
+	</channel>
+</rss>

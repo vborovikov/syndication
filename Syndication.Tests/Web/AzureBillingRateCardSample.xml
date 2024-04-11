@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/arminreiter/AzureBillingRateCardSample/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/arminreiter/AzureBillingRateCardSample/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/arminreiter/AzureBillingRateCardSample/commits/master.atom"/>
+  <title>Recent Commits to AzureBillingRateCardSample:master</title>
+  <updated>2017-01-13T11:46:22Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/93e92a5ba4dee44c9310302ba0ac2fe701c9c5bf</id>
+    <link type="text/html" rel="alternate" href="https://github.com/arminreiter/AzureBillingRateCardSample/commit/93e92a5ba4dee44c9310302ba0ac2fe701c9c5bf"/>
+    <title>
+        Update README.MD
+    </title>
+    <updated>2017-01-13T11:46:22Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/87626328?s=30&amp;v=4"/>
+    <author>
+      <name>CodeHollow</name>
+      <uri>https://github.com/CodeHollow</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update README.MD
+
+fixed typo&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2876fac5e1ea302fa2ec385a34d8522e59f0e8e3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/arminreiter/AzureBillingRateCardSample/commit/2876fac5e1ea302fa2ec385a34d8522e59f0e8e3"/>
+    <title>
+        Update LICENSE
+    </title>
+    <updated>2017-01-13T09:50:53Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/87626328?s=30&amp;v=4"/>
+    <author>
+      <name>CodeHollow</name>
+      <uri>https://github.com/CodeHollow</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update LICENSE
+
+to MIT&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/003559856f164c2f0134036a16176e42f871e6e0</id>
+    <link type="text/html" rel="alternate" href="https://github.com/arminreiter/AzureBillingRateCardSample/commit/003559856f164c2f0134036a16176e42f871e6e0"/>
+    <title>
+        update readme.md
+    </title>
+    <updated>2016-12-22T07:53:19Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/87626328?s=30&amp;v=4"/>
+    <author>
+      <name>CodeHollow</name>
+      <uri>https://github.com/CodeHollow</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;update readme.md&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/5433eee5e1cb200c1d39499b4f299b94579b5486</id>
+    <link type="text/html" rel="alternate" href="https://github.com/arminreiter/AzureBillingRateCardSample/commit/5433eee5e1cb200c1d39499b4f299b94579b5486"/>
+    <title>
+        updated readme
+    </title>
+    <updated>2016-12-22T07:52:24Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/17526338?s=30&amp;v=4"/>
+    <author>
+      <name>arminreiter</name>
+      <uri>https://github.com/arminreiter</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;updated readme&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f365800fe874f7e68f4ade02de60a6304278ce6c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/arminreiter/AzureBillingRateCardSample/commit/f365800fe874f7e68f4ade02de60a6304278ce6c"/>
+    <title>
+        updated readme, added comment to app.config
+    </title>
+    <updated>2016-12-21T16:44:31Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/17526338?s=30&amp;v=4"/>
+    <author>
+      <name>arminreiter</name>
+      <uri>https://github.com/arminreiter</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;updated readme, added comment to app.config&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cdd28a0af44d72b81a7e13c75da4c599b71e4ef8</id>
+    <link type="text/html" rel="alternate" href="https://github.com/arminreiter/AzureBillingRateCardSample/commit/cdd28a0af44d72b81a7e13c75da4c599b71e4ef8"/>
+    <title>
+        updated readme
+    </title>
+    <updated>2016-12-21T12:04:01Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/17526338?s=30&amp;v=4"/>
+    <author>
+      <name>arminreiter</name>
+      <uri>https://github.com/arminreiter</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;updated readme&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/bdd770dd1ce79e6488a84227456e7f988e24f99b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/arminreiter/AzureBillingRateCardSample/commit/bdd770dd1ce79e6488a84227456e7f988e24f99b"/>
+    <title>
+        initial commit, visual studio solution, first working version
+    </title>
+    <updated>2016-12-21T12:00:14Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/17526338?s=30&amp;v=4"/>
+    <author>
+      <name>arminreiter</name>
+      <uri>https://github.com/arminreiter</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;initial commit, visual studio solution, first working version&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/fa8f1b58a98e1058809893a30eda2cfa90c9b93f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/arminreiter/AzureBillingRateCardSample/commit/fa8f1b58a98e1058809893a30eda2cfa90c9b93f"/>
+    <title>
+        Initial commit
+    </title>
+    <updated>2016-12-21T11:48:48Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/87626328?s=30&amp;v=4"/>
+    <author>
+      <name>CodeHollow</name>
+      <uri>https://github.com/CodeHollow</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Initial commit&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

@@ -1,0 +1,63 @@
+<rss version="2.0">
+  <channel>
+    <title>APOD</title>
+    <link>https://apod.nasa.gov/</link>
+    <description>Astronomy Picture of the Day</description>
+    <language>en-us</language>
+    <image>
+      <title>APOD</title>
+      <url>https://apod.nasa.gov/favicon.ico</url>
+      <link>https://apod.nasa.gov/</link>
+    </image>
+
+    <item>
+    <title>Eclipse in Seven</title>
+    <link>https://apod.nasa.gov/apod/astropix.html</link>
+<description>&#60;p>&#60;a href="https://apod.nasa.gov/apod/astropix.html">&#60;img src="https://apod.nasa.gov/apod/calendar/S_240411.jpg" align="left" alt="Start at the upper left above and you can follow the progress of" border="0" />&#60;/a> Start at the upper left above and you can follow the progress of&#60;/p>&#60;br clear="all"/></description>
+    </item>
+
+    <item>
+    <title></title>
+    <link>https://apod.nasa.gov/apod/ap240410.html</link>
+<description>&#60;p>&#60;a href="https://apod.nasa.gov/apod/ap240410.html">&#60;img src="https://apod.nasa.gov/apod/calendar/S_240410.jpg" align="left" alt="What wonders appear when the Moon blocks the Sun?" border="0" />&#60;/a> What wonders appear when the Moon blocks the Sun?&#60;/p>&#60;br clear="all"/></description>
+    </item>
+
+    <item>
+    <title></title>
+    <link>https://apod.nasa.gov/apod/ap240409.html</link>
+<description>&#60;p>&#60;a href="https://apod.nasa.gov/apod/ap240409.html">&#60;img src="https://apod.nasa.gov/apod/calendar/S_240409.jpg" align="left" alt="Captured in this snapshot, the shadow of the Moon came to Lake Magog," border="0" />&#60;/a> Captured in this snapshot, the shadow of the Moon came to Lake Magog,&#60;/p>&#60;br clear="all"/></description>
+    </item>
+
+    <item>
+    <title></title>
+    <link>https://apod.nasa.gov/apod/ap240408.html</link>
+<description>&#60;p>&#60;a href="https://apod.nasa.gov/apod/ap240408.html">&#60;img src="https://apod.nasa.gov/apod/calendar/S_240408.jpg" align="left" alt="How does a comet tail change?" border="0" />&#60;/a> How does a comet tail change?&#60;/p>&#60;br clear="all"/></description>
+    </item>
+
+    <item>
+    <title></title>
+    <link>https://apod.nasa.gov/apod/ap240407.html</link>
+<description>&#60;p>&#60;a href="https://apod.nasa.gov/apod/ap240407.html">&#60;img src="https://apod.nasa.gov/apod/calendar/S_240407.jpg" align="left" alt="Will the sky be clear enough to see the eclipse?" border="0" />&#60;/a> Will the sky be clear enough to see the eclipse?&#60;/p>&#60;br clear="all"/></description>
+    </item>
+
+    <item>
+    <title>Unwinding M51</title>
+    <link>https://apod.nasa.gov/apod/ap240406.html</link>
+<description>&#60;p>&#60;a href="https://apod.nasa.gov/apod/ap240406.html">&#60;img src="https://apod.nasa.gov/apod/calendar/S_240406.jpg" align="left" alt="The arms of a grand design spiral galaxy 60,000 light-years across are" border="0" />&#60;/a> The arms of a grand design spiral galaxy 60,000 light-years across are&#60;/p>&#60;br clear="all"/></description>
+    </item>
+
+    <item>
+    <title>The Solar Corona Unwrapped</title>
+    <link>https://apod.nasa.gov/apod/ap240405.html</link>
+<description>&#60;p>&#60;a href="https://apod.nasa.gov/apod/ap240405.html">&#60;img src="https://apod.nasa.gov/apod/calendar/S_240405.jpg" align="left" alt="Changes in the" border="0" />&#60;/a> Changes in the&#60;/p>&#60;br clear="all"/></description>
+    </item>
+
+    <textInput>
+    <title>Search APOD</title>
+    <description>Search APOD</description>
+    <name>query</name>
+    <link>https://apod.nasa.gov/cgi-bin/apod/apod_search
+    </link>
+    </textInput>
+  </channel>
+</rss>
