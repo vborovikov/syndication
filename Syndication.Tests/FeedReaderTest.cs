@@ -3,50 +3,34 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Brackets;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 [TestClass]
 public class FeedReaderTest
 {
     [TestMethod]
-    public async Task TestDownload400BadRequest()
-    {
-        // results in a 400 BadRequest if webclient is not initialized correctly
-        await DownloadTestAsync("http://www.methode.at/blog?format=RSS");
-    }
-
-    [TestMethod]
-    public async Task TestAcceptForbiddenUserAgent()
-    {
-        // results in 403 Forbidden if webclient does not have the accept header set
-        await DownloadTestAsync("https://mikeclayton.wordpress.com/feed/");
-    }
-
-    [TestMethod]
-    public async Task TestAcceptForbiddenUserAgentWrike()
-    {
-        // results in 403 Forbidden if webclient does not have the accept header set
-        await DownloadTestAsync("https://www.wrike.com/blog");
-    }
-
-    [TestMethod]
     public async Task TestParseRssLinksCodehollow()
     {
-        await TestParseRssLinksAsync("https://codehollow.com", 2);
+        await TestParseRssLinksAsync("Web/codehollow_com.html", 2);
     }
 
     [TestMethod]
-    public async Task TestParseRssLinksHeise() { await TestParseRssLinksAsync("http://heise.de/", 2); }
+    public async Task TestParseRssLinksHeise()
+    {
+        await TestParseRssLinksAsync("Web/heise_de.html", 2);
+    }
+
     [TestMethod]
-    public async Task TestParseRssLinksHeise2() { await TestParseRssLinksAsync("heise.de", 2); }
-    [TestMethod]
-    public async Task TestParseRssLinksHeise3() { await TestParseRssLinksAsync("www.heise.de", 2); }
-    [TestMethod]
-    public async Task TestParseRssLinksNYTimes() { await TestParseRssLinksAsync("nytimes.com", 1); }
+    public async Task TestParseRssLinksNYTimes()
+    {
+        await TestParseRssLinksAsync("Web/nytimes_com.html", 1);
+    }
 
     private static async Task TestParseRssLinksAsync(string url, int expectedNumberOfLinks)
     {
-        string[] urls = await FeedReader.ParseFeedUrlsAsStringAsync(url);
+        var document = await Document.Html.ParseAsync(Samples.GetStream(url), default);
+        var urls = Feed.FindAll(document);
         Assert.AreEqual(expectedNumberOfLinks, urls.Length);
     }
 
@@ -54,7 +38,8 @@ public class FeedReaderTest
     public async Task TestParseAndAbsoluteUrlDerStandard1()
     {
         string url = "derstandard.at";
-        var links = await FeedReader.GetFeedUrlsFromUrlAsync(url);
+        var document = await Document.Html.ParseAsync(Samples.GetStream("Web/derstandard_at.html"), default);
+        var links = Feed.FindAll(document);
 
         foreach (var link in links)
         {
@@ -137,12 +122,6 @@ public class FeedReaderTest
     }
 
     [TestMethod]
-    public async Task TestReadBuildAzure()
-    {
-        await DownloadTestAsync("https://buildazure.com");
-    }
-
-    [TestMethod]
     public async Task TestReadNoticiasCatolicas()
     {
         var feed = await FeedReader.ReadAsync("feeds.feedburner.com/NoticiasCatolicasAleteia");
@@ -218,11 +197,5 @@ public class FeedReaderTest
     {
         var feed = await FeedReader.ReadAsync("http://www.stadtfeuerwehr-weiz.at/rss/einsaetze.xml");
         Assert.AreEqual("Stadtfeuerwehr Weiz - Einsätze", feed.Title);
-    }
-
-    private static async Task DownloadTestAsync(string url)
-    {
-        var content = await Helpers.DownloadAsync(url);
-        Assert.IsTrue(content.Length > 200);
     }
 }

@@ -5,6 +5,7 @@
     using System.Diagnostics.CodeAnalysis;
     using System.IO;
     using System.Linq;
+    using System.Net;
     using System.Text;
     using System.Threading;
     using System.Threading.Tasks;
@@ -166,6 +167,80 @@
         }
 
         /// <summary>
+        /// Finds all feed links in the <see cref="Document">document</see>.
+        /// </summary>
+        /// <param name="document">The document.</param>
+        /// <returns>An array of <see cref="HtmlFeedLink"/> instances.</returns>
+        public static HtmlFeedLink[] FindAll(Document document)
+        {
+            const StringComparison cmp = StringComparison.OrdinalIgnoreCase;
+
+            if (document.FirstOrDefault<ParentTag>(t => t.Name == "html") is ParentTag html &&
+                html.FirstOrDefault<ParentTag>(t => t.Name == "head") is ParentTag head)
+            {
+                var links = head.FindAll<Tag>(t => t is { Name: "link", HasAttributes: true } &&
+                    t.Attributes.Has("rel", "alternate") && t.Attributes.Has("href") &&
+                    (t.Attributes.Has("type", "application/rss") || t.Attributes.Has("type", "application/atom")));
+
+                var found = new List<HtmlFeedLink>();
+                foreach (var link in links)
+                {
+                    found.Add(new(
+                        WebUtility.HtmlDecode(link.Attributes["title"].ToString()),
+                        link.Attributes["href"].ToString(),
+                        link.Attributes["type"] switch
+                        {
+                            var type when type.StartsWith("application/rss", cmp) => FeedType.Rss,
+                            var type when type.StartsWith("application/atom", cmp) => FeedType.Atom,
+                            _ => FeedType.Unknown,
+                        }));
+                }
+
+                if (found.Count == 0 && html.FirstOrDefault<ParentTag>(t => t.Name == "body") is ParentTag body)
+                {
+                    var anchors = body.FindAll<ParentTag>(t => t is { Name: "a", HasAttributes: true } &&
+                        t.Attributes["href"] is { Length: > 0 } href && (
+                        (href.EndsWith("feed", cmp) || href.EndsWith("feed/", cmp) || 
+                        href.EndsWith(".xml", cmp) || href.EndsWith(".xml/", cmp) || 
+                        href.EndsWith("rss", cmp) || href.EndsWith("rss/", cmp) || 
+                        href.EndsWith("atom", cmp) || href.EndsWith("atom/", cmp)) ||
+                        ContainsText(t, "rss")));
+
+                    foreach (var anchor in anchors)
+                    {
+                        var href = anchor.Attributes["href"].ToString();
+                        var feedType = FeedType.Unknown;
+                        if (href.Contains("rss", cmp) || ContainsText(anchor, "rss"))
+                        {
+                            feedType = FeedType.Rss;
+                        }
+                        else if (href.Contains("atom", cmp) || ContainsText(anchor, "atom"))
+                        {
+                            feedType = FeedType.Atom;
+                        }
+
+                        found.Add(new(WebUtility.HtmlDecode(anchor.ToString()), href, feedType));
+                    }
+                }
+
+                return [..found];
+            }
+
+            return [];
+        }
+
+        private static bool ContainsText(ParentTag tag, ReadOnlySpan<char> text)
+        {
+            foreach (var content in tag.FindAll<Content>(c => true))
+            {
+                if (content.Contains(text))
+                    return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
         /// Creates a <see cref="Feed"/> from a <see cref="Document">document</see>.
         /// </summary>
         /// <param name="document">The document object.</param>
@@ -185,7 +260,7 @@
             var documentRoot = document.FirstOrDefault<ParentTag>();
             if (documentRoot is { Name: "html" })
             {
-                var feedUrls = Helpers.ParseFeedUrls(document);
+                var feedUrls = FindAll(document);
                 throw new HtmlContentDetectedException("HTML content was detected.", feedUrls);
             }
 
