@@ -38,7 +38,7 @@
         /// The published date as datetime. Null if parsing failed or if
         /// no publishing date is set. If null, please check <see cref="PublishingDateString"/> property.
         /// </summary>
-        public DateTime? PublishingDate { get; internal init; }
+        public DateTimeOffset? PublishingDate { get; internal init; }
 
         /// <summary>
         /// The author of the feed item

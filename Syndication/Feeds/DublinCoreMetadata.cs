@@ -47,7 +47,7 @@
         /// <summary>
         /// The "date" element as datetime. Null if parsing failed or date is empty.
         /// </summary>
-        public DateTime? Date { get; }
+        public DateTimeOffset? Date { get; }
 
         /// <summary>
         /// The "type" element

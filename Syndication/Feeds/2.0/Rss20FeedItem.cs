@@ -43,7 +43,7 @@
         /// <summary>
         /// The "pubDate" field as DateTime. Null if parsing failed or pubDate is empty.
         /// </summary>
-        public DateTime? PublishingDate { get; }
+        public DateTimeOffset? PublishingDate { get; }
 
         /// <summary>
         /// The "source" field

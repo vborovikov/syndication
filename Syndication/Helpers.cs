@@ -124,7 +124,7 @@
         /// <param name="dateTimeSpan">datetime as string</param>
         /// <param name="cultureInfo">The cultureInfo for parsing</param>
         /// <returns>datetime or null</returns>
-        public static DateTime? TryParseDateTime(ReadOnlySpan<char> dateTimeSpan, CultureInfo? cultureInfo = null)
+        public static DateTimeOffset? TryParseDateTime(ReadOnlySpan<char> dateTimeSpan, CultureInfo? cultureInfo = null)
         {
             if (dateTimeSpan.IsEmpty)
                 return null;
@@ -137,7 +137,7 @@
             if (!parseSuccess)
                 return null;
 
-            return dt.UtcDateTime;
+            return dt;
         }
 
         /// <summary>

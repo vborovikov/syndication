@@ -44,7 +44,7 @@ public class FeedReaderTest
         foreach (var link in links)
         {
             var absoluteUrl = FeedReader.GetAbsoluteFeedUrl(url, link);
-            Assert.IsTrue(absoluteUrl.Url.StartsWith("http://"));
+            Assert.IsTrue(absoluteUrl.Url.StartsWith("https://"));
         }
     }
 

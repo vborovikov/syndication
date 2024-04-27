@@ -43,7 +43,7 @@ namespace Syndication.Feeds
         /// <summary>
         /// The "published" element as DateTime. Null if parsing failed or published is empty.
         /// </summary>
-        public DateTime? PublishedDate { get; }
+        public DateTimeOffset? PublishedDate { get; }
 
         /// <summary>
         /// The "rights" element
@@ -68,7 +68,7 @@ namespace Syndication.Feeds
         /// <summary>
         /// The "updated" element as DateTime. Null if parsing failed or updated is empty
         /// </summary>
-        public DateTime? UpdatedDate { get; }
+        public DateTimeOffset? UpdatedDate { get; }
 
         /// <summary>
         /// All "link" elements

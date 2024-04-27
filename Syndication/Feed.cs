@@ -61,7 +61,7 @@
         /// The last updated date as datetime. Null if parsing failed or if
         /// no last updated date is set. If null, please check <see cref="LastUpdatedDateString"/> property.
         /// </summary>
-        public DateTime? LastUpdatedDate { get; internal set; }
+        public DateTimeOffset? LastUpdatedDate { get; internal set; }
 
         /// <summary>
         /// The url of the image

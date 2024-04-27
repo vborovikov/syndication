@@ -63,7 +63,7 @@
         /// <summary>
         /// The "updated" element as DateTime. Null if parsing failed of updatedDate is empty.
         /// </summary>
-        public DateTime? UpdatedDate { get; }
+        public DateTimeOffset? UpdatedDate { get; }
 
         /// <summary>
         /// All "link" elements

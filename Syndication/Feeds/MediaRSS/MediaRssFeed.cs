@@ -44,7 +44,7 @@
         /// <summary>
         /// The "lastBuildDate" element as DateTime. Null if parsing failed of lastBuildDate is empty.
         /// </summary>
-        public DateTime? LastBuildDate { get; private set; }
+        public DateTimeOffset? LastBuildDate { get; private set; }
 
         /// <summary>
         /// The "managingEditor" element
@@ -59,7 +59,7 @@
         /// <summary>
         /// The "pubDate" field as DateTime. Null if parsing failed or pubDate is empty.
         /// </summary>
-        public DateTime? PublishingDate { get; private set; }
+        public DateTimeOffset? PublishingDate { get; private set; }
 
         /// <summary>
         /// The "webMaster" field

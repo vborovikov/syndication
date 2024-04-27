@@ -30,15 +30,15 @@ public class FullParseTest
         Assert.AreEqual("The Verge -  Front Pages", feed.Title);
         Assert.AreEqual("https://cdn2.vox-cdn.com/community_logos/34086/verge-fv.png", feed.Icon);
         Assert.AreEqual("2017-01-07T09:00:01-05:00", feed.UpdatedDateString);
-        Assert.AreEqual(new DateTime(2017, 1, 7, 14, 0, 1), feed.UpdatedDate);
+        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), feed.UpdatedDate);
         Assert.AreEqual("http://www.theverge.com/rss/group/front-page/index.xml", feed.Id);
 
         var item = (AtomFeedItem)feed.Items.First();
 
         Assert.AreEqual("2017-01-07T09:00:01-05:00", item.UpdatedDateString);
-        Assert.AreEqual(new DateTime(2017, 1, 7, 14, 0, 1), item.UpdatedDate);
+        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), item.UpdatedDate);
         Assert.AreEqual("2017-01-07T09:00:01-05:00", item.PublishedDateString);
-        Assert.AreEqual(new DateTime(2017, 1, 7, 14, 0, 1), item.PublishedDate);
+        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), item.PublishedDate);
         Assert.AreEqual("This is the new Hulu experience with live TV", item.Title);
         Assert.AreEqual("http://www.theverge.com/ces/2017/1/7/14195588/hulu-live-tv-streaming-internet-ces-2017", item.Id);
         Assert.AreEqual("http://www.theverge.com/ces/2017/1/7/14195588/hulu-live-tv-streaming-internet-ces-2017", item.Link);
@@ -109,7 +109,7 @@ public class FullParseTest
         Assert.IsTrue(item.Description.Contains("Weitere Informationen"));
         Assert.AreEqual("http://www.stadtfeuerwehr-weiz.at/einsaetze/einsatz-detail/5220/", item.Link);
         Assert.AreEqual("Sun, 19 Aug 2018 07:08:00 +0100", item.PublishingDateString);
-        Assert.AreEqual(new DateTime(2018, 8, 19, 6, 08, 0), item.PublishingDate);
+        Assert.AreEqual(new DateTimeOffset(2018, 8, 19, 7, 08, 0, TimeSpan.FromHours(1)), item.PublishingDate);
 
         Assert.AreEqual(15, feed.Items.Count);
     }
@@ -261,7 +261,7 @@ public class FullParseTest
         Assert.AreEqual("http://scriptingnews.userland.com/backissues/2002/09/29#reallyEarlyMorningNocoffeeNotes", item.Link);
         Assert.IsTrue(item.Description.Contains("<p>One of the lessons I've learned"));
         Assert.AreEqual("Sun, 29 Sep 2002 11:13:10 GMT", item.PublishingDateString);
-        Assert.AreEqual(new DateTime(2002, 09, 29, 11, 13, 10), item.PublishingDate);
+        Assert.AreEqual(new DateTimeOffset(2002, 09, 29, 11, 13, 10, TimeSpan.Zero), item.PublishingDate);
         Assert.AreEqual("http://scriptingnews.userland.com/backissues/2002/09/29#reallyEarlyMorningNocoffeeNotes", item.Guid);
     }
 
@@ -274,7 +274,7 @@ public class FullParseTest
         Assert.AreEqual("https://codehollow.com", feed.Link);
         Assert.AreEqual("Azure, software engineering/architecture, Scrum, SharePoint, VSTS/TFS, .NET and other funny things", feed.Description);
         Assert.AreEqual("Fri, 23 Dec 2016 09:01:55 +0000", feed.LastBuildDateString);
-        Assert.AreEqual(new DateTime(2016, 12, 23, 09, 01, 55), feed.LastBuildDate);
+        Assert.AreEqual(new DateTimeOffset(2016, 12, 23, 09, 01, 55, TimeSpan.Zero), feed.LastBuildDate);
         Assert.AreEqual("en-US", feed.Language);
         Assert.AreEqual("hourly", feed.Sy.UpdatePeriod);
         Assert.AreEqual("1", feed.Sy.UpdateFrequency);
@@ -286,7 +286,7 @@ public class FullParseTest
         Assert.AreEqual("https://codehollow.com/2016/12/export-azure-ratecard-data-csv-csharp-billing-api/", item.Link);
         Assert.AreEqual("https://codehollow.com/2016/12/export-azure-ratecard-data-csv-csharp-billing-api/#respond", item.Comments);
         Assert.AreEqual("Thu, 22 Dec 2016 07:00:28 +0000", item.PublishingDateString);
-        Assert.AreEqual(new DateTime(2016, 12, 22, 7, 0, 28), item.PublishingDate);
+        Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 7, 0, 28, TimeSpan.Zero), item.PublishingDate);
         Assert.AreEqual("Armin Reiter", item.DC.Creator);
         Assert.AreEqual(4, item.Categories.Count);
         Assert.IsTrue(item.Categories.Contains("BillingAPI"));
@@ -303,7 +303,7 @@ public class FullParseTest
         Assert.AreEqual("ContentWind", feed.Title);
         Assert.AreEqual("http://content-wind.com", feed.Link);
         Assert.AreEqual("Do, 22 Dez 2016 17:36:00 +0000", feed.LastBuildDateString);
-        Assert.AreEqual(new DateTime(2016, 12, 22, 17, 36, 00), feed.LastBuildDate);
+        Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 17, 36, 0, TimeSpan.Zero), feed.LastBuildDate);
         Assert.AreEqual("de-DE", feed.Language);
         Assert.AreEqual("hourly", feed.Sy.UpdatePeriod);
         Assert.AreEqual("1", feed.Sy.UpdateFrequency);
@@ -314,7 +314,7 @@ public class FullParseTest
         Assert.AreEqual("http://content-wind.com/2016/12/22/wachstum-influencer-marketing/", item.Link);
         Assert.AreEqual("http://content-wind.com/2016/12/22/wachstum-influencer-marketing/#respond", item.Comments);
         Assert.AreEqual("Thu, 22 Dec 2016 13:09:51 +0000", item.PublishingDateString);
-        Assert.AreEqual(new DateTime(2016, 12, 22, 13, 09, 51), item.PublishingDate);
+        Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 13, 09, 51, TimeSpan.Zero), item.PublishingDate);
         Assert.AreEqual("Harald Schaffernak", item.DC.Creator);
 
     }
@@ -415,15 +415,15 @@ public class FullParseTest
         Assert.AreEqual("The Verge -  Front Pages", feed.Title);
         Assert.AreEqual("https://cdn2.vox-cdn.com/community_logos/34086/verge-fv.png", feed.Icon);
         Assert.AreEqual("2017-01-07T09:00:01-05:00", feed.UpdatedDateString);
-        Assert.AreEqual(new DateTime(2017, 1, 7, 14, 0, 1), feed.UpdatedDate);
+        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), feed.UpdatedDate);
         Assert.AreEqual("http://www.theverge.com/rss/group/front-page/index.xml", feed.Id);
 
         var item = (AtomFeedItem)feed.Items.First();
 
         Assert.AreEqual("2017-01-07T09:00:01-05:00", item.UpdatedDateString);
-        Assert.AreEqual(new DateTime(2017, 1, 7, 14, 0, 1), item.UpdatedDate);
+        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), item.UpdatedDate);
         Assert.AreEqual("2017-01-07T09:00:01-05:00", item.PublishedDateString);
-        Assert.AreEqual(new DateTime(2017, 1, 7, 14, 0, 1), item.PublishedDate);
+        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), item.PublishedDate);
         Assert.AreEqual("This is the new Hulu experience with live TV", item.Title);
         Assert.AreEqual("http://www.theverge.com/ces/2017/1/7/14195588/hulu-live-tv-streaming-internet-ces-2017", item.Id);
         Assert.AreEqual("http://www.theverge.com/ces/2017/1/7/14195588/hulu-live-tv-streaming-internet-ces-2017", item.Link);
@@ -469,7 +469,7 @@ public class FullParseTest
         Assert.IsTrue(item.Description.Contains("Weitere Informationen"));
         Assert.AreEqual("http://www.stadtfeuerwehr-weiz.at/einsaetze/einsatz-detail/5220/", item.Link);
         Assert.AreEqual("Sun, 19 Aug 2018 07:08:00 +0100", item.PublishingDateString);
-        Assert.AreEqual(new DateTime(2018, 8, 19, 6, 08, 0), item.PublishingDate);
+        Assert.AreEqual(new DateTimeOffset(2018, 8, 19, 7, 08, 0, TimeSpan.FromHours(1)), item.PublishingDate);
 
         Assert.AreEqual(15, feed.Items.Count);
     }
@@ -621,7 +621,7 @@ public class FullParseTest
         Assert.AreEqual("http://scriptingnews.userland.com/backissues/2002/09/29#reallyEarlyMorningNocoffeeNotes", item.Link);
         Assert.IsTrue(item.Description.Contains("<p>One of the lessons I've learned"));
         Assert.AreEqual("Sun, 29 Sep 2002 11:13:10 GMT", item.PublishingDateString);
-        Assert.AreEqual(new DateTime(2002, 09, 29, 11, 13, 10), item.PublishingDate);
+        Assert.AreEqual(new DateTimeOffset(2002, 09, 29, 11, 13, 10, TimeSpan.Zero), item.PublishingDate);
         Assert.AreEqual("http://scriptingnews.userland.com/backissues/2002/09/29#reallyEarlyMorningNocoffeeNotes", item.Guid);
     }
 
@@ -634,7 +634,7 @@ public class FullParseTest
         Assert.AreEqual("https://codehollow.com", feed.Link);
         Assert.AreEqual("Azure, software engineering/architecture, Scrum, SharePoint, VSTS/TFS, .NET and other funny things", feed.Description);
         Assert.AreEqual("Fri, 23 Dec 2016 09:01:55 +0000", feed.LastBuildDateString);
-        Assert.AreEqual(new DateTime(2016, 12, 23, 09, 01, 55), feed.LastBuildDate);
+        Assert.AreEqual(new DateTimeOffset(2016, 12, 23, 09, 01, 55, TimeSpan.Zero), feed.LastBuildDate);
         Assert.AreEqual("en-US", feed.Language);
         Assert.AreEqual("hourly", feed.Sy.UpdatePeriod);
         Assert.AreEqual("1", feed.Sy.UpdateFrequency);
@@ -646,7 +646,7 @@ public class FullParseTest
         Assert.AreEqual("https://codehollow.com/2016/12/export-azure-ratecard-data-csv-csharp-billing-api/", item.Link);
         Assert.AreEqual("https://codehollow.com/2016/12/export-azure-ratecard-data-csv-csharp-billing-api/#respond", item.Comments);
         Assert.AreEqual("Thu, 22 Dec 2016 07:00:28 +0000", item.PublishingDateString);
-        Assert.AreEqual(new DateTime(2016, 12, 22, 7, 0, 28), item.PublishingDate);
+        Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 7, 0, 28, TimeSpan.Zero), item.PublishingDate);
         Assert.AreEqual("Armin Reiter", item.DC.Creator);
         Assert.AreEqual(4, item.Categories.Count);
         Assert.IsTrue(item.Categories.Contains("BillingAPI"));
@@ -663,7 +663,7 @@ public class FullParseTest
         Assert.AreEqual("ContentWind", feed.Title);
         Assert.AreEqual("http://content-wind.com", feed.Link);
         Assert.AreEqual("Do, 22 Dez 2016 17:36:00 +0000", feed.LastBuildDateString);
-        Assert.AreEqual(new DateTime(2016, 12, 22, 17, 36, 00), feed.LastBuildDate);
+        Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 17, 36, 00, TimeSpan.Zero), feed.LastBuildDate);
         Assert.AreEqual("de-DE", feed.Language);
         Assert.AreEqual("hourly", feed.Sy.UpdatePeriod);
         Assert.AreEqual("1", feed.Sy.UpdateFrequency);
@@ -674,7 +674,7 @@ public class FullParseTest
         Assert.AreEqual("http://content-wind.com/2016/12/22/wachstum-influencer-marketing/", item.Link);
         Assert.AreEqual("http://content-wind.com/2016/12/22/wachstum-influencer-marketing/#respond", item.Comments);
         Assert.AreEqual("Thu, 22 Dec 2016 13:09:51 +0000", item.PublishingDateString);
-        Assert.AreEqual(new DateTime(2016, 12, 22, 13, 09, 51), item.PublishingDate);
+        Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 13, 09, 51, TimeSpan.Zero), item.PublishingDate);
         Assert.AreEqual("Harald Schaffernak", item.DC.Creator);
 
     }
