@@ -23,12 +23,12 @@
         /// <summary>
         /// The link (url) to the feed
         /// </summary>
-        public string Link { get; protected set; }
+        public string? Link { get; protected set; }
 
         /// <summary>
         /// The items that are in the feed
         /// </summary>
-        public ICollection<BaseFeedItem> Items { get; }
+        public IReadOnlyCollection<BaseFeedItem> Items { get; protected init; } = [];
 
         /// <summary>
         /// Gets the whole, original feed as string
@@ -42,25 +42,15 @@
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BaseFeed"/> class.
-        /// default constructor (for serialization)
-        /// </summary>
-        protected BaseFeed()
-        {
-            this.Items = new List<BaseFeedItem>();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BaseFeed"/> class.
         /// Reads a base feed based on the xml given in element
         /// </summary>
         /// <param name="feedXml">the entire feed xml as string</param>
         /// <param name="channel">the "channel" element in the xml as XElement</param>
         protected BaseFeed(string feedXml, ParentTag channel)
-            : this()
         {
             this.OriginalDocument = feedXml;
 
-            this.Title = channel.GetValue("title");
+            this.Title = channel.GetRequiredValue("title");
             this.Link = channel.GetValue("link");
             this.Element = channel;
         }

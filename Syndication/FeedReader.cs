@@ -67,7 +67,7 @@
                 }
             }
             
-            throw new UrlNotFoundException($"Could not get the absolute url out of {pageUrl} and {feedLink.Url}");
+            throw new InvalidFeedLinkException($"Could not get the absolute url out of {pageUrl} and {feedLink.Url}");
         }
 
         /// <summary>

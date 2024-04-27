@@ -7,8 +7,21 @@ using Brackets;
 
 static class XmlExtensions
 {
+    private const StringComparison NameComparison = StringComparison.OrdinalIgnoreCase;
+
     public static Tag? Tag(this ParentTag root, string name) =>
-        root?.FirstOrDefault<Tag>(t => t.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+        root.FirstOrDefault<Tag>(tag => tag.Name.Equals(name, NameComparison));
+
+    public static string? GetValue(this ParentTag root, string elementName) =>
+        root.FirstOrDefault<Tag>(tag => tag.Name.Equals(elementName, NameComparison))?.GetValue();
+
+    public static string GetRequiredValue(this ParentTag root, string elementName) =>
+        root.First<Tag>(tag => tag.Name.Equals(elementName, NameComparison)).GetRequiredValue();
+
+    public static string GetRequiredValue(this Element element)
+    {
+        return element.GetValue() ?? throw new RequiredElementValueMissingException();
+    }
 
     public static string? GetValue(this Element? element)
     {
@@ -28,11 +41,28 @@ static class XmlExtensions
         };
     }
 
-    public static string? GetValue(this ParentTag parent, string tagName) => parent.Tag(tagName)?.GetValue();
+    public static T[] GetArray<T>(this ParentTag root, string elementName, Func<Tag, T> factory)
+    {
+        var items = new List<T>();
 
-    public static string? GetAttributeValue(this Tag? tag, string attributeName) => tag?.Attributes[attributeName].ToString();
+        foreach (var element in root)
+        {
+            if (element is Tag tag && tag.Name.Equals(elementName, NameComparison))
+            {
+                items.Add(factory(tag));
+            }
+        }
 
-    public static ParentTag? GetElement(this ParentTag parent, string name) => parent.FirstOrDefault<ParentTag>(r => r.Name == name);
+        return items.ToArray();
+    }
+
+    public static string GetAttributeValue(this Tag element, string attributeName) => element.Attributes[attributeName].ToString();
+
+    public static string GetAttributeValue(this ParentTag root, string elementName, string attributeName) =>
+        root.FirstOrDefault<Tag>(tag => tag.Name.Equals(elementName, NameComparison))?.Attributes[attributeName].ToString() ?? string.Empty;
+
+    public static ParentTag? GetElement(this ParentTag parent, string name) => 
+        parent.FirstOrDefault<ParentTag>(r => r.Name.Equals(name, NameComparison));
 
     public static IEnumerable<Tag> GetElements(this Tag tag, string name) => tag is ParentTag parent ? GetTags(parent, name) : [];
 
@@ -66,5 +96,21 @@ static class XmlExtensions
                 yield return element;
             }
         }
+    }
+}
+
+[Serializable]
+public class RequiredElementValueMissingException : Exception
+{
+    public RequiredElementValueMissingException()
+    {
+    }
+
+    public RequiredElementValueMissingException(string? message) : base(message)
+    {
+    }
+
+    public RequiredElementValueMissingException(string? message, Exception? innerException) : base(message, innerException)
+    {
     }
 }

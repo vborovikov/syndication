@@ -49,7 +49,7 @@
         /// <summary>
         /// The copyright of the feed
         /// </summary>
-        public string Copyright { get; internal set; }
+        public string? Copyright { get; internal set; }
 
         /// <summary>
         /// The last updated date as string. This is filled, if a last updated

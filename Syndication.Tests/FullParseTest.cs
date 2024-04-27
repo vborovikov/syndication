@@ -15,7 +15,7 @@ public class FullParseTest
         Assert.AreEqual("Adobe Blog", feed.Title);
         Assert.AreEqual(null, feed.Icon);
         Assert.AreEqual("https://blog.adobe.com/", feed.Link);
-        Assert.AreEqual("2021-07-19T00:00:00.000Z", feed.UpdatedDateString);
+        Assert.AreEqual("2021-07-19T00:00:00.000Z", feed.UpdatedAsString);
         Assert.AreEqual("https://blog.adobe.com/", feed.Id);
 
         var item = (AtomFeedItem)feed.Items.First();
@@ -29,16 +29,16 @@ public class FullParseTest
 
         Assert.AreEqual("The Verge -  Front Pages", feed.Title);
         Assert.AreEqual("https://cdn2.vox-cdn.com/community_logos/34086/verge-fv.png", feed.Icon);
-        Assert.AreEqual("2017-01-07T09:00:01-05:00", feed.UpdatedDateString);
-        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), feed.UpdatedDate);
+        Assert.AreEqual("2017-01-07T09:00:01-05:00", feed.UpdatedAsString);
+        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), feed.Updated);
         Assert.AreEqual("http://www.theverge.com/rss/group/front-page/index.xml", feed.Id);
 
         var item = (AtomFeedItem)feed.Items.First();
 
-        Assert.AreEqual("2017-01-07T09:00:01-05:00", item.UpdatedDateString);
-        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), item.UpdatedDate);
-        Assert.AreEqual("2017-01-07T09:00:01-05:00", item.PublishedDateString);
-        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), item.PublishedDate);
+        Assert.AreEqual("2017-01-07T09:00:01-05:00", item.UpdatedAsString);
+        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), item.Updated);
+        Assert.AreEqual("2017-01-07T09:00:01-05:00", item.PublishedAsString);
+        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), item.Published);
         Assert.AreEqual("This is the new Hulu experience with live TV", item.Title);
         Assert.AreEqual("http://www.theverge.com/ces/2017/1/7/14195588/hulu-live-tv-streaming-internet-ces-2017", item.Id);
         Assert.AreEqual("http://www.theverge.com/ces/2017/1/7/14195588/hulu-live-tv-streaming-internet-ces-2017", item.Link);
@@ -56,7 +56,7 @@ public class FullParseTest
         Assert.AreEqual("StarCraft® II", feed.Title);
         Assert.AreEqual(null, feed.Icon);
         Assert.AreEqual(null, feed.Link);
-        Assert.AreEqual("2018-11-20T19:59:19.147Z", feed.UpdatedDateString);
+        Assert.AreEqual("2018-11-20T19:59:19.147Z", feed.UpdatedAsString);
         Assert.AreEqual("3", feed.Id);
     }
 
@@ -75,8 +75,8 @@ public class FullParseTest
         Assert.AreEqual("yt:video:AFA8ZtMwrvc", item.Id);
         Assert.AreEqual("Zukunft von Vertretern I Kernfusion I Musikgeschäft #ASKTHEPUNK 71", item.Title);
         Assert.AreEqual("alternate", item.Links.First().Relation);
-        Assert.AreEqual("2017-01-23T18:14:49+00:00", item.UpdatedDateString);
-        Assert.AreEqual("2017-01-20T16:00:00+00:00", item.PublishedDateString);
+        Assert.AreEqual("2017-01-23T18:14:49+00:00", item.UpdatedAsString);
+        Assert.AreEqual("2017-01-20T16:00:00+00:00", item.PublishedAsString);
     }
 
 
@@ -400,7 +400,7 @@ public class FullParseTest
         Assert.AreEqual("Adobe Blog", feed.Title);
         Assert.AreEqual(null, feed.Icon);
         Assert.AreEqual("https://blog.adobe.com/", feed.Link);
-        Assert.AreEqual("2021-07-19T00:00:00.000Z", feed.UpdatedDateString);
+        Assert.AreEqual("2021-07-19T00:00:00.000Z", feed.UpdatedAsString);
         Assert.AreEqual("https://blog.adobe.com/", feed.Id);
 
         var item = (AtomFeedItem)feed.Items.First();
@@ -414,16 +414,16 @@ public class FullParseTest
 
         Assert.AreEqual("The Verge -  Front Pages", feed.Title);
         Assert.AreEqual("https://cdn2.vox-cdn.com/community_logos/34086/verge-fv.png", feed.Icon);
-        Assert.AreEqual("2017-01-07T09:00:01-05:00", feed.UpdatedDateString);
-        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), feed.UpdatedDate);
+        Assert.AreEqual("2017-01-07T09:00:01-05:00", feed.UpdatedAsString);
+        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), feed.Updated);
         Assert.AreEqual("http://www.theverge.com/rss/group/front-page/index.xml", feed.Id);
 
         var item = (AtomFeedItem)feed.Items.First();
 
-        Assert.AreEqual("2017-01-07T09:00:01-05:00", item.UpdatedDateString);
-        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), item.UpdatedDate);
-        Assert.AreEqual("2017-01-07T09:00:01-05:00", item.PublishedDateString);
-        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), item.PublishedDate);
+        Assert.AreEqual("2017-01-07T09:00:01-05:00", item.UpdatedAsString);
+        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), item.Updated);
+        Assert.AreEqual("2017-01-07T09:00:01-05:00", item.PublishedAsString);
+        Assert.AreEqual(new DateTimeOffset(2017, 1, 7, 9, 0, 1, TimeSpan.FromHours(-5)), item.Published);
         Assert.AreEqual("This is the new Hulu experience with live TV", item.Title);
         Assert.AreEqual("http://www.theverge.com/ces/2017/1/7/14195588/hulu-live-tv-streaming-internet-ces-2017", item.Id);
         Assert.AreEqual("http://www.theverge.com/ces/2017/1/7/14195588/hulu-live-tv-streaming-internet-ces-2017", item.Link);
@@ -448,8 +448,8 @@ public class FullParseTest
         Assert.AreEqual("yt:video:AFA8ZtMwrvc", item.Id);
         Assert.AreEqual("Zukunft von Vertretern I Kernfusion I Musikgeschäft #ASKTHEPUNK 71", item.Title);
         Assert.AreEqual("alternate", item.Links.First().Relation);
-        Assert.AreEqual("2017-01-23T18:14:49+00:00", item.UpdatedDateString);
-        Assert.AreEqual("2017-01-20T16:00:00+00:00", item.PublishedDateString);
+        Assert.AreEqual("2017-01-23T18:14:49+00:00", item.UpdatedAsString);
+        Assert.AreEqual("2017-01-20T16:00:00+00:00", item.PublishedAsString);
     }
 
     [TestMethod]

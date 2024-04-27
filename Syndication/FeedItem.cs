@@ -26,7 +26,7 @@
         /// <summary>
         /// The description of the feed item
         /// </summary>
-        public string Description { get; internal init; }
+        public string? Description { get; internal init; }
 
         /// <summary>
         /// The publishing date as string. This is filled, if a publishing
@@ -58,7 +58,7 @@
         /// <summary>
         /// The content of the feed item
         /// </summary>
-        public string Content { get; internal init; }
+        public string? Content { get; internal init; }
 
         /// <summary>
         /// The parsed feed item element - e.g. of type <see cref="Rss20FeedItem"/> which contains
