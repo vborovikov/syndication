@@ -19,7 +19,7 @@ public class FullParseTest
         Assert.AreEqual("https://blog.adobe.com/", feed.Id);
 
         var item = (AtomFeedItem)feed.Items.First();
-        Assert.AreEqual(null, item.Link); // The post href is store in the id element
+        Assert.AreEqual("", item.Link); // The post href is store in the id element
     }
 
     [TestMethod]
@@ -55,7 +55,7 @@ public class FullParseTest
 
         Assert.AreEqual("StarCraft® II", feed.Title);
         Assert.AreEqual(null, feed.Icon);
-        Assert.AreEqual(null, feed.Link);
+        Assert.AreEqual("", feed.Link);
         Assert.AreEqual("2018-11-20T19:59:19.147Z", feed.UpdatedAsString);
         Assert.AreEqual("3", feed.Id);
     }
@@ -108,8 +108,8 @@ public class FullParseTest
         Assert.AreEqual(@"[19.08.2018 - 07:08 Uhr] Brandmeldeanlagenalarm", item.Title.Trim());
         Assert.IsTrue(item.Description.Contains("Weitere Informationen"));
         Assert.AreEqual("http://www.stadtfeuerwehr-weiz.at/einsaetze/einsatz-detail/5220/", item.Link);
-        Assert.AreEqual("Sun, 19 Aug 2018 07:08:00 +0100", item.PublishingDateString);
-        Assert.AreEqual(new DateTimeOffset(2018, 8, 19, 7, 08, 0, TimeSpan.FromHours(1)), item.PublishingDate);
+        Assert.AreEqual("Sun, 19 Aug 2018 07:08:00 +0100", item.PubDateAsString);
+        Assert.AreEqual(new DateTimeOffset(2018, 8, 19, 7, 08, 0, TimeSpan.FromHours(1)), item.PubDate);
 
         Assert.AreEqual(15, feed.Items.Count);
     }
@@ -247,7 +247,7 @@ public class FullParseTest
         Assert.AreEqual("A weblog about scripting and stuff like that.", feed.Description);
         Assert.AreEqual("en-us", feed.Language);
         Assert.AreEqual("Copyright 1997-2002 Dave Winer", feed.Copyright);
-        Assert.AreEqual("Mon, 30 Sep 2002 11:00:00 GMT", feed.LastBuildDateString);
+        Assert.AreEqual("Mon, 30 Sep 2002 11:00:00 GMT", feed.LastBuildDateAsString);
         Assert.AreEqual("http://backend.userland.com/rss", feed.Docs);
         Assert.AreEqual("Radio UserLand v8.0.5", feed.Generator);
         Assert.AreEqual("1765", feed.Categories.First());
@@ -260,8 +260,8 @@ public class FullParseTest
         Assert.AreEqual("Really early morning no-coffee notes", item.Title);
         Assert.AreEqual("http://scriptingnews.userland.com/backissues/2002/09/29#reallyEarlyMorningNocoffeeNotes", item.Link);
         Assert.IsTrue(item.Description.Contains("<p>One of the lessons I've learned"));
-        Assert.AreEqual("Sun, 29 Sep 2002 11:13:10 GMT", item.PublishingDateString);
-        Assert.AreEqual(new DateTimeOffset(2002, 09, 29, 11, 13, 10, TimeSpan.Zero), item.PublishingDate);
+        Assert.AreEqual("Sun, 29 Sep 2002 11:13:10 GMT", item.PubDateAsString);
+        Assert.AreEqual(new DateTimeOffset(2002, 09, 29, 11, 13, 10, TimeSpan.Zero), item.PubDate);
         Assert.AreEqual("http://scriptingnews.userland.com/backissues/2002/09/29#reallyEarlyMorningNocoffeeNotes", item.Guid);
     }
 
@@ -273,7 +273,7 @@ public class FullParseTest
         Assert.AreEqual("codehollow", feed.Title);
         Assert.AreEqual("https://codehollow.com", feed.Link);
         Assert.AreEqual("Azure, software engineering/architecture, Scrum, SharePoint, VSTS/TFS, .NET and other funny things", feed.Description);
-        Assert.AreEqual("Fri, 23 Dec 2016 09:01:55 +0000", feed.LastBuildDateString);
+        Assert.AreEqual("Fri, 23 Dec 2016 09:01:55 +0000", feed.LastBuildDateAsString);
         Assert.AreEqual(new DateTimeOffset(2016, 12, 23, 09, 01, 55, TimeSpan.Zero), feed.LastBuildDate);
         Assert.AreEqual("en-US", feed.Language);
         Assert.AreEqual("hourly", feed.Sy.UpdatePeriod);
@@ -285,8 +285,8 @@ public class FullParseTest
         Assert.AreEqual("Export Azure RateCard data to CSV with C# and Billing API", item.Title);
         Assert.AreEqual("https://codehollow.com/2016/12/export-azure-ratecard-data-csv-csharp-billing-api/", item.Link);
         Assert.AreEqual("https://codehollow.com/2016/12/export-azure-ratecard-data-csv-csharp-billing-api/#respond", item.Comments);
-        Assert.AreEqual("Thu, 22 Dec 2016 07:00:28 +0000", item.PublishingDateString);
-        Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 7, 0, 28, TimeSpan.Zero), item.PublishingDate);
+        Assert.AreEqual("Thu, 22 Dec 2016 07:00:28 +0000", item.PubDateAsString);
+        Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 7, 0, 28, TimeSpan.Zero), item.PubDate);
         Assert.AreEqual("Armin Reiter", item.DC.Creator);
         Assert.AreEqual(4, item.Categories.Count);
         Assert.IsTrue(item.Categories.Contains("BillingAPI"));
@@ -302,7 +302,7 @@ public class FullParseTest
         var feed = (Rss20Feed)Feed.FromString(Samples.GetContent("Feeds/Rss20ContentWindCom.xml")).SpecificFeed;
         Assert.AreEqual("ContentWind", feed.Title);
         Assert.AreEqual("http://content-wind.com", feed.Link);
-        Assert.AreEqual("Do, 22 Dez 2016 17:36:00 +0000", feed.LastBuildDateString);
+        Assert.AreEqual("Do, 22 Dez 2016 17:36:00 +0000", feed.LastBuildDateAsString);
         Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 17, 36, 0, TimeSpan.Zero), feed.LastBuildDate);
         Assert.AreEqual("de-DE", feed.Language);
         Assert.AreEqual("hourly", feed.Sy.UpdatePeriod);
@@ -313,8 +313,8 @@ public class FullParseTest
         Assert.AreEqual("Wachstum Influencer Marketing", item.Title);
         Assert.AreEqual("http://content-wind.com/2016/12/22/wachstum-influencer-marketing/", item.Link);
         Assert.AreEqual("http://content-wind.com/2016/12/22/wachstum-influencer-marketing/#respond", item.Comments);
-        Assert.AreEqual("Thu, 22 Dec 2016 13:09:51 +0000", item.PublishingDateString);
-        Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 13, 09, 51, TimeSpan.Zero), item.PublishingDate);
+        Assert.AreEqual("Thu, 22 Dec 2016 13:09:51 +0000", item.PubDateAsString);
+        Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 13, 09, 51, TimeSpan.Zero), item.PubDate);
         Assert.AreEqual("Harald Schaffernak", item.DC.Creator);
 
     }
@@ -327,21 +327,21 @@ public class FullParseTest
         Assert.AreEqual("https://themoscowtimes.com/", feed.Link);
         Assert.AreEqual("The Moscow Times offers everything you need to know about Russia: Breaking news, top stories, business, analysis, opinion, multimedia, upcoming cultural events", feed.Description);
         Assert.AreEqual("en-us", feed.Language);
-        Assert.AreEqual("Mon, 23 Jan 2017 16:45:02 +0000", feed.LastBuildDateString);
+        Assert.AreEqual("Mon, 23 Jan 2017 16:45:02 +0000", feed.LastBuildDateAsString);
         Assert.AreEqual("600", feed.TTL);
 
         var item = (Rss20FeedItem)feed.Items.First();
         Assert.AreEqual("Russian State TV Praises Trump for Avoiding ‘Democracy’ in Inauguration Speech", item.Title);
         Assert.AreEqual("https://themoscowtimes.com/articles/russian-state-tv-praises-trump-for-avoiding-democracy-in-inauguration-speech-56901", item.Link);
         Assert.AreEqual("Though he welcomed the end of Obama’s presidency as the start of a bright new era, the Kremlin’s “chief propagandist” quickly found himself struggling to find convincing scapegoats for the world’s problems this week.", item.Description);
-        Assert.AreEqual("Mon, 23 Jan 2017 16:45:02 +0000", item.PublishingDateString);
+        Assert.AreEqual("Mon, 23 Jan 2017 16:45:02 +0000", item.PubDateAsString);
         Assert.AreEqual("https://themoscowtimes.com/articles/russian-state-tv-praises-trump-for-avoiding-democracy-in-inauguration-speech-56901", item.Guid);
 
         item = (Rss20FeedItem)feed.Items.Last();
         Assert.AreEqual("Don’t Say It", item.Title);
         Assert.AreEqual("https://themoscowtimes.com/articles/dont-say-it-56774", item.Link);
         Assert.AreEqual("They say “sex sells,” but don't go peddling it near dinner tables in Russia, where families in an ostensibly conservative society say the subject is too taboo to discuss at home.", item.Description);
-        Assert.AreEqual("Tue, 10 Jan 2017 19:58:13 +0000", item.PublishingDateString);
+        Assert.AreEqual("Tue, 10 Jan 2017 19:58:13 +0000", item.PubDateAsString);
         Assert.AreEqual("https://themoscowtimes.com/articles/dont-say-it-56774", item.Guid);
     }
 
@@ -357,7 +357,7 @@ public class FullParseTest
         Assert.AreEqual("SVART MÅNAD - DÖDSOLYCKA i Vetlanda", item.Title);
         Assert.AreEqual("https://www.retriever-info.com/go/?a=30338&d=00201120180819281555686&p=200108&s=2011&sa=2016177&u=http%3A%2F%2Fwww.hoglandsnytt.se%2Fsvart-manad-dodsolycka-i-vetlanda%2F&x=33d88e677ce6481d9882de22c76e4234", item.Link);
         Assert.AreEqual("Under juli 2018 omkom 39 personer och 1 521 skadades i vägtrafiken. Det visar de preliminära uppgifter som inkommit till Transportstyrelsen fram till den 15 augusti 2018. Det är åtta fler omkomna jämfört med juli månad 2017.", item.Description);
-        Assert.AreEqual("Sun, 19 Aug 2018 07:14:00 GMT", item.PublishingDateString);
+        Assert.AreEqual("Sun, 19 Aug 2018 07:14:00 GMT", item.PubDateAsString);
         Assert.AreEqual("00201120180819281555686", item.Guid);
         Assert.AreEqual("Höglandsnytt", item.Author);
 
@@ -404,7 +404,7 @@ public class FullParseTest
         Assert.AreEqual("https://blog.adobe.com/", feed.Id);
 
         var item = (AtomFeedItem)feed.Items.First();
-        Assert.AreEqual(null, item.Link); // The post href is store in the id element
+        Assert.AreEqual("", item.Link); // The post href is store in the id element
     }
 
     [TestMethod]
@@ -468,8 +468,8 @@ public class FullParseTest
         Assert.AreEqual(@"[19.08.2018 - 07:08 Uhr] Brandmeldeanlagenalarm", item.Title.Trim());
         Assert.IsTrue(item.Description.Contains("Weitere Informationen"));
         Assert.AreEqual("http://www.stadtfeuerwehr-weiz.at/einsaetze/einsatz-detail/5220/", item.Link);
-        Assert.AreEqual("Sun, 19 Aug 2018 07:08:00 +0100", item.PublishingDateString);
-        Assert.AreEqual(new DateTimeOffset(2018, 8, 19, 7, 08, 0, TimeSpan.FromHours(1)), item.PublishingDate);
+        Assert.AreEqual("Sun, 19 Aug 2018 07:08:00 +0100", item.PubDateAsString);
+        Assert.AreEqual(new DateTimeOffset(2018, 8, 19, 7, 08, 0, TimeSpan.FromHours(1)), item.PubDate);
 
         Assert.AreEqual(15, feed.Items.Count);
     }
@@ -607,7 +607,7 @@ public class FullParseTest
         Assert.AreEqual("A weblog about scripting and stuff like that.", feed.Description);
         Assert.AreEqual("en-us", feed.Language);
         Assert.AreEqual("Copyright 1997-2002 Dave Winer", feed.Copyright);
-        Assert.AreEqual("Mon, 30 Sep 2002 11:00:00 GMT", feed.LastBuildDateString);
+        Assert.AreEqual("Mon, 30 Sep 2002 11:00:00 GMT", feed.LastBuildDateAsString);
         Assert.AreEqual("http://backend.userland.com/rss", feed.Docs);
         Assert.AreEqual("Radio UserLand v8.0.5", feed.Generator);
         Assert.AreEqual("1765", feed.Categories.First());
@@ -620,8 +620,8 @@ public class FullParseTest
         Assert.AreEqual("Really early morning no-coffee notes", item.Title);
         Assert.AreEqual("http://scriptingnews.userland.com/backissues/2002/09/29#reallyEarlyMorningNocoffeeNotes", item.Link);
         Assert.IsTrue(item.Description.Contains("<p>One of the lessons I've learned"));
-        Assert.AreEqual("Sun, 29 Sep 2002 11:13:10 GMT", item.PublishingDateString);
-        Assert.AreEqual(new DateTimeOffset(2002, 09, 29, 11, 13, 10, TimeSpan.Zero), item.PublishingDate);
+        Assert.AreEqual("Sun, 29 Sep 2002 11:13:10 GMT", item.PubDateAsString);
+        Assert.AreEqual(new DateTimeOffset(2002, 09, 29, 11, 13, 10, TimeSpan.Zero), item.PubDate);
         Assert.AreEqual("http://scriptingnews.userland.com/backissues/2002/09/29#reallyEarlyMorningNocoffeeNotes", item.Guid);
     }
 
@@ -633,7 +633,7 @@ public class FullParseTest
         Assert.AreEqual("codehollow", feed.Title);
         Assert.AreEqual("https://codehollow.com", feed.Link);
         Assert.AreEqual("Azure, software engineering/architecture, Scrum, SharePoint, VSTS/TFS, .NET and other funny things", feed.Description);
-        Assert.AreEqual("Fri, 23 Dec 2016 09:01:55 +0000", feed.LastBuildDateString);
+        Assert.AreEqual("Fri, 23 Dec 2016 09:01:55 +0000", feed.LastBuildDateAsString);
         Assert.AreEqual(new DateTimeOffset(2016, 12, 23, 09, 01, 55, TimeSpan.Zero), feed.LastBuildDate);
         Assert.AreEqual("en-US", feed.Language);
         Assert.AreEqual("hourly", feed.Sy.UpdatePeriod);
@@ -645,8 +645,8 @@ public class FullParseTest
         Assert.AreEqual("Export Azure RateCard data to CSV with C# and Billing API", item.Title);
         Assert.AreEqual("https://codehollow.com/2016/12/export-azure-ratecard-data-csv-csharp-billing-api/", item.Link);
         Assert.AreEqual("https://codehollow.com/2016/12/export-azure-ratecard-data-csv-csharp-billing-api/#respond", item.Comments);
-        Assert.AreEqual("Thu, 22 Dec 2016 07:00:28 +0000", item.PublishingDateString);
-        Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 7, 0, 28, TimeSpan.Zero), item.PublishingDate);
+        Assert.AreEqual("Thu, 22 Dec 2016 07:00:28 +0000", item.PubDateAsString);
+        Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 7, 0, 28, TimeSpan.Zero), item.PubDate);
         Assert.AreEqual("Armin Reiter", item.DC.Creator);
         Assert.AreEqual(4, item.Categories.Count);
         Assert.IsTrue(item.Categories.Contains("BillingAPI"));
@@ -662,7 +662,7 @@ public class FullParseTest
         var feed = (Rss20Feed)(await Feed.FromStreamAsync(Samples.GetStream("Feeds/Rss20ContentWindCom.xml"), default)).SpecificFeed;
         Assert.AreEqual("ContentWind", feed.Title);
         Assert.AreEqual("http://content-wind.com", feed.Link);
-        Assert.AreEqual("Do, 22 Dez 2016 17:36:00 +0000", feed.LastBuildDateString);
+        Assert.AreEqual("Do, 22 Dez 2016 17:36:00 +0000", feed.LastBuildDateAsString);
         Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 17, 36, 00, TimeSpan.Zero), feed.LastBuildDate);
         Assert.AreEqual("de-DE", feed.Language);
         Assert.AreEqual("hourly", feed.Sy.UpdatePeriod);
@@ -673,8 +673,8 @@ public class FullParseTest
         Assert.AreEqual("Wachstum Influencer Marketing", item.Title);
         Assert.AreEqual("http://content-wind.com/2016/12/22/wachstum-influencer-marketing/", item.Link);
         Assert.AreEqual("http://content-wind.com/2016/12/22/wachstum-influencer-marketing/#respond", item.Comments);
-        Assert.AreEqual("Thu, 22 Dec 2016 13:09:51 +0000", item.PublishingDateString);
-        Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 13, 09, 51, TimeSpan.Zero), item.PublishingDate);
+        Assert.AreEqual("Thu, 22 Dec 2016 13:09:51 +0000", item.PubDateAsString);
+        Assert.AreEqual(new DateTimeOffset(2016, 12, 22, 13, 09, 51, TimeSpan.Zero), item.PubDate);
         Assert.AreEqual("Harald Schaffernak", item.DC.Creator);
 
     }
@@ -687,21 +687,21 @@ public class FullParseTest
         Assert.AreEqual("https://themoscowtimes.com/", feed.Link);
         Assert.AreEqual("The Moscow Times offers everything you need to know about Russia: Breaking news, top stories, business, analysis, opinion, multimedia, upcoming cultural events", feed.Description);
         Assert.AreEqual("en-us", feed.Language);
-        Assert.AreEqual("Mon, 23 Jan 2017 16:45:02 +0000", feed.LastBuildDateString);
+        Assert.AreEqual("Mon, 23 Jan 2017 16:45:02 +0000", feed.LastBuildDateAsString);
         Assert.AreEqual("600", feed.TTL);
 
         var item = (Rss20FeedItem)feed.Items.First();
         Assert.AreEqual("Russian State TV Praises Trump for Avoiding ‘Democracy’ in Inauguration Speech", item.Title);
         Assert.AreEqual("https://themoscowtimes.com/articles/russian-state-tv-praises-trump-for-avoiding-democracy-in-inauguration-speech-56901", item.Link);
         Assert.AreEqual("Though he welcomed the end of Obama’s presidency as the start of a bright new era, the Kremlin’s “chief propagandist” quickly found himself struggling to find convincing scapegoats for the world’s problems this week.", item.Description);
-        Assert.AreEqual("Mon, 23 Jan 2017 16:45:02 +0000", item.PublishingDateString);
+        Assert.AreEqual("Mon, 23 Jan 2017 16:45:02 +0000", item.PubDateAsString);
         Assert.AreEqual("https://themoscowtimes.com/articles/russian-state-tv-praises-trump-for-avoiding-democracy-in-inauguration-speech-56901", item.Guid);
 
         item = (Rss20FeedItem)feed.Items.Last();
         Assert.AreEqual("Don’t Say It", item.Title);
         Assert.AreEqual("https://themoscowtimes.com/articles/dont-say-it-56774", item.Link);
         Assert.AreEqual("They say “sex sells,” but don't go peddling it near dinner tables in Russia, where families in an ostensibly conservative society say the subject is too taboo to discuss at home.", item.Description);
-        Assert.AreEqual("Tue, 10 Jan 2017 19:58:13 +0000", item.PublishingDateString);
+        Assert.AreEqual("Tue, 10 Jan 2017 19:58:13 +0000", item.PubDateAsString);
         Assert.AreEqual("https://themoscowtimes.com/articles/dont-say-it-56774", item.Guid);
     }
 
@@ -717,7 +717,7 @@ public class FullParseTest
         Assert.AreEqual("SVART MÅNAD - DÖDSOLYCKA i Vetlanda", item.Title);
         Assert.AreEqual("https://www.retriever-info.com/go/?a=30338&d=00201120180819281555686&p=200108&s=2011&sa=2016177&u=http%3A%2F%2Fwww.hoglandsnytt.se%2Fsvart-manad-dodsolycka-i-vetlanda%2F&x=33d88e677ce6481d9882de22c76e4234", item.Link);
         Assert.AreEqual("Under juli 2018 omkom 39 personer och 1 521 skadades i vägtrafiken. Det visar de preliminära uppgifter som inkommit till Transportstyrelsen fram till den 15 augusti 2018. Det är åtta fler omkomna jämfört med juli månad 2017.", item.Description);
-        Assert.AreEqual("Sun, 19 Aug 2018 07:14:00 GMT", item.PublishingDateString);
+        Assert.AreEqual("Sun, 19 Aug 2018 07:14:00 GMT", item.PubDateAsString);
         Assert.AreEqual("00201120180819281555686", item.Guid);
         Assert.AreEqual("Höglandsnytt", item.Author);
 

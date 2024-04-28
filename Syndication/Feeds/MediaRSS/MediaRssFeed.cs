@@ -69,7 +69,7 @@
         /// <summary>
         /// All "category" elements
         /// </summary>
-        public ICollection<string> Categories { get; } // category
+        public IReadOnlyCollection<string> Categories { get; } = []; // category
 
         /// <summary>
         /// The "generator" element
@@ -89,12 +89,12 @@
         /// <summary>
         /// All "day" elements in "skipDays"
         /// </summary>
-        public ICollection<string> SkipDays { get; }
+        public IReadOnlyCollection<string> SkipDays { get; } = [];
 
         /// <summary>
         /// All "hour" elements in "skipHours"
         /// </summary>
-        public ICollection<string> SkipHours { get; }
+        public IReadOnlyCollection<string> SkipHours { get; } = [];
 
         /// <summary>
         /// The "textInput" element
@@ -125,8 +125,7 @@
             this.LastBuildDateString = channel.GetValue("lastBuildDate");
             this.ParseDates(this.Language, this.PublishingDateString, this.LastBuildDateString);
 
-            var categories = channel.GetElements("category");
-            this.Categories = categories.Select(x => x.GetValue()).ToArray();
+            this.Categories = channel.GetArray("category", x => x.GetRequiredValue());
 
             this.Sy = new SyndicationMetadata(channel);
             this.Generator = channel.GetValue("generator");
@@ -135,20 +134,16 @@
             this.Cloud = new FeedCloud(channel.Tag("cloud"));
             this.TextInput = new FeedTextInput(channel.GetElement("textinput"));
 
-            var skipHours = channel.GetElement("skipHours");
-            if (skipHours != null)
-                this.SkipHours = skipHours.GetElements("hour")?.Select(x => x.GetValue()).ToArray();
-
-            var skipDays = channel.GetElement("skipDays");
-            if (skipDays != null)
-                this.SkipDays = skipDays.GetElements("day")?.Select(x => x.GetValue()).ToArray();
-
-            var items = channel.GetRoots("item");
-
-            foreach (var item in items)
+            if (channel.GetElement("skipHours") is ParentTag skipHours)
             {
-                this.Items.Add(new MediaRssFeedItem(item));
+                this.SkipHours = skipHours.GetArray("hour", x => x.GetRequiredValue());
             }
+            if (channel.GetElement("skipDays") is ParentTag skipDays)
+            {
+                this.SkipDays = skipDays.GetArray("day", x => x.GetRequiredValue());
+            }
+
+            this.Items = channel.GetArray("item", item => new MediaRssFeedItem((ParentTag)item));
         }
 
         /// <summary>
@@ -165,7 +160,7 @@
                 Language = this.Language,
                 LastUpdatedDate = this.LastBuildDate,
                 LastUpdatedDateString = this.LastBuildDateString,
-                Type = FeedType.MediaRss
+                Type = FeedType.MediaRss,
             };
             return f;
         }

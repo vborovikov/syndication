@@ -31,8 +31,8 @@
         /// <param name="item">feed item as xml</param>
         protected BaseFeedItem(ParentTag item)
         {
-            this.Title = item.GetValue("title");
-            this.Link = item.GetValue("link");
+            this.Title = item.GetValue("title") ?? string.Empty;
+            this.Link = item.GetValue("link") ?? string.Empty;
             this.Element = item;
         }
     }

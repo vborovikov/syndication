@@ -74,7 +74,7 @@ public record AtomFeedItem : BaseFeedItem
     /// <summary>
     /// All "link" elements
     /// </summary>
-    public ICollection<AtomLink> Links { get; }
+    public IReadOnlyCollection<AtomLink> Links { get; } = [];
 
     /// <summary>
     /// The "summary" element
@@ -84,7 +84,7 @@ public record AtomFeedItem : BaseFeedItem
     /// <summary>
     /// All "category" elements
     /// </summary>
-    public ICollection<string> Categories { get; }
+    public IReadOnlyCollection<string> Categories { get; } = [];
 
     /// <summary>
     /// The "contributor" element

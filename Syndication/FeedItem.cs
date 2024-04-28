@@ -53,7 +53,7 @@
         /// <summary>
         /// The categories of the feeditem
         /// </summary>
-        public ICollection<string> Categories { get; internal init; }
+        public IReadOnlyCollection<string> Categories { get; internal init; } = [];
 
         /// <summary>
         /// The content of the feed item

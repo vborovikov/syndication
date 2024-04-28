@@ -85,6 +85,6 @@ namespace Syndication.Feeds.MediaRSS
         /// <summary>
         /// Representative images for the media object
         /// </summary>
-        public ICollection<Thumbnail> Thumbnails { get; }
+        public IReadOnlyCollection<Thumbnail> Thumbnails { get; } = [];
     }
 }

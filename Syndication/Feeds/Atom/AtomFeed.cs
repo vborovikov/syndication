@@ -21,7 +21,7 @@ public record AtomFeed : BaseFeed
     {
         // Required feed elements
         this.Id = feed.GetRequiredValue("id");
-        this.UpdatedAsString = feed.GetRequiredValue("updated");
+        this.UpdatedAsString = feed.GetValue("updated") ?? feed.GetValue("published") ?? string.Empty;
         this.Updated = Helpers.TryParseDateTime(this.UpdatedAsString);
 
         // Recommended feed elements
@@ -72,7 +72,7 @@ public record AtomFeed : BaseFeed
     /// <summary>
     /// All "category" elements
     /// </summary>
-    public ICollection<string> Categories { get; }
+    public IReadOnlyCollection<string> Categories { get; } = [];
 
     /// <summary>
     /// The "contributor" element
@@ -107,7 +107,7 @@ public record AtomFeed : BaseFeed
     /// <summary>
     /// All "link" elements
     /// </summary>
-    public IReadOnlyCollection<AtomLink> Links { get; }
+    public IReadOnlyCollection<AtomLink> Links { get; } = [];
 
     /// <summary>
     /// Creates the base <see cref="Feed"/> element out of this feed.

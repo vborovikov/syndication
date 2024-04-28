@@ -54,17 +54,17 @@
         /// <summary>
         /// All entries "category" entries
         /// </summary>
-        public ICollection<string> Categories { get; }
+        public IReadOnlyCollection<string> Categories { get; } = [];
 
         /// <summary>
         /// All entries from the "media:content" elements.
         /// </summary>
-        public ICollection<Media> Media { get; }
+        public IReadOnlyCollection<Media> Media { get; } = [];
 
         /// <summary>
         /// All entries from the "media:group" elements. 
         /// </summary>
-        public ICollection<MediaGroup> MediaGroups { get; }
+        public IReadOnlyCollection<MediaGroup> MediaGroups { get; } = [];
 
         /// <summary>
         /// The "content:encoded" field
@@ -84,7 +84,6 @@
         public MediaRssFeedItem(ParentTag item)
             : base(item)
         {
-             
             this.Comments = item.GetValue("comments");
             this.Author = item.GetValue("author");
             this.Enclosure = new FeedItemEnclosure(item.GetElement("enclosure"));
@@ -99,8 +98,7 @@
             var mediaGroups = item.GetRoots("media:group");
             this.MediaGroups = mediaGroups.Select(x => new MediaGroup(x)).ToArray();
 
-            var categories = item.GetElements("category");
-            this.Categories = categories.Select(x => x.GetValue()).ToArray();
+            this.Categories = item.GetArray("category", x => x.GetRequiredValue());
 
             this.Guid = item.GetValue("guid");
             this.Description = item.GetValue("description");

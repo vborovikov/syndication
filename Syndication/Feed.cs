@@ -55,7 +55,7 @@
         /// The last updated date as string. This is filled, if a last updated
         /// date is set - independent if it is a correct date or not
         /// </summary>
-        public string LastUpdatedDateString { get; internal set; }
+        public string? LastUpdatedDateString { get; internal set; }
 
         /// <summary>
         /// The last updated date as datetime. Null if parsing failed or if

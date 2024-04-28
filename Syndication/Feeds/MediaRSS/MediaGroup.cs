@@ -29,6 +29,6 @@ namespace Syndication.Feeds.MediaRSS
         /// <summary>
         /// Media object
         /// </summary>
-        public ICollection<Media> Media { get; }
+        public IReadOnlyCollection<Media> Media { get; } = [];
     }
 }

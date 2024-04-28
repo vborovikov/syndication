@@ -11,17 +11,17 @@
         /// <summary>
         /// The "updatePeriod" element
         /// </summary>
-        public string UpdatePeriod { get; }
+        public string? UpdatePeriod { get; }
 
         /// <summary>
         /// The "updateFrequency" element
         /// </summary>
-        public string UpdateFrequency { get; }
+        public string? UpdateFrequency { get; }
 
         /// <summary>
         /// The "updateBase" element
         /// </summary>
-        public string UpdateBase { get; }
+        public string? UpdateBase { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SyndicationMetadata"/> class.

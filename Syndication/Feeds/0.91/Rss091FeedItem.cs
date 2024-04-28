@@ -9,21 +9,6 @@
     public record Rss091FeedItem : BaseFeedItem
     {
         /// <summary>
-        /// The "description" field
-        /// </summary>
-        public string Description { get; } // description
-
-        /// <summary>
-        /// The "pubDate" field
-        /// </summary>
-        public string PublishingDateString { get; }
-
-        /// <summary>
-        /// The "pubDate" field as DateTime. Null if parsing failed or pubDate is empty.
-        /// </summary>
-        public DateTimeOffset? PublishingDate { get; }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="Rss091FeedItem"/> class.
         /// Creates this object based on the xml in the XElement parameter.
         /// </summary>
@@ -32,20 +17,34 @@
             : base(item)
         {
             this.Description = item.GetValue("description");
-            this.PublishingDateString = item.GetValue("pubDate");
-            this.PublishingDate = Helpers.TryParseDateTime(this.PublishingDateString);
+            this.PubDateAsString = item.GetValue("pubDate");
+            this.PubDate = Helpers.TryParseDateTime(this.PubDateAsString);
         }
+
+        /// <summary>
+        /// The "description" field
+        /// </summary>
+        public string? Description { get; } // description
+
+        /// <summary>
+        /// The "pubDate" field
+        /// </summary>
+        public string? PubDateAsString { get; }
+
+        /// <summary>
+        /// The "pubDate" field as DateTime. Null if parsing failed or pubDate is empty.
+        /// </summary>
+        public DateTimeOffset? PubDate { get; }
 
         internal override FeedItem ToFeedItem()
         {
-            FeedItem fi = new FeedItem(this)
+            return new FeedItem(this)
             {
+                Id = this.Link,
                 Description = this.Description,
-                PublishingDate = this.PublishingDate,
-                PublishingDateString = this.PublishingDateString,
-                Id = this.Link
+                PublishingDate = this.PubDate,
+                PublishingDateString = this.PubDateAsString ?? string.Empty,
             };
-            return fi;
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿namespace Syndication.Feeds
 {
     using System.Collections.Generic;
-    using System.Linq;
     using Brackets;
 
     /// <summary>
@@ -10,21 +9,6 @@
     public record Rss092FeedItem : Rss091FeedItem
     {
         /// <summary>
-        /// All entries "category" entries
-        /// </summary>
-        public ICollection<string> Categories { get; }
-
-        /// <summary>
-        /// The "enclosure" field
-        /// </summary>
-        public FeedItemEnclosure Enclosure { get; }
-
-        /// <summary>
-        /// The "source" field
-        /// </summary>
-        public FeedItemSource Source { get; }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="Rss092FeedItem"/> class.
         /// Creates a new feed item element based on the given xml XELement
         /// </summary>
@@ -32,11 +16,31 @@
         public Rss092FeedItem(ParentTag item)
             : base(item)
         {
-            this.Enclosure = new FeedItemEnclosure(item.Tag("enclosure"));
-            this.Source = new FeedItemSource(item.GetElement("source"));
+            if (item.Tag("enclosure") is Tag enclosure)
+            {
+                this.Enclosure = new FeedItemEnclosure(enclosure);
+            }
+            if (item.GetElement("source") is ParentTag source)
+            {
+                this.Source = new FeedItemSource(source);
+            }
 
-            var categories = item.GetElements("category");
-            this.Categories = categories.Select(x => x.GetValue()).ToArray();
+            this.Categories = item.GetArray("category", x => x.GetRequiredValue());
         }
+
+        /// <summary>
+        /// All entries "category" entries
+        /// </summary>
+        public IReadOnlyCollection<string> Categories { get; } = [];
+
+        /// <summary>
+        /// The "enclosure" field
+        /// </summary>
+        public FeedItemEnclosure? Enclosure { get; }
+
+        /// <summary>
+        /// The "source" field
+        /// </summary>
+        public FeedItemSource? Source { get; }
     }
 }
