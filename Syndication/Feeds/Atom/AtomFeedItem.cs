@@ -20,7 +20,7 @@ public record AtomFeedItem : BaseFeedItem
     {
         // Required elements of <entry>
         this.Id = item.GetRequiredValue("id");
-        this.UpdatedAsString = item.GetRequiredValue("updated");
+        this.UpdatedAsString = item.GetValue("updated") ?? item.GetValue("published") ?? string.Empty;
         this.Updated = Helpers.TryParseDateTime(this.UpdatedAsString);
 
         // Recommended elements of <entry>
