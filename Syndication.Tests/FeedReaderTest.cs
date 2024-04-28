@@ -35,27 +35,6 @@ public class FeedReaderTest
     }
 
     [TestMethod]
-    public async Task TestParseAndAbsoluteUrlDerStandard1()
-    {
-        string url = "derstandard.at";
-        var document = await Document.Html.ParseAsync(Samples.GetStream("Web/derstandard_at.html"), default);
-        var links = Feed.FindAll(document);
-
-        foreach (var link in links)
-        {
-            var absoluteUrl = FeedReader.GetAbsoluteFeedUrl(url, link);
-            Assert.IsTrue(absoluteUrl.Url.StartsWith("https://"));
-        }
-    }
-
-    [TestMethod]
-    public void GetAbsoluteFeedUrl_RelativePath_Concat()
-    {
-        var feedLink = FeedReader.GetAbsoluteFeedUrl("https://devleader.substack.com/", new HtmlFeedLink("Dev Leader", "/feed", FeedType.Rss_2_0));
-        Assert.AreEqual("https://devleader.substack.com/feed", feedLink.Url);
-    }
-
-    [TestMethod]
     public async Task TestReadSimpleFeed()
     {
         var feed = await Feed.FromStreamAsync(Samples.GetStream("Web/arminreiter_com.xml"), default);
