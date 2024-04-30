@@ -121,8 +121,8 @@ public record AtomFeedItem : BaseFeedItem
             Content = this.Content,
             Description = this.Summary,
             Id = this.Id,
-            PublishingDate = this.Updated ?? this.Published,
-            PublishingDateString = this.UpdatedAsString ?? this.PublishedAsString ?? string.Empty,
+            PublishingDate = this.Published ?? this.Updated,
+            PublishingDateString = this.PublishedAsString ?? this.UpdatedAsString ?? string.Empty,
         };
     }
 }
