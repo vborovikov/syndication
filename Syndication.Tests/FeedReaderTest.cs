@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Brackets;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Syndication.Parser;
 
 [TestClass]
 public class FeedReaderTest
@@ -32,6 +33,15 @@ public class FeedReaderTest
         var document = await Document.Html.ParseAsync(Samples.GetStream(url), default);
         var urls = Feed.FindAll(document);
         Assert.AreEqual(expectedNumberOfLinks, urls.Length);
+    }
+
+    [TestMethod]
+    public async Task FindAll_HtmlEntityInType_FoundFeedLink()
+    {
+        var ex = await Assert.ThrowsExceptionAsync<HtmlContentDetectedException>(() => 
+            Feed.FromStreamAsync(Samples.GetStream("Web/tobeva.html"), default));
+
+        Assert.AreEqual(1, ex.FeedLinks.Count());
     }
 
     [TestMethod]
