@@ -752,6 +752,23 @@ public class FullParseTest
         }
     }
 
+    [TestMethod]
+    public async Task TestRss20AtomElements_Async()
+    {
+        var feed = (Rss20Feed)(await Feed.FromStreamAsync(Samples.GetStream("Feeds/Rss20Atom.xml"), default)).SpecificFeed;
+
+        Assert.AreEqual("dotnetkicks.com", feed.Title);
+        Assert.AreEqual("https://dotnetkicks.com/", feed.Link);
+        Assert.AreEqual("The latest published stories from DotNetKicks.com", feed.Description);
+
+        // assert all items have author and pubDate elements parsed
+        foreach (var item in feed.Items.Cast<Rss20FeedItem>())
+        {
+            Assert.IsNotNull(item.PubDateAsString);
+            Assert.IsNotNull(item.Author);
+        }
+    }
+
     private static void TestItunesParsingForException(Feed feed)
     {
         Assert.IsNotNull(feed.GetItunesChannel());

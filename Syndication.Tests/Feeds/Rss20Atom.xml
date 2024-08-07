@@ -1,0 +1,1116 @@
+<?xml version="1.0"?>
+<rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>dotnetkicks.com</title>
+    <link>https://dotnetkicks.com/</link>
+    <description>The latest published stories from DotNetKicks.com</description>
+    <language>en-us</language>
+    <copyright>DotNetKicks LLC</copyright>
+    <generator>dotnetkicks.com</generator>
+    <item>
+      <guid isPermaLink="false">stories/693266</guid>
+      <link>https://dotnetkicks.com/r/693266?url=https://jeremydmiller.com/2024/08/06/critter-stack-workshop-at-devup-next-week/</link>
+      <a10:author>
+        <a10:name>jeremydmiller</a10:name>
+        <a10:uri>https://dotnetkicks.com/@jeremydmiller</a10:uri>
+      </a10:author>
+      <title>Critter Stack Workshop at DevUp Next Week</title>
+      <description>If you're planning on coming to my workshop, you'll want .NET 8, Git, and some kind of Docker Desktop on your box to run the sample code I'll use in the workshop. If Docker doesn't work for you, you maybe want a local install of PostgreSQL and Rabbit MQ.</description>
+      <a10:updated>2024-08-06T19:02:22Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/693247</guid>
+      <link>https://dotnetkicks.com/r/693247?url=https://www.jimmybogard.com/tales-from-the-net-migration-trenches-middleware/</link>
+      <a10:author>
+        <a10:name>jbogard</a10:name>
+        <a10:uri>https://dotnetkicks.com/@jbogard</a10:uri>
+      </a10:author>
+      <title>Tales from the .NET Migration Trenches - Middleware</title>
+      <description>Posts in this series: * Intro * Cataloging * Empty Proxy * Shared Library * Our First Controller * Migrating Initial Business Logic * Our First Views * Session State * Hangfire * Authentication * Middleware In the last post, we looked at tackling probably the most important pieces of middleware - authentication.</description>
+      <a10:updated>2024-08-06T17:02:07Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/693229</guid>
+      <link>https://dotnetkicks.com/r/693229?url=https://www.jimmybogard.com/tales-from-the-net-migration-trenches-middleware/</link>
+      <a10:author>
+        <a10:name>jbogard</a10:name>
+        <a10:uri>https://dotnetkicks.com/@jbogard</a10:uri>
+      </a10:author>
+      <title>Tales from the .NET Migration Trenches - Middleware</title>
+      <description>Posts in this series: * Intro * Cataloging * Empty Proxy * Shared Library * Our First Controller * Migrating Initial Business Logic * Our First Views * Session State * Hangfire * Authentication * Middleware In the last post, we looked at tackling probably the most important pieces of middleware - authentication.</description>
+      <a10:updated>2024-08-06T17:02:01Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/693212</guid>
+      <link>https://dotnetkicks.com/r/693212?url=https://andrewlock.net/simplifying-theory-test-data-with-xunit-combinatorial/</link>
+      <a10:author>
+        <a10:name>Andrew Lock</a10:name>
+        <a10:uri>https://dotnetkicks.com/@andrewlocknet</a10:uri>
+      </a10:author>
+      <title>Simplifying [Theory] test data with Xunit.Combinatorial</title>
+      <description>In this post I show how you can simplify your xUnit [Theory] tests using the Xunit.Combinatorial package to auto-generate your test parameters</description>
+      <a10:updated>2024-08-06T11:11:56Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/693200</guid>
+      <link>https://dotnetkicks.com/r/693200?url=https://devblogs.microsoft.com/visualstudio/introducing-the-revamped-attach-to-process-experience/</link>
+      <a10:author>
+        <a10:name>Visual Studio</a10:name>
+        <a10:uri>https://dotnetkicks.com/@VisualStudio</a10:uri>
+      </a10:author>
+      <title>Introducing the revamped Attach to Process experience - Visual Studio Blog</title>
+      <description>Discover the new Attach to Process dialog in Visual Studio 2022! Experience a refreshed UI, improved performance, enhanced search capabilities, and better theming support. Debug processes more efficiently on both local and remote machines with these exciting updates.</description>
+      <a10:updated>2024-08-06T10:11:59Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/693143</guid>
+      <link>https://dotnetkicks.com/r/693143?url=https://daedtech.com/the-best-tool-for-real-content-attribution-the-fermi-problem/</link>
+      <a10:author>
+        <a10:name>Erik Dietrich</a10:name>
+        <a10:uri>https://dotnetkicks.com/@daedtech</a10:uri>
+      </a10:author>
+      <title>The Best Tool for Real Content Attribution? The Fermi Problem</title>
+      <description>I was recently scrolling through LinkedIn, admiring the art of the single-line hook followed by emoji bullets, when I stumbled on a really interesting question from Fio Dossetto. The question is as follows: As someone who self-identifies as neither a marketer nor "smarter than" anyone, I figured I'd leave the comments to the thought leaders [...]</description>
+      <a10:updated>2024-08-05T20:11:29Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/693068</guid>
+      <link>https://dotnetkicks.com/r/693068?url=https://build5nines.com/what-is-generative-ai/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>What Is Generative AI? | Build5Nines</title>
+      <description>Generative AI has emerged as a groundbreaking technology, transforming how we create content. From text and images to music and software code, generative AI</description>
+      <a10:updated>2024-08-05T11:31:18Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/692986</guid>
+      <link>https://dotnetkicks.com/r/692986?url=https://sergeytihon.com/2024/08/03/f-weekly-31-2024-enhancing-help-in-f-interactive/</link>
+      <a10:author>
+        <a10:name>Sergey Tihon</a10:name>
+        <a10:uri>https://dotnetkicks.com/@sergey_tihon</a10:uri>
+      </a10:author>
+      <title>F# Weekly #31, 2024 - Enhancing #help in F# Interactive</title>
+      <description>Welcome to F# Weekly, A roundup of F# content from this past week: News Enhancing #help in F# Interactive - .NET Blog The Aardvark Platform. Introducing GitHub Models: A new generation of AI engineers building on GitHub - The GitHub Blog The Definitive Guide to Building and Deploying Avalonia Applications for macOS Support for Azure.AI.OpenAI...</description>
+      <a10:updated>2024-08-04T18:50:15Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/692953</guid>
+      <link>https://dotnetkicks.com/r/692953?url=https://build5nines.com/what-is-mlops/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>What Is MLOps? | Build5Nines</title>
+      <description>MLOps, or Machine Learning Operations, is like the backbone of a well-oiled machine in the machine learning domain. It's an intersection where machine</description>
+      <a10:updated>2024-08-02T18:59:48Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/692940</guid>
+      <link>https://dotnetkicks.com/r/692940?url=https://visualstudiomagazine.com/Articles/2024/08/02/Data-Anomaly-Detection-Using-LightGBM.aspx</link>
+      <a10:author>
+        <a10:name>VisualStudioMagazine</a10:name>
+        <a10:uri>https://dotnetkicks.com/@VSMdev</a10:uri>
+      </a10:author>
+      <title>Data Anomaly Detection Using LightGBM</title>
+      <description>Dr. James McCaffrey from Microsoft Research presents a complete program that uses the Python language LightGBM system to create a custom autoencoder for data anomaly detection. You can easily adapt the demo program for your own anomaly detection scenarios.</description>
+      <a10:updated>2024-08-02T18:59:30Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690147</guid>
+      <link>https://dotnetkicks.com/r/690147?url=https://blog.postsharp.net/singleton?utm_source=dotnetkicks&amp;utm_medium=paid&amp;utm_campaign=singleton</link>
+      <a10:author>
+        <a10:name>PostSharp</a10:name>
+        <a10:uri>https://dotnetkicks.com/@postsharp</a10:uri>
+      </a10:author>
+      <title>The Singleton pattern in modern C# is not your dad's one!</title>
+      <description>The Singleton pattern in modern C# is not your dad's one! How did this classic evolve to the era of unit testing and dependency injection? And how to ensure that there is _really_ just one Singleton instance in your code?</description>
+      <a10:updated>2024-08-02T14:00:00Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/692875</guid>
+      <link>https://dotnetkicks.com/r/692875?url=https://build5nines.com/top-7-signs-youre-doing-devops-wrong/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>Top 7 Signs You're Doing DevOps Wrong | Build5Nines</title>
+      <description>Chances are you or your manager thinks you're doing DevOps. But what if you're doing it wrong? Do you really know what DevOps is? After all, you have a DevOps</description>
+      <a10:updated>2024-08-02T12:19:12Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/692838</guid>
+      <link>https://dotnetkicks.com/r/692838?url=https://petabridge.com/blog/worst-dotnet-bug/</link>
+      <a10:author>
+        <a10:name>Petabridge</a10:name>
+        <a10:uri>https://dotnetkicks.com/@petabridge</a10:uri>
+      </a10:author>
+      <title>The Worst .NET Bug I've Ever Fixed</title>
+      <description>A 70+ journey into fixing a ~10 year old Akka.NET bug.</description>
+      <a10:updated>2024-08-01T16:38:52Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/692696</guid>
+      <link>https://dotnetkicks.com/r/692696?url=https://devblogs.microsoft.com/dotnet/enhancing-help-in-fsi/</link>
+      <a10:author>
+        <a10:name>.NET Team</a10:name>
+        <a10:uri>https://dotnetkicks.com/@dotnet</a10:uri>
+      </a10:author>
+      <title>Enhancing #help in F# Interactive - .NET Blog</title>
+      <description>The '#help' directive in F# Interactive can now quickly access documentation instantly within the REPL.</description>
+      <a10:updated>2024-07-31T17:08:45Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/692683</guid>
+      <link>https://dotnetkicks.com/r/692683?url=https://devblogs.microsoft.com/dotnet/enhancing-help-in-fsi/</link>
+      <a10:author>
+        <a10:name>Jeff Fritz</a10:name>
+        <a10:uri>https://dotnetkicks.com/@csharpfritz</a10:uri>
+      </a10:author>
+      <title>Enhancing #help in F# Interactive - .NET Blog</title>
+      <description>The '#help' directive in F# Interactive can now quickly access documentation instantly within the REPL.</description>
+      <a10:updated>2024-07-31T17:08:31Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/692651</guid>
+      <link>https://dotnetkicks.com/r/692651?url=https://build5nines.com/using-the-terraform-merge-function/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>Using The Terraform 'merge' Function | Build5Nines</title>
+      <description>One of the core strengths of Terraform is its rich set of built-in functions, which empower users to create flexible and reusable configurations. Among these</description>
+      <a10:updated>2024-07-31T12:38:11Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/692612</guid>
+      <link>https://dotnetkicks.com/r/692612?url=https://jeremydmiller.com/2024/07/30/critter-stack-roadmap-for-the-rest-of-2024/</link>
+      <a10:author>
+        <a10:name>jeremydmiller</a10:name>
+        <a10:uri>https://dotnetkicks.com/@jeremydmiller</a10:uri>
+      </a10:author>
+      <title>Critter Stack Roadmap for the Rest of 2024</title>
+      <description>It's been a little bit since I've written any kind of update on the unofficial "Critter Stack" roadmap, with the last update in February. A ton of new, important strategic features have been added to especially Marten since then, with plenty of expansion of Wolverine to boot.</description>
+      <a10:updated>2024-07-30T20:27:58Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690146</guid>
+      <link>https://dotnetkicks.com/r/690146?url=https://www.mobilize.net/blog/net-6-end-of-support-is-on-the-horizon?utm_source=DNK-690146&amp;utm_medium=DNK-690146&amp;utm_content=DNK-690146&amp;utm_campaign=DNK-690146</link>
+      <a10:author>
+        <a10:name>Robert Greyling</a10:name>
+        <a10:uri>https://dotnetkicks.com/@RobertTheGrey</a10:uri>
+      </a10:author>
+      <title>.NET 6: Don’t Panic Yet - But .NET 6 End of Support Is On The Horizon</title>
+      <description>.NET 6 end of support is Nov. 12, 2024! Don't panic, but it's time to plan your upgrade to .NET 8. This will ensure continued security patches, tech support, and compatibility with the latest tools and libraries. Microsoft's .NET Upgrade Assistant can help, but be prepared for some manual work.</description>
+      <a10:updated>2024-07-30T14:00:00Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/692564</guid>
+      <link>https://dotnetkicks.com/r/692564?url=https://andrewlock.net/creating-source-only-nuget-packages/</link>
+      <a10:author>
+        <a10:name>Andrew Lock</a10:name>
+        <a10:uri>https://dotnetkicks.com/@andrewlocknet</a10:uri>
+      </a10:author>
+      <title>Creating source-only NuGet packages</title>
+      <description>In this post I show how you can create a NuGet package that contains source code (instead of dlls) which is then compiled into the target project</description>
+      <a10:updated>2024-07-30T12:37:50Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/692525</guid>
+      <link>https://dotnetkicks.com/r/692525?url=https://jeremydmiller.com/2024/07/29/making-marten-faster-through-table-partitioning/</link>
+      <a10:author>
+        <a10:name>jeremydmiller</a10:name>
+        <a10:uri>https://dotnetkicks.com/@jeremydmiller</a10:uri>
+      </a10:author>
+      <title>Making Marten Faster Through Table Partitioning</title>
+      <description>There's been a definite theme lately about increasing the performance and scalability of Marten, as evident (I hope) in my post last week describing new optimization options in Marten 7.25. Today I was able to push a follow up feature that got missed in that release that allows Marten users to utilize PostgreSQL table partitioning...</description>
+      <a10:updated>2024-07-29T21:57:24Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/692513</guid>
+      <link>https://dotnetkicks.com/r/692513?url=https://build5nines.com/azure-functions-best-practices-for-performance-reliability-and-security/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>Azure Functions Best Practices For Performance, Reliability And Security | Build5Nines</title>
+      <description>Building Microservice and Serverless architectures demand different design patterns to be used that other traditional application architectures. Even the</description>
+      <a10:updated>2024-07-29T19:57:17Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/692494</guid>
+      <link>https://dotnetkicks.com/r/692494?url=https://devblogs.microsoft.com/dotnet/native-library-interop-dotnet-maui/</link>
+      <a10:author>
+        <a10:name>.NET Team</a10:name>
+        <a10:uri>https://dotnetkicks.com/@dotnet</a10:uri>
+      </a10:author>
+      <title>Easily Create Bindings for .NET MAUI with Native Library Interop - .NET Blog</title>
+      <description>Learn how to get started creating bindings with Native Library Interop by following this example binding native Chart libraries in a .NET MAUI application.</description>
+      <a10:updated>2024-07-29T17:17:33Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/692445</guid>
+      <link>https://dotnetkicks.com/r/692445?url=https://devblogs.microsoft.com/visualstudio/sign-vsix-packages-with-sign-cli/</link>
+      <a10:author>
+        <a10:name>Visual Studio</a10:name>
+        <a10:uri>https://dotnetkicks.com/@VisualStudio</a10:uri>
+      </a10:author>
+      <title>Sign VSIX packages with Sign CLI - Visual Studio Blog</title>
+      <description>You can now leverage Sign CLI for a more secure, modern way to sign your Visual Studio extensions. Signing your VSIX packages improves security, prevents tampering, and builds trust with your users. This integration makes it easier and more convenient to sign your packages than ever before!</description>
+      <a10:updated>2024-07-29T15:47:23Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690145</guid>
+      <link>https://dotnetkicks.com/r/690145?url=https://blog.postsharp.net/memento-metalama?utm_source=dotnetkicks&amp;utm_medium=paid&amp;utm_campaign=memento</link>
+      <a10:author>
+        <a10:name>PostSharp</a10:name>
+        <a10:uri>https://dotnetkicks.com/@postsharp</a10:uri>
+      </a10:author>
+      <title>The Memento Design Pattern in C#, Practically With Examples [2024]</title>
+      <description>The Memento pattern is one of the foundational design patterns. It helps build UI features like undo/redo or UI transactions. In this article, we will see how to implement the Memento pattern in C#. We use a small WPF-based Fish Tank Manager as a sample application.
+
+</description>
+      <a10:updated>2024-07-29T14:00:00Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/692367</guid>
+      <link>https://dotnetkicks.com/r/692367?url=https://sergeytihon.com/2024/07/27/f-weekly-30-2024-f-nullness-checking-avalonia-11-1/</link>
+      <a10:author>
+        <a10:name>Sergey Tihon</a10:name>
+        <a10:uri>https://dotnetkicks.com/@sergey_tihon</a10:uri>
+      </a10:author>
+      <title>F# Weekly #30, 2024 - F# Nullness Checking &amp;amp; Avalonia 11.1</title>
+      <description>Welcome to F# Weekly, A roundup of F# content from this past week: News What's new in .NET Aspire 8.1 for cloud native developers! - .NET Blog Avalonia 11.1: A Quantum Leap in Cross-Platform UI Development ReSharper 20 years! | The .NET Tools Blog Add AI to Your .NET Apps Easily with Prompty - .NET...</description>
+      <a10:updated>2024-07-28T05:46:45Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691992</guid>
+      <link>https://dotnetkicks.com/r/691992?url=https://jeremydmiller.com/2024/07/24/marten-7-25-is-better-faster-stronger/</link>
+      <a10:author>
+        <a10:name>jeremydmiller</a10:name>
+        <a10:uri>https://dotnetkicks.com/@jeremydmiller</a10:uri>
+      </a10:author>
+      <title>Marten 7.25 is Better, Faster, Stronger</title>
+      <description>Just a reminder, JasperFx Software offers support contracts and consulting services to help you get the most out of the "Critter Stack" tools (Marten and Wolverine). If you're building server side applications on .NET, the Critter Stack is the most feature rich tool set for Event Sourcing and Event Driven Architectures around.</description>
+      <a10:updated>2024-07-24T21:14:54Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691978</guid>
+      <link>https://dotnetkicks.com/r/691978?url=https://devblogs.microsoft.com/dotnet/how-use-a-blazor-quickgrid-with-graphql/</link>
+      <a10:author>
+        <a10:name>Jeff Fritz</a10:name>
+        <a10:uri>https://dotnetkicks.com/@csharpfritz</a10:uri>
+      </a10:author>
+      <title>How use a Blazor QuickGrid with GraphQL - .NET Blog</title>
+      <description>In this is the second post in a series of posts about GraphQL and .NET, we will see how to fill a Blazor QuickGrid component with data fetched with GraphQL. We will also use the virtualize feature of the QuickGrid to improve performance.</description>
+      <a10:updated>2024-07-24T17:25:02Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691862</guid>
+      <link>https://dotnetkicks.com/r/691862?url=https://devblogs.microsoft.com/dotnet/announcing-dotnetconf-focus-on-ai/</link>
+      <a10:author>
+        <a10:name>.NET Team</a10:name>
+        <a10:uri>https://dotnetkicks.com/@dotnet</a10:uri>
+      </a10:author>
+      <title>Announcing .NET Conf: Focus on AI - August 20th 2024 - .NET Blog</title>
+      <description>We're thrilled to announce the upcoming .NET Conf: Focus on AI, happening on August 20th! This one-day, virtual event will be packed with insightful sessions from both the community and Microsoft teams, showcasing how you can infuse your .NET applications with powerful AI capabilities.</description>
+      <a10:updated>2024-07-23T17:14:11Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691845</guid>
+      <link>https://dotnetkicks.com/r/691845?url=https://devblogs.microsoft.com/dotnet/whats-new-in-aspire-8-1/</link>
+      <a10:author>
+        <a10:name>.NET Team</a10:name>
+        <a10:uri>https://dotnetkicks.com/@dotnet</a10:uri>
+      </a10:author>
+      <title>What's new in .NET Aspire 8.1 for cloud native developers! - .NET Blog</title>
+      <description>Let's take a look at what is new with .NET Aspire 8.1 for building cloud native applications!</description>
+      <a10:updated>2024-07-23T16:54:20Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691812</guid>
+      <link>https://dotnetkicks.com/r/691812?url=https://daedtech.com/the-flat-squirrel-barrier-to-content-at-scale/</link>
+      <a10:author>
+        <a10:name>Erik Dietrich</a10:name>
+        <a10:uri>https://dotnetkicks.com/@daedtech</a10:uri>
+      </a10:author>
+      <title>The Flat Squirrel Barrier to Content at Scale</title>
+      <description>Editorial note: I originally wrote this post over on the Hit Subscribe blog. Be decisive. The road of life is paved with flat squirrels who couldn't make a decision. I don't know who originally said this, so I can't properly attribute it. I guess that makes it some kind of piece of folk wisdom, now best [...]</description>
+      <a10:updated>2024-07-23T13:14:06Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691753</guid>
+      <link>https://dotnetkicks.com/r/691753?url=https://devblogs.microsoft.com/dotnet/add-ai-to-your-dotnet-apps-easily-with-prompty/</link>
+      <a10:author>
+        <a10:name>Jeff Fritz</a10:name>
+        <a10:uri>https://dotnetkicks.com/@csharpfritz</a10:uri>
+      </a10:author>
+      <title>Add AI to Your .NET Apps Easily with Prompty - .NET Blog</title>
+      <description>Learn how to integrate AI into your .NET applications with Prompty, a powerful Visual Studio Code extension.</description>
+      <a10:updated>2024-07-22T17:13:46Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691664</guid>
+      <link>https://dotnetkicks.com/r/691664?url=https://sergeytihon.com/2024/07/20/f-weekly-29-2024-end-of-net-6-and-terrabuild/</link>
+      <a10:author>
+        <a10:name>Sergey Tihon</a10:name>
+        <a10:uri>https://dotnetkicks.com/@sergey_tihon</a10:uri>
+      </a10:author>
+      <title>F# Weekly #29, 2024 - end of .NET 6 and Terrabuild</title>
+      <description>Welcome to F# Weekly, A roundup of F# content from this past week: News ILSpy for macOS: First Public Beta Release .NET 6 will reach End of Support on November 12, 2024 - .NET Blog .NET 9 Preview 6 is now available! - .NET Blog Introducing CoreWCF and WCF Client Azure Queue Storage bindings for...</description>
+      <a10:updated>2024-07-21T17:23:26Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691658</guid>
+      <link>https://dotnetkicks.com/r/691658?url=https://build5nines.com/revolutionizing-the-drive-audis-chatgpt-automotive-integration/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>Revolutionizing The Drive: Audi's ChatGPT Automotive Integration | Build5Nines</title>
+      <description>The automotive industry is constantly advancing with new technology integrations, and Audi is taking a significant leap forward with the utilization of</description>
+      <a10:updated>2024-07-21T16:03:29Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691643</guid>
+      <link>https://dotnetkicks.com/r/691643?url=https://build5nines.com/gpt-4o-mini-advancing-cost-efficient-ai/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>GPT-4o Mini: Advancing Cost-Efficient AI | Build5Nines</title>
+      <description>OpenAI's GPT-4o Mini represents a significant advancement in the field of artificial intelligence, combining high performance with cost efficiency. This model</description>
+      <a10:updated>2024-07-21T15:23:29Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691636</guid>
+      <link>https://dotnetkicks.com/r/691636?url=https://build5nines.com/crowdstrike-launches-guidance-hub-for-dealing-with-windows-outage/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>CrowdStrike Launches Guidance Hub For Dealing With Windows Outage | Build5Nines</title>
+      <description>CrowdStrike, in an effort to mitigate the widespread disruption caused by the recent CrowdStrike content bug, they have launched a comprehensive "Remediation</description>
+      <a10:updated>2024-07-21T15:03:21Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691619</guid>
+      <link>https://dotnetkicks.com/r/691619?url=https://build5nines.com/microsoft-released-crowdstrike-recovery-tool-to-help-repair-affected-windows-machines/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>Microsoft Released CrowdStrike Recovery Tool To Help Repair Affected Windows Machines | Build5Nines</title>
+      <description>Microsoft has released a recovery tool designed to aid IT administrators in fixing Windows machines affected by the recent CrowdStrike Falcon agent issue.</description>
+      <a10:updated>2024-07-21T14:44:23Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691618</guid>
+      <link>https://dotnetkicks.com/r/691618?url=https://build5nines.com/crowdstrike-crashed-8-5-million-windows-pcs-globally-estimated-by-microsoft/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>CrowdStrike Crashed 8.5 Million Windows PCs Globally, Estimated By Microsoft | Build5Nines</title>
+      <description>The world of cybersecurity faced a catastrophic event recently when a CrowdStrike bug led to the crashing of 8.5 million PCs, approximately 1% of all Windows</description>
+      <a10:updated>2024-07-21T13:23:13Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691604</guid>
+      <link>https://dotnetkicks.com/r/691604?url=https://build5nines.com/why-antivirus-uses-kernel-mode-in-windows/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>Why Antivirus Uses Kernel Mode In Windows | Build5Nines</title>
+      <description>The recent CrowdStrike bug that took out 1% of Windows machines (approx. 8.5 million PCs) globally, the question of why Antivirus apps use Kernel Mode has</description>
+      <a10:updated>2024-07-20T21:22:48Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691539</guid>
+      <link>https://dotnetkicks.com/r/691539?url=https://build5nines.com/understanding-the-crowdstrike-bug-impact-on-microsoft-azure-and-global-windows-outage/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>Understanding The CrowdStrike Bug, Impact On Microsoft Azure, And Global Windows Outage | Build5Nines</title>
+      <description>On July 18, 2024, CrowdStrike released a update with a bug that significantly impacted Windows machines globally, including virtual machines (VMs) running on</description>
+      <a10:updated>2024-07-19T18:22:34Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690144</guid>
+      <link>https://dotnetkicks.com/r/690144?url=https://bit.ly/3W8aBv0?utm_source=DNK-690144&amp;utm_medium=DNK-690144&amp;utm_content=DNK-690144&amp;utm_campaign=DNK-690144</link>
+      <a10:author>
+        <a10:name>PostSharp</a10:name>
+        <a10:uri>https://dotnetkicks.com/@postsharp</a10:uri>
+      </a10:author>
+      <title>Adding Serilog to ASP.NET Core: a Practical Guide</title>
+      <description>Why should developers use Serilog in ASP.NET Core? How do you set up your logging? How can you enable HTTP request logging and enhance your logging with a middleware? How do you implement verbose logging without boilerplate code? Look at this practical guide for answers.</description>
+      <a10:updated>2024-07-19T14:00:00Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691471</guid>
+      <link>https://dotnetkicks.com/r/691471?url=https://devblogs.microsoft.com/dotnet/introducing-core-wcf-and-wcf-client-azure-queue-storage-bindings-for-dotnet/</link>
+      <a10:author>
+        <a10:name>.NET Team</a10:name>
+        <a10:uri>https://dotnetkicks.com/@dotnet</a10:uri>
+      </a10:author>
+      <title>Introducing CoreWCF and WCF Client Azure Queue Storage bindings for .NET - .NET Blog</title>
+      <description>The initial beta release of the official libraries Microsoft.CoreWCF.Azure.StorageQueues and Microsoft.WCF.Azure.StorageQueues.Client library for .NET is now available.</description>
+      <a10:updated>2024-07-18T21:22:10Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691457</guid>
+      <link>https://dotnetkicks.com/r/691457?url=https://devblogs.microsoft.com/dotnet/dotnet-6-end-of-support/</link>
+      <a10:author>
+        <a10:name>.NET Team</a10:name>
+        <a10:uri>https://dotnetkicks.com/@dotnet</a10:uri>
+      </a10:author>
+      <title>.NET 6 will reach End of Support on November 12, 2024 - .NET Blog</title>
+      <description>NET 6 will reach end of support on November 12, 2024, this blog breaks down all the valuable information you need to know and how to update to .NET 8.</description>
+      <a10:updated>2024-07-18T17:12:03Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691415</guid>
+      <link>https://dotnetkicks.com/r/691415?url=https://devblogs.microsoft.com/visualstudio/new-visual-studio-benefits-2024/</link>
+      <a10:author>
+        <a10:name>Visual Studio</a10:name>
+        <a10:uri>https://dotnetkicks.com/@VisualStudio</a10:uri>
+      </a10:author>
+      <title>Three New Premium Visual Studio Subscriber Benefits Announced - Visual Studio Blog</title>
+      <description>Explore the latest exclusive offers for Visual Studio Professional and Enterprise subscribers, including discounts on Dometrain Pro, DevPass Business, and Visual Studio LIVE! Events. Learn how these new benefits can enhance your software development skills and keep you competitive in the rapidly evolving tech landscape. Log in today to unlock your benefits at my.visualstudio.com.</description>
+      <a10:updated>2024-07-18T15:02:21Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691396</guid>
+      <link>https://dotnetkicks.com/r/691396?url=https://devblogs.microsoft.com/visualstudio/new-visual-studio-benefits-2024/</link>
+      <a10:author>
+        <a10:name>Visual Studio</a10:name>
+        <a10:uri>https://dotnetkicks.com/@VisualStudio</a10:uri>
+      </a10:author>
+      <title>Three New Premium Visual Studio Subscriber Benefits Announced - Visual Studio Blog</title>
+      <description>Explore the latest exclusive offers for Visual Studio Professional and Enterprise subscribers, including discounts on Dometrain Pro, DevPass Business, and Visual Studio LIVE! Events. Learn how these new benefits can enhance your software development skills and keep you competitive in the rapidly evolving tech landscape. Log in today to unlock your benefits at my.visualstudio.com.</description>
+      <a10:updated>2024-07-18T15:02:11Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691286</guid>
+      <link>https://dotnetkicks.com/r/691286?url=https://codeopinion.com/is-vertical-slice-architecture-better-than-clean-architecture-or-ports-and-adapters/</link>
+      <a10:author>
+        <a10:name>Derek Comartin</a10:name>
+        <a10:uri>https://dotnetkicks.com/@codeopinion</a10:uri>
+      </a10:author>
+      <title>Is Vertical Slice Architecture better than Clean Architecture or Ports and Adapters?</title>
+      <description>You'll hear a lot advocating for Vertical Slices or Clean Architecture. So which one is better and which one should you use?</description>
+      <a10:updated>2024-07-17T21:41:33Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691271</guid>
+      <link>https://dotnetkicks.com/r/691271?url=https://devblogs.microsoft.com/nuget/nugetaudit-2-0-elevating-security-and-trust-in-package-management/</link>
+      <a10:author>
+        <a10:name>NuGet Team</a10:name>
+        <a10:uri>https://dotnetkicks.com/@nuget</a10:uri>
+      </a10:author>
+      <title>NuGetAudit 2.0: Elevating Security and Trust in Package Management - The NuGet Blog</title>
+      <description>Introduction In November 2023 (NuGet 6.8, Visual Studio 17.8, .NET SDK 8.0.100), we released NuGet Audit. NuGet Audit provides warnings during restore when a package with a known vulnerability is used by a project. More information about NuGet Audit, including detailed configuration options can be found on our learn website.</description>
+      <a10:updated>2024-07-17T20:01:25Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691158</guid>
+      <link>https://dotnetkicks.com/r/691158?url=https://build5nines.com/what-is-azure-private-link-and-how-to-deploy-with-terraform/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>What Is Azure Private Link And How To Deploy With Terraform | Build5Nines</title>
+      <description>Azure Private Link offers several benefits, including enhanced security, simplified network architecture, and improved performance. It supports various Azure</description>
+      <a10:updated>2024-07-16T21:21:10Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691143</guid>
+      <link>https://dotnetkicks.com/r/691143?url=https://devblogs.microsoft.com/nuget/building-a-safer-future-how-nuget-is-tackling-software-supply-chain-threats/</link>
+      <a10:author>
+        <a10:name>NuGet Team</a10:name>
+        <a10:uri>https://dotnetkicks.com/@nuget</a10:uri>
+      </a10:author>
+      <title>Building a Safer Future - How NuGet is Tackling Software Supply Chain Threats - The NuGet Blog</title>
+      <description>Despite significant technological progress in addressing complex security threats, the key to preventing the next attack lies in adhering to fundamental security principles. It's essential to ensure the software ecosystem is secure, focusing on protecting .NET developers who design, build, and maintain the critical software we all use.</description>
+      <a10:updated>2024-07-16T19:01:06Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691106</guid>
+      <link>https://dotnetkicks.com/r/691106?url=https://xamgirl.com/styleclass/</link>
+      <a10:author>
+        <a10:name>Charlin Agramonte</a10:name>
+        <a10:uri>https://dotnetkicks.com/@Chard003</a10:uri>
+      </a10:author>
+      <title>Simplifying your MAUI Styles with StyleClass - XamGirl</title>
+      <description>Styles classes enables you to have multiple styles applied to a control, in simple words it allows you to apply the concept of multiple inheritance to your styles. It gives you the flexibility to avoid creating a lot of styles that will be inherited from. How we usually do it?</description>
+      <a10:updated>2024-07-16T13:00:58Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691089</guid>
+      <link>https://dotnetkicks.com/r/691089?url=https://andrewlock.net/disambiguating-types-with-the-same-name-with-extern-alias/</link>
+      <a10:author>
+        <a10:name>Andrew Lock</a10:name>
+        <a10:uri>https://dotnetkicks.com/@andrewlocknet</a10:uri>
+      </a10:author>
+      <title>Disambiguating types with the same name with extern alias</title>
+      <description>In this post I describe how to solve Error CS0433, where you have two types with the exact same name and namespace coming from two different packages</description>
+      <a10:updated>2024-07-16T11:40:51Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691071</guid>
+      <link>https://dotnetkicks.com/r/691071?url=https://devblogs.microsoft.com/visualstudio/making-visual-studio-a-bit-more-visual/</link>
+      <a10:author>
+        <a10:name>Visual Studio</a10:name>
+        <a10:uri>https://dotnetkicks.com/@VisualStudio</a10:uri>
+      </a10:author>
+      <title>Making Visual Studio a bit more visual - Visual Studio Blog</title>
+      <description>Any web, desktop, or mobile developer works with images often. You reference them from C#, HTML, XAML, CSS, C++, VB, TypeScript, and even in code comments. Some images are local, and some exist online or on network shares, while others only exist as base64 encoded strings.</description>
+      <a10:updated>2024-07-16T10:11:01Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/691019</guid>
+      <link>https://dotnetkicks.com/r/691019?url=https://textslashplain.com/2024/07/15/browser-features-find-in-page/</link>
+      <a10:author>
+        <a10:name>Eric Lawrence</a10:name>
+        <a10:uri>https://dotnetkicks.com/@ericlaw</a10:uri>
+      </a10:author>
+      <title>Browser Features: Find in Page</title>
+      <description>For busy web users, the humble Find-in-Page feature in the browser is one of the most important features available. While Google or Bing can get you to the page you're looking for faster than ever before, once you get to that page, you've got to find the information you're looking for1, and that's where Find-in-Page...</description>
+      <a10:updated>2024-07-16T03:51:04Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690966</guid>
+      <link>https://dotnetkicks.com/r/690966?url=https://build5nines.com/how-to-choose-between-azure-cosmos-db-for-table-and-azure-table-storage/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>How To Choose Between Azure Cosmos DB For Table And Azure Table Storage | Build5Nines</title>
+      <description>Choosing the right database solution is critical for the performance and scalability of your applications. When working with NoSQL, Table data and Microsoft</description>
+      <a10:updated>2024-07-15T23:00:46Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690902</guid>
+      <link>https://dotnetkicks.com/r/690902?url=https://visualstudiomagazine.com/Articles/2024/07/15/data-dimensionality-reduction.aspx</link>
+      <a10:author>
+        <a10:name>VisualStudioMagazine</a10:name>
+        <a10:uri>https://dotnetkicks.com/@VSMdev</a10:uri>
+      </a10:author>
+      <title>Data Dimensionality Reduction Using a Neural Autoencoder with C#</title>
+      <description>Dr. James McCaffrey of Microsoft Research presents a full-code, step-by-step tutorial on creating an approximation of a dataset that has fewer columns.</description>
+      <a10:updated>2024-07-15T19:20:52Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690892</guid>
+      <link>https://dotnetkicks.com/r/690892?url=https://devblogs.microsoft.com/dotnet/dotnet-9-preview-6/</link>
+      <a10:author>
+        <a10:name>.NET Team</a10:name>
+        <a10:uri>https://dotnetkicks.com/@dotnet</a10:uri>
+      </a10:author>
+      <title>.NET 9 Preview 6 is now available! - .NET Blog</title>
+      <description>Try out the latest features in .NET 9 Preview 6 across the .NET runtime, SDK, libraries, ASP.NET Core, Blazor, and more!</description>
+      <a10:updated>2024-07-15T17:11:27Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690878</guid>
+      <link>https://dotnetkicks.com/r/690878?url=https://devblogs.microsoft.com/dotnet/dotnet-9-preview-6/</link>
+      <a10:author>
+        <a10:name>Jeff Fritz</a10:name>
+        <a10:uri>https://dotnetkicks.com/@csharpfritz</a10:uri>
+      </a10:author>
+      <title>.NET 9 Preview 6 is now available! - .NET Blog</title>
+      <description>Try out the latest features in .NET 9 Preview 6 across the .NET runtime, SDK, libraries, ASP.NET Core, Blazor, and more!</description>
+      <a10:updated>2024-07-15T17:11:15Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690857</guid>
+      <link>https://dotnetkicks.com/r/690857?url=https://devblogs.microsoft.com/visualstudio/visual-studio-live-2024-microsoft-hq/</link>
+      <a10:author>
+        <a10:name>Visual Studio</a10:name>
+        <a10:uri>https://dotnetkicks.com/@VisualStudio</a10:uri>
+      </a10:author>
+      <title>Get Hands-On with Visual Studio and Azure: Live at Microsoft HQ this August! - Visual Studio Blog</title>
+      <description>Join us for Visual Studio LIVE! 2024 at Microsoft HQ from August 5-9. Sharpen your skills with hands-on sessions, network with industry leaders, and explore the latest innovations in Visual Studio, Azure, GitHub, and AI technologies. Limited spots available-register now!</description>
+      <a10:updated>2024-07-15T14:50:37Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690826</guid>
+      <link>https://dotnetkicks.com/r/690826?url=https://sergeytihon.com/2024/07/14/f-weekly-28-2024-the-dark-side-of-nuget/</link>
+      <a10:author>
+        <a10:name>Sergey Tihon</a10:name>
+        <a10:uri>https://dotnetkicks.com/@sergey_tihon</a10:uri>
+      </a10:author>
+      <title>F# Weekly #28, 2024 - The Dark Side of Nuget</title>
+      <description>Welcome to F# Weekly, A roundup of F# content from this past week: News Dark Mode Now Available on NuGet.org - The NuGet Blog C# 13: Explore the latest preview features - .NET Blog Try Full Line Code Completion in JetBrains Rider 2024.1.4 | The .NET Tools Blog Dark Mode Now Available on NuGet.org -...</description>
+      <a10:updated>2024-07-15T04:10:26Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690683</guid>
+      <link>https://dotnetkicks.com/r/690683?url=https://blogs.windows.com/windowsdeveloper/2024/07/11/local-ai-on-windows-explaining-the-audio-editor-app-sample/</link>
+      <a10:author>
+        <a10:name>Windows Blogs</a10:name>
+        <a10:uri>https://dotnetkicks.com/@windowsblog</a10:uri>
+      </a10:author>
+      <title>Local AI on Windows: Explaining the Audio Editor app sample</title>
+      <description>Building Windows apps that leverage on-device AI models can seem like a daunting task - there's a lot of work that goes into defining your use case, choosing and tuning the right models, and refining the logic surrounding the models. While there's n</description>
+      <a10:updated>2024-07-11T21:08:53Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690635</guid>
+      <link>https://dotnetkicks.com/r/690635?url=https://devblogs.microsoft.com/dotnet/why-and-how-to-execute-graph-ql-queries-in-dotnet/</link>
+      <a10:author>
+        <a10:name>.NET Team</a10:name>
+        <a10:uri>https://dotnetkicks.com/@dotnet</a10:uri>
+      </a10:author>
+      <title>Why and How to Execute GraphQL Queries in .NET - .NET Blog</title>
+      <description>This post shows how to query a GraphQL API in .NET using Strawberry Shake from a console application</description>
+      <a10:updated>2024-07-11T17:19:08Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690572</guid>
+      <link>https://dotnetkicks.com/r/690572?url=https://devblogs.microsoft.com/nuget/dark-mode-now-available-on-nuget-org/</link>
+      <a10:author>
+        <a10:name>NuGet Team</a10:name>
+        <a10:uri>https://dotnetkicks.com/@nuget</a10:uri>
+      </a10:author>
+      <title>Dark Mode Now Available on NuGet.org - The NuGet Blog</title>
+      <description>We won't keep you "in the dark" about this any longer... Dark Mode for NuGet.org is finally here! Your feedback has been invaluable in making this happen. We know that eye strain is a significant issue for many developers, and we're excited to offer a solution.</description>
+      <a10:updated>2024-07-11T13:28:49Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690498</guid>
+      <link>https://dotnetkicks.com/r/690498?url=https://ardalis.com/from-microservices-to-modular-monoliths/</link>
+      <a10:author>
+        <a10:name>Steve Smith</a10:name>
+        <a10:uri>https://dotnetkicks.com/@ardalis</a10:uri>
+      </a10:author>
+      <title>From Microservices to Modular Monoliths</title>
+      <description>What do you do when you find yourself in microservice hell? How do you keep the gains you (hopefully) made in breaking up your legacy ball of mud, without having to constantly contend with a massively distributed system? Migrate to a modular monolith.</description>
+      <a10:updated>2024-07-10T17:28:32Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690329</guid>
+      <link>https://dotnetkicks.com/r/690329?url=https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-july-2024-servicing-updates/</link>
+      <a10:author>
+        <a10:name>Jeff Fritz</a10:name>
+        <a10:uri>https://dotnetkicks.com/@csharpfritz</a10:uri>
+      </a10:author>
+      <title>.NET and .NET Framework July 2024 servicing releases updates - .NET Blog</title>
+      <description>A recap of the latest servicing updates for .NET and .NET Framework for July 2024.</description>
+      <a10:updated>2024-07-09T17:18:13Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690323</guid>
+      <link>https://dotnetkicks.com/r/690323?url=https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-july-2024-servicing-updates/</link>
+      <a10:author>
+        <a10:name>.NET Team</a10:name>
+        <a10:uri>https://dotnetkicks.com/@dotnet</a10:uri>
+      </a10:author>
+      <title>.NET and .NET Framework July 2024 servicing releases updates - .NET Blog</title>
+      <description>A recap of the latest servicing updates for .NET and .NET Framework for July 2024.</description>
+      <a10:updated>2024-07-09T17:18:03Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690143</guid>
+      <link>https://dotnetkicks.com/r/690143?url=https://bit.ly/3XS2a9u?utm_source=DNK-690143&amp;utm_medium=DNK-690143&amp;utm_content=DNK-690143&amp;utm_campaign=DNK-690143</link>
+      <a10:author>
+        <a10:name>PostSharp</a10:name>
+        <a10:uri>https://dotnetkicks.com/@postsharp</a10:uri>
+      </a10:author>
+      <title>Simplify Your .NET Aspire Caching With Metalama</title>
+      <description>.NET Aspire makes it super easy to add Redis to your cloud app. But did you also know you can add caching to a method with just with a [Cache] attribute? </description>
+      <a10:updated>2024-07-09T14:00:00Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690301</guid>
+      <link>https://dotnetkicks.com/r/690301?url=https://andrewlock.net/behind-the-scenes-of-collection-expressions-part-5-adding-support-for-collection-expressions-to-your-own-types/</link>
+      <a10:author>
+        <a10:name>Andrew Lock</a10:name>
+        <a10:uri>https://dotnetkicks.com/@andrewlocknet</a10:uri>
+      </a10:author>
+      <title>Adding support for collection expressions to your own types: Behind the scenes of collection expressions - Part 5</title>
+      <description>In this final post of the series I show how to add support for collection expressions to your own types that don't support them automatically</description>
+      <a10:updated>2024-07-09T11:48:03Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690291</guid>
+      <link>https://dotnetkicks.com/r/690291?url=https://devblogs.microsoft.com/premier-developer/open-ai-whisper/</link>
+      <a10:author>
+        <a10:name>Premier Developer</a10:name>
+        <a10:uri>https://dotnetkicks.com/@MicrosoftPSfD</a10:uri>
+      </a10:author>
+      <title>Open AI Whisper - Developer Support</title>
+      <description>The Whisper model is a speech to text model from OpenAI that you can use to transcribe audio files. The model is trained on a large dataset of English audio and text. The model is optimized for transcribing audio files that contain speech in English.</description>
+      <a10:updated>2024-07-09T07:07:51Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690254</guid>
+      <link>https://dotnetkicks.com/r/690254?url=https://jeremydmiller.com/2024/07/08/network-round-trips-are-evil/</link>
+      <a10:author>
+        <a10:name>jeremydmiller</a10:name>
+        <a10:uri>https://dotnetkicks.com/@jeremydmiller</a10:uri>
+      </a10:author>
+      <title>Network Round Trips are Evil</title>
+      <description>As Houston gets drenched by Hurricane Beryl as I write this, I'm reminded of a formative set of continuing education courses I took when I was living in Houston in the late 90's and plotting my formal move into software development. Whatever we learned about VB6 in those MSDN classes is long, long since obsolete,...</description>
+      <a10:updated>2024-07-08T18:47:58Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690189</guid>
+      <link>https://dotnetkicks.com/r/690189?url=https://sergeytihon.com/2024/07/07/f-weekly-27-2024-building-functional-ttrpg-with-f/</link>
+      <a10:author>
+        <a10:name>Sergey Tihon</a10:name>
+        <a10:uri>https://dotnetkicks.com/@sergey_tihon</a10:uri>
+      </a10:author>
+      <title>F# Weekly #27, 2024 - Building Functional TTRPG with F#</title>
+      <description>Welcome to F# Weekly, A roundup of F# content from this past week: News Let GitHub Copilot draft of your pull request description - Visual Studio Blog Dive into native Windows development with new WinUI workload and template improvements - Visual Studio Blog What's new in the Windows Subsystem for Linux in May 2024 -...</description>
+      <a10:updated>2024-07-08T12:27:35Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690142</guid>
+      <link>https://dotnetkicks.com/r/690142?url=https://devblogs.microsoft.com/visualstudio/demystify-history-with-github-copilot-commit-explanations/</link>
+      <a10:author>
+        <a10:name>Visual Studio</a10:name>
+        <a10:uri>https://dotnetkicks.com/@VisualStudio</a10:uri>
+      </a10:author>
+      <title>Demystify history with GitHub Copilot commit explanations - Visual Studio Blog</title>
+      <description>GitHub Copilot can analyze your code differences and produce concise summaries that highlight the key points.</description>
+      <a10:updated>2024-07-08T07:17:39Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690094</guid>
+      <link>https://dotnetkicks.com/r/690094?url=https://blog.sixeyed.com/tracing-external-processes-with-akka-net-and-opentelemetry-part-1-the-code/</link>
+      <a10:author>
+        <a10:name>Elton Stoneman</a10:name>
+        <a10:uri>https://dotnetkicks.com/@EltonStoneman</a10:uri>
+      </a10:author>
+      <title>Tracing External Processes with Akka.NET and OpenTelemetry: Part 1 (The Code)</title>
+      <description>Distributed tracing is one of the most useful observability tools you can add to your products. Digging into the steps of some process to see what happened and how long everything took gives you a valuable debugging tool for distributed systems. It's usually straightforward to add tracing to HTTP components</description>
+      <a10:updated>2024-07-07T19:26:50Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690044</guid>
+      <link>https://dotnetkicks.com/r/690044?url=http://thedatafarm.com/docker/docker-compose-watch/</link>
+      <a10:author>
+        <a10:name>Julie Lerman</a10:name>
+        <a10:uri>https://dotnetkicks.com/@julielerman</a10:uri>
+      </a10:author>
+      <title>Exploring docker compose watch in Visual Studio Code</title>
+      <description>Docker's compose watch feature was first released in Sept 2023 as part of docker compose v 2.22.0 ( Here are some tips and behaviors to be aware of when using compose watch in Visual Studio Code as...</description>
+      <a10:updated>2024-07-07T06:16:49Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/690012</guid>
+      <link>https://dotnetkicks.com/r/690012?url=https://codeopinion.com/avoiding-long-running-http-api-requests/</link>
+      <a10:author>
+        <a10:name>Derek Comartin</a10:name>
+        <a10:uri>https://dotnetkicks.com/@codeopinion</a10:uri>
+      </a10:author>
+      <title>Avoiding long-running HTTP API requests</title>
+      <description>How do you handle long-running HTTP requests that take a long time to complete? Move the work async and return to the client immediately.</description>
+      <a10:updated>2024-07-06T15:26:23Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/689914</guid>
+      <link>https://dotnetkicks.com/r/689914?url=https://devblogs.microsoft.com/premier-developer/copilot-studio-prompt-response-times/</link>
+      <a10:author>
+        <a10:name>Premier Developer</a10:name>
+        <a10:uri>https://dotnetkicks.com/@MicrosoftPSfD</a10:uri>
+      </a10:author>
+      <title>Copilot Studio - Prompt Response Times - Developer Support</title>
+      <description>Building custom copilots (GenAI chatbots) in Microsoft Copilot Studio is amazing. Especially with the new functionalities which were released in Microsoft Build 2024. What's more amazing is when we can point the custom copilots to different kinds of external and internal data sources like public websites (external), Dataverse tables (internal), SharePoint etc.</description>
+      <a10:updated>2024-07-05T08:05:45Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/689663</guid>
+      <link>https://dotnetkicks.com/r/689663?url=https://devblogs.microsoft.com/visualstudio/dive-into-native-windows-development-with-new-winui-workload-and-template-improvements/</link>
+      <a10:author>
+        <a10:name>Visual Studio</a10:name>
+        <a10:uri>https://dotnetkicks.com/@VisualStudio</a10:uri>
+      </a10:author>
+      <title>Dive into native Windows development with new WinUI workload and template improvements - Visual Studio Blog</title>
+      <description>Explore the latest in native Windows app development with our comprehensive guide on WinUI workload and template enhancements in Visual Studio 17.10. Dive into modern, stylish, and fast WinUI app creation using .NET or C++ and discover new tools for a seamless coding experience.</description>
+      <a10:updated>2024-07-02T16:14:13Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/689649</guid>
+      <link>https://dotnetkicks.com/r/689649?url=https://devblogs.microsoft.com/visualstudio/dive-into-native-windows-development-with-new-winui-workload-and-template-improvements/</link>
+      <a10:author>
+        <a10:name>Visual Studio</a10:name>
+        <a10:uri>https://dotnetkicks.com/@VisualStudio</a10:uri>
+      </a10:author>
+      <title>Dive into native Windows development with new WinUI workload and template improvements - Visual Studio Blog</title>
+      <description>Explore the latest in native Windows app development with our comprehensive guide on WinUI workload and template enhancements in Visual Studio 17.10. Dive into modern, stylish, and fast WinUI app creation using .NET or C++ and discover new tools for a seamless coding experience.</description>
+      <a10:updated>2024-07-02T16:14:05Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/689396</guid>
+      <link>https://dotnetkicks.com/r/689396?url=https://blog.postsharp.net/memorycache?mtm_campaign=memorycache&amp;mtm_source=dotnetkicks&amp;mtm_medium=affiliateutm_source=DNK-689396&amp;utm_medium=DNK-689396&amp;utm_content=DNK-689396&amp;utm_campaign=DNK-689396</link>
+      <a10:author>
+        <a10:name>PostSharp</a10:name>
+        <a10:uri>https://dotnetkicks.com/@postsharp</a10:uri>
+      </a10:author>
+      <title>MemoryCache in C#: A Practical Guide</title>
+      <description>When to use in-memory caching? How fast is MemoryCache?
+What are its disadvantages? How to add it to an ASP.NET Core app? And how do you reduce the strong coupling of your code with caching?
+
+Find answers in this article from the Timeless .NET Engineer series.</description>
+      <a10:updated>2024-07-02T14:00:00Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/689489</guid>
+      <link>https://dotnetkicks.com/r/689489?url=https://visualstudiomagazine.com/Articles/2024/07/01/lightgbm-classification.aspx</link>
+      <a10:author>
+        <a10:name>VisualStudioMagazine</a10:name>
+        <a10:uri>https://dotnetkicks.com/@VSMdev</a10:uri>
+      </a10:author>
+      <title>Binary Classification Using LightGBM</title>
+      <description>Dr. James McCaffrey from Microsoft Research presents a full-code, step-by-step tutorial on using the LightGBM tree-based system to perform binary classification (predicting a discrete variable that has exactly two possible values).</description>
+      <a10:updated>2024-07-01T17:33:33Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/689462</guid>
+      <link>https://dotnetkicks.com/r/689462?url=https://damienbod.com/2024/07/01/creating-hashes-in-net/</link>
+      <a10:author>
+        <a10:name>damienbod</a10:name>
+        <a10:uri>https://dotnetkicks.com/@damien_bod</a10:uri>
+      </a10:author>
+      <title>Creating hashes in .NET</title>
+      <description>This article looks at different ways to create hashes in .NET Core. Hashes are useful for one way encryption which can be used for password storage, JWT validation and some other security use cases. When storing hashes in a database, extra care must be taken and the recommended approach from Microsoft should be used when...</description>
+      <a10:updated>2024-07-01T14:03:28Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/689351</guid>
+      <link>https://dotnetkicks.com/r/689351?url=https://devblogs.microsoft.com/visualstudio/let-github-copilot-draft-of-your-pull-request-description/</link>
+      <a10:author>
+        <a10:name>Visual Studio</a10:name>
+        <a10:uri>https://dotnetkicks.com/@VisualStudio</a10:uri>
+      </a10:author>
+      <title>Let GitHub Copilot draft of your pull request description - Visual Studio Blog</title>
+      <description>GitHub Copilot examines your code changes and generates helpful summaries that you can edit and customize for your pull request description</description>
+      <a10:updated>2024-07-01T07:13:17Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/689280</guid>
+      <link>https://dotnetkicks.com/r/689280?url=https://sergeytihon.com/2024/06/29/f-weekly-26-2024-winmerge-f-with-syntax-highlighting/</link>
+      <a10:author>
+        <a10:name>Sergey Tihon</a10:name>
+        <a10:uri>https://dotnetkicks.com/@sergey_tihon</a10:uri>
+      </a10:author>
+      <title>F# Weekly #26, 2024 - WinMerge F# with syntax highlighting!</title>
+      <description>Welcome to F# Weekly, A roundup of F# content from this past week: News WinMerge added support for F# language syntax highlight. Join Us for .NET Aspire Developers Day - Elevate Your Cloud Native Skills! - .NET Blog Let's Learn .NET Aspire - Start your cloud-native journey live!</description>
+      <a10:updated>2024-06-30T04:42:33Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/689068</guid>
+      <link>https://dotnetkicks.com/r/689068?url=https://build5nines.com/dbrx-databricks-open-large-language-model/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>DBRX: Databricks Open Large Language Model | Build5Nines</title>
+      <description>DBRX is Databricks' newest Large Language Model (LLM) is open source and designed to bring advanced AI capabilities to businesses across multiple industries.</description>
+      <a10:updated>2024-06-27T11:31:30Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/689047</guid>
+      <link>https://dotnetkicks.com/r/689047?url=https://jeremydmiller.com/2024/06/26/tentative-roadmap-for-wolverine-3-0/</link>
+      <a10:author>
+        <a10:name>jeremydmiller</a10:name>
+        <a10:uri>https://dotnetkicks.com/@jeremydmiller</a10:uri>
+      </a10:author>
+      <title>Tentative Roadmap for Wolverine 3.0</title>
+      <description>By the way, JasperFx Software offers support contracts or tailored consulting engagements to help your shop maximize your success with Wolverine. It's an unfortunate fact of long running software tooling projects like Wolverine that decisions made years earlier won't hold up perfectly as the usage requirements, underlying platform, and other tools it's integrated with change...</description>
+      <a10:updated>2024-06-27T00:21:07Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/689011</guid>
+      <link>https://dotnetkicks.com/r/689011?url=https://devblogs.microsoft.com/dotnet/join-us-for-dotnet-aspire-developers-day/</link>
+      <a10:author>
+        <a10:name>.NET Team</a10:name>
+        <a10:uri>https://dotnetkicks.com/@dotnet</a10:uri>
+      </a10:author>
+      <title>Join Us for .NET Aspire Developers Day - Elevate Your Cloud Native Skills! - .NET Blog</title>
+      <description>Join us on July 23, 2024, for .NET Aspire Developers Day, a livestream event to elevate your .NET skills with keynotes, deep dives, and interactive sessions. Connect with experts and the community.</description>
+      <a10:updated>2024-06-26T15:11:15Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688958</guid>
+      <link>https://dotnetkicks.com/r/688958?url=https://build5nines.com/what-is-the-hashicorp-infrastructure-cloud/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>What Is The HashiCorp Infrastructure Cloud? | Build5Nines</title>
+      <description>The cloud is the standard for hosting applications and workloads. However, only a small percentage of organizations realize the full benefits such as cost</description>
+      <a10:updated>2024-06-26T10:30:57Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688942</guid>
+      <link>https://dotnetkicks.com/r/688942?url=https://devblogs.microsoft.com/visualstudio/code-assessment-with-net-upgrade-assistant/</link>
+      <a10:author>
+        <a10:name>Visual Studio</a10:name>
+        <a10:uri>https://dotnetkicks.com/@VisualStudio</a10:uri>
+      </a10:author>
+      <title>Code Assessment with .NET Upgrade Assistant - Visual Studio Blog</title>
+      <description>NET Upgrade Assistant now provides powerful code assessment to help understand potential issues when upgrading your app to modern .NET.</description>
+      <a10:updated>2024-06-25T18:10:57Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688937</guid>
+      <link>https://dotnetkicks.com/r/688937?url=https://devblogs.microsoft.com/visualstudio/code-assessment-with-net-upgrade-assistant/</link>
+      <a10:author>
+        <a10:name>Visual Studio</a10:name>
+        <a10:uri>https://dotnetkicks.com/@VisualStudio</a10:uri>
+      </a10:author>
+      <title>Code Assessment with .NET Upgrade Assistant - Visual Studio Blog</title>
+      <description>NET Upgrade Assistant now provides powerful code assessment to help understand potential issues when upgrading your app to modern .NET.</description>
+      <a10:updated>2024-06-25T18:10:45Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688921</guid>
+      <link>https://dotnetkicks.com/r/688921?url=https://build5nines.com/introduction-to-building-ai-agents-with-phidata-and-python/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>Introduction To Building AI Agents With Phidata And Python | Build5Nines</title>
+      <description>Phidata is a Python framework designed for creating AI assistants that leverage Large Language Models (LLMs), memory, knowledge, and tools. If you've ever</description>
+      <a10:updated>2024-06-25T11:20:35Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688897</guid>
+      <link>https://dotnetkicks.com/r/688897?url=https://build5nines.com/openai-acquires-rockset-a-strategic-move-in-ai-and-data-processing/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>OpenAI Acquires Rockset: A Strategic Move In AI And Data Processing | Build5Nines</title>
+      <description>OpenAI's recent acquisition of Rockset is a significant milestone in the AI and data management sectors. This acquisition is poised to bolster OpenAI's</description>
+      <a10:updated>2024-06-25T02:00:07Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688856</guid>
+      <link>https://dotnetkicks.com/r/688856?url=https://devblogs.microsoft.com/dotnet/lets-learn-dotnet-aspire/</link>
+      <a10:author>
+        <a10:name>Jeff Fritz</a10:name>
+        <a10:uri>https://dotnetkicks.com/@csharpfritz</a10:uri>
+      </a10:author>
+      <title>Let's Learn .NET Aspire - Start your cloud-native journey live! - .NET Blog</title>
+      <description>Join us for Let's Learn .NET Aspire, a global live stream workshop where you can learn all about what .NET Aspire is, why you would use it, and see how to integrate .NET Aspire into your apps with a hands on workshop.</description>
+      <a10:updated>2024-06-24T17:11:08Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688838</guid>
+      <link>https://dotnetkicks.com/r/688838?url=https://devblogs.microsoft.com/dotnet/lets-learn-dotnet-aspire/</link>
+      <a10:author>
+        <a10:name>.NET Team</a10:name>
+        <a10:uri>https://dotnetkicks.com/@dotnet</a10:uri>
+      </a10:author>
+      <title>Let's Learn .NET Aspire - Start your cloud-native journey live! - .NET Blog</title>
+      <description>Join us for Let's Learn .NET Aspire, a global live stream workshop where you can learn all about what .NET Aspire is, why you would use it, and see how to integrate .NET Aspire into your apps with a hands on workshop.</description>
+      <a10:updated>2024-06-24T17:10:56Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688663</guid>
+      <link>https://dotnetkicks.com/r/688663?url=https://build5nines.com/introduction-to-building-ai-agents-with-langchain-and-python/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>Introduction To Building AI Agents With LangChain And Python | Build5Nines</title>
+      <description>LangChain is a tool for more easily creating AI agents that can autonomously perform tasks. These agents can streamline operations, enhance user experiences,</description>
+      <a10:updated>2024-06-23T11:19:19Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688660</guid>
+      <link>https://dotnetkicks.com/r/688660?url=https://jeremydmiller.com/2024/06/22/off-topic-90s-country-music-rewind/</link>
+      <a10:author>
+        <a10:name>jeremydmiller</a10:name>
+        <a10:uri>https://dotnetkicks.com/@jeremydmiller</a10:uri>
+      </a10:author>
+      <title>Off Topic: 90's Country Music Rewind</title>
+      <description>I'm a huge fan of alt country or Americana music, definitely appreciate some classic country like Johnny Cash, Lefty Frizzell or Buck Owens, and I live in Austin so it's mandatory to be into Willie Nelson, Robert Earl Keen, Hays Carll, and the late, great Billy Joe Shaver (maybe my favorite musician of all time)....</description>
+      <a10:updated>2024-06-22T22:10:31Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688659</guid>
+      <link>https://dotnetkicks.com/r/688659?url=https://build5nines.com/detecting-ai-hallucinations-using-semantic-entropy/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>Detecting AI Hallucinations Using Semantic Entropy | Build5Nines</title>
+      <description>Artificial Intelligence (AI) and the use of Large Language Models (LLMs) has transformed numerous fields, from healthcare to entertainment, by enabling</description>
+      <a10:updated>2024-06-22T18:59:03Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688651</guid>
+      <link>https://dotnetkicks.com/r/688651?url=https://sergeytihon.com/2024/06/22/f-weekly-24-2024-adding-help-to-fsi/</link>
+      <a10:author>
+        <a10:name>Sergey Tihon</a10:name>
+        <a10:uri>https://dotnetkicks.com/@sergey_tihon</a10:uri>
+      </a10:author>
+      <title>F# Weekly #24, 2024 - Adding #help to fsi</title>
+      <description>Welcome to F# Weekly, A roundup of F# content from this past week: News Adding #help to fsi Using Phi-3 &amp; C# with ONNX for text and vision samples - .NET Blog (microsoft.com) Refactor your code with default lambda parameters - .NET Blog (microsoft.com) Announcing Third Party API and Package Map Support for .NET Upgrade...</description>
+      <a10:updated>2024-06-22T18:29:18Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688633</guid>
+      <link>https://dotnetkicks.com/r/688633?url=https://build5nines.com/what-are-ai-agents-and-agentic-ai/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>What Are AI Agents And Agentic AI? | Build5Nines</title>
+      <description>AI Agents are more advanced implementations of artificial intelligence (AI) built to more autonomously perform tasks, make decisions, and interact with users</description>
+      <a10:updated>2024-06-22T15:59:10Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688618</guid>
+      <link>https://dotnetkicks.com/r/688618?url=https://ardalis.com/navigation-properties-between-aggregates-modules/</link>
+      <a10:author>
+        <a10:name>Steve Smith</a10:name>
+        <a10:uri>https://dotnetkicks.com/@ardalis</a10:uri>
+      </a10:author>
+      <title>Modeling Navigation Properties Between Aggregates or Modules</title>
+      <description>A question from a student of my Modular Monolith course about how to effectively access related data from a different module. It's a frequent question from DDD students when it comes to modeling aggregates as well.</description>
+      <a10:updated>2024-06-21T21:38:37Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688554</guid>
+      <link>https://dotnetkicks.com/r/688554?url=https://build5nines.com/introduction-to-building-ai-agents-with-microsoft-semantic-kernel/</link>
+      <a10:author>
+        <a10:name>Build5Nines.com</a10:name>
+        <a10:uri>https://dotnetkicks.com/@BuildAzure</a10:uri>
+      </a10:author>
+      <title>Introduction To Building AI Agents With Microsoft Semantic Kernel | Build5Nines</title>
+      <description>Microsoft Semantic Kernel is an innovative, open-source SDK designed to seamlessly integrate Large Language Models (LLMs) with conventional programming</description>
+      <a10:updated>2024-06-21T11:38:36Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688515</guid>
+      <link>https://dotnetkicks.com/r/688515?url=https://jeremydmiller.com/2024/06/20/multi-tenancy-mixed-modes-with-marten/</link>
+      <a10:author>
+        <a10:name>jeremydmiller</a10:name>
+        <a10:uri>https://dotnetkicks.com/@jeremydmiller</a10:uri>
+      </a10:author>
+      <title>Multi-Tenancy: Mixed Modes with Marten</title>
+      <description>This is continuing a series about multi-tenancy with Marten, Wolverine, and ASP.Net Core: What is it and why do you care? Marten's "Conjoined" Model Database per Tenant with Marten Mixed Modes with Marten (this post) In previous posts I've described first why multi-tenancy might be useful, how to do it with Marten's "conjoined" tenancy model, and lastly how...</description>
+      <a10:updated>2024-06-20T19:38:20Z</a10:updated>
+    </item>
+    <item>
+      <guid isPermaLink="false">stories/688492</guid>
+      <link>https://dotnetkicks.com/r/688492?url=https://devblogs.microsoft.com/dotnet/announcing-api-map-support-for-ua/</link>
+      <a10:author>
+        <a10:name>Jeff Fritz</a10:name>
+        <a10:uri>https://dotnetkicks.com/@csharpfritz</a10:uri>
+      </a10:author>
+      <title>Announcing Third Party API and Package Map Support for .NET Upgrade Assistant - .NET Blog</title>
+      <description>Learn how to extend the .NET Upgrade Assistant by providing mappings for your own libraries and packages.</description>
+      <a10:updated>2024-06-20T17:18:33Z</a10:updated>
+    </item>
+  </channel>
+</rss>

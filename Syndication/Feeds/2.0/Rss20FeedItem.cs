@@ -18,7 +18,16 @@
             : base(item)
         {
             this.Description = item.GetValue("description");
-            this.Author = item.GetValue("author");
+            
+            if (item.GetElement("author", ignoreNamespace: true) is ParentTag author)
+            {
+                this.Author = author.GetValue("name", ignoreNamespace: true);
+            }
+            else
+            {
+                this.Author = item.GetValue("author");
+            }
+
             this.Categories = item.GetArray("category", x => x.GetRequiredValue());
             this.Comments = item.GetValue("comments");
             if (item.GetElement("enclosure") is Tag enclosure)
@@ -26,7 +35,7 @@
                 this.Enclosure = new FeedItemEnclosure(enclosure);
             }
             this.Guid = item.GetValue("guid");
-            this.PubDateAsString = item.GetValue("pubDate");
+            this.PubDateAsString = item.GetValue("pubDate") ?? item.GetValue("updated", ignoreNamespace: true);
             this.PubDate = Helpers.TryParseDateTime(this.PubDateAsString);
             if (item.GetElement("source") is ParentTag source)
             {
