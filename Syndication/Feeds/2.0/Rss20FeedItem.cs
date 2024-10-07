@@ -23,7 +23,7 @@
             {
                 this.Author = author.GetValue("name", ignoreNamespace: true);
             }
-            else
+            if (string.IsNullOrEmpty(this.Author))
             {
                 this.Author = item.GetValue("author");
             }
