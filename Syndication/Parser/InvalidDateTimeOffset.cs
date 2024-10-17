@@ -1,6 +1,7 @@
 ﻿namespace Syndication.Parser;
 
 using System;
+using System.Collections.Frozen;
 using System.Diagnostics;
 using System.Globalization;
 
@@ -10,19 +11,19 @@ static class InvalidDateTimeOffset
         DateTimeStyles.AllowLeadingWhite | DateTimeStyles.AllowTrailingWhite | DateTimeStyles.AssumeUniversal;
 
     // they better should provide correct offsets instead of abbreviations, we just assume the values here
-    private static readonly Dictionary<string, string> knownTimeZones = new()
+    private static readonly FrozenDictionary<string, string> knownTimeZones = new KeyValuePair<string, string>[]
     {
-        { "CST", "-06:00" },
-        { "EDT", "-04:00" },
-        { "EST", "-05:00" },
-        { "GMT", "+00:00" },
-        { "MDT", "-06:00" },
-        { "MST", "-07:00" },
-        { "PDT", "-07:00" },
-        { "PST", "-08:00" },
-        { "UT",  "+00:00" },
-        { "UTC", "+00:00" },
-    };
+        new("CST", "-06:00"),
+        new("EDT", "-04:00"),
+        new("EST", "-05:00"),
+        new("GMT", "+00:00"),
+        new("MDT", "-06:00"),
+        new("MST", "-07:00"),
+        new("PDT", "-07:00"),
+        new("PST", "-08:00"),
+        new("UT",  "+00:00"),
+        new("UTC", "+00:00"),
+    }.ToFrozenDictionary(StringComparer.OrdinalIgnoreCase);
 
     public static bool TryParse(ReadOnlySpan<char> str, out DateTimeOffset dateTimeOffset)
     {
