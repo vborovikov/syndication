@@ -187,4 +187,15 @@ public class FeedReaderTest
         var feed = await Feed.FromStreamAsync(Samples.GetStream("Web/stadtfeuerwehr-weiz_at.xml"), default);
         Assert.AreEqual("Stadtfeuerwehr Weiz - Einsätze", feed.Title);
     }
+
+    [TestMethod]
+    public async Task TestRachelByTheBay_HtmlContent()
+    {
+        var feed = await Feed.FromStreamAsync(Samples.GetStream("Web/rachelbythebay.xml"), default);
+        Assert.IsTrue(feed.Items.Count > 1);
+
+        var feedItem = feed.Items[0];
+        Assert.IsNotNull(feedItem.Content);
+        Assert.IsTrue(feedItem.Content.StartsWith("<div"), $"Actual content: \"{feedItem.Content[..5]}...\"");
+    }
 }

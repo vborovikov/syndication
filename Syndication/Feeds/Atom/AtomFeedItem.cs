@@ -28,7 +28,7 @@ public record AtomFeedItem : BaseFeedItem
         {
             this.Author = new AtomPerson(author);
         }
-        this.Content = item.GetValue("content");
+        this.Content = GetContent(item);
         this.Links = item.GetArray("link", link => new AtomLink(link));
         this.Link = (this.Links.FirstOrDefault(link => link.Relation == "alternate") ??
             this.Links.FirstOrDefault())?.Href ?? string.Empty;
@@ -44,6 +44,21 @@ public record AtomFeedItem : BaseFeedItem
         this.Published = Helpers.TryParseDateTime(this.PublishedAsString);
         this.Rights = item.GetValue("rights");
         this.Source = item.GetValue("source");
+    }
+
+    private static string? GetContent(ParentTag item)
+    {
+        var content = item.FirstOrDefault<ParentTag>(t => t.Name == "content");
+        if (content is null)
+            return null;
+
+        var contentType = content.FindAttribute(at => at.Name == "type");
+        if (contentType is { Value: "xhtml" or "html" })
+        {
+            //todo: get the html with all formatting preserved (<pre> tags)
+        }
+
+        return content.GetValue();
     }
 
     /// <summary>
