@@ -10,6 +10,7 @@
     using System.Threading;
     using System.Threading.Tasks;
     using Brackets;
+    using Brackets.Html;
     using Feeds;
     using Parser;
 
@@ -112,14 +113,14 @@
 
             var encoding = Encoding.UTF8;
             var sampleStr = encoding.GetString(sample);
-            var sampleDoc = Document.Xml.Parse(sampleStr);
+            var sampleDoc = Parser.Parse(sampleStr);
             if (TryGetEncoding(sampleDoc, out var docEncoding))
             {
                 encoding = docEncoding;
             }
 
             var content = encoding.GetString(span);
-            var document = Document.Xml.Parse(content);
+            var document = Parser.Parse(content);
             return GetFeed(document, content);
         }
 
@@ -150,7 +151,7 @@
         /// <returns>The <see cref="Feed"/> instance.</returns>
         public static Feed FromString(string content)
         {
-            var document = Document.Xml.Parse(content);
+            var document = Parser.Parse(content);
             return GetFeed(document, content);
         }
 
@@ -162,7 +163,7 @@
         /// <returns>A task that represents the asynchronous operation.</returns>
         public static async Task<Feed> FromStreamAsync(Stream stream, CancellationToken cancellationToken)
         {
-            var document = await Document.Xml.ParseAsync(stream, cancellationToken).ConfigureAwait(false);
+            var document = await Parser.ParseAsync(stream, cancellationToken).ConfigureAwait(false);
             return GetFeed(document, string.Empty);
         }
 
@@ -231,7 +232,7 @@
 
         private static bool ContainsText(ParentTag tag, ReadOnlySpan<char> text)
         {
-            foreach (var content in tag.FindAll<Content>(c => true))
+            foreach (var content in tag.FindAll<Content>())
             {
                 if (content.Contains(text))
                     return true;
@@ -249,7 +250,7 @@
 
         private static Feed GetFeed(Document document, string content)
         {
-            if (FeedParser.TryParseFeedType(document, out var feedType))
+            if (TryParseFeedType(document, out var feedType))
             {
                 var parser = Factory.GetParser(feedType);
                 var feed = parser.Parse(document, content);
@@ -266,5 +267,75 @@
 
             throw new FeedTypeNotSupportedException($"Unknown feed type '{documentRoot?.Name}'.");
         }
+
+        private static bool TryParseFeedType(Document doc, out FeedType feedType)
+        {
+            var docRoot = doc.FirstOrDefault<ParentTag>();
+            if (docRoot is null)
+            {
+                feedType = FeedType.Unknown;
+                return false;
+            }
+            var rootElement = docRoot.Name.AsSpan()[(docRoot.Name.IndexOf(':') + 1)..];
+
+            if (rootElement.EqualsIgnoreCase("feed"))
+            {
+                feedType = FeedType.Atom;
+                return true;
+            }
+
+            if (rootElement.EqualsIgnoreCase("rdf"))
+            {
+                feedType = FeedType.Rss_1_0;
+                return true;
+            }
+
+            if (rootElement.EqualsIgnoreCase("rss"))
+            {
+                var version = docRoot.Attributes["version"];
+                if (version.EqualsIgnoreCase("2.0"))
+                {
+                    if (docRoot.Attributes.Has("media"))
+                    {
+                        feedType = FeedType.MediaRss;
+                        return true;
+                    }
+                    else
+                    {
+                        feedType = FeedType.Rss_2_0;
+                        return true;
+                    }
+                }
+
+                if (version.EqualsIgnoreCase("0.91"))
+                {
+                    feedType = FeedType.Rss_0_91;
+                    return true;
+                }
+
+                if (version.EqualsIgnoreCase("0.92"))
+                {
+                    feedType = FeedType.Rss_0_92;
+                    return true;
+                }
+
+                feedType = FeedType.Rss;
+                return true;
+            }
+
+            feedType = FeedType.Unknown;
+            return false;
+        }
+
+        private sealed class FeedParser : XhtmlParser
+        {
+            public FeedParser() : base(isThreadSafe: true)
+            {
+                InitTagRef(new("link", this));
+                InitTagRef(new("source", this));
+            }
+        }
+
+        private static readonly FeedParser Parser = new();
     }
 }
